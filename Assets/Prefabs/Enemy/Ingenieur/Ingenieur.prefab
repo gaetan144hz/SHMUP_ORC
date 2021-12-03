@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6244103163788977795}
   - component: {fileID: 6244103163788977792}
   - component: {fileID: 6244103163788977793}
+  - component: {fileID: 3048030552276065324}
   m_Layer: 0
   m_Name: Ingenieur
   m_TagString: Enemy
@@ -150,6 +151,21 @@ MonoBehaviour:
   damage: 10
   enemyBullet: {fileID: 1433657902881779579, guid: bd95d264d0f21e54d9c4710da56e7e38, type: 3}
   bulletParent: {fileID: 6244103164689674613}
+--- !u!114 &3048030552276065324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244103163788977798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  rangeRight: 5
+  rangeLeft: -5
 --- !u!1 &6244103164689674613
 GameObject:
   m_ObjectHideFlags: 0

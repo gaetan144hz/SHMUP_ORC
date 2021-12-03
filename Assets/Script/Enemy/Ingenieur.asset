@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
   m_Name: Ingenieur
   m_EditorClassIdentifier: 
-  EnemyData: Ingenieur
+  Enemy: 
   Description: rapide avec tourelle 2t max
   EnemyModel: {fileID: 0}
-  health: 100
-  fireRate: 20
+  health: 200
   speed: 1
-  damageCorps: 1
+  bulletSpeed: 1
+  bulletDamage: 1
   healIncrease: 10
   range: 0
   shootingRange: 7
