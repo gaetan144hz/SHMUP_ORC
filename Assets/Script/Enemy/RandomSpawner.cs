@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
+    public List<GameObject> firePoints = new List<GameObject>();
+
     //[SerializeField] float speed;
     public Transform[] spawnPoints;
+
     public GameObject[] enemyPrefabs;
+
     private Transform[] firePoint;
-    
+
+    public GameObject firePoint1;
+
     //[SerializeField] private Transform firePoint;
     //private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        firePoints.Add(firePoint1);
         //rb.GetComponent<Rigidbody2D>();
         //rb.velocity = transform.right * speed;
         spawn();

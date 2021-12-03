@@ -8,7 +8,7 @@ public class healBullet : MonoBehaviour
 
     GameObject target;
 
-    public float speed;
+    [SerializeField] float speed;
     Rigidbody2D bulletRb;
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class healBullet : MonoBehaviour
 
             if (playerScript)
             {
-                playerScript.data.health += data.healIncrease;
+                playerScript.data.currentHealth += data.healIncrease;
                 Destroy(gameObject);
             }
         }

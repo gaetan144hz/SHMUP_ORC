@@ -38,7 +38,7 @@ public class MageMove : MonoBehaviour
         }
         else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
         {
-            if (enemyFollowPlayer.data.health < 100) 
+            if (enemyFollowPlayer.data.currentHealth < 100) 
             {
                 Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
                 nextFireTime = Time.time + fireRate;
@@ -56,8 +56,8 @@ public class MageMove : MonoBehaviour
 
     public void TakeDamage(int playerDamage)
     {
-        data.health -= playerDamage;
-        if (data.health <= 0)
+        data.currentHealth -= playerDamage;
+        if (data.currentHealth <= 0)
         {
             Die();
         }

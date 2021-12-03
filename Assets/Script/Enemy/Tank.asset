@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
   m_Name: Tank
   m_EditorClassIdentifier: 
-  EnemyData: Tank
+  Enemy: 
   Description: 
   EnemyModel: {fileID: 0}
-  health: -10
-  fireRate: 1
+  currentHealth: 0
+  startHealth: 200
   speed: 1
-  damageCorps: 50
+  bulletSpeed: 3
+  bulletDamage: 1
+  healIncrease: 0
   range: 0
   shootingRange: 10

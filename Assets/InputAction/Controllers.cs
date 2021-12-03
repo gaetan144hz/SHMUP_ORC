@@ -212,6 +212,52 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""audio"",
+            ""id"": ""697baa78-8824-492d-89bc-2fad87984119"",
+            ""actions"": [
+                {
+                    ""name"": ""play"",
+                    ""type"": ""Button"",
+                    ""id"": ""80336bc0-8a38-4849-ba7d-afbd3ddc3ba9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""stop"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f9624db-e907-4b5b-a165-8ef327ff1994"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""578b3300-fd61-47e4-9d51-e981be21faad"",
+                    ""path"": ""<Keyboard>/numpad7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87a15f6b-82bd-4359-a462-fb8c59f00a66"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""stop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -225,6 +271,10 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_GameManager = asset.FindActionMap("GameManager", throwIfNotFound: true);
         m_GameManager_pause = m_GameManager.FindAction("pause", throwIfNotFound: true);
         m_GameManager_play = m_GameManager.FindAction("play", throwIfNotFound: true);
+        // audio
+        m_audio = asset.FindActionMap("audio", throwIfNotFound: true);
+        m_audio_play = m_audio.FindAction("play", throwIfNotFound: true);
+        m_audio_stop = m_audio.FindAction("stop", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -360,6 +410,47 @@ public class @Controllers : IInputActionCollection, IDisposable
         }
     }
     public GameManagerActions @GameManager => new GameManagerActions(this);
+
+    // audio
+    private readonly InputActionMap m_audio;
+    private IAudioActions m_AudioActionsCallbackInterface;
+    private readonly InputAction m_audio_play;
+    private readonly InputAction m_audio_stop;
+    public struct AudioActions
+    {
+        private @Controllers m_Wrapper;
+        public AudioActions(@Controllers wrapper) { m_Wrapper = wrapper; }
+        public InputAction @play => m_Wrapper.m_audio_play;
+        public InputAction @stop => m_Wrapper.m_audio_stop;
+        public InputActionMap Get() { return m_Wrapper.m_audio; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AudioActions set) { return set.Get(); }
+        public void SetCallbacks(IAudioActions instance)
+        {
+            if (m_Wrapper.m_AudioActionsCallbackInterface != null)
+            {
+                @play.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @play.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @play.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @stop.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+                @stop.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+                @stop.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+            }
+            m_Wrapper.m_AudioActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @play.started += instance.OnPlay;
+                @play.performed += instance.OnPlay;
+                @play.canceled += instance.OnPlay;
+                @stop.started += instance.OnStop;
+                @stop.performed += instance.OnStop;
+                @stop.canceled += instance.OnStop;
+            }
+        }
+    }
+    public AudioActions @audio => new AudioActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -370,5 +461,10 @@ public class @Controllers : IInputActionCollection, IDisposable
     {
         void OnPause(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
+    }
+    public interface IAudioActions
+    {
+        void OnPlay(InputAction.CallbackContext context);
+        void OnStop(InputAction.CallbackContext context);
     }
 }

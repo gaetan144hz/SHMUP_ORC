@@ -199,6 +199,52 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "audio",
+            "id": "697baa78-8824-492d-89bc-2fad87984119",
+            "actions": [
+                {
+                    "name": "play",
+                    "type": "Button",
+                    "id": "80336bc0-8a38-4849-ba7d-afbd3ddc3ba9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "stop",
+                    "type": "Button",
+                    "id": "1f9624db-e907-4b5b-a165-8ef327ff1994",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "578b3300-fd61-47e4-9d51-e981be21faad",
+                    "path": "<Keyboard>/numpad7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "play",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87a15f6b-82bd-4359-a462-fb8c59f00a66",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "stop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

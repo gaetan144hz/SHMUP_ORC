@@ -64,8 +64,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public void TakeDamage(int playerDamage)
     {
-        data.health -= playerDamage;
-        if (data.health <= 0)
+        data.currentHealth -= playerDamage;
+        if (data.currentHealth <= 0)
         {
             Die();
         }
