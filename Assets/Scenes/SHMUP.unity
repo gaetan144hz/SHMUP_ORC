@@ -1174,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995282254613510149, guid: ac8861858afc50643aa0390a4cfff378, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac8861858afc50643aa0390a4cfff378, type: 3}
@@ -3580,7 +3580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1802839989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3753,7 +3753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826387075835381363, guid: ef83bfda86b8f544ea30d28e350524e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef83bfda86b8f544ea30d28e350524e1, type: 3}
@@ -4082,7 +4082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1997754872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,7 +4206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997754871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.12, z: 0}
+  m_LocalPosition: {x: 2.52, y: 1.12, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 3}
   m_Children:
   - {fileID: 735629706}
@@ -4324,7 +4324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433657902881779579, guid: bd95d264d0f21e54d9c4710da56e7e38, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1433657902881779579, guid: bd95d264d0f21e54d9c4710da56e7e38, type: 3}
       propertyPath: m_TagString
@@ -4608,7 +4608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
       propertyPath: m_TagString

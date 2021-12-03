@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  rangeOfSlide: 5
+  rangeRight: 5
+  rangeLeft: -5
 --- !u!1 &6244103164689674613
 GameObject:
   m_ObjectHideFlags: 0
