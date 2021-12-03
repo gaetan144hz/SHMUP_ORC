@@ -1,0 +1,91 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MageMove : MonoBehaviour
+{
+    public EnemyData data;
+
+    public float speed = 1.5f;
+
+    public float fireRate = 1f;
+    private float nextFireTime;
+
+    public GameObject enemyBullet;
+    public GameObject bulletParent;
+    private Transform enemy;
+
+    EnemyFollowPlayer enemyFollowPlayer;
+    PlayerHealth playerScript;
+
+    Coroutine coroutineCorpsDamage;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
+
+        float distanceFromPlayer = Vector2.Distance(enemy.position, transform.position);
+        if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, enemy.position, speed * Time.deltaTime);
+        }
+        else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
+        {
+            if (enemyFollowPlayer.data.health < 100) 
+            {
+                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
+                nextFireTime = Time.time + fireRate;
+            }
+        }
+        
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, data.range);
+        Gizmos.DrawWireSphere(transform.position, data.shootingRange);
+    }
+
+    public void TakeDamage(int playerDamage)
+    {
+        data.health -= playerDamage;
+        if (data.health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject player = collision.gameObject;
+        playerScript = player.GetComponent<PlayerHealth>();
+
+        if (collision.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.tag == "skybarriere")
+        {
+            Destroy(gameObject);
+
+        }
+    }
+}
