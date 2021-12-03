@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slideMovement : MonoBehaviour
+public class SlideMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     private bool moveRight;
-    [SerializeField] private float rangeOfSlide;
+    [SerializeField] private float rangeRight;
+    [SerializeField] private float rangeLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,11 @@ public class slideMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > rangeOfSlide)
+        if (transform.position.x > rangeRight)
         {
             moveRight = false;
         }
-        else if (transform.position.x < -rangeOfSlide)
+        else if (transform.position.x < rangeLeft)
         {
             moveRight = true;
         }

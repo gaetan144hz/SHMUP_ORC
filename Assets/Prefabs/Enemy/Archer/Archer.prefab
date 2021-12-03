@@ -152,7 +152,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
   fireRate: 1
   damage: 10
-  enemyBullet: {fileID: 0}
+  enemyBullet: {fileID: 6981149121312585428, guid: 9ed3146154156f14c975658dedb8460c, type: 3}
   bulletParent: {fileID: 2647647480842136899}
 --- !u!60 &5924302721223800349
 PolygonCollider2D:
