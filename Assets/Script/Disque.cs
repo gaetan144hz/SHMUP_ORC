@@ -34,7 +34,6 @@ public class Disque : MonoBehaviour
 
             if (playerHealth != null)
             {
-                ;
                 playerHealth.TakeDamage(damage);
                 Destroy(gameObject);
             }

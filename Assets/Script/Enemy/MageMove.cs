@@ -13,8 +13,8 @@ public class MageMove : MonoBehaviour
 
     public GameObject enemyBullet;
     public GameObject bulletParent;
-    private Transform enemy;
-
+    private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
+    
     EnemyFollowPlayer enemyFollowPlayer;
     PlayerHealth playerScript;
 
@@ -66,26 +66,5 @@ public class MageMove : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject player = collision.gameObject;
-        playerScript = player.GetComponent<PlayerHealth>();
-
-        if (collision.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-
-        if (collision.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-        if (collision.tag == "skybarriere")
-        {
-            Destroy(gameObject);
-
-        }
     }
 }

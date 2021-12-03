@@ -25,7 +25,8 @@ public class Bullet : MonoBehaviour
     {
         Disque disque = hitInfo.transform.GetComponent<Disque>();
         EnemyFollowPlayer enemyFollowPlayer = hitInfo.transform.GetComponent<EnemyFollowPlayer>();
-        BossMovement bossMovement = hitInfo.transform.GetComponent<BossMovement>(); 
+        BossMovement bossMovement = hitInfo.transform.GetComponent<BossMovement>();
+        MageMove mageMove = hitInfo.transform.GetComponent <MageMove>();
         
         if (disque != null)
         {
@@ -42,6 +43,12 @@ public class Bullet : MonoBehaviour
         if(bossMovement != null)
         {
             bossMovement.TakeDamage(bulletDamage);
+            Destroy(gameObject);
+        }
+
+        if(mageMove != null)
+        {
+            mageMove.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
     }

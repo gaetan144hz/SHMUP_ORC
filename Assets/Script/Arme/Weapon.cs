@@ -35,6 +35,13 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
+        /*
+        for (int i = 0; i < bulletPrefab.Length; i++)
+        {
+            if (i >= nombreDeTirAutorise)
+                return;
+        }
+        */
         Instantiate(bulletPrefab[0], firePoint.position, firePoint.rotation);
         Instantiate(bulletPrefab[0], firePointDroite.position, firePointDroite.rotation);
         Instantiate(bulletPrefab[0], firePointGauche.position, firePointGauche.rotation);
