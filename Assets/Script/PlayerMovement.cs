@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerMovement : MonoBehaviour
 {
     public int bulletDamage = 20;
@@ -19,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
     }
-
     private void OnEnable()
     {
         playerInput.Enable();
