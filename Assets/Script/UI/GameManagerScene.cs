@@ -10,6 +10,8 @@ public class GameManagerScene : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject settingsMenuUI;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -18,7 +20,16 @@ public class GameManagerScene : MonoBehaviour
 
     public void Options()
     {
-        Debug.Log("Options");
+        settingsMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        pauseMenuUI.SetActive(false);
+
+        if(settingsMenuUI == false)
+        {
+            pauseMenuUI.SetActive(true);
+        }
+
     }
 
     public void Credit()
@@ -47,6 +58,7 @@ public class GameManagerScene : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
         GameIsPaused = false; 
     }
