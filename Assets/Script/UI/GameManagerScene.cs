@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScene : MonoBehaviour
 {
-    Weapon weapon;
-
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;

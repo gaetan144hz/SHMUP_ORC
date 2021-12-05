@@ -18,6 +18,6 @@ public class SoundManager : MonoBehaviour
 
     public void stop(InputAction.CallbackContext ctx)
     {
-        m_MyAudioSource.Stop();
+        m_MyAudioSource.Pause();
     }
 }

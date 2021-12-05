@@ -9,9 +9,9 @@ public class BossMovement : MonoBehaviour
 
     private Transform player;
     private float nextFireTime;
-
-    [SerializeField] float fireRate = 1f;
     [SerializeField] int damage = 10;
+    [SerializeField] float fireRate = 1f;
+    
     public GameObject enemyBullet;
     public GameObject bulletParent;
 
@@ -56,7 +56,6 @@ public class BossMovement : MonoBehaviour
             }
         }
     }
-
     public void TakeDamage(int playerDamage)
     {
         data.currentHealth -= playerDamage;
