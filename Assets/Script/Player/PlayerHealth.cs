@@ -4,6 +4,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth = 100;
 
+    public GameObject explosion;
+
     public HealthBar healthBar;
 
     public GameObject gameOverUI;
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

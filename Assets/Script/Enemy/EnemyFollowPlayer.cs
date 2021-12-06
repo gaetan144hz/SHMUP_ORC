@@ -8,6 +8,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 {
     public EnemyData data;
 
+    public GameObject explosion;
+
     public int EnemyScore = 100;
 
     private float nextFireTime;
@@ -71,6 +73,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

@@ -7,6 +7,8 @@ public class BossMovement : MonoBehaviour
 {
     public EnemyData data;
 
+    public GameObject explosion;
+
     public int BossScore = 500;
 
     private Transform player;
@@ -69,6 +71,7 @@ public class BossMovement : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

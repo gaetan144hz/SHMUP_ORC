@@ -272,7 +272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
   healthBar: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!114 &7567997724479068160
 MonoBehaviour:
   m_ObjectHideFlags: 0
