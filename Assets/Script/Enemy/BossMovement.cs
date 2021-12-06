@@ -7,11 +7,13 @@ public class BossMovement : MonoBehaviour
 {
     public EnemyData data;
 
+    public int BossScore = 500;
+
     private Transform player;
     private float nextFireTime;
-
-    [SerializeField] float fireRate = 1f;
     [SerializeField] int damage = 10;
+    [SerializeField] float fireRate = 1f;
+    
     public GameObject enemyBullet;
     public GameObject bulletParent;
 
@@ -56,12 +58,11 @@ public class BossMovement : MonoBehaviour
             }
         }
     }
-
     public void TakeDamage(int playerDamage)
     {
-        data.health -= playerDamage;
-        if (data.health <= 0)
-        {
+        data.currentHealth -= playerDamage;
+        if (data.currentHealth <= 0)
+        {           
             Die();
         }
     }

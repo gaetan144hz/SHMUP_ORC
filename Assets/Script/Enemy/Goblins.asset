@@ -15,7 +15,8 @@ MonoBehaviour:
   Enemy: 
   Description: petit gobelin
   EnemyModel: {fileID: 8204708026756084754, guid: 643c549752473b4459dd8b3536e0ef72, type: 3}
-  health: 100
+  currentHealth: 100
+  startHealth: 100
   speed: 0
   bulletSpeed: 3
   bulletDamage: 10

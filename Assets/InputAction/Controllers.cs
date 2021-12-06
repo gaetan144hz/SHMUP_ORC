@@ -33,14 +33,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""spawn"",
-                    ""type"": ""Button"",
-                    ""id"": ""97475455-6cdb-4975-ac40-f010ac430e21"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -142,28 +134,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""340d28cd-7d51-4498-a505-bd9ce6b73565"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a9a325a7-9236-499b-8779-688547824020"",
-                    ""path"": ""<XInputController>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -212,6 +182,90 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""audio"",
+            ""id"": ""697baa78-8824-492d-89bc-2fad87984119"",
+            ""actions"": [
+                {
+                    ""name"": ""play"",
+                    ""type"": ""Button"",
+                    ""id"": ""80336bc0-8a38-4849-ba7d-afbd3ddc3ba9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""stop"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f9624db-e907-4b5b-a165-8ef327ff1994"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""578b3300-fd61-47e4-9d51-e981be21faad"",
+                    ""path"": ""<Keyboard>/numpad7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87a15f6b-82bd-4359-a462-fb8c59f00a66"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""stop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""spawnTest"",
+            ""id"": ""59fa575d-6ea6-486c-9c7e-bc6ce110b2c5"",
+            ""actions"": [
+                {
+                    ""name"": ""spawn"",
+                    ""type"": ""Button"",
+                    ""id"": ""a56a6dc7-5291-4193-8d2d-efcbbc7b9ad9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a6cc0a58-7a15-481f-8f40-4820bf6c55bd"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""spawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""893c1a21-6d41-4b61-856c-23c256b498af"",
+                    ""path"": ""<XInputController>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""spawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -220,11 +274,17 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player = asset.FindActionMap("player", throwIfNotFound: true);
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_shoot = m_player.FindAction("shoot", throwIfNotFound: true);
-        m_player_spawn = m_player.FindAction("spawn", throwIfNotFound: true);
         // GameManager
         m_GameManager = asset.FindActionMap("GameManager", throwIfNotFound: true);
         m_GameManager_pause = m_GameManager.FindAction("pause", throwIfNotFound: true);
         m_GameManager_play = m_GameManager.FindAction("play", throwIfNotFound: true);
+        // audio
+        m_audio = asset.FindActionMap("audio", throwIfNotFound: true);
+        m_audio_play = m_audio.FindAction("play", throwIfNotFound: true);
+        m_audio_stop = m_audio.FindAction("stop", throwIfNotFound: true);
+        // spawnTest
+        m_spawnTest = asset.FindActionMap("spawnTest", throwIfNotFound: true);
+        m_spawnTest_spawn = m_spawnTest.FindAction("spawn", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -276,14 +336,12 @@ public class @Controllers : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_shoot;
-    private readonly InputAction m_player_spawn;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
         public PlayerActions(@Controllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @shoot => m_Wrapper.m_player_shoot;
-        public InputAction @spawn => m_Wrapper.m_player_spawn;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -299,9 +357,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
-                @spawn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
-                @spawn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
-                @spawn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -312,9 +367,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @shoot.started += instance.OnShoot;
                 @shoot.performed += instance.OnShoot;
                 @shoot.canceled += instance.OnShoot;
-                @spawn.started += instance.OnSpawn;
-                @spawn.performed += instance.OnSpawn;
-                @spawn.canceled += instance.OnSpawn;
             }
         }
     }
@@ -360,15 +412,97 @@ public class @Controllers : IInputActionCollection, IDisposable
         }
     }
     public GameManagerActions @GameManager => new GameManagerActions(this);
+
+    // audio
+    private readonly InputActionMap m_audio;
+    private IAudioActions m_AudioActionsCallbackInterface;
+    private readonly InputAction m_audio_play;
+    private readonly InputAction m_audio_stop;
+    public struct AudioActions
+    {
+        private @Controllers m_Wrapper;
+        public AudioActions(@Controllers wrapper) { m_Wrapper = wrapper; }
+        public InputAction @play => m_Wrapper.m_audio_play;
+        public InputAction @stop => m_Wrapper.m_audio_stop;
+        public InputActionMap Get() { return m_Wrapper.m_audio; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AudioActions set) { return set.Get(); }
+        public void SetCallbacks(IAudioActions instance)
+        {
+            if (m_Wrapper.m_AudioActionsCallbackInterface != null)
+            {
+                @play.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @play.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @play.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
+                @stop.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+                @stop.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+                @stop.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
+            }
+            m_Wrapper.m_AudioActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @play.started += instance.OnPlay;
+                @play.performed += instance.OnPlay;
+                @play.canceled += instance.OnPlay;
+                @stop.started += instance.OnStop;
+                @stop.performed += instance.OnStop;
+                @stop.canceled += instance.OnStop;
+            }
+        }
+    }
+    public AudioActions @audio => new AudioActions(this);
+
+    // spawnTest
+    private readonly InputActionMap m_spawnTest;
+    private ISpawnTestActions m_SpawnTestActionsCallbackInterface;
+    private readonly InputAction m_spawnTest_spawn;
+    public struct SpawnTestActions
+    {
+        private @Controllers m_Wrapper;
+        public SpawnTestActions(@Controllers wrapper) { m_Wrapper = wrapper; }
+        public InputAction @spawn => m_Wrapper.m_spawnTest_spawn;
+        public InputActionMap Get() { return m_Wrapper.m_spawnTest; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SpawnTestActions set) { return set.Get(); }
+        public void SetCallbacks(ISpawnTestActions instance)
+        {
+            if (m_Wrapper.m_SpawnTestActionsCallbackInterface != null)
+            {
+                @spawn.started -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
+                @spawn.performed -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
+                @spawn.canceled -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
+            }
+            m_Wrapper.m_SpawnTestActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @spawn.started += instance.OnSpawn;
+                @spawn.performed += instance.OnSpawn;
+                @spawn.canceled += instance.OnSpawn;
+            }
+        }
+    }
+    public SpawnTestActions @spawnTest => new SpawnTestActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
-        void OnSpawn(InputAction.CallbackContext context);
     }
     public interface IGameManagerActions
     {
         void OnPause(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
+    }
+    public interface IAudioActions
+    {
+        void OnPlay(InputAction.CallbackContext context);
+        void OnStop(InputAction.CallbackContext context);
+    }
+    public interface ISpawnTestActions
+    {
+        void OnSpawn(InputAction.CallbackContext context);
     }
 }

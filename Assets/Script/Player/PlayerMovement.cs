@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int bulletDamage = 20;
+    public int bulletDamage = 35;
 
     private Controllers playerInput; // recupere le Input Action, attention au nom
 
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void OnEnable()
     {
         playerInput.Enable();

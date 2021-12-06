@@ -131,8 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4ed3baa12e30a2a498356a22c3639c2f, type: 2}
   fireRate: 1
-  damage: 10
-  enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
+  damage: 20
+  enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
   bulletParent: {fileID: 2572329372805760763}
 --- !u!114 &8992187200880663561
 MonoBehaviour:
@@ -177,7 +177,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

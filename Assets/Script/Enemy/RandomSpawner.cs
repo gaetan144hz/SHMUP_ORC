@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    //[SerializeField] float speed;
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
-    private Transform[] firePoint;
-    
-    //[SerializeField] private Transform firePoint;
-    //private Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
+    Coroutine coroutineSpawn;
+
+    private void Start()
     {
-        //rb.GetComponent<Rigidbody2D>();
-        //rb.velocity = transform.right * speed;
-        spawn();
+        coroutineSpawn = StartCoroutine(Spawn());
     }
 
     public void spawn()
@@ -25,7 +19,15 @@ public class RandomSpawner : MonoBehaviour
         int randEnemy = Random.Range(0, enemyPrefabs.Length);
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
 
-        Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
-        Instantiate(enemyPrefabs[1], firePoint[randSpawnPoint].position, transform.rotation);
+        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+    }
+
+    IEnumerator Spawn()
+    {
+        while (true)
+        {
+            spawn();
+            yield return new WaitForSeconds(5);
+        }
     }
 }

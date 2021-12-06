@@ -15,7 +15,8 @@ MonoBehaviour:
   Enemy: 
   Description: rapide avec tourelle 2t max
   EnemyModel: {fileID: 0}
-  health: 200
+  currentHealth: 150
+  startHealth: 150
   speed: 1
   bulletSpeed: 1
   bulletDamage: 1

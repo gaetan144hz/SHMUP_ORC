@@ -7,8 +7,6 @@ using UnityEngine.InputSystem;
 
 public class Timer : MonoBehaviour
 {
-    PlayerHealth playerHealthScript;
-
     [SerializeField] float currentTime = 0f;
     [SerializeField] float startingTime = 0f;
 

@@ -8,6 +8,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 {
     public EnemyData data;
 
+    public int EnemyScore = 100;
+
     private float nextFireTime;
 
     [SerializeField] float fireRate = 1f;
@@ -15,10 +17,6 @@ public class EnemyFollowPlayer : MonoBehaviour
     public GameObject enemyBullet;
     public GameObject bulletParent;
     private Transform player;
-
-    PlayerHealth playerScript;
-
-    Coroutine coroutineFire;
 
     // Start is called before the first frame update
     void Start()
@@ -64,8 +62,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public void TakeDamage(int playerDamage)
     {
-        data.health -= playerDamage;
-        if (data.health <= 0)
+        data.currentHealth -= playerDamage;
+        if (data.currentHealth <= 0)
         {
             Die();
         }
