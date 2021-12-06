@@ -6,6 +6,8 @@ public class MageMove : MonoBehaviour
 {
     public EnemyData data;
 
+    public GameObject explosion;
+
     public int MageScore = 200;
 
     public float speed = 1.5f;
@@ -60,6 +62,7 @@ public class MageMove : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
