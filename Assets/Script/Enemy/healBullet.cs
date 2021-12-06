@@ -8,16 +8,19 @@ public class healBullet : MonoBehaviour
 
     GameObject target;
 
-    [SerializeField] float speed;
+    [SerializeField] float speed = 3f;
+    [SerializeField] int healIncrease = 15;
     Rigidbody2D bulletRb;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        bulletRb = GetComponent<Rigidbody2D>();
+        bulletRb = this.GetComponent<Rigidbody2D>();
+
         target = GameObject.FindGameObjectWithTag("Enemy");
         Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
         bulletRb.velocity = new Vector2(movedir.x, movedir.y);
+
         Destroy(this.gameObject, 5);
     }
 
@@ -25,12 +28,12 @@ public class healBullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            GameObject player = collision.gameObject;
-            EnemyFollowPlayer playerScript = player.transform.GetComponent<EnemyFollowPlayer>();
+            GameObject enemy = collision.gameObject;
+            EnemyFollowPlayer enemyScript = enemy.transform.GetComponent<EnemyFollowPlayer>();
 
-            if (playerScript)
+            if (enemyScript)
             {
-                playerScript.data.currentHealth += data.healIncrease;
+                enemyScript.data.currentHealth += healIncrease;
                 Destroy(gameObject);
             }
         }

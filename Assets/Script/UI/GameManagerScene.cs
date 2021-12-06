@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScene : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
@@ -29,7 +31,6 @@ public class GameManagerScene : MonoBehaviour
         {
             pauseMenuUI.SetActive(true);
         }
-
     }
 
     public void Credit()
@@ -57,6 +58,7 @@ public class GameManagerScene : MonoBehaviour
 
     public void Resume()
     {
+        player.SetActive(true);
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
@@ -65,6 +67,7 @@ public class GameManagerScene : MonoBehaviour
 
     public void Paused()
     {
+        player.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

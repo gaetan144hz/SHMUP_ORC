@@ -7,6 +7,8 @@ public class BossMovement : MonoBehaviour
 {
     public EnemyData data;
 
+    public int BossScore = 500;
+
     private Transform player;
     private float nextFireTime;
     [SerializeField] int damage = 10;
@@ -60,7 +62,7 @@ public class BossMovement : MonoBehaviour
     {
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
-        {
+        {           
             Die();
         }
     }

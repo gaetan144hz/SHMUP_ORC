@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Disque : MonoBehaviour
 {
+    public int DisqueScore = 150;
+
     [SerializeField] int disqueHealth = 50;
 
     [SerializeField] float speed = 7;
@@ -66,7 +68,7 @@ public class Disque : MonoBehaviour
     {
         disqueHealth -= playerDamage;
         if (disqueHealth <= 0)
-        {
+        {            
             Die();
         }
     }

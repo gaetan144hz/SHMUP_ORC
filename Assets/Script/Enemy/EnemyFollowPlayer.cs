@@ -8,6 +8,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 {
     public EnemyData data;
 
+    public int EnemyScore = 100;
+
     private float nextFireTime;
 
     [SerializeField] float fireRate = 1f;
@@ -15,10 +17,6 @@ public class EnemyFollowPlayer : MonoBehaviour
     public GameObject enemyBullet;
     public GameObject bulletParent;
     private Transform player;
-
-    PlayerHealth playerScript;
-
-    Coroutine coroutineFire;
 
     // Start is called before the first frame update
     void Start()
