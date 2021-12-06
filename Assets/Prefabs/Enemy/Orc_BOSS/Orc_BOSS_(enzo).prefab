@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1405351762913005656}
   - component: {fileID: 1405351762913005663}
   - component: {fileID: 1405351762913005660}
+  - component: {fileID: 6281377891622321027}
   - component: {fileID: 1405351762913005662}
   - component: {fileID: 1405351762913005661}
-  - component: {fileID: 1405351762913005657}
   m_Layer: 0
   m_Name: Orc_BOSS_(enzo)
   m_TagString: Enemy
@@ -100,10 +100,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
-  fireRate: 1
   damage: 10
+  fireRate: 1
   enemyBullet: {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
   bulletParent: {fileID: 1405351764310200364}
+--- !u!114 &6281377891622321027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405351762913005651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  rangeRight: 7
+  rangeLeft: -7
 --- !u!50 &1405351762913005662
 Rigidbody2D:
   serializedVersion: 4
@@ -151,21 +166,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1405351762913005657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405351762913005651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rangeRight: 7
-  rangeLeft: -7
 --- !u!1 &1405351764310200364
 GameObject:
   m_ObjectHideFlags: 0

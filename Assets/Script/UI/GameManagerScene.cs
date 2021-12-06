@@ -6,11 +6,13 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScene : MonoBehaviour
 {
-    Weapon weapon;
+    [SerializeField] private GameObject player;
 
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    public GameObject settingsMenuUI;
 
     public void PlayGame()
     {
@@ -20,7 +22,15 @@ public class GameManagerScene : MonoBehaviour
 
     public void Options()
     {
-        Debug.Log("Options");
+        settingsMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        pauseMenuUI.SetActive(false);
+
+        if(settingsMenuUI == false)
+        {
+            pauseMenuUI.SetActive(true);
+        }
     }
 
     public void Credit()
@@ -48,13 +58,16 @@ public class GameManagerScene : MonoBehaviour
 
     public void Resume()
     {
+        player.SetActive(true);
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
         GameIsPaused = false; 
     }
 
     public void Paused()
     {
+        player.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

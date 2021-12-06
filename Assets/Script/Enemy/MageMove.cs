@@ -6,6 +6,8 @@ public class MageMove : MonoBehaviour
 {
     public EnemyData data;
 
+    public int MageScore = 200;
+
     public float speed = 1.5f;
 
     public float fireRate = 1f;
@@ -14,15 +16,9 @@ public class MageMove : MonoBehaviour
     public GameObject enemyBullet;
     public GameObject bulletParent;
     private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
-    
-    EnemyFollowPlayer enemyFollowPlayer;
-    PlayerHealth playerScript;
-
-    Coroutine coroutineCorpsDamage;
-
-    // Start is called before the first frame update
+  
     void Start()
-    {
+    {       
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
@@ -31,6 +27,8 @@ public class MageMove : MonoBehaviour
     {
         // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
 
+        //int randEnemy = Random.Range(0, enemy.Length);
+
         float distanceFromPlayer = Vector2.Distance(enemy.position, transform.position);
         if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
         {
@@ -38,11 +36,8 @@ public class MageMove : MonoBehaviour
         }
         else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
         {
-            if (enemyFollowPlayer.data.currentHealth < 100) 
-            {
-                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + fireRate;
-            }
+            Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
+            nextFireTime = Time.time + fireRate;
         }
         
     }

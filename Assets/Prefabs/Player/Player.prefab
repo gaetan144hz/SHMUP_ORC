@@ -332,10 +332,6 @@ MonoBehaviour:
     m_ActionName: player/shoot[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 97475455-6cdb-4975-ac40-f010ac430e21
-    m_ActionName: player/spawn[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 642b0f26-bb2f-4ae7-a4b1-e4dc99ab73d0
     m_ActionName: time/pause[/Keyboard/escape]
   - m_PersistentCalls:
@@ -374,6 +370,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1f9624db-e907-4b5b-a165-8ef327ff1994
     m_ActionName: audio/stop[/Keyboard/numpad1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a56a6dc7-5291-4193-8d2d-efcbbc7b9ad9
+    m_ActionName: spawnTest/spawn[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player
