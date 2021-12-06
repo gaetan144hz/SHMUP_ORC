@@ -137,7 +137,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "play",
+                    "name": "resume/play",
                     "type": "Button",
                     "id": "74cf2ad1-8e24-4dc4-8300-ce3e9fdda2f6",
                     "expectedControlType": "Button",
@@ -164,7 +164,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "play",
+                    "action": "resume/play",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

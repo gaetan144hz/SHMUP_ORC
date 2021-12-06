@@ -150,7 +150,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""play"",
+                    ""name"": ""resume/play"",
                     ""type"": ""Button"",
                     ""id"": ""74cf2ad1-8e24-4dc4-8300-ce3e9fdda2f6"",
                     ""expectedControlType"": ""Button"",
@@ -177,7 +177,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""play"",
+                    ""action"": ""resume/play"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -277,7 +277,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         // GameManager
         m_GameManager = asset.FindActionMap("GameManager", throwIfNotFound: true);
         m_GameManager_pause = m_GameManager.FindAction("pause", throwIfNotFound: true);
-        m_GameManager_play = m_GameManager.FindAction("play", throwIfNotFound: true);
+        m_GameManager_resumeplay = m_GameManager.FindAction("resume/play", throwIfNotFound: true);
         // audio
         m_audio = asset.FindActionMap("audio", throwIfNotFound: true);
         m_audio_play = m_audio.FindAction("play", throwIfNotFound: true);
@@ -376,13 +376,13 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputActionMap m_GameManager;
     private IGameManagerActions m_GameManagerActionsCallbackInterface;
     private readonly InputAction m_GameManager_pause;
-    private readonly InputAction m_GameManager_play;
+    private readonly InputAction m_GameManager_resumeplay;
     public struct GameManagerActions
     {
         private @Controllers m_Wrapper;
         public GameManagerActions(@Controllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @pause => m_Wrapper.m_GameManager_pause;
-        public InputAction @play => m_Wrapper.m_GameManager_play;
+        public InputAction @resumeplay => m_Wrapper.m_GameManager_resumeplay;
         public InputActionMap Get() { return m_Wrapper.m_GameManager; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -395,9 +395,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @pause.started -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
                 @pause.performed -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
                 @pause.canceled -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
-                @play.started -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPlay;
-                @play.performed -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPlay;
-                @play.canceled -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPlay;
+                @resumeplay.started -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
+                @resumeplay.performed -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
+                @resumeplay.canceled -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
             }
             m_Wrapper.m_GameManagerActionsCallbackInterface = instance;
             if (instance != null)
@@ -405,9 +405,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @pause.started += instance.OnPause;
                 @pause.performed += instance.OnPause;
                 @pause.canceled += instance.OnPause;
-                @play.started += instance.OnPlay;
-                @play.performed += instance.OnPlay;
-                @play.canceled += instance.OnPlay;
+                @resumeplay.started += instance.OnResumeplay;
+                @resumeplay.performed += instance.OnResumeplay;
+                @resumeplay.canceled += instance.OnResumeplay;
             }
         }
     }
@@ -494,7 +494,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     public interface IGameManagerActions
     {
         void OnPause(InputAction.CallbackContext context);
-        void OnPlay(InputAction.CallbackContext context);
+        void OnResumeplay(InputAction.CallbackContext context);
     }
     public interface IAudioActions
     {
