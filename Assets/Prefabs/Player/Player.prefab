@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427d8247b6fc6934ca914bc4facf1684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
+  datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
   healthBar: {fileID: 0}
   gameOverUI: {fileID: 0}

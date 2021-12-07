@@ -2,17 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CircleCollider2D))]
+
 public class slime : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    PlayerData datap;
+
+    [SerializeField] int increase = 3;
+
+    Rigidbody2D rb;
+
+    Coroutine coroutineFroze;
+
+    private void Awake()
     {
-        
+        rb.gravityScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.tag == "Player")
+        {
+            StartCoroutine(MakeFroze());
+        }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        StopCoroutine(coroutineFroze);
+        datap.speed = 8;
+    }
+
+    IEnumerator MakeFroze()
+    {
+        while (true)
+        {
+            datap.speed /= increase;
+            yield return new WaitForSeconds(2);
+        }
+    }
+
 }

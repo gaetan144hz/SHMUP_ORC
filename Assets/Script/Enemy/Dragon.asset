@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
-  m_Name: DragonMaster
+  m_Name: Dragon
   m_EditorClassIdentifier: 
-  Enemy: DragonMaster
-  Description: sous boss, attack avec des minis dragons, colldown
+  Enemy: 
+  Description: 
   EnemyModel: {fileID: 0}
-  currentHealth: 0
-  startHealth: 150
+  currentHealth: 75
+  startHealth: 75
   speed: 1
   bulletSpeed: 1
   bulletDamage: 1
-  healIncrease: 0
+  healIncrease: 10
   range: 0
   shootingRange: 10

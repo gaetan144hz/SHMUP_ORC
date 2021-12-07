@@ -48,6 +48,14 @@ public class Disque : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
 
+        else if (collision.gameObject.CompareTag("plateforme"))
+        {
+            var speed = lastVelocity.magnitude;
+            var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
+            rb.velocity = direction * Mathf.Max(speed, 0f);
+        }
+
         else if (collision.gameObject.CompareTag("Disque"))
         {
             var speed = lastVelocity.magnitude;
@@ -55,6 +63,7 @@ public class Disque : MonoBehaviour
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
+
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             var speed = lastVelocity.magnitude;

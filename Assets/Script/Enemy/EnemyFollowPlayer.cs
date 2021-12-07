@@ -20,9 +20,13 @@ public class EnemyFollowPlayer : MonoBehaviour
     public GameObject bulletParent;
     private Transform player;
 
+    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
+        //rb.gravityScale = 0;
+        //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

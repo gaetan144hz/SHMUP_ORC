@@ -7,17 +7,19 @@ using TMPro;
 [RequireComponent(typeof(PolygonCollider2D))]
 
 public class Bullet : MonoBehaviour
-{ 
+{
+    public PlayerData datap;
+
     [SerializeField] Rigidbody2D rb;
     
-    [SerializeField] float speed = 7f;
-    [SerializeField] int bulletDamage = 10;
+    //[SerializeField] float speed = 7f;
+    //[SerializeField] int bulletDamage = 10;
 
     void Start()
     {
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * datap.bulletSpeed;
         //rb.velocity = new Vector2(0, transform.position.x * -speed);    //another way to shoot
     }
 
@@ -30,27 +32,32 @@ public class Bullet : MonoBehaviour
         
         if (disque != null)
         {
-            disque.TakeDamage(bulletDamage);           
-            Destroy(gameObject);
+            disque.TakeDamage(datap.bulletDamage);           
+            Destroy(gameObject); 
         }
 
         if (enemyFollowPlayer != null)
         {
-            enemyFollowPlayer.TakeDamage(bulletDamage);
+            enemyFollowPlayer.TakeDamage(datap.bulletDamage);
             Destroy(gameObject);
         }
 
         if(bossMovement != null)
         {
-            bossMovement.TakeDamage(bulletDamage);
+            bossMovement.TakeDamage(datap.bulletDamage);
             Destroy(gameObject);
         }
 
         if(mageMove != null)
         {
-            mageMove.TakeDamage(bulletDamage);
+            mageMove.TakeDamage(datap.bulletDamage);
             Destroy(gameObject);
             //score.scoreValue += 200;
+        }
+
+        if(hitInfo.gameObject.tag == "plateforme")
+        {
+            Destroy(gameObject);
         }
     }
 }

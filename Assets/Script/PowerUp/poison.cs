@@ -2,22 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CircleCollider2D))]
+
 public class poison : MonoBehaviour
 {
-    [SerializeField] int increase = 10;
+    PlayerData datap;
 
-    PlayerHealth playerScript;
+    [SerializeField] int increase = 10;
 
     Coroutine coroutinePoison ;
 
+    private Rigidbody2D rb;
+
     private void Start()
     {
-        
+        rb.gravityScale = 0;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
-        playerScript = player.GetComponent<PlayerHealth>();
+        //playerScript = player.GetComponent<PlayerHealth>();
 
         if (collision.tag == "Player")
         {
@@ -33,7 +39,7 @@ public class poison : MonoBehaviour
     {
         while (true)
         {
-            playerScript.playerHealth -= increase;
+            datap.currentHealth -= increase;
             yield return new WaitForSeconds(2);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    EnemyData data;
+    public EnemyData data;
 
     GameObject target;
 

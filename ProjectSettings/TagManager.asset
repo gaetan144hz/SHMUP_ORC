@@ -10,6 +10,7 @@ TagManager:
   - Mage
   - Ennemi
   - Disque
+  - plateforme
   layers:
   - Default
   - TransparentFX

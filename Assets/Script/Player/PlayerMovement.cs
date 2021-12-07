@@ -7,8 +7,6 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int bulletDamage = 35;
-
     private Controllers playerInput; // recupere le Input Action, attention au nom
 
     private Rigidbody2D rb;
