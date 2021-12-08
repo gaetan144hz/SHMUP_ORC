@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    EnemyData data;
+    public EnemyData data;
 
     GameObject target;
 
-    [SerializeField] float speed = 7f;
-    [SerializeField] int bulletDamage = 10;
-
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +16,7 @@ public class EnemyBullet : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.currentbulletSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
 
         Destroy(this.gameObject, 5);
@@ -31,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(bulletDamage);
+            playerHealth.TakeDamage(data.bulletDamage);
             Destroy(gameObject);
         }
     }

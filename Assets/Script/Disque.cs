@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class Disque : MonoBehaviour
 {
-    public int DisqueScore = 150;
+    public int DisqueScore;
 
-    [SerializeField] int disqueHealth = 50;
+    [SerializeField] int disqueHealth;
 
-    [SerializeField] float speed = 7;
+    [SerializeField] float speed;
 
-    [SerializeField] int damage = 10;
+    [SerializeField] int damage;
 
     public Transform blade;
 
     private Rigidbody2D rb;
+
+    public Vector2 direction;
 
     Vector3 lastVelocity;
 
@@ -20,7 +22,8 @@ public class Disque : MonoBehaviour
     void Awake()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        //rb.velocity = transform.right * speed;
+        rb.velocity = direction.normalized * speed;
     }
 
     void Update()
@@ -48,6 +51,14 @@ public class Disque : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
 
+        else if (collision.gameObject.CompareTag("plateforme"))
+        {
+            var speed = lastVelocity.magnitude;
+            var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
+            rb.velocity = direction * Mathf.Max(speed, 0f);
+        }
+
         else if (collision.gameObject.CompareTag("Disque"))
         {
             var speed = lastVelocity.magnitude;
@@ -55,6 +66,7 @@ public class Disque : MonoBehaviour
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
+
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             var speed = lastVelocity.magnitude;

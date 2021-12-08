@@ -97,10 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346dd1ceaac5b0248bb5f88483dcc4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisqueScore: 150
   disqueHealth: 50
   speed: 7
   damage: 50
   blade: {fileID: 8995282254613510145}
+  direction: {x: 1, y: 0}
 --- !u!58 &8995282254613510151
 CircleCollider2D:
   m_ObjectHideFlags: 0

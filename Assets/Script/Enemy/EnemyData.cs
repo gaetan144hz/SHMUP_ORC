@@ -6,6 +6,7 @@ public class EnemyData : ScriptableObject
     private void OnEnable()
     {
         currentHealth = startHealth;
+        bulletSpeed = currentbulletSpeed;
     }
 
     public string Enemy;
@@ -15,12 +16,16 @@ public class EnemyData : ScriptableObject
     public int currentHealth;
     public int startHealth;
 
-    public float speed = 1f;
+    public float speed;
 
-    public float bulletSpeed = 1f;
-    public int bulletDamage = 1;
-    public int healIncrease = 10;
+    public float currentbulletSpeed;
 
-    public float range = 0;
-    public float shootingRange = 10;
+    private float bulletSpeed;
+    public int bulletDamage;
+    public float fireRate;
+
+    public int healIncrease;
+
+    public float range;
+    public float shootingRange;
 }

@@ -7,16 +7,11 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int bulletDamage = 35;
+    public PlayerData datap;
 
     private Controllers playerInput; // recupere le Input Action, attention au nom
 
     private Rigidbody2D rb;
-    
-    //public int bulletSpeed = 3;
-    //public int playerDamage = 40;
-
-    public float speed = 10f;
 
     void Awake()
     {
@@ -38,6 +33,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
-        rb.velocity = moveInput * speed;
+        rb.velocity = moveInput * datap.speed;
     }
 }

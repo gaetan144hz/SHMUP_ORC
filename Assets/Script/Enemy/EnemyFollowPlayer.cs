@@ -8,19 +8,26 @@ public class EnemyFollowPlayer : MonoBehaviour
 {
     public EnemyData data;
 
+    public GameObject explosion;
+
     public int EnemyScore = 100;
 
     private float nextFireTime;
 
-    [SerializeField] float fireRate = 1f;
-    [SerializeField] int damage = 10;
+    //[SerializeField] float fireRate = 1f;
+    //[SerializeField] int damage = 10;
+
     public GameObject enemyBullet;
     public GameObject bulletParent;
     private Transform player;
 
+    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
+        //rb.gravityScale = 0;
+        //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -35,7 +42,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
         {
             Instantiate(enemyBullet,bulletParent.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
+            nextFireTime = Time.time + data.fireRate;
         }
     }
 
@@ -55,7 +62,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         {
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(data.bulletDamage);
             }
         }
     }
@@ -71,6 +78,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

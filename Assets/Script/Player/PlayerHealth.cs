@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int playerHealth = 100;
+    public PlayerData datap;
+
+    public GameObject explosion;
 
     public HealthBar healthBar;
 
@@ -11,24 +13,26 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        healthBar.SetMaxHealth(playerHealth);
+        healthBar.SetMaxHealth(datap.currentHealth);
     }
     public void TakeDamage(int enemyBullet)
     {
-        playerHealth -= enemyBullet;
-        if (playerHealth <= 0)
+        datap.currentHealth -= enemyBullet;
+        if (datap.currentHealth <= 0)
         {
             gameOverUI.SetActive(true);
             Time.timeScale = 0f;
             Die();
         }
 
-        healthBar.SetHealth(playerHealth);
+        healthBar.SetHealth(datap.currentHealth);
     }
 
     void Die()
     {
-        Destroy(gameObject);
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(GetComponent<PlayerMovement>());
+        Destroy(GetComponent<PrincipalWeapon>());
     }
 }
 
