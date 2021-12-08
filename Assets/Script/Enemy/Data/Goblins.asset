@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
-  m_Name: Ingenieur
+  m_Name: Goblins
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: rapide avec tourelle 2t max
-  EnemyModel: {fileID: 0}
-  currentHealth: 150
-  startHealth: 150
-  speed: 1
-  bulletSpeed: 1
-  bulletDamage: 1
-  healIncrease: 10
+  Description: petit gobelin
+  EnemyModel: {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
+  currentHealth: 100
+  startHealth: 100
+  speed: 0
+  currentbulletSpeed: 3
+  bulletDamage: 5
+  fireRate: 0.5
+  healIncrease: 0
   range: 0
-  shootingRange: 15
+  shootingRange: 10

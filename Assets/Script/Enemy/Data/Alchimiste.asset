@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
-  m_Name: Mutant
+  m_Name: Alchimiste
   m_EditorClassIdentifier: 
-  EnemyData: Mutant
-  Description: "balance de la gel\xE9 qui ralenti"
-  EnemyModel: {fileID: 0}
-  health: 150
-  speedAttack: 1
-  moveSpeed: 1
-  damage: 1
+  Enemy: 
+  Description: gros colldown
+  EnemyModel: {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
+  currentHealth: 80
+  startHealth: 100
+  speed: 0
+  currentbulletSpeed: 3
+  bulletDamage: 0
+  fireRate: 10
+  healIncrease: 0
+  range: 0
+  shootingRange: 10

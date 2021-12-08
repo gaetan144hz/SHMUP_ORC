@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6981149121312585449}
   - component: {fileID: 6981149121312585448}
-  - component: {fileID: 6981149121312585431}
   - component: {fileID: 6981149121312585430}
+  - component: {fileID: 6981149121312585431}
   - component: {fileID: 6981149121312585429}
   m_Layer: 0
   m_Name: ArcherBullet
@@ -85,6 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6981149121312585430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981149121312585428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5a1ef9b98a84a4ea35a8ba28ef5046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
+  rb: {fileID: 6981149121312585431}
 --- !u!50 &6981149121312585431
 Rigidbody2D:
   serializedVersion: 4
@@ -106,20 +120,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6981149121312585430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6981149121312585428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5a1ef9b98a84a4ea35a8ba28ef5046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDamage: 2
-  speed: 3
 --- !u!60 &6981149121312585429
 PolygonCollider2D:
   m_ObjectHideFlags: 0

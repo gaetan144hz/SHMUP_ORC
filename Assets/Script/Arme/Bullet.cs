@@ -10,7 +10,9 @@ public class Bullet : MonoBehaviour
 {
     public PlayerData datap;
 
-    [SerializeField] Rigidbody2D rb;
+    public GameObject hit;
+
+    public Rigidbody2D rb;
     
     //[SerializeField] float speed = 7f;
     //[SerializeField] int bulletDamage = 10;
@@ -32,31 +34,36 @@ public class Bullet : MonoBehaviour
         
         if (disque != null)
         {
-            disque.TakeDamage(datap.bulletDamage);           
+            disque.TakeDamage(datap.bulletDamage);
+            Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(gameObject); 
         }
 
         if (enemyFollowPlayer != null)
         {
             enemyFollowPlayer.TakeDamage(datap.bulletDamage);
+            Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
         if(bossMovement != null)
         {
             bossMovement.TakeDamage(datap.bulletDamage);
+            Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
         if(mageMove != null)
-        {
+        {           
             mageMove.TakeDamage(datap.bulletDamage);
+            Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(gameObject);
             //score.scoreValue += 200;
         }
 
         if(hitInfo.gameObject.tag == "plateforme")
         {
+            //Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

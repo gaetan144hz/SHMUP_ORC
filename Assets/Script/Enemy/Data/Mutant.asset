@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56bce9a67d169e64a8e4ba152c876a52, type: 3}
-  m_Name: Goblins
+  m_Name: Mutant
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: petit gobelin
-  EnemyModel: {fileID: 8204708026756084754, guid: 643c549752473b4459dd8b3536e0ef72, type: 3}
-  currentHealth: 100
-  startHealth: 100
+  Description: "balance de la gel\xE9 qui ralenti"
+  EnemyModel: {fileID: 0}
+  currentHealth: 0
+  startHealth: 200
   speed: 0
   currentbulletSpeed: 0
-  bulletDamage: 10
-  fireRate: 0.5
+  bulletDamage: 0
+  fireRate: 1
   healIncrease: 0
   range: 0
   shootingRange: 10

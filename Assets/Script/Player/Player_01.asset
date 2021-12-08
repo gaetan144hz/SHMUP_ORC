@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef6260cb0610e14cbe0beb47a9a882d, type: 3}
   m_Name: Player_01
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   startHealth: 100
-  currentHealth: 100
+  currentHealth: 80
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
   bulletDamage: 10
-  bulletSpeed: 7
+  bulletSpeed: 15
