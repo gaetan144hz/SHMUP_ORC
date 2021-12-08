@@ -215,44 +215,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "spawnTest",
-            "id": "59fa575d-6ea6-486c-9c7e-bc6ce110b2c5",
-            "actions": [
-                {
-                    "name": "spawn",
-                    "type": "Button",
-                    "id": "a56a6dc7-5291-4193-8d2d-efcbbc7b9ad9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "a6cc0a58-7a15-481f-8f40-4820bf6c55bd",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "spawn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "893c1a21-6d41-4b61-856c-23c256b498af",
-                    "path": "<XInputController>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "spawn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": []

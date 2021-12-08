@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -15,6 +13,7 @@ public class healer : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
 
@@ -22,6 +21,9 @@ public class healer : MonoBehaviour
     {
         if (collision.tag == "Player") 
         {
+            datap.currentHealth += increase;
+            Destroy(gameObject);
+            /*
             GameObject player = collision.gameObject;
             PlayerData playerScript = player.transform.GetComponent<PlayerData>();
 
@@ -30,6 +32,7 @@ public class healer : MonoBehaviour
                 datap.currentHealth += increase;
                 Destroy(gameObject);
             }
+            */
         }
     }
 }

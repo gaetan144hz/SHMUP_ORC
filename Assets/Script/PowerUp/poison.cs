@@ -17,6 +17,7 @@ public class poison : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
 

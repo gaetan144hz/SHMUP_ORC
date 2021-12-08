@@ -25,6 +25,7 @@ public class fire : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
         rb.gravityScale = 0;

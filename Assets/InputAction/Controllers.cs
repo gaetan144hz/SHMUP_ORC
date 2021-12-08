@@ -228,44 +228,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""spawnTest"",
-            ""id"": ""59fa575d-6ea6-486c-9c7e-bc6ce110b2c5"",
-            ""actions"": [
-                {
-                    ""name"": ""spawn"",
-                    ""type"": ""Button"",
-                    ""id"": ""a56a6dc7-5291-4193-8d2d-efcbbc7b9ad9"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""a6cc0a58-7a15-481f-8f40-4820bf6c55bd"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""893c1a21-6d41-4b61-856c-23c256b498af"",
-                    ""path"": ""<XInputController>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -282,9 +244,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_audio = asset.FindActionMap("audio", throwIfNotFound: true);
         m_audio_play = m_audio.FindAction("play", throwIfNotFound: true);
         m_audio_stop = m_audio.FindAction("stop", throwIfNotFound: true);
-        // spawnTest
-        m_spawnTest = asset.FindActionMap("spawnTest", throwIfNotFound: true);
-        m_spawnTest_spawn = m_spawnTest.FindAction("spawn", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -453,39 +412,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         }
     }
     public AudioActions @audio => new AudioActions(this);
-
-    // spawnTest
-    private readonly InputActionMap m_spawnTest;
-    private ISpawnTestActions m_SpawnTestActionsCallbackInterface;
-    private readonly InputAction m_spawnTest_spawn;
-    public struct SpawnTestActions
-    {
-        private @Controllers m_Wrapper;
-        public SpawnTestActions(@Controllers wrapper) { m_Wrapper = wrapper; }
-        public InputAction @spawn => m_Wrapper.m_spawnTest_spawn;
-        public InputActionMap Get() { return m_Wrapper.m_spawnTest; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(SpawnTestActions set) { return set.Get(); }
-        public void SetCallbacks(ISpawnTestActions instance)
-        {
-            if (m_Wrapper.m_SpawnTestActionsCallbackInterface != null)
-            {
-                @spawn.started -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
-                @spawn.performed -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
-                @spawn.canceled -= m_Wrapper.m_SpawnTestActionsCallbackInterface.OnSpawn;
-            }
-            m_Wrapper.m_SpawnTestActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @spawn.started += instance.OnSpawn;
-                @spawn.performed += instance.OnSpawn;
-                @spawn.canceled += instance.OnSpawn;
-            }
-        }
-    }
-    public SpawnTestActions @spawnTest => new SpawnTestActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -500,9 +426,5 @@ public class @Controllers : IInputActionCollection, IDisposable
     {
         void OnPlay(InputAction.CallbackContext context);
         void OnStop(InputAction.CallbackContext context);
-    }
-    public interface ISpawnTestActions
-    {
-        void OnSpawn(InputAction.CallbackContext context);
     }
 }

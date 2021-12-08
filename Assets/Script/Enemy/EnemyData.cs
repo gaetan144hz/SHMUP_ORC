@@ -19,9 +19,10 @@ public class EnemyData : ScriptableObject
     public float speed;
 
     public float currentbulletSpeed;
-    private float bulletSpeed;
 
+    private float bulletSpeed;
     public int bulletDamage;
+    public float fireRate;
 
     public int healIncrease;
 
