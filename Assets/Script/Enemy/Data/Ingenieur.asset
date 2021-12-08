@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: 
   Description: rapide avec tourelle 2t max
-  EnemyModel: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
-  currentHealth: 0
+  EnemyModel: {fileID: 0}
+  currentHealth: 150
   startHealth: 150
   speed: 1
   currentbulletSpeed: 0
