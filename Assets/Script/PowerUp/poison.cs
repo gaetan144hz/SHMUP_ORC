@@ -23,7 +23,7 @@ public class poison : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = collision.gameObject;
+        //GameObject player = collision.gameObject;
         //playerScript = player.GetComponent<PlayerHealth>();
 
         if (collision.tag == "Player")
