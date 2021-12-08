@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Weapon : MonoBehaviour
+public class PrincipalWeapon : MonoBehaviour
 {
     [SerializeField] Transform firePoint;
     [SerializeField] Transform firePointDroite;

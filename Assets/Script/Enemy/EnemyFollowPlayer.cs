@@ -14,8 +14,9 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     private float nextFireTime;
 
-    [SerializeField] float fireRate = 1f;
-    [SerializeField] int damage = 10;
+    //[SerializeField] float fireRate = 1f;
+    //[SerializeField] int damage = 10;
+
     public GameObject enemyBullet;
     public GameObject bulletParent;
     private Transform player;
@@ -41,7 +42,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
         {
             Instantiate(enemyBullet,bulletParent.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
+            nextFireTime = Time.time + data.fireRate;
         }
     }
 
@@ -61,7 +62,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         {
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(data.bulletDamage);
             }
         }
     }
