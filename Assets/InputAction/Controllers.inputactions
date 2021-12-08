@@ -20,6 +20,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "pause",
+                    "type": "Button",
+                    "id": "a75d895c-c06e-4245-b224-e93cb7754063",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "resume/play",
+                    "type": "Button",
+                    "id": "9aeaa1a4-0e8d-4d79-ae2a-3b6b2133a93a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "stopMusic",
+                    "type": "Button",
+                    "id": "f80c4f7f-c632-4ee6-a6d7-d5188f4fb133",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "playMusic",
+                    "type": "Button",
+                    "id": "982af7ac-2c26-4247-9d6a-bb2fa01d8e45",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -121,34 +153,10 @@
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "GameManager",
-            "id": "f9c72090-6df3-4b04-ad90-be0c36224578",
-            "actions": [
-                {
-                    "name": "pause",
-                    "type": "Button",
-                    "id": "642b0f26-bb2f-4ae7-a4b1-e4dc99ab73d0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 },
                 {
-                    "name": "resume/play",
-                    "type": "Button",
-                    "id": "74cf2ad1-8e24-4dc4-8300-ce3e9fdda2f6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
                     "name": "",
-                    "id": "4cc4089f-5668-4b1e-9679-9b2671adea8f",
+                    "id": "22fcb377-4eb7-4f09-8796-c5c41959db5c",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
@@ -159,7 +167,7 @@
                 },
                 {
                     "name": "",
-                    "id": "aa1e9f8f-cc20-4645-9cbd-8a5984b47728",
+                    "id": "976aeddd-7448-460a-b1c7-956be8f7c4e0",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
@@ -167,50 +175,26 @@
                     "action": "resume/play",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "audio",
-            "id": "697baa78-8824-492d-89bc-2fad87984119",
-            "actions": [
-                {
-                    "name": "play",
-                    "type": "Button",
-                    "id": "80336bc0-8a38-4849-ba7d-afbd3ddc3ba9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 },
                 {
-                    "name": "stop",
-                    "type": "Button",
-                    "id": "1f9624db-e907-4b5b-a165-8ef327ff1994",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
                     "name": "",
-                    "id": "578b3300-fd61-47e4-9d51-e981be21faad",
-                    "path": "<Keyboard>/numpad7",
+                    "id": "c650273d-b315-48e1-a94b-b075f32fb4dc",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "play",
+                    "action": "stopMusic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "87a15f6b-82bd-4359-a462-fb8c59f00a66",
-                    "path": "<Keyboard>/numpad1",
+                    "id": "d543e532-1a39-447c-81c9-2afa000c214b",
+                    "path": "<Keyboard>/numpad7",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "stop",
+                    "action": "playMusic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

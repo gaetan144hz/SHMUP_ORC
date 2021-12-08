@@ -31,7 +31,8 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(GetComponent<PlayerMovement>());
+        Destroy(GetComponent<PrincipalWeapon>());
     }
 }
 

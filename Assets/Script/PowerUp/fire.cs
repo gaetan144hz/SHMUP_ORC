@@ -15,10 +15,6 @@ public class fire : MonoBehaviour
 
     [SerializeField] int increase = 1;
 
-    PlayerHealth playerScript;
-
-    PlayerMovement playerMovement;
-
     Coroutine coroutineFire;
 
     private Rigidbody2D rb;
@@ -43,7 +39,6 @@ public class fire : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopCoroutine(coroutineFire);
-        playerMovement.speed = 8;
     }
 
     IEnumerator MakeFire()

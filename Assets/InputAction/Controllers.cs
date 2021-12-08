@@ -33,6 +33,38 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a75d895c-c06e-4245-b224-e93cb7754063"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""resume/play"",
+                    ""type"": ""Button"",
+                    ""id"": ""9aeaa1a4-0e8d-4d79-ae2a-3b6b2133a93a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""stopMusic"",
+                    ""type"": ""Button"",
+                    ""id"": ""f80c4f7f-c632-4ee6-a6d7-d5188f4fb133"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""playMusic"",
+                    ""type"": ""Button"",
+                    ""id"": ""982af7ac-2c26-4247-9d6a-bb2fa01d8e45"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -134,34 +166,10 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""GameManager"",
-            ""id"": ""f9c72090-6df3-4b04-ad90-be0c36224578"",
-            ""actions"": [
-                {
-                    ""name"": ""pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""642b0f26-bb2f-4ae7-a4b1-e4dc99ab73d0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 },
                 {
-                    ""name"": ""resume/play"",
-                    ""type"": ""Button"",
-                    ""id"": ""74cf2ad1-8e24-4dc4-8300-ce3e9fdda2f6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
                     ""name"": """",
-                    ""id"": ""4cc4089f-5668-4b1e-9679-9b2671adea8f"",
+                    ""id"": ""22fcb377-4eb7-4f09-8796-c5c41959db5c"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -172,7 +180,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""aa1e9f8f-cc20-4645-9cbd-8a5984b47728"",
+                    ""id"": ""976aeddd-7448-460a-b1c7-956be8f7c4e0"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -180,50 +188,26 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""resume/play"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""audio"",
-            ""id"": ""697baa78-8824-492d-89bc-2fad87984119"",
-            ""actions"": [
-                {
-                    ""name"": ""play"",
-                    ""type"": ""Button"",
-                    ""id"": ""80336bc0-8a38-4849-ba7d-afbd3ddc3ba9"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 },
                 {
-                    ""name"": ""stop"",
-                    ""type"": ""Button"",
-                    ""id"": ""1f9624db-e907-4b5b-a165-8ef327ff1994"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
                     ""name"": """",
-                    ""id"": ""578b3300-fd61-47e4-9d51-e981be21faad"",
-                    ""path"": ""<Keyboard>/numpad7"",
+                    ""id"": ""c650273d-b315-48e1-a94b-b075f32fb4dc"",
+                    ""path"": ""<Keyboard>/numpad1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""play"",
+                    ""action"": ""stopMusic"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""87a15f6b-82bd-4359-a462-fb8c59f00a66"",
-                    ""path"": ""<Keyboard>/numpad1"",
+                    ""id"": ""d543e532-1a39-447c-81c9-2afa000c214b"",
+                    ""path"": ""<Keyboard>/numpad7"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""stop"",
+                    ""action"": ""playMusic"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -236,14 +220,10 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player = asset.FindActionMap("player", throwIfNotFound: true);
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_shoot = m_player.FindAction("shoot", throwIfNotFound: true);
-        // GameManager
-        m_GameManager = asset.FindActionMap("GameManager", throwIfNotFound: true);
-        m_GameManager_pause = m_GameManager.FindAction("pause", throwIfNotFound: true);
-        m_GameManager_resumeplay = m_GameManager.FindAction("resume/play", throwIfNotFound: true);
-        // audio
-        m_audio = asset.FindActionMap("audio", throwIfNotFound: true);
-        m_audio_play = m_audio.FindAction("play", throwIfNotFound: true);
-        m_audio_stop = m_audio.FindAction("stop", throwIfNotFound: true);
+        m_player_pause = m_player.FindAction("pause", throwIfNotFound: true);
+        m_player_resumeplay = m_player.FindAction("resume/play", throwIfNotFound: true);
+        m_player_stopMusic = m_player.FindAction("stopMusic", throwIfNotFound: true);
+        m_player_playMusic = m_player.FindAction("playMusic", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,12 +275,20 @@ public class @Controllers : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_shoot;
+    private readonly InputAction m_player_pause;
+    private readonly InputAction m_player_resumeplay;
+    private readonly InputAction m_player_stopMusic;
+    private readonly InputAction m_player_playMusic;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
         public PlayerActions(@Controllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @shoot => m_Wrapper.m_player_shoot;
+        public InputAction @pause => m_Wrapper.m_player_pause;
+        public InputAction @resumeplay => m_Wrapper.m_player_resumeplay;
+        public InputAction @stopMusic => m_Wrapper.m_player_stopMusic;
+        public InputAction @playMusic => m_Wrapper.m_player_playMusic;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -316,6 +304,18 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                @pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @resumeplay.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResumeplay;
+                @resumeplay.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResumeplay;
+                @resumeplay.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResumeplay;
+                @stopMusic.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
+                @stopMusic.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
+                @stopMusic.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
+                @playMusic.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
+                @playMusic.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
+                @playMusic.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -326,105 +326,29 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @shoot.started += instance.OnShoot;
                 @shoot.performed += instance.OnShoot;
                 @shoot.canceled += instance.OnShoot;
-            }
-        }
-    }
-    public PlayerActions @player => new PlayerActions(this);
-
-    // GameManager
-    private readonly InputActionMap m_GameManager;
-    private IGameManagerActions m_GameManagerActionsCallbackInterface;
-    private readonly InputAction m_GameManager_pause;
-    private readonly InputAction m_GameManager_resumeplay;
-    public struct GameManagerActions
-    {
-        private @Controllers m_Wrapper;
-        public GameManagerActions(@Controllers wrapper) { m_Wrapper = wrapper; }
-        public InputAction @pause => m_Wrapper.m_GameManager_pause;
-        public InputAction @resumeplay => m_Wrapper.m_GameManager_resumeplay;
-        public InputActionMap Get() { return m_Wrapper.m_GameManager; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GameManagerActions set) { return set.Get(); }
-        public void SetCallbacks(IGameManagerActions instance)
-        {
-            if (m_Wrapper.m_GameManagerActionsCallbackInterface != null)
-            {
-                @pause.started -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
-                @pause.performed -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
-                @pause.canceled -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnPause;
-                @resumeplay.started -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
-                @resumeplay.performed -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
-                @resumeplay.canceled -= m_Wrapper.m_GameManagerActionsCallbackInterface.OnResumeplay;
-            }
-            m_Wrapper.m_GameManagerActionsCallbackInterface = instance;
-            if (instance != null)
-            {
                 @pause.started += instance.OnPause;
                 @pause.performed += instance.OnPause;
                 @pause.canceled += instance.OnPause;
                 @resumeplay.started += instance.OnResumeplay;
                 @resumeplay.performed += instance.OnResumeplay;
                 @resumeplay.canceled += instance.OnResumeplay;
+                @stopMusic.started += instance.OnStopMusic;
+                @stopMusic.performed += instance.OnStopMusic;
+                @stopMusic.canceled += instance.OnStopMusic;
+                @playMusic.started += instance.OnPlayMusic;
+                @playMusic.performed += instance.OnPlayMusic;
+                @playMusic.canceled += instance.OnPlayMusic;
             }
         }
     }
-    public GameManagerActions @GameManager => new GameManagerActions(this);
-
-    // audio
-    private readonly InputActionMap m_audio;
-    private IAudioActions m_AudioActionsCallbackInterface;
-    private readonly InputAction m_audio_play;
-    private readonly InputAction m_audio_stop;
-    public struct AudioActions
-    {
-        private @Controllers m_Wrapper;
-        public AudioActions(@Controllers wrapper) { m_Wrapper = wrapper; }
-        public InputAction @play => m_Wrapper.m_audio_play;
-        public InputAction @stop => m_Wrapper.m_audio_stop;
-        public InputActionMap Get() { return m_Wrapper.m_audio; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(AudioActions set) { return set.Get(); }
-        public void SetCallbacks(IAudioActions instance)
-        {
-            if (m_Wrapper.m_AudioActionsCallbackInterface != null)
-            {
-                @play.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
-                @play.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
-                @play.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnPlay;
-                @stop.started -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
-                @stop.performed -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
-                @stop.canceled -= m_Wrapper.m_AudioActionsCallbackInterface.OnStop;
-            }
-            m_Wrapper.m_AudioActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @play.started += instance.OnPlay;
-                @play.performed += instance.OnPlay;
-                @play.canceled += instance.OnPlay;
-                @stop.started += instance.OnStop;
-                @stop.performed += instance.OnStop;
-                @stop.canceled += instance.OnStop;
-            }
-        }
-    }
-    public AudioActions @audio => new AudioActions(this);
+    public PlayerActions @player => new PlayerActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
-    }
-    public interface IGameManagerActions
-    {
         void OnPause(InputAction.CallbackContext context);
         void OnResumeplay(InputAction.CallbackContext context);
-    }
-    public interface IAudioActions
-    {
-        void OnPlay(InputAction.CallbackContext context);
-        void OnStop(InputAction.CallbackContext context);
+        void OnStopMusic(InputAction.CallbackContext context);
+        void OnPlayMusic(InputAction.CallbackContext context);
     }
 }
