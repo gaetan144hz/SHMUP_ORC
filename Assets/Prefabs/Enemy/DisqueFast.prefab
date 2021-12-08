@@ -97,10 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346dd1ceaac5b0248bb5f88483dcc4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisqueScore: 0
   disqueHealth: 25
   speed: 14
   damage: 25
   blade: {fileID: 6826387075835381327}
+  direction: {x: 0, y: 0}
 --- !u!50 &6826387075835381362
 Rigidbody2D:
   serializedVersion: 4
