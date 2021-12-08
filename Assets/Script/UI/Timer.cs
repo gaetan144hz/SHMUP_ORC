@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float currentTime = 0f;
-    [SerializeField] float startingTime = 0f;
+    public float currentTime;
+    [SerializeField] float startingTime;
 
     [SerializeField] TextMeshProUGUI countdownText;
 
@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        currentTime += 1 * Time.deltaTime;
+        currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
         if (currentTime == 5)
