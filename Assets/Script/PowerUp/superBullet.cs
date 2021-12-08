@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class superBullet : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
     Coroutine superWeapon;
 

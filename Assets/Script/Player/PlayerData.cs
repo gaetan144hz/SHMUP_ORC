@@ -6,9 +6,11 @@ public class PlayerData : ScriptableObject
     private void OnEnable()
     {
         currentHealth = startHealth;
+        speed = startSpeed;
     }
 
     public float speed;
+    public float startSpeed;
 
     public int startHealth;
     public int currentHealth;

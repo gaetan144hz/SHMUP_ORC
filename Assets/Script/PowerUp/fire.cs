@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class fire : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
     public float speed;
 

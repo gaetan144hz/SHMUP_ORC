@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class poison : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
     [SerializeField] int increase = 10;
 

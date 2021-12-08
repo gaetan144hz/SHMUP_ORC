@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeedPowerUp : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
     [SerializeField] float increase = 10f;
 
