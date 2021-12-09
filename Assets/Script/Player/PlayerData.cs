@@ -7,18 +7,24 @@ public class PlayerData : ScriptableObject
     {
         currentHealth = startHealth;
         speed = startSpeed;
+        bulletDamage = startBulletDamage;
+        bulletSpeed = startBulletSpeed;
     }
 
+    [Header("PLayer Movement")]
     public float speed;
-    public float startSpeed;
+    [HideInInspector] public float startSpeed;
 
+    [Header("Health")]
     public int startHealth;
-    public int currentHealth;
+    [HideInInspector] public int currentHealth;
 
-    public GameObject explosion;
-
+    [Header("Bullet Settings")]
     public int bulletDamage;
-    
-    public int bulletSpeed;
+    [HideInInspector] public int startBulletDamage;
+    [HideInInspector] public int bulletSpeed;
+    public int startBulletSpeed;
 
+    [Header("AnimationDeath")]
+    public GameObject explosion;
 }

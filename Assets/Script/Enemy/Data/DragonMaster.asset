@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: DragonMaster
   m_EditorClassIdentifier: 
   Enemy: DragonMaster
-  Description: sous boss, attack avec des minis dragons, colldown
   EnemyModel: {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
-  currentHealth: 0
-  startHealth: 150
+  Description: sous boss, attack avec des minis dragons, colldown
   speed: 0
-  currentbulletSpeed: 0
+  currentHealth: 150
+  startHealth: 150
+  bulletSpeed: 0
+  startBulletSpeed: 5
   bulletDamage: 0
+  startBulletDamage: 0
   fireRate: 10
   healIncrease: 0
   range: 0

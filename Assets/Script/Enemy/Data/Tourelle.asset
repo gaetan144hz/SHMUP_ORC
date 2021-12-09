@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Tourelle
   m_EditorClassIdentifier: 
   Enemy: Tourelle
+  EnemyModel: {fileID: 2441193465313363522, guid: 962f3078b1cb7bd40b45998c066082a0, type: 3}
   Description: 
-  EnemyModel: {fileID: 3324358679601129131, guid: 09f3f34cd4830b74a8ce81f18a57fafc, type: 3}
+  speed: 0
   currentHealth: 60
   startHealth: 60
-  speed: 0
-  currentbulletSpeed: 5
-  bulletDamage: 3
-  fireRate: 1
+  bulletSpeed: 4
+  startBulletSpeed: 4
+  bulletDamage: 1
+  startBulletDamage: 1
+  fireRate: 0.3
   healIncrease: 0
   range: 0
   shootingRange: 15

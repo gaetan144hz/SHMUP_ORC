@@ -19,9 +19,9 @@ public class PrincipalWeapon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void shoot(InputAction.CallbackContext context)
+    public void OnShoot(InputValue value)
     {
-        if (context.performed)
+        if (value.isPressed)
         {
             Shoot();
             return;

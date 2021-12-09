@@ -9,10 +9,11 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
 
     public GameObject gameOverUI;
-    //public GameObject deathEffect;
+
+    public PlayerMovement playerMovement;
 
     void Start()
-    {
+    {       
         healthBar.SetMaxHealth(datap.currentHealth);
     }
     public void TakeDamage(int enemyBullet)
@@ -24,13 +25,13 @@ public class PlayerHealth : MonoBehaviour
             Time.timeScale = 0f;
             Die();
         }
-
         healthBar.SetHealth(datap.currentHealth);
     }
 
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
+        PlayerMovement.playerList.Remove(playerMovement);
         Destroy(GetComponent<PlayerMovement>());
         Destroy(GetComponent<PrincipalWeapon>());
     }

@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Goblins
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: petit gobelin
   EnemyModel: {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
+  Description: petit gobelin
+  speed: 1
   currentHealth: 100
   startHealth: 100
-  speed: 0.1
-  currentbulletSpeed: 3
+  bulletSpeed: 3
+  startBulletSpeed: 3
   bulletDamage: 5
-  fireRate: 0.3
+  startBulletDamage: 5
+  fireRate: 0.5
   healIncrease: 0
   range: 15
   shootingRange: 15
