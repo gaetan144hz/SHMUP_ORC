@@ -60,11 +60,15 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             //score.scoreValue += 200;
         }
-
+        if(hitInfo.gameObject.tag == "skybarriere")
+        {
+            Instantiate(hit, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
         if(hitInfo.gameObject.tag == "plateforme")
         {
-            //Instantiate(hit, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Instantiate(hit, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
 }

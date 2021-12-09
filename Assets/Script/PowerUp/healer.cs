@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class healer : MonoBehaviour
 {
-     PlayerData datap;
+     public PlayerData datap;
 
     [SerializeField] int increase = 50;
 

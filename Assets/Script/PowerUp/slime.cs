@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class slime : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
     [SerializeField] int increase = 3;
 

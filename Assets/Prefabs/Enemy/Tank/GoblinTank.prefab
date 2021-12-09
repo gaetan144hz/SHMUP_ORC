@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 2572329373142976745}
   - component: {fileID: 2572329373142976742}
   - component: {fileID: 2572329373142976743}
-  - component: {fileID: 8992187200880663561}
   - component: {fileID: 2572329373142976747}
   - component: {fileID: 2572329373142976744}
   m_Layer: 0
@@ -130,22 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4ed3baa12e30a2a498356a22c3639c2f, type: 2}
-  fireRate: 1
-  damage: 20
+  explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
+  EnemyScore: 100
   enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
   bulletParent: {fileID: 2572329372805760763}
---- !u!114 &8992187200880663561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2572329373142976740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ad3ef69c5463b4a9221297ca11c063, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2572329373142976747
 Rigidbody2D:
   serializedVersion: 4
@@ -177,7 +164,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

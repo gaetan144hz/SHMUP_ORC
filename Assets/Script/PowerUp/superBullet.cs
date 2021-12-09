@@ -4,40 +4,21 @@ using UnityEngine;
 
 public class superBullet : MonoBehaviour
 {
-    PlayerData datap;
+    public PlayerData datap;
 
-    Coroutine superWeapon;
+    [SerializeField] int increase = 10;
 
-    public int increase;
-
-    private Rigidbody2D rb;
-
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
-    }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //GameObject player = collision.gameObject;
-        //playerScript = player.GetComponent<PlayerHealth>();
-
-        if (collision.gameObject.tag == "Player")
+        if (collision.tag == "Player")
         {
-            superWeapon = StartCoroutine(SuperShoot());
+            GameObject player = collision.gameObject;
 
-        }
-    }
-
-    IEnumerator SuperShoot()
-    {
-        while (true)
-        {
-            datap.bulletDamage = increase;
-            yield return new WaitForSeconds(10);
-            datap.bulletDamage = 10;
-            StopCoroutine(superWeapon);
+            if (datap)
+            {
+                datap.bulletDamage += increase;
+                Destroy(gameObject);
+            }
         }
     }
 }

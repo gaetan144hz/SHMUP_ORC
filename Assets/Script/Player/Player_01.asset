@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Player_01
   m_EditorClassIdentifier: 
   speed: 10
+  startSpeed: 10
   startHealth: 100
-  currentHealth: 80
+  currentHealth: 100
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
-  bulletDamage: 10
+  bulletDamage: 20
   bulletSpeed: 15

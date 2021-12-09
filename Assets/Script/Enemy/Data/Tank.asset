@@ -19,7 +19,7 @@ MonoBehaviour:
   startHealth: 200
   speed: 0
   currentbulletSpeed: 3
-  bulletDamage: 1
+  bulletDamage: 10
   fireRate: 2
   healIncrease: 0
   range: 0
