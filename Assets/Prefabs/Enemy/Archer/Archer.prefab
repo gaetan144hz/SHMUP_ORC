@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5924302721223800349}
   m_Layer: 0
   m_Name: Archer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,10 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
-  explosion: {fileID: 0}
+  explosion: {fileID: 4271312362133296787, guid: 03c1ac17960dbc541892aabe611523d4, type: 3}
   EnemyScore: 100
   enemyBullet: {fileID: 6981149121312585428, guid: 9ed3146154156f14c975658dedb8460c, type: 3}
   bulletParent: {fileID: 2647647480842136899}
+  playerList: []
 --- !u!60 &5924302721223800349
 PolygonCollider2D:
   m_ObjectHideFlags: 0
