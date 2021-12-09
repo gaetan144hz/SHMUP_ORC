@@ -392,8 +392,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6309468454909960890}
   - component: {fileID: 6309468454909960891}
-  - component: {fileID: 6309468454909960868}
   - component: {fileID: 6309468454909960869}
+  - component: {fileID: 3714470050940854725}
+  - component: {fileID: 6309468454909960868}
   - component: {fileID: 4812617269235284127}
   m_Layer: 0
   m_Name: DragonMaster
@@ -469,6 +470,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6309468454909960869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309468454909960870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0a24eba5fb7d245b971074da9a206f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 2a19aae0c9012134487ef61fd8a8e61d, type: 2}
+  healthBar: {fileID: 3837178668055789509}
+  explosion: {fileID: 4940616246933530902, guid: b88805c2daff97a4bb862df9c2d8afd4, type: 3}
+  EnemyScore: 100
+  enemyBullet: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
+  bulletParent: {fileID: 6309468453753526194}
+  playerList: []
+--- !u!114 &3714470050940854725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309468454909960870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rangeRight: 9
+  rangeLeft: -9
 --- !u!50 &6309468454909960868
 Rigidbody2D:
   serializedVersion: 4
@@ -490,25 +525,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6309468454909960869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6309468454909960870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0a24eba5fb7d245b971074da9a206f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 2a19aae0c9012134487ef61fd8a8e61d, type: 2}
-  healthBar: {fileID: 3837178668055789509}
-  explosion: {fileID: 4940616246933530902, guid: b88805c2daff97a4bb862df9c2d8afd4, type: 3}
-  EnemyScore: 100
-  enemyBullet: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
-  bulletParent: {fileID: 6309468453753526194}
-  playerList: []
 --- !u!60 &4812617269235284127
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -534,30 +550,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4375, y: -0.265625}
-      - {x: 0.44140625, y: -0.2578125}
-      - {x: 0.44140625, y: 0.2578125}
-      - {x: 0.4375, y: 0.265625}
-      - {x: 0.390625, y: 0.29296875}
-      - {x: 0.36328125, y: 0.30859375}
-      - {x: 0.26171875, y: 0.3671875}
-      - {x: 0.21484375, y: 0.39453125}
-      - {x: 0.16015625, y: 0.42578125}
-      - {x: 0.05859375, y: 0.484375}
-      - {x: 0.02734375, y: 0.5}
-      - {x: -0.03125, y: 0.5}
-      - {x: -0.05859375, y: 0.484375}
-      - {x: -0.1875, y: 0.41015625}
-      - {x: -0.36328125, y: 0.30859375}
-      - {x: -0.4375, y: 0.265625}
-      - {x: -0.44140625, y: 0.2578125}
+    - - {x: 0.45054102, y: -0.26040113}
+      - {x: 0.45037746, y: 0.25687575}
+      - {x: -0.00880909, y: 0.51036584}
+      - {x: -0.44306755, y: 0.26162595}
       - {x: -0.44140625, y: -0.2578125}
       - {x: -0.4375, y: -0.265625}
-      - {x: -0.31640625, y: -0.3359375}
-      - {x: -0.26171875, y: -0.3671875}
-      - {x: -0.21484375, y: -0.39453125}
-      - {x: -0.11328125, y: -0.453125}
-      - {x: -0.03125, y: -0.5}
-      - {x: 0.03125, y: -0.5}
-      - {x: 0.0859375, y: -0.46875}
-      - {x: 0.2421875, y: -0.37890625}
+      - {x: -0.008556366, y: -0.5194514}
