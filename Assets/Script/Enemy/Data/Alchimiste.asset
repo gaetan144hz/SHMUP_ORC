@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Alchimiste
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: gros colldown
   EnemyModel: {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
-  currentHealth: 80
-  startHealth: 100
+  Description: gros colldown
   speed: 0
-  currentbulletSpeed: 3
+  currentHealth: 100
+  startHealth: 100
+  bulletSpeed: 0
+  startBulletSpeed: 3
   bulletDamage: 0
+  startBulletDamage: 0
   fireRate: 10
   healIncrease: 0
   range: 0

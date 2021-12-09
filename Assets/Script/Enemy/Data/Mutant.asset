@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Mutant
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: "balance de la gel\xE9 qui ralenti"
   EnemyModel: {fileID: 0}
-  currentHealth: 0
-  startHealth: 200
+  Description: "balance de la gel\xE9 qui ralenti"
   speed: 0
-  currentbulletSpeed: 0
+  currentHealth: 200
+  startHealth: 200
+  bulletSpeed: 0
+  startBulletSpeed: 3
   bulletDamage: 0
+  startBulletDamage: 0
   fireRate: 1
   healIncrease: 0
   range: 0

@@ -26,7 +26,8 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //rb.gravityScale = 0;
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
         //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }

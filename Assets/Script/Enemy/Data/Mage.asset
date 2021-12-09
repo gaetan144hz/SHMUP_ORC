@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Mage
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: Heal les ennemis
   EnemyModel: {fileID: 9221972125930786076, guid: ee40498bc1496f240afb664eea33f70b, type: 3}
+  Description: Heal les ennemis
+  speed: 0
   currentHealth: 70
   startHealth: 70
-  speed: 0
-  currentbulletSpeed: 0
-  bulletDamage: 1
+  bulletSpeed: 0
+  startBulletSpeed: 3
+  bulletDamage: 0
+  startBulletDamage: 0
   fireRate: 1
   healIncrease: 10
   range: 0

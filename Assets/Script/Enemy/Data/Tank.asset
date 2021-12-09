@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Tank
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: 
   EnemyModel: {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
+  Description: 
+  speed: 0
   currentHealth: 200
   startHealth: 200
-  speed: 0
-  currentbulletSpeed: 3
-  bulletDamage: 10
+  bulletSpeed: 0
+  startBulletSpeed: 2
+  bulletDamage: 0
+  startBulletDamage: 15
   fireRate: 2
   healIncrease: 0
   range: 0
