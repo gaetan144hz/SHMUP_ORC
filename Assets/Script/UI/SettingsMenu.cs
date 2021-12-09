@@ -11,6 +11,8 @@ public class SettingsMenu : MonoBehaviour
 
     public Dropdown resolutionDropdown;
 
+    public GameObject fps;
+
     Resolution[] resolutions;
 
     private void Start()
@@ -58,5 +60,11 @@ public class SettingsMenu : MonoBehaviour
     {
         Debug.Log(isFullscreen);
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void ShowFPS(bool isShow)
+    {
+        gameObject.SetActive(isShow);
+        Debug.Log(isShow);
     }
 }

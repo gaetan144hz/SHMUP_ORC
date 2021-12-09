@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
+        currentTime += 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
         if (currentTime == 5)

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 611315204015682665}
   - component: {fileID: 3460990415734724479}
   - component: {fileID: 5905986223753121142}
-  - component: {fileID: 3345646474117936343}
   m_Layer: 0
   m_Name: Tourelle
   m_TagString: Enemy
@@ -100,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b8c4d6aaeaf2f7f4b88ae36f2b22113e, type: 2}
+  healthBar: {fileID: 0}
   explosion: {fileID: 6699515664324340717, guid: 63b7e0847131c7242919cdc62905adb4, type: 3}
   EnemyScore: 100
   enemyBullet: {fileID: 9132094279296641494, guid: a660c05f4ae1f674c8bb8e6ccf66d0dc, type: 3}
@@ -137,32 +137,6 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!61 &3345646474117936343
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2441193465313363522}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

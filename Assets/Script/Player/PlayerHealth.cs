@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverUI;
 
     public PlayerMovement playerMovement;
-    //public GameObject deathEffect;
 
     void Start()
     {       
@@ -26,7 +25,6 @@ public class PlayerHealth : MonoBehaviour
             Time.timeScale = 0f;
             Die();
         }
-
         healthBar.SetHealth(datap.currentHealth);
     }
 

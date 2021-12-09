@@ -269,17 +269,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""isOR"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Mouse"",
-            ""bindingGroup"": ""Mouse"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
         }
     ]
 }");
@@ -425,15 +414,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         {
             if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
             return asset.controlSchemes[m_GamepadSchemeIndex];
-        }
-    }
-    private int m_MouseSchemeIndex = -1;
-    public InputControlScheme MouseScheme
-    {
-        get
-        {
-            if (m_MouseSchemeIndex == -1) m_MouseSchemeIndex = asset.FindControlSchemeIndex("Mouse");
-            return asset.controlSchemes[m_MouseSchemeIndex];
         }
     }
     public interface IPlayerActions
