@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SHMUP_PROTO.unity
     guid: e926b97083d727a449e9db9003d18c44
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 00cd80dc0a519284ead65a167315624f, type: 2}

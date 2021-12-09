@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class healer : MonoBehaviour
 {
-     public PlayerData datap;
+    public PlayerData datap;
 
     [SerializeField] int increase = 50;
 
@@ -16,7 +16,16 @@ public class healer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            datap.currentHealth += increase;
+            Destroy(gameObject);
+        }
+    }
+}
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player") 
