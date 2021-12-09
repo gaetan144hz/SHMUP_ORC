@@ -151,6 +151,7 @@ MonoBehaviour:
   EnemyScore: 100
   enemyBullet: {fileID: 2441193465313363522, guid: 962f3078b1cb7bd40b45998c066082a0, type: 3}
   bulletParent: {fileID: 6244103164689674613}
+  playerList: []
 --- !u!114 &3048030552276065324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  rangeRight: 5
-  rangeLeft: -5
+  rangeRight: 13
+  rangeLeft: -13
 --- !u!1 &6244103164689674613
 GameObject:
   m_ObjectHideFlags: 0

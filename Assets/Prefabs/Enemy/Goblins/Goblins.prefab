@@ -103,6 +103,7 @@ MonoBehaviour:
   EnemyScore: 100
   enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
   bulletParent: {fileID: 8745041235908337779}
+  playerList: []
 --- !u!70 &8745041235676749274
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,7 +114,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.015836358}
