@@ -49,7 +49,7 @@ public class GameManagerScene : MonoBehaviour
         Debug.Log("Jeu Quitté");
     }
 
-    public void PauseGame(InputAction.CallbackContext ctx)
+    public void OnResumeplay(InputValue value)
     {
         if (GameIsPaused)
         {

@@ -11,12 +11,12 @@ public class SoundManager : MonoBehaviour
         m_MyAudioSource.Stop();
     }
 
-    public void play(InputAction.CallbackContext ctx)
+    public void OnPlayMusic(InputValue value)
     {
         m_MyAudioSource.Play();
     }
 
-    public void stop(InputAction.CallbackContext ctx)
+    public void OnStopMusic(InputValue value)
     {
         m_MyAudioSource.Pause();
     }

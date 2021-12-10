@@ -16,13 +16,13 @@ MonoBehaviour:
   EnemyModel: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   Description: rapide avec tourelle 2t max
   speed: 5
-  currentHealth: 150
+  currentHealth: 0
   startHealth: 150
   bulletSpeed: 0
   startBulletSpeed: 0
   bulletDamage: 0
   startBulletDamage: 0
-  fireRate: 0.5
+  fireRate: 5
   healIncrease: 10
   range: 0
   shootingRange: 15
