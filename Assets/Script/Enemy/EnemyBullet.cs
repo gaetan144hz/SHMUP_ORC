@@ -6,6 +6,9 @@ public class EnemyBullet : MonoBehaviour
 {
     public EnemyData data;
 
+    public GameObject hitPrefab;
+    public GameObject lastHit;
+
     GameObject target;
 
     public Rigidbody2D rb;
@@ -22,7 +25,7 @@ public class EnemyBullet : MonoBehaviour
         Destroy(this.gameObject, 5);
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)
+    public void OnTriggerEnter2D(Collider2D hitInfo)
     {
         PlayerHealth playerHealth = hitInfo.transform.GetComponent<PlayerHealth>();
 
@@ -31,5 +34,21 @@ public class EnemyBullet : MonoBehaviour
             playerHealth.TakeDamage(data.bulletDamage);
             Destroy(gameObject);
         }
+        if (hitInfo.gameObject.tag == "skybarriere")
+        {
+            hitSpawn();
+            Destroy(this.gameObject);
+        }
+        if (hitInfo.gameObject.tag == "plateforme")
+        {
+            hitSpawn();
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void hitSpawn()
+    {
+        lastHit = Instantiate(hitPrefab, transform.position, Quaternion.identity);
+        Destroy(lastHit, 1f);
     }
 }

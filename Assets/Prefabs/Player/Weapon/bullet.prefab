@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  hit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  hitPrefab: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  lastHit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
   rb: {fileID: -5077753748412367215}
 --- !u!50 &-5077753748412367215
 Rigidbody2D:
