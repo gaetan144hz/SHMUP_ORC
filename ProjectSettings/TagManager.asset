@@ -10,6 +10,7 @@ TagManager:
   - Mage
   - Disque
   - plateforme
+  - DeathZone
   layers:
   - Default
   - TransparentFX

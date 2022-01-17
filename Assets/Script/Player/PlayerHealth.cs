@@ -28,6 +28,17 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(datap.currentHealth);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "DeathZone")
+        {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+            Die();
+        }
+        healthBar.SetHealth(datap.currentHealth);
+    }
+
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
