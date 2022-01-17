@@ -6,10 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 
 public class fire : MonoBehaviour
-{
+{ 
     public PlayerData datap;
-
-    public float speed;
 
     public GameObject target;
 
@@ -23,7 +21,6 @@ public class fire : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
         rb.gravityScale = 0;
     }
 
@@ -47,10 +44,17 @@ public class fire : MonoBehaviour
         while (true)
         {
             datap.currentHealth -= increase++;
-            yield return new WaitForSeconds(1);
-            //yield return null;
+            yield return new WaitForSeconds(1);   
         }
-        
+    }
+
+    IEnumerator FireDestroy()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10);
+            Destroy(this.gameObject);
+        }
     }
 
 }

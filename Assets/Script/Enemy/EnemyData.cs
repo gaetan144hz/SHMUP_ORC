@@ -16,6 +16,7 @@ public class EnemyData : ScriptableObject
     public GameObject EnemyModel;
     [TextArea]
     public string Description;
+    public int Score;
 
     [Header("Enemy Movement")]
     [HideInInspector] public float currentSpeedMovement;
