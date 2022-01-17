@@ -15,10 +15,11 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 0}
   Description: "balance de la gel\xE9 qui ralenti"
-  speed: 0
+  currentSpeedMovement: 0.5
+  startSpeedMovement: 0.5
   currentHealth: 200
   startHealth: 200
-  bulletSpeed: 0
+  bulletSpeed: 3
   startBulletSpeed: 3
   bulletDamage: 0
   startBulletDamage: 0

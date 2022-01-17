@@ -6,37 +6,31 @@ public class BossSpawner : MonoBehaviour
 {
     public Timer time;
 
-    public Transform[] spawnPoints;
-    public GameObject[] enemyPrefabs;
+    public GameObject bossPrefabs;
+    private bool bossSpawned;
 
-    [SerializeField] int startWaitingSecond;
-    [SerializeField] int waitingSecond;
-
-    Coroutine coroutineSpawn;
+    public Transform bossSpawnPoint;
 
     private void Start()
     {
-        coroutineSpawn = StartCoroutine(Spawn());
+       time = this.GetComponent<Timer>();
+    }
+
+    private void Update()
+    {
+        if (!bossSpawned) // ! inverse le booleen
+        {
+            spawn();
+        }      
     }
 
     public void spawn()
     {
-        if (time.currentTime == 60)
+        if (time.currentTime >= 60f)
         {
-            int randEnemy = Random.Range(0, enemyPrefabs.Length);
-            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+            bossSpawned = true;
+            Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);
+            Destroy(this);
         }       
-    }
-
-    IEnumerator Spawn()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(startWaitingSecond);
-            spawn();
-            yield return new WaitForSeconds(waitingSecond);
-        }
     }
 }

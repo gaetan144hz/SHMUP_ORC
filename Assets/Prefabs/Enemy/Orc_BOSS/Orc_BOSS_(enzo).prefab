@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: Orc_BOSS_(enzo)
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -33,8 +33,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 3}
   m_Children:
   - {fileID: 1405351764310200366}
-  - {fileID: 1404511805962807138}
   - {fileID: 492364778598148776}
+  - {fileID: 1404511805962807138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
   healthBar: {fileID: 8827138564293951634}
   explosion: {fileID: 7451577467745133327, guid: bdd50dc6e42b04146b1110171c398bad, type: 3}
-  BossScore: 500
+  BossScore: 854564
   enemyBullet: {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
   bulletParent: {fileID: 1405351764310200364}
   bulletParent2: {fileID: 7845987600335875881}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
   rangeRight: 7
   rangeLeft: -7
 --- !u!50 &1405351762913005662
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1405351764310200366}
   - component: {fileID: 7703165351471687059}
   m_Layer: 0
-  m_Name: FirePoint
+  m_Name: FirePoint1
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ RectTransform:
   m_Children:
   - {fileID: 1406477875600671058}
   m_Father: {fileID: 1405351762913005656}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 8827138564293951634}
   - component: {fileID: 847126240203914214}
   m_Layer: 5
-  m_Name: GoblinsHealthBar
+  m_Name: EnzoHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,5 +595,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405351762913005656}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -35,7 +35,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2572329372805760762}
   m_Layer: 0
-  m_Name: firePoint
+  m_Name: TankFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -148,12 +148,13 @@ GameObject:
   - component: {fileID: 2572329373142976745}
   - component: {fileID: 2572329373142976742}
   - component: {fileID: 2572329373142976743}
+  - component: {fileID: 7207205614913576959}
   - component: {fileID: 2572329373142976747}
   - component: {fileID: 2572329373142976744}
   m_Layer: 0
   m_Name: GoblinTank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -239,10 +240,25 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 4ed3baa12e30a2a498356a22c3639c2f, type: 2}
   healthBar: {fileID: 4775624471845222539}
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
-  EnemyScore: 100
+  EnemyScore: 200
   enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
   bulletParent: {fileID: 2572329372805760763}
   playerList: []
+--- !u!114 &7207205614913576959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572329373142976740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4ed3baa12e30a2a498356a22c3639c2f, type: 2}
+  rangeRight: 7
+  rangeLeft: -7
 --- !u!50 &2572329373142976747
 Rigidbody2D:
   serializedVersion: 4
@@ -251,7 +267,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2572329373142976740}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -403,7 +419,7 @@ GameObject:
   - component: {fileID: 4775624471845222539}
   - component: {fileID: 6397065622704227852}
   m_Layer: 5
-  m_Name: GoblinsHealthBar
+  m_Name: TankHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

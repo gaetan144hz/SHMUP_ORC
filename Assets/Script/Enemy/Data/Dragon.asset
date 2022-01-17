@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Dragon
   m_EditorClassIdentifier: 
   Enemy: 
-  Description: 
   EnemyModel: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
+  Description: 
+  currentSpeedMovement: 0
+  startSpeedMovement: 0
   currentHealth: 75
   startHealth: 75
-  speed: 1
-  currentbulletSpeed: 2
-  bulletDamage: 1
+  bulletSpeed: 0
+  startBulletSpeed: 0
+  bulletDamage: 0
+  startBulletDamage: 0
   fireRate: 20
   healIncrease: 10
   range: 0

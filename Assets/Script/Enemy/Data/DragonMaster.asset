@@ -15,10 +15,11 @@ MonoBehaviour:
   Enemy: DragonMaster
   EnemyModel: {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   Description: sous boss, attack avec des minis dragons, colldown
-  speed: 0
+  currentSpeedMovement: 0
+  startSpeedMovement: 0.4
   currentHealth: 150
   startHealth: 150
-  bulletSpeed: 0
+  bulletSpeed: 5
   startBulletSpeed: 5
   bulletDamage: 0
   startBulletDamage: 0

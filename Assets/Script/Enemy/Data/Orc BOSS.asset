@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Orc BOSS
   m_EditorClassIdentifier: 
   Enemy: Orc
-  EnemyModel: {fileID: 0}
+  EnemyModel: {fileID: 1405351762913005651, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
   Description: BOSS
-  speed: 0
-  currentHealth: 1000
-  startHealth: 1000
-  bulletSpeed: 0
+  currentSpeedMovement: 0
+  startSpeedMovement: 1
+  currentHealth: 1500
+  startHealth: 1500
+  bulletSpeed: 4
   startBulletSpeed: 4
-  bulletDamage: 0
+  bulletDamage: 10
   startBulletDamage: 10
   fireRate: 2
   healIncrease: 0

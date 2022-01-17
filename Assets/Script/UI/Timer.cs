@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.InputSystem;
+using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
@@ -12,7 +9,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI countdownText;
 
-    void Start()
+    void Awake()
     {
         currentTime = startingTime;
     }
@@ -21,12 +18,6 @@ public class Timer : MonoBehaviour
     {
         currentTime += 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
-
-        if (currentTime == 5)
-        {
-            currentTime = 0;
-            Time.timeScale = 0f;
-            countdownText.color = Color.red;
-        }
     }
+    
 }
