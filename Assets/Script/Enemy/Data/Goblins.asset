@@ -15,14 +15,15 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
   Description: petit gobelin
-  speed: 1
+  currentSpeedMovement: 0
+  startSpeedMovement: 0.5
   currentHealth: 100
   startHealth: 100
   bulletSpeed: 3
   startBulletSpeed: 3
   bulletDamage: 5
   startBulletDamage: 5
-  fireRate: 0.5
+  fireRate: 0.7
   healIncrease: 0
   range: 15
   shootingRange: 15

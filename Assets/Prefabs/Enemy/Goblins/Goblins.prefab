@@ -35,7 +35,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6039677663660212000}
   - component: {fileID: 7222724078819913523}
   m_Layer: 0
-  m_Name: HealthCanvas
+  m_Name: EnemyHealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 2515818500961963475}
   - component: {fileID: 5025583239720936283}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: GoblinsHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,12 +363,13 @@ GameObject:
   - component: {fileID: 8745041235676749277}
   - component: {fileID: 8745041235676749276}
   - component: {fileID: 8745041235676749278}
+  - component: {fileID: 5431377427111105237}
   - component: {fileID: 8745041235676749274}
   - component: {fileID: 5262262207201644745}
   m_Layer: 0
   m_Name: Goblins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -458,6 +459,21 @@ MonoBehaviour:
   enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
   bulletParent: {fileID: 8745041235908337779}
   playerList: []
+--- !u!114 &5431377427111105237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745041235676749273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: bf31ed7e4ae07954389f73b3190a60b5, type: 2}
+  rangeRight: -3
+  rangeLeft: 3.65
 --- !u!70 &8745041235676749274
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

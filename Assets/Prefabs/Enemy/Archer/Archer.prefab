@@ -35,7 +35,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -147,13 +147,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2647647482063053803}
   - component: {fileID: 2647647482063053800}
-  - component: {fileID: 2647647482063053801}
   - component: {fileID: 2647647482063053806}
+  - component: {fileID: 6552985913213346757}
+  - component: {fileID: 2647647482063053801}
   - component: {fileID: 5924302721223800349}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -224,27 +225,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2647647482063053801
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2647647482063053804}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &2647647482063053806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,10 +240,46 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
   healthBar: {fileID: 5313695336406884829}
   explosion: {fileID: 4271312362133296787, guid: 03c1ac17960dbc541892aabe611523d4, type: 3}
-  EnemyScore: 100
+  EnemyScore: 150
   enemyBullet: {fileID: 6981149121312585428, guid: 9ed3146154156f14c975658dedb8460c, type: 3}
   bulletParent: {fileID: 2647647480842136899}
   playerList: []
+--- !u!114 &6552985913213346757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647647482063053804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
+  rangeRight: 4
+  rangeLeft: -4
+--- !u!50 &2647647482063053801
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647647482063053804}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!60 &5924302721223800349
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -408,7 +424,7 @@ GameObject:
   - component: {fileID: 5313695336406884829}
   - component: {fileID: 2903280606087211532}
   m_Layer: 5
-  m_Name: GoblinsHealthBar
+  m_Name: ArcherHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

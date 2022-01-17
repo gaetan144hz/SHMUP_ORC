@@ -15,10 +15,11 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
   Description: gros colldown
-  speed: 0
+  currentSpeedMovement: 0
+  startSpeedMovement: 0.7
   currentHealth: 100
   startHealth: 100
-  bulletSpeed: 0
+  bulletSpeed: 3
   startBulletSpeed: 3
   bulletDamage: 0
   startBulletDamage: 0

@@ -369,7 +369,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ingenieur
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -502,7 +502,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 588074bb03731e64391d4ac03dee0f10, type: 2}
   healthBar: {fileID: 3265689835579081968}
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
-  EnemyScore: 100
+  EnemyScore: 250
   enemyBullet: {fileID: 7592566264066918321, guid: a8359f3a04cd0624a8450d28951d1958, type: 3}
   bulletParent: {fileID: 6244103164689674613}
   playerList: []
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  data: {fileID: 11400000, guid: 588074bb03731e64391d4ac03dee0f10, type: 2}
   rangeRight: 13
   rangeLeft: -13
 --- !u!1 &6244103164689674613
@@ -545,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6244103164689674613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.39, z: 0}
+  m_LocalPosition: {x: 0, y: -1.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6244103163788977805}

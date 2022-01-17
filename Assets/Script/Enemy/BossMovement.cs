@@ -37,7 +37,7 @@ public class BossMovement : MonoBehaviour
             float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {

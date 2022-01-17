@@ -15,10 +15,11 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 9221972125930786076, guid: ee40498bc1496f240afb664eea33f70b, type: 3}
   Description: Heal les ennemis
-  speed: 0
+  currentSpeedMovement: 0
+  startSpeedMovement: 0.7
   currentHealth: 70
   startHealth: 70
-  bulletSpeed: 0
+  bulletSpeed: 3
   startBulletSpeed: 3
   bulletDamage: 0
   startBulletDamage: 0

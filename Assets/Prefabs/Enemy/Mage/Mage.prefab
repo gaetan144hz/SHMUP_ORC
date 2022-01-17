@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: HealFirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -65,7 +65,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1109490202028204185}
   - component: {fileID: 529326840936392083}
   m_Layer: 5
-  m_Name: GoblinsHealthBar
+  m_Name: MageHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,13 +392,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4027311272883783668}
   - component: {fileID: 8917303142875540991}
+  - component: {fileID: 797769026872179890}
+  - component: {fileID: 2510982591209325625}
   - component: {fileID: 4704902016387944718}
   - component: {fileID: 3608113848786597381}
-  - component: {fileID: 797769026872179890}
   m_Layer: 0
   m_Name: Mage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Mage
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -469,6 +470,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &797769026872179890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221972125930786076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4e96a5236fc75438ddb23631efd6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: bc693aa856f306e4981e19b5475701c8, type: 2}
+  healthBar: {fileID: 0}
+  explosion: {fileID: 4057173624688721646, guid: a49cf91c8d4715a40aae6824d102b42f, type: 3}
+  MageScore: 75
+  speed: 1.5
+  fireRate: 1
+  enemyBullet: {fileID: 2024379208871035764, guid: 91938c5e55e88084b9ccacad08e4976c, type: 3}
+  bulletParent: {fileID: 3272891980177971676}
+--- !u!114 &2510982591209325625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221972125930786076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: bc693aa856f306e4981e19b5475701c8, type: 2}
+  rangeRight: 5
+  rangeLeft: -5
 --- !u!50 &4704902016387944718
 Rigidbody2D:
   serializedVersion: 4
@@ -477,7 +513,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9221972125930786076}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -506,22 +542,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &797769026872179890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221972125930786076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec4e96a5236fc75438ddb23631efd6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bc693aa856f306e4981e19b5475701c8, type: 2}
-  explosion: {fileID: 4057173624688721646, guid: a49cf91c8d4715a40aae6824d102b42f, type: 3}
-  MageScore: 200
-  speed: 1.5
-  fireRate: 1
-  enemyBullet: {fileID: 2024379208871035764, guid: 91938c5e55e88084b9ccacad08e4976c, type: 3}
-  bulletParent: {fileID: 3272891980177971676}

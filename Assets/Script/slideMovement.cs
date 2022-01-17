@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SlideMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] float speed;
+
     private bool moveRight;
+
     [SerializeField] private float rangeRight;
     [SerializeField] private float rangeLeft;
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 2f;
+        //moveSpeed = 2f;
         moveRight = true;
     }
 
@@ -30,11 +32,11 @@ public class SlideMovement : MonoBehaviour
 
         if (moveRight)
         {
-            transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
         }
         else
         {
-            transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
         }
     }
 }

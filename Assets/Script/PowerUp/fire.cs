@@ -36,6 +36,7 @@ public class fire : MonoBehaviour
             coroutineFire = StartCoroutine(MakeFire());
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopCoroutine(coroutineFire);
@@ -47,7 +48,9 @@ public class fire : MonoBehaviour
         {
             datap.currentHealth -= increase++;
             yield return new WaitForSeconds(1);
+            //yield return null;
         }
+        
     }
 
 }

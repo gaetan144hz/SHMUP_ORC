@@ -8,6 +8,7 @@ public class EnemyData : ScriptableObject
         currentHealth = startHealth;
         bulletSpeed = startBulletSpeed;
         bulletDamage = startBulletDamage;
+        currentSpeedMovement = startSpeedMovement;
     }
 
     [Header("Enemy Information")]
@@ -17,7 +18,8 @@ public class EnemyData : ScriptableObject
     public string Description;
 
     [Header("Enemy Movement")]
-    public float speed;
+    [HideInInspector] public float currentSpeedMovement;
+    public float startSpeedMovement;
 
     [Header("Health")]
     [HideInInspector] public int currentHealth;
