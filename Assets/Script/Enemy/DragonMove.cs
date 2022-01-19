@@ -37,6 +37,7 @@ public class DragonMove : MonoBehaviour
         foreach (PlayerMovement player in PlayerMovement.GetPlayerList())
         {
             float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+            
             if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
                 Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
@@ -45,12 +46,14 @@ public class DragonMove : MonoBehaviour
         }
     }
 
+    /*
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, data.range);
         Gizmos.DrawWireSphere(transform.position, data.shootingRange);
     }
+    */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

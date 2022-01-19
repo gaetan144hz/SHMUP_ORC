@@ -38,46 +38,56 @@ public class Bullet : MonoBehaviour
         EnemyFollowPlayer enemyFollowPlayer = hitInfo.transform.GetComponent<EnemyFollowPlayer>();
         BossMovement bossMovement = hitInfo.transform.GetComponent<BossMovement>();
         MageMove mageMove = hitInfo.transform.GetComponent<MageMove>();
+        DragonMove dragonMove = hitInfo.transform.GetComponent<DragonMove>();
 
         if (disque != null)
         {
             disque.TakeDamage(datap.bulletDamage);
             hitSpawn();
-            Destroy(gameObject, 5f);
+            Destroy(gameObject);
         }
 
         if (enemyFollowPlayer != null)
         {
             enemyFollowPlayer.TakeDamage(datap.bulletDamage);
             hitSpawn();
-            Destroy(gameObject, 5f);
+            Destroy(gameObject);
         }
 
         if(bossMovement != null)
         {
             bossMovement.TakeDamage(datap.bulletDamage);
             hitSpawn();
-            Destroy(gameObject, 5f);
+            Destroy(gameObject);
         }
 
         if(mageMove != null)
         {           
             mageMove.TakeDamage(datap.bulletDamage);
             hitSpawn();
-            Destroy(gameObject, 5f);
+            Destroy(gameObject);
             
             //score.scoreValue += 200;
         }
+
+        if (dragonMove != null)
+        {
+            dragonMove.TakeDamage((datap.bulletDamage));
+            hitSpawn();
+            Destroy(gameObject);
+        }
+        
         if(hitInfo.gameObject.tag == "skybarriere")
         {
             hitSpawn();
             Destroy(this.gameObject);
         }
+        
         if(hitInfo.gameObject.tag == "plateforme")
         {
             hitSpawn();           
             Destroy(this.gameObject);
-        }       
+        }
     }
 
     public void hitSpawn()
