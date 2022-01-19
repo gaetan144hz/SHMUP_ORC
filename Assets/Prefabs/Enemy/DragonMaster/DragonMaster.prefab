@@ -392,8 +392,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6309468454909960890}
   - component: {fileID: 6309468454909960891}
+  - component: {fileID: 2456712091568839959}
   - component: {fileID: 6309468454909960869}
-  - component: {fileID: 5688453232538983420}
   - component: {fileID: 3714470050940854725}
   - component: {fileID: 6309468454909960868}
   - component: {fileID: 4812617269235284127}
@@ -471,6 +471,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2456712091568839959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309468454909960870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a141ff5115f424db6bbb50527014c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 6309468453753526194}
+  angle: 90
 --- !u!114 &6309468454909960869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,20 +504,6 @@ MonoBehaviour:
   enemyBullet: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
   bulletParent: {fileID: 6309468453753526194}
   playerList: []
---- !u!114 &5688453232538983420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6309468454909960870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a141ff5115f424db6bbb50527014c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  pivotObject: {fileID: 6309468453753526194}
 --- !u!114 &3714470050940854725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6309468454909960870}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
   m_Name: 

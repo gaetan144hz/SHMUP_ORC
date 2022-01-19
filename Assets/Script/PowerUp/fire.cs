@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -22,11 +23,12 @@ public class fire : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");
         rb.gravityScale = 0;
+        Destroy(this.gameObject,10);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = collision.gameObject;
+        //GameObject player = collision.gameObject;
 
         if (collision.tag == "Player")
         {
@@ -47,14 +49,4 @@ public class fire : MonoBehaviour
             yield return new WaitForSeconds(1);   
         }
     }
-
-    IEnumerator FireDestroy()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(10);
-            Destroy(this.gameObject);
-        }
-    }
-
 }

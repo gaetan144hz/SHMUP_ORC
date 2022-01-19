@@ -11,7 +11,7 @@ public class EnemyBullet : MonoBehaviour
 
     GameObject target;
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class EnemyBullet : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(data.bulletDamage);
+            hitSpawn();
             Destroy(gameObject);
         }
         if (hitInfo.gameObject.tag == "skybarriere")

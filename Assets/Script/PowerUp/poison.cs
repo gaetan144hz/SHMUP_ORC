@@ -34,6 +34,7 @@ public class poison : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopCoroutine(coroutinePoison);
+        return;
     }
 
     IEnumerator MakePoison()

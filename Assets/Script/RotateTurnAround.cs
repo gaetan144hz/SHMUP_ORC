@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RotateTurnAround : MonoBehaviour
 {
-    public float rotationSpeed;
-    public GameObject pivotObject;
-
+    public GameObject target;
+    [SerializeField] private int angle;
+    
     void Start()
     {
         
@@ -14,6 +14,6 @@ public class RotateTurnAround : MonoBehaviour
 
     void Update()
     {
-        transform.RotateAround(pivotObject.transform.position, new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
+        transform.RotateAround(target.transform.position, Vector3.back, angle * Time.deltaTime);
     }
 }

@@ -294,11 +294,10 @@ GameObject:
   - component: {fileID: 4789042166700847258}
   - component: {fileID: 4789042166700847259}
   - component: {fileID: 2213989257203447332}
-  - component: {fileID: 6483579848077396418}
   - component: {fileID: 323298150298923271}
   m_Layer: 0
   m_Name: Dragon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,25 +421,6 @@ PolygonCollider2D:
       - {x: -0.43842566, y: -0.25626975}
       - {x: -0.43848634, y: 0.2489996}
       - {x: 0.0021967143, y: 0.5077255}
---- !u!114 &6483579848077396418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4789042166700847261}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0a24eba5fb7d245b971074da9a206f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: e634aee9feffa5b44aa7595295d45127, type: 2}
-  healthBar: {fileID: 6700823747649081718}
-  explosion: {fileID: 4940616246933530902, guid: b88805c2daff97a4bb862df9c2d8afd4, type: 3}
-  EnemyScore: 100
-  enemyBullet: {fileID: 8608233570520217305, guid: ec6d72d20cec57545b335c839bbaf5a3, type: 3}
-  bulletParent: {fileID: 1510493159224182386}
-  playerList: []
 --- !u!114 &323298150298923271
 MonoBehaviour:
   m_ObjectHideFlags: 0
