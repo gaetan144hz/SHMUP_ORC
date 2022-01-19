@@ -26,16 +26,17 @@ public class slime : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            StartCoroutine(MakeFroze());
+            StartCoroutine(MakeMutant());
         }
     }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopCoroutine(coroutineFroze);
         datap.speed = 8;
     }
 
-    IEnumerator MakeFroze()
+    IEnumerator MakeMutant()
     {
         while (true)
         {
