@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,11 @@ public class GameManagerScene : MonoBehaviour
         principalWeapon = GetComponent<PrincipalWeapon>();
     }
     */
+    private void Update()
+    {
+        
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
