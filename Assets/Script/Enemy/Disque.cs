@@ -14,7 +14,7 @@ public class Disque : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public Vector2 direction;
+    public Vector3 direction;
 
     Vector3 lastVelocity;
 
@@ -22,8 +22,10 @@ public class Disque : MonoBehaviour
     void Awake()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        //rb.velocity = transform.right * speed;
-        rb.velocity = direction.normalized * speed;
+
+        var num = Random.Range(1, 10);
+        Vector3 moveDir = new Vector3(num, num).normalized;
+        rb.velocity = moveDir * speed;
     }
 
     void Update()
@@ -51,7 +53,7 @@ public class Disque : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
 
-        else if (collision.gameObject.CompareTag("plateforme"))
+        if (collision.gameObject.CompareTag("plateforme"))
         {
             var speed = lastVelocity.magnitude;
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
@@ -59,7 +61,7 @@ public class Disque : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
 
-        else if (collision.gameObject.CompareTag("Disque"))
+        if (collision.gameObject.CompareTag("Disque"))
         {
             var speed = lastVelocity.magnitude;
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
@@ -67,12 +69,17 @@ public class Disque : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
 
-        else if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             var speed = lastVelocity.magnitude;
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
+        }
+
+        if (collision.gameObject.CompareTag("DeathZone"))
+        {
+            Destroy(this.gameObject);
         }
     }
 

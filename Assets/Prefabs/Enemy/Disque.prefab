@@ -102,7 +102,7 @@ MonoBehaviour:
   speed: 14
   damage: 50
   blade: {fileID: 8995282254613510145}
-  direction: {x: 1, y: 0}
+  direction: {x: 1, y: 1}
 --- !u!58 &8995282254613510151
 CircleCollider2D:
   m_ObjectHideFlags: 0
