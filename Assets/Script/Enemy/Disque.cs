@@ -68,7 +68,7 @@ public class Disque : MonoBehaviour
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
-
+        /*
         if (collision.gameObject.CompareTag("Enemy"))
         {
             var speed = lastVelocity.magnitude;
@@ -76,7 +76,7 @@ public class Disque : MonoBehaviour
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
-
+        */
         if (collision.gameObject.CompareTag("DeathZone"))
         {
             Destroy(this.gameObject);

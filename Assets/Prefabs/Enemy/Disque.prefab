@@ -102,7 +102,7 @@ MonoBehaviour:
   speed: 14
   damage: 50
   blade: {fileID: 8995282254613510145}
-  direction: {x: 1, y: 1}
+  direction: {x: 1, y: 1, z: 0}
 --- !u!58 &8995282254613510151
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,5 +138,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
