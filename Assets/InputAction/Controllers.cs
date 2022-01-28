@@ -65,6 +65,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""tripleShoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""84fd978c-fdf7-44b7-bcf7-5310e94ff96a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -243,6 +251,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""playMusic"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""344e68a4-a6bb-46fd-81ba-7b38f54dadbb"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""tripleShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""439c49f5-7cec-4b51-af9d-b9d184a04dc6"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""tripleShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -280,6 +310,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_resumeplay = m_player.FindAction("resume/play", throwIfNotFound: true);
         m_player_stopMusic = m_player.FindAction("stopMusic", throwIfNotFound: true);
         m_player_playMusic = m_player.FindAction("playMusic", throwIfNotFound: true);
+        m_player_tripleShoot = m_player.FindAction("tripleShoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -335,6 +366,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_resumeplay;
     private readonly InputAction m_player_stopMusic;
     private readonly InputAction m_player_playMusic;
+    private readonly InputAction m_player_tripleShoot;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -345,6 +377,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @resumeplay => m_Wrapper.m_player_resumeplay;
         public InputAction @stopMusic => m_Wrapper.m_player_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player_playMusic;
+        public InputAction @tripleShoot => m_Wrapper.m_player_tripleShoot;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -372,6 +405,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
                 @playMusic.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
                 @playMusic.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
+                @tripleShoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
+                @tripleShoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
+                @tripleShoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -394,6 +430,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started += instance.OnPlayMusic;
                 @playMusic.performed += instance.OnPlayMusic;
                 @playMusic.canceled += instance.OnPlayMusic;
+                @tripleShoot.started += instance.OnTripleShoot;
+                @tripleShoot.performed += instance.OnTripleShoot;
+                @tripleShoot.canceled += instance.OnTripleShoot;
             }
         }
     }
@@ -424,5 +463,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnResumeplay(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
+        void OnTripleShoot(InputAction.CallbackContext context);
     }
 }

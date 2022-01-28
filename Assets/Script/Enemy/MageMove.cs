@@ -19,32 +19,35 @@ public class MageMove : MonoBehaviour
 
     public GameObject enemyBullet;
     public GameObject bulletParent;
-    private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
-  
+    //private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
+
+    public List<GameObject> enemyList;
+
     void Start()
     {
         healthBar.SetMaxHealth(data.currentHealth);
-        enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
-
-        //int randEnemy = Random.Range(0, enemy.Length);
-
-        float distanceFromPlayer = Vector2.Distance(enemy.position, transform.position);
-        if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
+        foreach (EnemyFollowPlayer enemy in EnemyFollowPlayer.GetEnemyList())
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, enemy.position, speed * Time.deltaTime);
+            float distanceFromPlayer = Vector2.Distance(enemy.transform.position, transform.position);
+            if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, speed * Time.deltaTime);
+            }
+            else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
+            {
+                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
+                nextFireTime = Time.time + fireRate;
+            }
         }
-        else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
-        {
-            Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
-        }
-        
+            // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
+
+            //int randEnemy = Random.Range(0, enemy.Length); 
     }
 
     private void OnDrawGizmosSelected()
