@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class superBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PlayerData datap;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] int increase = 10;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.tag == "Player")
+        {
+            GameObject player = collision.gameObject;
+
+            if (datap)
+            {
+                datap.bulletDamage += increase;
+                Destroy(gameObject);
+            }
+        }
     }
 }

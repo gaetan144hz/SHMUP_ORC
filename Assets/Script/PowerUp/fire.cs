@@ -1,26 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
-public class fire : MonoBehaviour
-{
-   
-    [SerializeField] int increase = 1;
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 
-    PlayerHealth playerScript;
+public class fire : MonoBehaviour
+{ 
+    public PlayerData datap;
+
+    public GameObject target;
+
+    [SerializeField] int increase = 1;
 
     Coroutine coroutineFire;
 
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        rb.gravityScale = 0;
+        Destroy(this.gameObject,10);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = collision.gameObject;
-        playerScript = player.GetComponent<PlayerHealth>();
+        //GameObject player = collision.gameObject;
 
         if (collision.tag == "Player")
         {
             coroutineFire = StartCoroutine(MakeFire());
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopCoroutine(coroutineFire);
@@ -30,9 +45,8 @@ public class fire : MonoBehaviour
     {
         while (true)
         {
-            playerScript.playerHealth -= increase;
-            yield return new WaitForSeconds(1);
+            datap.currentHealth -= increase++;
+            yield return new WaitForSeconds(1);   
         }
     }
-
 }

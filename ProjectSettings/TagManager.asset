@@ -8,17 +8,18 @@ TagManager:
   - playerBullet
   - Enemy
   - Mage
-  - Ennemi
   - Disque
+  - plateforme
+  - DeathZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - MiddleSkybarriere
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

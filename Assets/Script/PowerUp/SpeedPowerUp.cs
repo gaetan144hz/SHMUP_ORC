@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpeedPowerUp : MonoBehaviour
 {
+    public PlayerData datap;
+
     [SerializeField] float increase = 10f;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -11,11 +13,10 @@ public class SpeedPowerUp : MonoBehaviour
         if(collision.tag == "Player")
         {
             GameObject player = collision.gameObject;
-            PlayerMovement playerScript = player.GetComponent<PlayerMovement>();
 
-            if (playerScript)
+            if (datap)
             {
-                playerScript.speed += increase;
+                datap.speed += increase;
                 Destroy(gameObject);
             }
         }

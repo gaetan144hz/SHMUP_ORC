@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,23 @@ using UnityEngine.InputSystem;
 
 public class GameManagerScene : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    //public PrincipalWeapon principalWeapon;
 
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
 
     public GameObject settingsMenuUI;
+    /*
+    private void Awake()
+    {
+        principalWeapon = GetComponent<PrincipalWeapon>();
+    }
+    */
+    private void Update()
+    {
+        
+    }
 
     public void PlayGame()
     {
@@ -44,7 +55,7 @@ public class GameManagerScene : MonoBehaviour
         Debug.Log("Jeu Quitté");
     }
 
-    public void PauseGame(InputAction.CallbackContext ctx)
+    public void OnResumeplay(InputValue value)
     {
         if (GameIsPaused)
         {
@@ -58,7 +69,7 @@ public class GameManagerScene : MonoBehaviour
 
     public void Resume()
     {
-        player.SetActive(true);
+        //principalWeapon.enabled = true ;
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
@@ -67,7 +78,7 @@ public class GameManagerScene : MonoBehaviour
 
     public void Paused()
     {
-        player.SetActive(false);
+        //principalWeapon.enabled = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    EnemyData data;
+    public EnemyData data;
+
+    public GameObject hitPrefab;
+    public GameObject lastHit;
 
     GameObject target;
 
-    [SerializeField] float speed = 7f;
-    [SerializeField] int bulletDamage = 10;
-
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +19,37 @@ public class EnemyBullet : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.startBulletSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
 
         Destroy(this.gameObject, 5);
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)
+    public void OnTriggerEnter2D(Collider2D hitInfo)
     {
         PlayerHealth playerHealth = hitInfo.transform.GetComponent<PlayerHealth>();
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(bulletDamage);
+            playerHealth.TakeDamage(data.bulletDamage);
+            hitSpawn();
             Destroy(gameObject);
         }
+        if (hitInfo.gameObject.tag == "skybarriere")
+        {
+            hitSpawn();
+            Destroy(this.gameObject);
+        }
+        if (hitInfo.gameObject.tag == "plateforme")
+        {
+            hitSpawn();
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void hitSpawn()
+    {
+        lastHit = Instantiate(hitPrefab, transform.position, Quaternion.identity);
+        Destroy(lastHit, 1f);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class SettingsMenu : MonoBehaviour
@@ -10,6 +11,8 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
 
     public Dropdown resolutionDropdown;
+
+    public GameObject fps;
 
     Resolution[] resolutions;
 
@@ -58,5 +61,11 @@ public class SettingsMenu : MonoBehaviour
     {
         Debug.Log(isFullscreen);
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void ShowFPS(bool isShow)
+    {
+        gameObject.SetActive(isShow);
+        Debug.Log(isShow);
     }
 }

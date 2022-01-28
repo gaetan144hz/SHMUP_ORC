@@ -6,6 +6,8 @@ public class MageMove : MonoBehaviour
 {
     public EnemyData data;
 
+    public HealthBar healthBar;
+
     public GameObject explosion;
 
     public int MageScore = 200;
@@ -20,7 +22,8 @@ public class MageMove : MonoBehaviour
     private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
   
     void Start()
-    {       
+    {
+        healthBar.SetMaxHealth(data.currentHealth);
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
@@ -58,6 +61,7 @@ public class MageMove : MonoBehaviour
         {
             Die();
         }
+        healthBar.SetHealth(data.currentHealth);
     }
 
     void Die()

@@ -2,36 +2,49 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int playerHealth = 100;
+    public PlayerData datap;
 
     public GameObject explosion;
 
     public HealthBar healthBar;
 
     public GameObject gameOverUI;
-    //public GameObject deathEffect;
+
+    public PlayerMovement playerMovement;
 
     void Start()
-    {
-        healthBar.SetMaxHealth(playerHealth);
+    {       
+        healthBar.SetMaxHealth(datap.currentHealth);
     }
     public void TakeDamage(int enemyBullet)
     {
-        playerHealth -= enemyBullet;
-        if (playerHealth <= 0)
+        datap.currentHealth -= enemyBullet;
+        if (datap.currentHealth <= 0)
         {
             gameOverUI.SetActive(true);
             Time.timeScale = 0f;
             Die();
         }
+        healthBar.SetHealth(datap.currentHealth);
+    }
 
-        healthBar.SetHealth(playerHealth);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "DeathZone")
+        {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+            Die();
+        }
+        healthBar.SetHealth(datap.currentHealth);
     }
 
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        PlayerMovement.playerList.Remove(playerMovement);
+        Destroy(GetComponent<PlayerMovement>());
+        Destroy(GetComponent<PrincipalWeapon>());
     }
 }
 

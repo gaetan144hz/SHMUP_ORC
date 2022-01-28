@@ -6,21 +6,39 @@ public class EnemyData : ScriptableObject
     private void OnEnable()
     {
         currentHealth = startHealth;
+        bulletSpeed = startBulletSpeed;
+        bulletDamage = startBulletDamage;
+        currentSpeedMovement = startSpeedMovement;
     }
 
+    [Header("Enemy Information")]
     public string Enemy;
-
-    public string Description;
     public GameObject EnemyModel;
-    public int currentHealth;
+    [TextArea]
+    public string Description;
+    public int Score;
+
+    [Header("Enemy Movement")]
+    [HideInInspector] public float currentSpeedMovement;
+    public float startSpeedMovement;
+
+    [Header("Health")]
+    [HideInInspector] public int currentHealth;
     public int startHealth;
 
-    public float speed = 1f;
+    [Header("Bullet Speed")]
+    [HideInInspector] public float bulletSpeed;
+    public float startBulletSpeed;
+    [Header("Bullet Damage")]
+    [HideInInspector] public int bulletDamage;
+    public int startBulletDamage;
+    [Space(5)]
+    public float fireRate;
 
-    public float bulletSpeed = 1f;
-    public int bulletDamage = 1;
-    public int healIncrease = 10;
+    [Header("Only for Mage")]
+    public int healIncrease;
 
-    public float range = 0;
-    public float shootingRange = 10;
+    [Header("Range of Detection")]
+    public float range;
+    public float shootingRange;
 }
