@@ -23,6 +23,12 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public List<GameObject> playerList;
 
+    public static List<EnemyFollowPlayer> enemyList = new List<EnemyFollowPlayer>();
+    public static List<EnemyFollowPlayer> GetEnemyList()
+    {
+        return enemyList;
+    }
+
 
     void Awake()
     {
