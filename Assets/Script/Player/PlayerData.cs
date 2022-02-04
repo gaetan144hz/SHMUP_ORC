@@ -21,7 +21,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Health")]
     public int startHealth;
-    [HideInInspector] public int currentHealth;
+    public int currentHealth;
 
     [Header("Bullet Settings")]
     public int bulletDamage;

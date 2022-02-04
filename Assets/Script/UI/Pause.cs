@@ -8,31 +8,15 @@ public class Pause : MonoBehaviour
 
     public GameObject pauseMenu;
 
-    public void onResumeplay(InputValue value)
+    public void OnResume(InputValue value)
     {
-        if (GameIsPaused)
-        {
-            onResume();
-        }
-        else
-        {
-            onPause();
-        }
-    }
-
-    public void onResume()
-    {
-        //playerInput.player.spawn.Enable();
-        //GetComponent<LadderSpawn>().enabled = true;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;              
         GameIsPaused = false;
     }
 
-    public void onPause()
+    public void OnPause(InputValue value)
     {
-        //playerInput.player.spawn.Disable();
-        //GetComponent<LadderSpawn>().enabled = false;
         pauseMenu.SetActive(true);        
         Time.timeScale = 0f;        
         GameIsPaused = true;

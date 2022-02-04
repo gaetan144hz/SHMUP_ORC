@@ -348,10 +348,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018361561}
-  - component: {fileID: 1018361560}
   - component: {fileID: 1018361564}
   - component: {fileID: 1018361563}
   - component: {fileID: 1018361562}
+  - component: {fileID: 1018361560}
   m_Layer: 0
   m_Name: GameManagerScene
   m_TagString: Untagged
@@ -366,13 +366,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018361559}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c15519dd36f204d9bc1a642eb0207d, type: 3}
+  m_Script: {fileID: 11500000, guid: d20650c0f1eb8214cb1fac3ffd7d1970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1413516643}
-  settingsMenuUI: {fileID: 0}
 --- !u!4 &1018361561
 Transform:
   m_ObjectHideFlags: 0
@@ -702,7 +700,7 @@ GameObject:
   - component: {fileID: 1234655609}
   - component: {fileID: 1234655608}
   m_Layer: 0
-  m_Name: MainEventSystem
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,8 +846,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1018361560}
-        m_TargetAssemblyTypeName: GameManagerScene, Assembly-CSharp
-        m_MethodName: Credit
+        m_TargetAssemblyTypeName: Credit, Assembly-CSharp
+        m_MethodName: onCredit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

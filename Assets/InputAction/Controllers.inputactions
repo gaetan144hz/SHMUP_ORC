@@ -22,6 +22,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "tripleShoot",
+                    "type": "Button",
+                    "id": "84fd978c-fdf7-44b7-bcf7-5310e94ff96a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "pause",
                     "type": "Button",
                     "id": "a75d895c-c06e-4245-b224-e93cb7754063",
@@ -30,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "resume/play",
+                    "name": "Resume",
                     "type": "Button",
                     "id": "9aeaa1a4-0e8d-4d79-ae2a-3b6b2133a93a",
                     "expectedControlType": "Button",
@@ -49,14 +57,6 @@
                     "name": "playMusic",
                     "type": "Button",
                     "id": "982af7ac-2c26-4247-9d6a-bb2fa01d8e45",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "tripleShoot",
-                    "type": "Button",
-                    "id": "84fd978c-fdf7-44b7-bcf7-5310e94ff96a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -180,7 +180,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "resume/play",
+                    "action": "Resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -191,7 +191,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "resume/play",
+                    "action": "Resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
