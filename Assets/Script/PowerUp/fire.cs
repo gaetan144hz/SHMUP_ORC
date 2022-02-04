@@ -53,7 +53,8 @@ public class fire : MonoBehaviour
         while (true)
         {
             //datap.currentHealth -= fireIncrease;
-            playerHealth.TakeDamage(fireIncrease);
+            var firemultiply = ++fireIncrease * multiplicator;
+            playerHealth.TakeDamage(firemultiply);
             yield return new WaitForSeconds(1);   
         }
     }
