@@ -175,10 +175,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8608233570520217305, guid: ec6d72d20cec57545b335c839bbaf5a3, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 8608233570520217305, guid: ec6d72d20cec57545b335c839bbaf5a3, type: 3}
       propertyPath: m_Name
       value: Fire
       objectReference: {fileID: 0}
@@ -197,11 +193,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6251475818840146565, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6251475818840146565, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
       propertyPath: m_Name
@@ -209,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309468454909960890, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
       propertyPath: m_RootOrder
@@ -1072,6 +1068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Random Disque Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 6734084580053839615, guid: 7ee4ca94710284c44b47b0a70075937c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee4ca94710284c44b47b0a70075937c, type: 3}
 --- !u!1001 &7488796568743965470
@@ -1190,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Random PowerUp Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7652325314966257743, guid: e176d7828e01d8c4bb0ee270897cd62d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e176d7828e01d8c4bb0ee270897cd62d, type: 3}
 --- !u!1001 &8098913061586048283
@@ -1202,6 +1206,10 @@ PrefabInstance:
     - target: {fileID: 8098913061637567088, guid: 358e272e310c5054a94526408df068c9, type: 3}
       propertyPath: m_Name
       value: Random Enemy Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098913061637567088, guid: 358e272e310c5054a94526408df068c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8098913061637567094, guid: 358e272e310c5054a94526408df068c9, type: 3}
       propertyPath: m_RootOrder
@@ -1256,10 +1264,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8291274181402240965, guid: d804c26c7c500b543b3514936e8ce3b2, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8291274181402240965, guid: d804c26c7c500b543b3514936e8ce3b2, type: 3}
       propertyPath: m_Name
       value: Poison

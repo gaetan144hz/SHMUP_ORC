@@ -16,9 +16,10 @@ public class PlayerHealth : MonoBehaviour
     {       
         healthBar.SetMaxHealth(datap.currentHealth);
     }
-    public void TakeDamage(int enemyBullet)
+
+    public void TakeDamage(int ennemyDamage)
     {
-        datap.currentHealth -= enemyBullet;
+        datap.currentHealth -= ennemyDamage;
         if (datap.currentHealth <= 0)
         {
             gameOverUI.SetActive(true);

@@ -7,9 +7,10 @@ using UnityEngine;
 
 public class poison : MonoBehaviour
 {
-    public PlayerData datap;
+    private PlayerData datap;
+    private PlayerHealth playerHealth;
 
-    [SerializeField] int increase = 10;
+    [SerializeField] public int poisonIncrease;
 
     Coroutine coroutinePoison ;
 
@@ -19,12 +20,13 @@ public class poison : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+
+        //Destroy(this.gameObject,10);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //GameObject player = collision.gameObject;
-        //playerScript = player.GetComponent<PlayerHealth>();
+        playerHealth = collision.transform.GetComponent<PlayerHealth>();
 
         if (collision.tag == "Player")
         {
@@ -33,17 +35,19 @@ public class poison : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        StopCoroutine(coroutinePoison);
-        return;
+        if(coroutinePoison != null)
+        {
+            StopCoroutine(coroutinePoison);
+        } 
     }
 
     IEnumerator MakePoison()
     {
         while (true)
         {
-            datap.currentHealth -= increase;
+            //datap.currentHealth -= poisonIncrease;
+            playerHealth.TakeDamage(poisonIncrease);
             yield return new WaitForSeconds(2);
         }
     }
-   
 }
