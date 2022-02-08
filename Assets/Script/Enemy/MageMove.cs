@@ -19,20 +19,20 @@ public class MageMove : MonoBehaviour
 
     public GameObject enemyBullet;
     public GameObject bulletParent;
-    //private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
+    private GameObject[] enemies; //-----------------------------------FAIRE TABLEAU----------------------------------//
 
     public List<GameObject> enemyList;
 
     void Start()
     {
         healthBar.SetMaxHealth(data.currentHealth);
-        //enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (EnemyFollowPlayer enemy in EnemyFollowPlayer.GetEnemyList())
+        foreach (var enemy in enemies) //pour chaque enemy dans la liste enemies
         {
             float distanceFromPlayer = Vector2.Distance(enemy.transform.position, transform.position);
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
