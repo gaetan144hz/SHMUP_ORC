@@ -27,7 +27,7 @@ public class EntityMovement : MonoBehaviour
         
         if (transform.position.y <= -stop)
         {
-            Debug.Log(stop);
+            //Debug.Log(stop);
             rb.bodyType = RigidbodyType2D.Static;
         }
     }
