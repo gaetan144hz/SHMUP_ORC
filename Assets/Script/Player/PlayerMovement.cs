@@ -9,6 +9,7 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Data")]
     public PlayerData datap;
 
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();

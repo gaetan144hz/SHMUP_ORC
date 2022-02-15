@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   startSpeed: 10
-  startHealth: 10
-  currentHealth: 0
-  bulletDamage: 10
-  startBulletDamage: 10
+  startHealth: 100
+  currentHealth: 100
+  bulletDamage: 500
+  startBulletDamage: 500
   bulletSpeed: 15
   startBulletSpeed: 15
   spellDamage: 50

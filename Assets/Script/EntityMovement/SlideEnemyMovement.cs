@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SlideEnemyMovement : MonoBehaviour
 {
+    [Header("EnemyData")]
     public EnemyData data;
 
     private bool moveRight;
 
+    [Header("Range")]
     [SerializeField] private float rangeRight;
     [SerializeField] private float rangeLeft;
 

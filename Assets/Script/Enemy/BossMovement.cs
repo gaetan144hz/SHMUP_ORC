@@ -6,20 +6,32 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
+    [Header("EnemyData")]
     public EnemyData data;
 
+    [Header("HealthBar")]
     public HealthBar healthBar;
 
+    [Header("UI")]
+    public GameObject gameOverUI;
+
+    [Header("FX")]
     public GameObject explosion;
 
-    public int BossScore = 500;
-
     private Transform player;
-    private float nextFireTime;
-
+    
+    [Header("Bullet")]
     public GameObject enemyBullet;
+    public GameObject bossSpellBullet;
+
+    [Header("FireRate")]
+    private float nextFireTime;
+    [SerializeField] private float spellFireRate;
+
+    [Header("FirePoint")]
     public GameObject bulletParent;
     public GameObject bulletParent2;
+    public GameObject bulletParent3;
 
     public List<GameObject> playerList;
 
@@ -38,6 +50,8 @@ public class BossMovement : MonoBehaviour
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
+                Instantiate(bossSpellBullet, bulletParent.transform.position, Quaternion.identity);
+                nextFireTime = Time.time + spellFireRate;
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
@@ -73,7 +87,7 @@ public class BossMovement : MonoBehaviour
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
-            Die();
+            Die();  
         }
         healthBar.SetHealth(data.currentHealth);
     }
@@ -81,6 +95,8 @@ public class BossMovement : MonoBehaviour
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(GetComponent<BossMovement>());
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 }

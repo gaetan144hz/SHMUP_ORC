@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [Header("Data")]
     public EnemyData data;
 
+    [Header("FX")]
     public GameObject hitPrefab;
     public GameObject lastHit;
 
+    [Header("Target")]
     GameObject target;
 
     private Rigidbody2D rb;

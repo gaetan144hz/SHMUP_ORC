@@ -4,15 +4,19 @@ using TMPro;
 
 public class PrincipalWeapon : MonoBehaviour
 {
+    [Header("TextCooldown")]
     public TextMeshProUGUI textCooldown;
 
+    [Header("BulletColdown")]
     [SerializeField] private float cooldown;
     [SerializeField] private float lastShot;
 
+    [Header("FirePoint")]
     [SerializeField] Transform firePoint;
     [SerializeField] Transform firePointDroite;
     [SerializeField] Transform firePointGauche;
 
+    [Header("Bullet")]
     public GameObject[] bulletPrefab;
     //public Transform[] spawnPoints;
 

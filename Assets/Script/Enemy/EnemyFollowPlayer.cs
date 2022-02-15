@@ -6,16 +6,24 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
+    [Header("EnemyData")]
     public EnemyData data;
+
+    [Header("HealthBar")]
     public HealthBar healthBar;
 
+    [Header("FX")]
     public GameObject explosion;
 
     public int EnemyScore = 100;
 
+    [Header("FireRate")]
     private float nextFireTime;
 
+    [Header("Bullet")]
     public GameObject enemyBullet;
+
+    [Header("FirePoint")]
     public GameObject bulletParent;
 
     private Rigidbody2D rb;
@@ -28,7 +36,6 @@ public class EnemyFollowPlayer : MonoBehaviour
     {
         return enemyList;
     }
-
 
     void Awake()
     {

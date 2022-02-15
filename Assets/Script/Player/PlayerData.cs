@@ -8,7 +8,7 @@ public class PlayerData : ScriptableObject
         currentHealth = startHealth;
         speed = startSpeed;
 
-        bulletDamage = startBulletDamage;
+        startBulletDamage = bulletDamage;
         bulletSpeed = startBulletSpeed;
 
         startSpellDamage = spellDamage;

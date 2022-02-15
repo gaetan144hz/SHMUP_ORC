@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class MageMove : MonoBehaviour
 {
+    [Header("Data")]
     public EnemyData data;
 
+    [Header("HealthBar")]
     public HealthBar healthBar;
 
+    [Header("FX")]
     public GameObject explosion;
 
     public int MageScore = 200;
 
-    public float speed = 1.5f;
-
-    public float fireRate = 1f;
+    [Header("FireRate")]
     private float nextFireTime;
+    private float nextFireRate;
 
+    [Header("Bullet")]
     public GameObject enemyBullet;
+
+    [Header("FirePoint")]
     public GameObject bulletParent;
+
     private GameObject[] enemies; //-----------------------------------FAIRE TABLEAU----------------------------------//
 
     public List<GameObject> enemyList;
@@ -37,12 +43,12 @@ public class MageMove : MonoBehaviour
             float distanceFromPlayer = Vector2.Distance(enemy.transform.position, transform.position);
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, data.currentSpeedMovement * Time.deltaTime);
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
                 Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + fireRate;
+                nextFireTime = Time.time + nextFireRate;
             }
         }
             // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
