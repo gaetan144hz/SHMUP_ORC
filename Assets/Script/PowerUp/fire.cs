@@ -14,6 +14,7 @@ public class fire : MonoBehaviour
     public GameObject target;
 
     [SerializeField] public int fireIncrease;
+    private int fireMultiply;
     [SerializeField] private int multiplicator;
     Coroutine coroutineFire;
 
@@ -21,6 +22,8 @@ public class fire : MonoBehaviour
 
     private void Start()
     {
+        fireIncrease = fireMultiply;
+        
         rb = GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
@@ -53,7 +56,7 @@ public class fire : MonoBehaviour
         while (true)
         {
             //datap.currentHealth -= fireIncrease;
-            var firemultiply = ++fireIncrease * multiplicator;
+            var firemultiply = fireIncrease * multiplicator;
             playerHealth.TakeDamage(firemultiply);
             yield return new WaitForSeconds(1);   
         }

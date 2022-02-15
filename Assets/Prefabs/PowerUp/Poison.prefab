@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928a0cb5af0337e4ea956574986324d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poisonIncrease: 1
+  poisonIncrease: 2
 --- !u!50 &8291274181402240963
 Rigidbody2D:
   serializedVersion: 4

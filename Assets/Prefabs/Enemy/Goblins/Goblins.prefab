@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 8745041235676749276}
   - component: {fileID: 8745041235676749278}
   - component: {fileID: 5431377427111105237}
-  - component: {fileID: 8745041235676749274}
+  - component: {fileID: 6913538426992909736}
   - component: {fileID: 5262262207201644745}
   m_Layer: 0
   m_Name: Goblins
@@ -474,8 +474,8 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: bf31ed7e4ae07954389f73b3190a60b5, type: 2}
   rangeRight: -3
   rangeLeft: 3.65
---- !u!70 &8745041235676749274
-CapsuleCollider2D:
+--- !u!61 &6913538426992909736
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -484,12 +484,22 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.015836358}
-  m_Size: {x: 0.8521943, y: 0.8838668}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.8828125}
+    newSize: {x: 1, y: 0.8828125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.8828125}
+  m_EdgeRadius: 0
 --- !u!50 &5262262207201644745
 Rigidbody2D:
   serializedVersion: 4

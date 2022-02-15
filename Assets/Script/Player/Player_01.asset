@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   startSpeed: 10
-  startHealth: 150
-  currentHealth: 150
+  startHealth: 10
+  currentHealth: 0
   bulletDamage: 10
   startBulletDamage: 10
   bulletSpeed: 15
