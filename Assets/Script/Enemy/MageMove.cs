@@ -48,7 +48,7 @@ public class MageMove : MonoBehaviour
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
                 Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + nextFireRate;
+                nextFireTime = Time.time + data.fireRate;
             }
         }
             // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100

@@ -6,8 +6,13 @@ public class EnemyData : ScriptableObject
     private void OnEnable()
     {
         currentHealth = startHealth;
+
         bulletSpeed = startBulletSpeed;
         bulletDamage = startBulletDamage;
+
+        spellDamage = startSpellDamage;
+        spellSpeed = startSpellSpeed;
+
         currentSpeedMovement = startSpeedMovement;
     }
 
@@ -29,9 +34,19 @@ public class EnemyData : ScriptableObject
     [Header("Bullet Speed")]
     [HideInInspector] public float bulletSpeed;
     public float startBulletSpeed;
+
     [Header("Bullet Damage")]
     [HideInInspector] public int bulletDamage;
     public int startBulletDamage;
+
+    [Header("Spell Speed")]
+    [HideInInspector] public float spellSpeed;
+    public float startSpellSpeed;
+
+    [Header("Spell Damage")]
+    [HideInInspector] public int spellDamage;
+    public int startSpellDamage;
+
     [Space(5)]
     public float fireRate;
 

@@ -244,6 +244,8 @@ MonoBehaviour:
   enemyBullet: {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
   bossSpellBullet: {fileID: 8648771640050673107, guid: de4cf5289010fc242b15cef3ff888a76, type: 3}
   spellFireRate: 10
+  cooldown: 5
+  lastShot: 0
   bulletParent: {fileID: 1405351764310200364}
   bulletParent2: {fileID: 7845987600335875881}
   bulletParent3: {fileID: 4049892974846328461}

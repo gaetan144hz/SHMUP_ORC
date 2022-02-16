@@ -11,8 +11,8 @@ public class EntityMovement : MonoBehaviour
     [SerializeField] private float max;
 
     [Header("StopRange")]
-    [SerializeField] private float stopMax;
     [SerializeField] private float stopMin;
+    [SerializeField] private float stopMax;
 
     private Rigidbody2D rb;
     

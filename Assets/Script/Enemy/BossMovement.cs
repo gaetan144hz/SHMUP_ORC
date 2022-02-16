@@ -25,8 +25,10 @@ public class BossMovement : MonoBehaviour
     public GameObject bossSpellBullet;
 
     [Header("FireRate")]
-    private float nextFireTime;
-    [SerializeField] private float spellFireRate;
+    public float nextFireTime;
+    public float spellFireRate;
+    public float cooldown;
+    public float lastShot;
 
     [Header("FirePoint")]
     public GameObject bulletParent;
@@ -60,6 +62,18 @@ public class BossMovement : MonoBehaviour
                 nextFireTime = Time.time + data.fireRate;
             }
         }
+
+        TripleShoot();
+    }
+
+    public void TripleShoot()
+    {
+        if (Time.time - lastShot < cooldown)
+        {
+            return;
+        }
+        lastShot = Time.time;
+        Instantiate(bossSpellBullet, bulletParent3.transform.position, bulletParent3.transform.rotation);
     }
 
     private void OnDrawGizmosSelected()

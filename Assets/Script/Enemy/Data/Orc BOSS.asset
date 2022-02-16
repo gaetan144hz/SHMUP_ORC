@@ -15,7 +15,8 @@ MonoBehaviour:
   Enemy: Orc
   EnemyModel: {fileID: 1405351762913005651, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
   Description: BOSS
-  currentSpeedMovement: 0
+  Score: 0
+  currentSpeedMovement: 1
   startSpeedMovement: 1
   currentHealth: 1500
   startHealth: 1500
@@ -23,6 +24,10 @@ MonoBehaviour:
   startBulletSpeed: 4
   bulletDamage: 10
   startBulletDamage: 10
+  spellSpeed: 5
+  startSpellSpeed: 5
+  spellDamage: 50
+  startSpellDamage: 50
   fireRate: 2
   healIncrease: 0
   range: 0
