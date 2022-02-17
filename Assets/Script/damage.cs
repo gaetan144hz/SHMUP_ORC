@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class damage : MonoBehaviour
 {
-    [Header("Data")]
-    public EnemyData data;
+    [SerializeField] private int spellDamage;
 
     private Rigidbody2D rb;
 
@@ -28,7 +27,7 @@ public class damage : MonoBehaviour
 
         if(playerHealth != null)
         {
-            playerHealth.TakeDamage(data.spellDamage);
+            playerHealth.TakeDamage(spellDamage);
             Destroy(this.gameObject,5);
         }
     }

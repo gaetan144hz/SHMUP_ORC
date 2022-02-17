@@ -2651,6 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662e3304dd8d34e4b85261e499803bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   textCooldown: {fileID: 1067283645133495291}
   cooldown: 2
   lastShot: 0

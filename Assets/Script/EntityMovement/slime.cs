@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotation : MonoBehaviour
+public class slime : MonoBehaviour
 {
     [SerializeField] private float rotaZ;
     [SerializeField] private float rotationSpeed;
@@ -19,21 +19,6 @@ public class Rotation : MonoBehaviour
     void Update()
     {
         rotaZ += Time.deltaTime * rotationSpeed;
-
-        /*
-        if (ClockwiseRoation == false)
-        {
-            rotaZ += Time.deltaTime * rotationSpeed;
-        }
-        else
-        {
-            rotaZ += -Time.deltaTime * rotationSpeed;
-        }
-        
-        transform.rotation = Quaternion.Euler(0, 0, rotaZ);
-        Debug.Log(transform.rotation);
-        Debug.Log(rotaZ);
-        */
     }
 
     public void OnTriggerStay2D(Collider2D obj)
@@ -42,7 +27,6 @@ public class Rotation : MonoBehaviour
         {            
             obj.transform.rotation = Quaternion.Euler(0, 0, rotaZ);
         }
-        
     }
 
     public void OnTriggerExit2D(Collider2D obj)
@@ -52,5 +36,4 @@ public class Rotation : MonoBehaviour
             obj.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
-
 }

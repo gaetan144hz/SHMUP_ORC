@@ -91,7 +91,7 @@ MonoBehaviour:
   - {fileID: 9221972125930786076, guid: ee40498bc1496f240afb664eea33f70b, type: 3}
   - {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   startWaitingSecond: 0
-  waitingSecond: 5
+  waitingSecond: 4
 --- !u!1 &8098913062235468643
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,24 +22,31 @@ public class BossMovement : MonoBehaviour
     
     [Header("Bullet")]
     public GameObject enemyBullet;
-    public GameObject bossSpellBullet;
+    public GameObject bossSpellBullet1;
+    public GameObject bossSpellBullet2;
 
     [Header("FireRate")]
-    public float nextFireTime;
     public float spellFireRate;
     public float cooldown;
-    public float lastShot;
+    public float FireRateSpell2;
+
+    private float lastShot;
+    private float nextFireTime;
 
     [Header("FirePoint")]
-    public GameObject bulletParent;
-    public GameObject bulletParent2;
-    public GameObject bulletParent3;
+    public GameObject bossFirePoint1;
+    public GameObject bossFirePoint2;
+
+    public GameObject spellFirePoint1;
+    public GameObject spellFirePoint2;
 
     public List<GameObject> playerList;
 
     // Start is called before the first frame update
     void Start()
     {
+        
+
         healthBar.SetMaxHealth(data.currentHealth);
     }
 
@@ -52,28 +59,33 @@ public class BossMovement : MonoBehaviour
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
-                Instantiate(bossSpellBullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + spellFireRate;
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
-                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-                Instantiate(enemyBullet, bulletParent2.transform.position, Quaternion.identity);
+                Instantiate(enemyBullet, bossFirePoint1.transform.position, Quaternion.identity);
+                Instantiate(enemyBullet, bossFirePoint2.transform.position, Quaternion.identity);
                 nextFireTime = Time.time + data.fireRate;
             }
         }
 
-        TripleShoot();
+        Invoke("spell2", FireRateSpell2);
+
+        spell1();
     }
 
-    public void TripleShoot()
+    public void spell1()
     {
         if (Time.time - lastShot < cooldown)
         {
             return;
         }
         lastShot = Time.time;
-        Instantiate(bossSpellBullet, bulletParent3.transform.position, bulletParent3.transform.rotation);
+        Instantiate(bossSpellBullet1, spellFirePoint1.transform.position, spellFirePoint1.transform.rotation);
+    }
+
+    public void spell2()
+    {
+        Instantiate(bossSpellBullet2, spellFirePoint2.transform.position, Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected()

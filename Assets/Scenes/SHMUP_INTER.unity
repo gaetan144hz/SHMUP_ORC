@@ -279,7 +279,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1701348624}
   - component: {fileID: 1701348623}
-  - component: {fileID: 1701348622}
   - component: {fileID: 1701348625}
   - component: {fileID: 1701348627}
   - component: {fileID: 1701348626}
@@ -290,23 +289,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1701348622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701348621}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bdd99c171c24314aa9a756bea637e1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startQuaternion: {x: 0, y: 1, z: 0, w: 0}
-  lerpTime: 20
-  RotateAmount: 10
-  rotate: 0
-  rotateConstantly: 0
 --- !u!212 &1701348623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -515,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8745041235676749277, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8745041235676749277, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -587,7 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121178067
 GameObject:
@@ -683,10 +665,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_BOSS_(enzo)
       objectReference: {fileID: 0}
-    - target: {fileID: 1405351762913005651, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1405351762913005656, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -733,15 +711,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1417891389912698412, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1417891389912698412, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3786459704463085288, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
-      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728519166858978697, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
+      propertyPath: m_Name
+      value: SpellFirePoint2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074701322560334342, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
+      propertyPath: m_Name
+      value: SpellFirePoint1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}

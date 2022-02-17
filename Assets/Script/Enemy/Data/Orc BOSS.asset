@@ -24,8 +24,8 @@ MonoBehaviour:
   startBulletSpeed: 4
   bulletDamage: 10
   startBulletDamage: 10
-  spellSpeed: 5
-  startSpellSpeed: 5
+  spellSpeed: 10
+  startSpellSpeed: 10
   spellDamage: 50
   startSpellDamage: 50
   fireRate: 2

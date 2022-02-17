@@ -4,12 +4,15 @@ using TMPro;
 
 public class PrincipalWeapon : MonoBehaviour
 {
+    [Header("Data")]
+    public PlayerData datap;
+
     [Header("TextCooldown")]
     public TextMeshProUGUI textCooldown;
 
     [Header("BulletColdown")]
     [SerializeField] private float cooldown;
-    [SerializeField] private float lastShot;
+    private float lastShot;
 
     [Header("FirePoint")]
     [SerializeField] Transform firePoint;
@@ -75,5 +78,35 @@ public class PrincipalWeapon : MonoBehaviour
         Instantiate(bulletPrefab[1], firePoint.position, firePoint.rotation);
         Instantiate(bulletPrefab[1], firePointDroite.position, firePointDroite.rotation);
         Instantiate(bulletPrefab[1], firePointGauche.position, firePointGauche.rotation);
+    }
+
+    public void OnCheatDamage(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            datap.bulletDamage += 9999;
+            Debug.Log("Damage augmenté de 9999");
+            return;
+        }
+    }
+
+    public void OnTimeScale1(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Time.timeScale = 1f;
+            Debug.Log("TimeScale 1");
+            return;
+        }
+    }
+
+    public void OnTimeScale0(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Time.timeScale = 0f;
+            Debug.Log("TimeScale 0");
+            return;
+        }
     }
 }

@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8648771640050673119}
   - component: {fileID: 8648771640050673118}
-  - component: {fileID: 7828001556746283974}
-  - component: {fileID: 8648771640050673116}
+  - component: {fileID: 1856927127737557237}
+  - component: {fileID: 6564390603560047939}
   - component: {fileID: 4015824844193870063}
   - component: {fileID: 8648771640050673117}
+  - component: {fileID: 9205439356590834661}
   m_Layer: 0
   m_Name: bossSpellBullet
   m_TagString: Untagged
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7828001556746283974
+--- !u!114 &1856927127737557237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +96,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8648771640050673107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e3b74177a00e54ba82614a53da45d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1bba68a09528b4496ad8840559f0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
-  spellDamage: 50
---- !u!114 &8648771640050673116
+  hitPrefab: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
+  lastHit: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
+  rb: {fileID: 8648771640050673117}
+--- !u!114 &6564390603560047939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,13 +112,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8648771640050673107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cc27db0769d1d4187fd276907b8889, type: 3}
+  m_Script: {fileID: 11500000, guid: 38777d7209745304794eea71f03d4583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 15
-  max: 20
-  stopMin: 15
-  stopMax: 20
+  timeToDestroy: 5
 --- !u!61 &4015824844193870063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +163,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!60 &9205439356590834661
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648771640050673107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.5}
