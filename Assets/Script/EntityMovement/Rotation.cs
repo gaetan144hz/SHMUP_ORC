@@ -18,7 +18,8 @@ public class Rotation : MonoBehaviour
     
     void Update()
     {
-        
+        rotaZ += Time.deltaTime * rotationSpeed;
+
         /*
         if (ClockwiseRoation == false)
         {
@@ -33,16 +34,15 @@ public class Rotation : MonoBehaviour
         Debug.Log(transform.rotation);
         Debug.Log(rotaZ);
         */
-
     }
 
-    public void OnTriggerEnter2D(Collider2D obj)
+    public void OnTriggerStay2D(Collider2D obj)
     {
         if (obj.gameObject.tag == "Player")
-        {
-            rotaZ += Time.deltaTime * rotationSpeed;
+        {            
             obj.transform.rotation = Quaternion.Euler(0, 0, rotaZ);
-        }       
+        }
+        
     }
 
     public void OnTriggerExit2D(Collider2D obj)
