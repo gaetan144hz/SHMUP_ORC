@@ -20,37 +20,26 @@ public class BossMovement : MonoBehaviour
 
     private Transform player;
     
-    [Header("Bullet")]
-    public GameObject enemyBullet;
-    public GameObject bossSpellBullet1;
-    public GameObject bossSpellBullet2;
+    public GameObject[] bossBullet;
+
+    public GameObject[] FirePoint;
 
     [Header("FireRate")]
-    public float spellFireRate;
-    public float cooldown;
+    public float FireRateBullet;
+    public float FireRateSpell1;
     public float FireRateSpell2;
 
     private float lastShot;
-    private float nextFireTime;
 
-    [Header("FirePoint")]
-    public GameObject bossFirePoint1;
-    public GameObject bossFirePoint2;
-
-    public GameObject spellFirePoint1;
-    public GameObject spellFirePoint2;
 
     public List<GameObject> playerList;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-
         healthBar.SetMaxHealth(data.currentHealth);
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach (PlayerMovement player in PlayerMovement.GetPlayerList())
@@ -60,32 +49,43 @@ public class BossMovement : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
             }
-            else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
+            else if (distanceFromPlayer <= data.shootingRange && FireRateBullet < Time.time)
             {
-                Instantiate(enemyBullet, bossFirePoint1.transform.position, Quaternion.identity);
-                Instantiate(enemyBullet, bossFirePoint2.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + data.fireRate;
+                shoot();
+                spell1();
+                spell2();
             }
         }
+    }
 
-        Invoke("spell2", FireRateSpell2);
-
-        spell1();
+    public void shoot()
+    {
+        Instantiate(bossBullet[0], FirePoint[0].transform.position, Quaternion.identity);
+        Instantiate(bossBullet[0], FirePoint[1].transform.position, Quaternion.identity);
+        FireRateBullet = Time.time + data.fireRate;
     }
 
     public void spell1()
     {
-        if (Time.time - lastShot < cooldown)
+        if (Time.time - lastShot < FireRateSpell1)
         {
             return;
         }
         lastShot = Time.time;
-        Instantiate(bossSpellBullet1, spellFirePoint1.transform.position, spellFirePoint1.transform.rotation);
+        Instantiate(bossBullet[1], FirePoint[2].transform.position, Quaternion.identity);
     }
 
     public void spell2()
     {
-        Instantiate(bossSpellBullet2, spellFirePoint2.transform.position, Quaternion.identity);
+        /*
+        if (Time.time - lastShot < FireRateSpell2)
+        {
+            return;
+        }
+        */
+        //lastShot = Time.time;
+        Instantiate(bossBullet[2], FirePoint[3].transform.position, Quaternion.identity);
+        Debug.Log("spawn");
     }
 
     private void OnDrawGizmosSelected()

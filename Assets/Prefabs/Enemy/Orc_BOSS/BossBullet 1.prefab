@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6924478342059470165}
   - component: {fileID: 6924478342059470166}
-  - component: {fileID: 1484163296184619106}
-  - component: {fileID: 6613090291719808518}
+  - component: {fileID: 2274381739262179628}
   - component: {fileID: 5930046989322185947}
   - component: {fileID: 437912124206334990}
+  - component: {fileID: 1484163296184619106}
+  - component: {fileID: 6613090291719808518}
   m_Layer: 0
   m_Name: BossBullet 1
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.8396226, g: 0, b: 0.50608957, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,6 +87,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2274381739262179628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924478342059470160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3bc6f6b30cb4f47ab9f3fa154524a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &5930046989322185947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924478342059470160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e3b74177a00e54ba82614a53da45d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellDamage: 25
+--- !u!114 &437912124206334990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924478342059470160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38777d7209745304794eea71f03d4583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 5
 --- !u!50 &1484163296184619106
 Rigidbody2D:
   serializedVersion: 4
@@ -123,29 +163,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5930046989322185947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6924478342059470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e3b74177a00e54ba82614a53da45d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellDamage: 25
---- !u!114 &437912124206334990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6924478342059470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38777d7209745304794eea71f03d4583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToDestroy: 5

@@ -23,8 +23,6 @@ public class BossSpell : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 movedir = (target.transform.position - transform.position).normalized * data.spellSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
-
-        Destroy(this.gameObject, 5);
     }
 
     public void OnTriggerEnter2D(Collider2D hitInfo)

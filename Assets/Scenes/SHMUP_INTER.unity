@@ -719,11 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2728519166858978697, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
       propertyPath: m_Name
-      value: SpellFirePoint2
+      value: FirePoint4
       objectReference: {fileID: 0}
     - target: {fileID: 4074701322560334342, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
       propertyPath: m_Name
-      value: SpellFirePoint1
+      value: Firepoint3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
@@ -1184,6 +1184,10 @@ PrefabInstance:
       propertyPath: bossSpawnPoint
       value: 
       objectReference: {fileID: 2083759559}
+    - target: {fileID: 6961053744208475257, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7488796569348178704, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
       propertyPath: m_Name
       value: Arene

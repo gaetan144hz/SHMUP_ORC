@@ -242,16 +242,18 @@ MonoBehaviour:
   healthBar: {fileID: 8827138564293951634}
   gameOverUI: {fileID: 8243553497120213944}
   explosion: {fileID: 7451577467745133327, guid: bdd50dc6e42b04146b1110171c398bad, type: 3}
-  enemyBullet: {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
-  bossSpellBullet1: {fileID: 8648771640050673107, guid: de4cf5289010fc242b15cef3ff888a76, type: 3}
-  bossSpellBullet2: {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
-  spellFireRate: 10
-  cooldown: 5
+  bossBullet:
+  - {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
+  - {fileID: 8648771640050673107, guid: de4cf5289010fc242b15cef3ff888a76, type: 3}
+  - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
+  FirePoint:
+  - {fileID: 1405351764310200364}
+  - {fileID: 7845987600335875881}
+  - {fileID: 4074701322560334342}
+  - {fileID: 2728519166858978697}
+  FireRateBullet: 2
+  FireRateSpell1: 1
   FireRateSpell2: 1
-  bossFirePoint1: {fileID: 1405351764310200364}
-  bossFirePoint2: {fileID: 7845987600335875881}
-  spellFirePoint1: {fileID: 4074701322560334342}
-  spellFirePoint2: {fileID: 2728519166858978697}
   playerList: []
 --- !u!114 &6281377891622321027
 MonoBehaviour:
@@ -356,7 +358,7 @@ GameObject:
   - component: {fileID: 3826620028802122857}
   - component: {fileID: 3787951613688185545}
   m_Layer: 0
-  m_Name: SpellFirePoint2
+  m_Name: FirePoint4
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -708,7 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5846432504357129469}
   m_Layer: 0
-  m_Name: SpellFirePoint1
+  m_Name: Firepoint3
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
