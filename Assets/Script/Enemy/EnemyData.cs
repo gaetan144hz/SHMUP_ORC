@@ -42,7 +42,7 @@ public class EnemyData : ScriptableObject
     [Header("Spell Speed")]
     [HideInInspector] public float spellSpeed;
     public float startSpellSpeed;
-
+     
     [Header("Spell Damage")]
     [HideInInspector] public int spellDamage;
     public int startSpellDamage;

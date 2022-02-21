@@ -60,6 +60,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "cheatDamage",
+                    "type": "Button",
+                    "id": "2903c791-cc8c-45db-9e7f-580edb9076d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "timeScale1",
+                    "type": "Button",
+                    "id": "794c45ac-c182-4941-b40b-cbb7392ef8f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "timeScale0",
+                    "type": "Button",
+                    "id": "59e664f0-e0c2-457e-8aaf-68f03dd5c08d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -258,6 +282,39 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "tripleShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9be41095-fc0d-471b-80e5-9a282af2ec66",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "cheatDamage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cad28fc0-cc3c-4845-a9e6-2f370cbe1531",
+                    "path": "<Keyboard>/numpadPlus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "timeScale1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39736c44-619b-413b-882e-5e80d3c2cdf3",
+                    "path": "<Keyboard>/numpadMinus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "timeScale0",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

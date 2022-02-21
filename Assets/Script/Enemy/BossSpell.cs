@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class EnemyBullet : MonoBehaviour
+public class BossSpell : MonoBehaviour
 {
     [Header("Data")]
     public EnemyData data;
@@ -14,17 +14,15 @@ public class EnemyBullet : MonoBehaviour
     [Header("Target")]
     GameObject target;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * data.bulletSpeed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.spellSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
-
-        Destroy(this.gameObject, 5);
     }
 
     public void OnTriggerEnter2D(Collider2D hitInfo)
@@ -33,7 +31,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(data.bulletDamage);
+            playerHealth.TakeDamage(data.spellDamage);
             hitSpawn();
             Destroy(gameObject);
         }

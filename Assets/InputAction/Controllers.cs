@@ -73,6 +73,30 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""cheatDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""2903c791-cc8c-45db-9e7f-580edb9076d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""timeScale1"",
+                    ""type"": ""Button"",
+                    ""id"": ""794c45ac-c182-4941-b40b-cbb7392ef8f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""timeScale0"",
+                    ""type"": ""Button"",
+                    ""id"": ""59e664f0-e0c2-457e-8aaf-68f03dd5c08d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -273,6 +297,39 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""tripleShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9be41095-fc0d-471b-80e5-9a282af2ec66"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""cheatDamage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cad28fc0-cc3c-4845-a9e6-2f370cbe1531"",
+                    ""path"": ""<Keyboard>/numpadPlus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""timeScale1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39736c44-619b-413b-882e-5e80d3c2cdf3"",
+                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""timeScale0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -311,6 +368,9 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
         m_player_stopMusic = m_player.FindAction("stopMusic", throwIfNotFound: true);
         m_player_playMusic = m_player.FindAction("playMusic", throwIfNotFound: true);
+        m_player_cheatDamage = m_player.FindAction("cheatDamage", throwIfNotFound: true);
+        m_player_timeScale1 = m_player.FindAction("timeScale1", throwIfNotFound: true);
+        m_player_timeScale0 = m_player.FindAction("timeScale0", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -367,6 +427,9 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_Resume;
     private readonly InputAction m_player_stopMusic;
     private readonly InputAction m_player_playMusic;
+    private readonly InputAction m_player_cheatDamage;
+    private readonly InputAction m_player_timeScale1;
+    private readonly InputAction m_player_timeScale0;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -378,6 +441,9 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Resume => m_Wrapper.m_player_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player_playMusic;
+        public InputAction @cheatDamage => m_Wrapper.m_player_cheatDamage;
+        public InputAction @timeScale1 => m_Wrapper.m_player_timeScale1;
+        public InputAction @timeScale0 => m_Wrapper.m_player_timeScale0;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -408,6 +474,15 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
                 @playMusic.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
                 @playMusic.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayMusic;
+                @cheatDamage.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheatDamage;
+                @cheatDamage.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheatDamage;
+                @cheatDamage.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheatDamage;
+                @timeScale1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale1;
+                @timeScale0.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
+                @timeScale0.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
+                @timeScale0.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -433,6 +508,15 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started += instance.OnPlayMusic;
                 @playMusic.performed += instance.OnPlayMusic;
                 @playMusic.canceled += instance.OnPlayMusic;
+                @cheatDamage.started += instance.OnCheatDamage;
+                @cheatDamage.performed += instance.OnCheatDamage;
+                @cheatDamage.canceled += instance.OnCheatDamage;
+                @timeScale1.started += instance.OnTimeScale1;
+                @timeScale1.performed += instance.OnTimeScale1;
+                @timeScale1.canceled += instance.OnTimeScale1;
+                @timeScale0.started += instance.OnTimeScale0;
+                @timeScale0.performed += instance.OnTimeScale0;
+                @timeScale0.canceled += instance.OnTimeScale0;
             }
         }
     }
@@ -464,5 +548,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
+        void OnCheatDamage(InputAction.CallbackContext context);
+        void OnTimeScale1(InputAction.CallbackContext context);
+        void OnTimeScale0(InputAction.CallbackContext context);
     }
 }
