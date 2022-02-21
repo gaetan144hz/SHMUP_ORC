@@ -47,7 +47,7 @@ public class MageMove : MonoBehaviour
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
-                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
+                Instantiate(enemyBullet, bulletParent.transform.position, bulletParent.transform.rotation);
                 nextFireTime = Time.time + data.fireRate;
             }
         }
