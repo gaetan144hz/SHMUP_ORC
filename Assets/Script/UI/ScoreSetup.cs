@@ -16,11 +16,6 @@ public class ScoreSetup : MonoBehaviour
         dmgCount = 0;
     }
 
-    public void OnSelected()
-    {
-        Debug.Log("marche");
-    }
-
     public void AddDmgScore(int scoreToAdd) //Fonction pour compter les dégats !
     {
         dmgCount += scoreToAdd;

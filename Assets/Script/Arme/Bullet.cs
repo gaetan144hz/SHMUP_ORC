@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 {
     public PlayerData datap;
 
-    private Classement classement;
+    private ScoreSetup scoreSetup;
     public GameObject hitPrefab;
     public GameObject lastHit;
 
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        classement = FindObjectOfType<Classement>();
+        scoreSetup = FindObjectOfType<ScoreSetup>();
         Vector3 pos = transform.position;
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
@@ -45,7 +45,7 @@ public class Bullet : MonoBehaviour
         if (disque != null)
         {
             disque.TakeDamage(datap.bulletDamage);
-            classement.AddDmgScore(datap.bulletDamage);
+            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour
         if (enemyFollowPlayer != null)
         {
             enemyFollowPlayer.TakeDamage(datap.bulletDamage);
-            classement.AddDmgScore(datap.bulletDamage);
+            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
         if(bossMovement != null)
         {
             bossMovement.TakeDamage(datap.bulletDamage);
-            classement.AddDmgScore(datap.bulletDamage);
+            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
@@ -69,7 +69,7 @@ public class Bullet : MonoBehaviour
         if(mageMove != null)
         {           
             mageMove.TakeDamage(datap.bulletDamage);
-            classement.AddDmgScore(datap.bulletDamage);
+            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
             
@@ -79,7 +79,7 @@ public class Bullet : MonoBehaviour
         if (dragonMove != null)
         {
             dragonMove.TakeDamage((datap.bulletDamage));
-            classement.AddDmgScore(datap.bulletDamage);
+            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
