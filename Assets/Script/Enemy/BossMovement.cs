@@ -47,14 +47,16 @@ public class BossMovement : MonoBehaviour
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
-                spell1();
+                
             }
             else if (distanceFromPlayer <= data.shootingRange && FireRateBullet < Time.time)
             {
                 shoot();
             }
+            spell1();
+            spell2();
         }
-        spell2();
+        
     }
 
     public void shoot()
