@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "SHMUP_Player/Player Data")]
 public class PlayerData : ScriptableObject
 {
-    private void OnEnable()
+    public void OnEnable()
     {
         currentHealth = startHealth;
         speed = startSpeed;
@@ -15,7 +15,7 @@ public class PlayerData : ScriptableObject
         startSpellSpeed = spellSpeed;
     }
 
-    [Header("PLayer Movement")]
+    [Header("Player Movement")]
     public float speed;
     [HideInInspector] public float startSpeed;
 
