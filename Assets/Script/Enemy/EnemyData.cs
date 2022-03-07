@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "SHMUP_Enemy/Enemy Data")]
 public class EnemyData : ScriptableObject
 {
-    private void OnEnable()
+    public void OnEnable()
     {
         currentHealth = startHealth;
 
