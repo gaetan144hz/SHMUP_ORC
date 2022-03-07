@@ -4,6 +4,11 @@ using TMPro;
 
 public class PrincipalWeapon : MonoBehaviour
 {
+    private void OnEnable()
+    {
+        datap.OnEnable();
+    }
+
     [Header("Data")]
     public PlayerData datap;
 
@@ -31,6 +36,7 @@ public class PrincipalWeapon : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
         textCooldown.text = cooldown.ToString();

@@ -11,6 +11,7 @@ TagManager:
   - Disque
   - plateforme
   - DeathZone
+  - middleSkybarriere
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
+  - Disque
   - 
   - 
   - 
