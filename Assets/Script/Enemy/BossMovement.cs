@@ -22,7 +22,7 @@ public class BossMovement : MonoBehaviour
     
     public GameObject[] bossBullet;
 
-    public GameObject[] FirePoint;
+    public GameObject[] firePoint;
 
     [Header("FireRate")]
     public float FireRateBullet;
@@ -30,8 +30,7 @@ public class BossMovement : MonoBehaviour
     public float FireRateSpell2;
 
     private float lastShot;
-
-
+    
     public List<GameObject> playerList;
 
     // Start is called before the first frame update
@@ -48,20 +47,22 @@ public class BossMovement : MonoBehaviour
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
+                
             }
             else if (distanceFromPlayer <= data.shootingRange && FireRateBullet < Time.time)
             {
                 shoot();
-                spell1();
-                spell2();
             }
+            spell1();
+            spell2();
         }
+        
     }
 
     public void shoot()
     {
-        Instantiate(bossBullet[0], FirePoint[0].transform.position, Quaternion.identity);
-        Instantiate(bossBullet[0], FirePoint[1].transform.position, Quaternion.identity);
+        Instantiate(bossBullet[0], firePoint[0].transform.position, Quaternion.identity);
+        Instantiate(bossBullet[0], firePoint[1].transform.position, Quaternion.identity);
         FireRateBullet = Time.time + data.fireRate;
     }
 
@@ -72,20 +73,17 @@ public class BossMovement : MonoBehaviour
             return;
         }
         lastShot = Time.time;
-        Instantiate(bossBullet[1], FirePoint[2].transform.position, Quaternion.identity);
+        Instantiate(bossBullet[1], firePoint[2].transform.position, firePoint[2].transform.rotation);
     }
 
     public void spell2()
     {
-        /*
         if (Time.time - lastShot < FireRateSpell2)
         {
             return;
         }
-        */
-        //lastShot = Time.time;
-        Instantiate(bossBullet[2], FirePoint[3].transform.position, Quaternion.identity);
-        Debug.Log("spawn");
+        lastShot = Time.time;
+        Instantiate(bossBullet[2], firePoint[3].transform.position, firePoint[3].transform.rotation);
     }
 
     private void OnDrawGizmosSelected()
@@ -108,6 +106,7 @@ public class BossMovement : MonoBehaviour
             }
         }
     }
+    
     public void TakeDamage(int playerDamage)
     {
         data.currentHealth -= playerDamage;

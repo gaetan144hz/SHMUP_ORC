@@ -246,11 +246,10 @@ MonoBehaviour:
   - {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
   - {fileID: 8648771640050673107, guid: de4cf5289010fc242b15cef3ff888a76, type: 3}
   - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
-  FirePoint:
+  firePoint:
   - {fileID: 1405351764310200364}
   - {fileID: 7845987600335875881}
   - {fileID: 4074701322560334342}
-  - {fileID: 2728519166858978697}
   FireRateBullet: 2
   FireRateSpell1: 1
   FireRateSpell2: 1
