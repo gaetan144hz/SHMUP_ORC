@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: Poison
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.7256848, g: 0.2971698, b: 1, a: 1}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 4d0041387d03adb44b34742bc72f3a4e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9cc27db0769d1d4187fd276907b8889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  min: 1
+  max: 10
+  stopMax: 4
+  stopMin: 9
 --- !u!114 &8291274181402240960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928a0cb5af0337e4ea956574986324d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  increase: 10
+  poisonIncrease: 2
 --- !u!50 &8291274181402240963
 Rigidbody2D:
   serializedVersion: 4

@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class healBullet : MonoBehaviour
 {
-    public EnemyData data; 
+    [Header("Data")]
+    public EnemyData data;
 
+    [Header("Target")]
     GameObject target;
 
-    [SerializeField] float speed = 3f;
+    [Header("HealPoint")]
     [SerializeField] int healIncrease = 15;
-    Rigidbody2D bulletRb;
+    private Rigidbody2D rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        bulletRb = this.GetComponent<Rigidbody2D>();
+        rb = this.GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Enemy");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * speed;
-        bulletRb.velocity = new Vector2(movedir.x, movedir.y);
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.currentSpeedMovement;
+        rb.velocity = new Vector2(-movedir.x, -movedir.y);
 
         Destroy(this.gameObject, 5);
     }

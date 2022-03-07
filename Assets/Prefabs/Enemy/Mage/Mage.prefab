@@ -483,13 +483,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bc693aa856f306e4981e19b5475701c8, type: 2}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1109490202028204185}
   explosion: {fileID: 4057173624688721646, guid: a49cf91c8d4715a40aae6824d102b42f, type: 3}
   MageScore: 75
   speed: 1.5
   fireRate: 1
   enemyBullet: {fileID: 2024379208871035764, guid: 91938c5e55e88084b9ccacad08e4976c, type: 3}
   bulletParent: {fileID: 3272891980177971676}
+  enemyList: []
 --- !u!114 &2510982591209325625
 MonoBehaviour:
   m_ObjectHideFlags: 0

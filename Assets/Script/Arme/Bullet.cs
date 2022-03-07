@@ -8,11 +8,14 @@ using TMPro;
 
 public class Bullet : MonoBehaviour
 {
+    [Header("Data")]
     public PlayerData datap;
 
+    [Header("FX")]
     public GameObject hitPrefab;
     public GameObject lastHit;
 
+    [Header("RigidBody")]
     public Rigidbody2D rb;
     
     //[SerializeField] float speed = 7f;

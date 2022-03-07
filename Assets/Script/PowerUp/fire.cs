@@ -7,45 +7,57 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 
 public class fire : MonoBehaviour
-{ 
-    public PlayerData datap;
+{
+    private PlayerData datap;
+    private PlayerHealth playerHealth;
 
     public GameObject target;
 
-    [SerializeField] int increase = 1;
-
+    [SerializeField] public int fireIncrease;
+    private int fireMultiply;
+    [SerializeField] private int multiplicator;
     Coroutine coroutineFire;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
+        fireIncrease = fireMultiply;
+        
         rb = GetComponent<Rigidbody2D>();
+
         target = GameObject.FindGameObjectWithTag("Player");
+
         rb.gravityScale = 0;
-        Destroy(this.gameObject,10);
+
+        //Destroy(this.gameObject,10);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //GameObject player = collision.gameObject;
+        playerHealth = collision.transform.GetComponent<PlayerHealth>();
 
         if (collision.tag == "Player")
         {
-            coroutineFire = StartCoroutine(MakeFire());
+            coroutineFire = StartCoroutine(MakeFire());           
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        StopCoroutine(coroutineFire);
+        if (coroutineFire != null)
+        {
+            StopCoroutine(coroutineFire);
+        }
     }
 
     IEnumerator MakeFire()
     {
         while (true)
         {
-            datap.currentHealth -= increase++;
+            //datap.currentHealth -= fireIncrease;
+            var firemultiply = fireIncrease * multiplicator;
+            playerHealth.TakeDamage(firemultiply);
             yield return new WaitForSeconds(1);   
         }
     }

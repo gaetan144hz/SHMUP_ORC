@@ -22,6 +22,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "tripleShoot",
+                    "type": "Button",
+                    "id": "84fd978c-fdf7-44b7-bcf7-5310e94ff96a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "pause",
                     "type": "Button",
                     "id": "a75d895c-c06e-4245-b224-e93cb7754063",
@@ -30,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "resume/play",
+                    "name": "Resume",
                     "type": "Button",
                     "id": "9aeaa1a4-0e8d-4d79-ae2a-3b6b2133a93a",
                     "expectedControlType": "Button",
@@ -49,6 +57,30 @@
                     "name": "playMusic",
                     "type": "Button",
                     "id": "982af7ac-2c26-4247-9d6a-bb2fa01d8e45",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "cheatDamage",
+                    "type": "Button",
+                    "id": "2903c791-cc8c-45db-9e7f-580edb9076d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "timeScale1",
+                    "type": "Button",
+                    "id": "794c45ac-c182-4941-b40b-cbb7392ef8f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "timeScale0",
+                    "type": "Button",
+                    "id": "59e664f0-e0c2-457e-8aaf-68f03dd5c08d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -172,7 +204,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "resume/play",
+                    "action": "Resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -183,7 +215,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "resume/play",
+                    "action": "Resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -228,6 +260,61 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "playMusic",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "344e68a4-a6bb-46fd-81ba-7b38f54dadbb",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "tripleShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "439c49f5-7cec-4b51-af9d-b9d184a04dc6",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "tripleShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9be41095-fc0d-471b-80e5-9a282af2ec66",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "cheatDamage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cad28fc0-cc3c-4845-a9e6-2f370cbe1531",
+                    "path": "<Keyboard>/numpadPlus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "timeScale1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39736c44-619b-413b-882e-5e80d3c2cdf3",
+                    "path": "<Keyboard>/numpadMinus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "timeScale0",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [Header("Data")]
     public EnemyData data;
 
+    [Header("FX")]
     public GameObject hitPrefab;
     public GameObject lastHit;
 
+    [Header("Target")]
     GameObject target;
 
     private Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * data.startBulletSpeed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.bulletSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
 
         Destroy(this.gameObject, 5);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6826387075835381361}
   - component: {fileID: 6826387075835381362}
   - component: {fileID: 4112902974339258977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DisqueFast
   m_TagString: Disque
   m_Icon: {fileID: 0}

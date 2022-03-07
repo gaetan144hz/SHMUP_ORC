@@ -4,47 +4,56 @@ using UnityEngine;
 
 public class MageMove : MonoBehaviour
 {
+    [Header("Data")]
     public EnemyData data;
 
+    [Header("HealthBar")]
     public HealthBar healthBar;
 
+    [Header("FX")]
     public GameObject explosion;
 
     public int MageScore = 200;
 
-    public float speed = 1.5f;
-
-    public float fireRate = 1f;
+    [Header("FireRate")]
     private float nextFireTime;
+    private float nextFireRate;
 
+    [Header("Bullet")]
     public GameObject enemyBullet;
+
+    [Header("FirePoint")]
     public GameObject bulletParent;
-    private Transform enemy; //-----------------------------------FAIRE TABLEAU----------------------------------//
-  
+
+    private GameObject[] enemies; //-----------------------------------FAIRE TABLEAU----------------------------------//
+
+    public List<GameObject> enemyList;
+
     void Start()
     {
         healthBar.SetMaxHealth(data.currentHealth);
-        enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
-
-        //int randEnemy = Random.Range(0, enemy.Length);
-
-        float distanceFromPlayer = Vector2.Distance(enemy.position, transform.position);
-        if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
+        foreach (var enemy in enemies) //pour chaque enemy dans la liste enemies
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, enemy.position, speed * Time.deltaTime);
+            float distanceFromPlayer = Vector2.Distance(enemy.transform.position, transform.position);
+            if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, data.currentSpeedMovement * Time.deltaTime);
+            }
+            else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
+            {
+                Instantiate(enemyBullet, bulletParent.transform.position, bulletParent.transform.rotation);
+                nextFireTime = Time.time + data.fireRate;
+            }
         }
-        else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
-        {
-            Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
-        }
-        
+            // faut le mettre ou ce truc ???  :  && enemyFollowPlayer.data.health < 100
+
+            //int randEnemy = Random.Range(0, enemy.Length); 
     }
 
     private void OnDrawGizmosSelected()
