@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8995282254613510144}
   - component: {fileID: 8995282254613510151}
   - component: {fileID: 8995282254613510148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disque
   m_TagString: Disque
   m_Icon: {fileID: 0}
