@@ -28,7 +28,7 @@ public class damage : MonoBehaviour
         if(playerHealth != null)
         {
             playerHealth.TakeDamage(spellDamage);
-            Destroy(this.gameObject,5);
+            Destroy(this.gameObject);
         }
     }
 }
