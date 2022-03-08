@@ -12,6 +12,7 @@ TagManager:
   - plateforme
   - DeathZone
   - middleSkybarriere
+  - Player2
   layers:
   - Default
   - TransparentFX
