@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class DragonMove : MonoBehaviour
 {
+    private ScoreSetup scoreSetup;
+
     [Header("EnemyData")]
     public EnemyData data;
 
@@ -33,6 +35,8 @@ public class DragonMove : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        scoreSetup = FindObjectOfType<ScoreSetup>();
+
         rb.gravityScale = 0;
         healthBar.SetMaxHealth(data.currentHealth);
     }
@@ -87,6 +91,7 @@ public class DragonMove : MonoBehaviour
 
     void Die()
     {
+        scoreSetup.AddKillScore(1);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

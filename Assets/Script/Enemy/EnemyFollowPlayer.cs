@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
+    private ScoreSetup scoreSetup;
+
     [Header("EnemyData")]
     public EnemyData data;
 
@@ -40,6 +42,8 @@ public class EnemyFollowPlayer : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        scoreSetup = FindObjectOfType<ScoreSetup>();
+
         rb.gravityScale = 0;
         healthBar.SetMaxHealth(data.currentHealth);
     }
@@ -97,6 +101,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Die()
     {
+        scoreSetup.AddKillScore(1);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

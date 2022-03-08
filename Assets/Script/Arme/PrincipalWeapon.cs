@@ -86,9 +86,9 @@ public class PrincipalWeapon : MonoBehaviour
         Instantiate(bulletPrefab[1], firePointGauche.position, firePointGauche.rotation);
     }
 
-    public void OnCheatDamage(InputValue value)
+    public void OnEnableCheatDamage(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed) //press C
         {
             datap.bulletDamage += 9999;
             Debug.Log("Damage augmenté de 9999");
@@ -96,9 +96,19 @@ public class PrincipalWeapon : MonoBehaviour
         }
     }
 
+    public void OnDisbableCheatDamage(InputValue value)
+    {
+        if (value.isPressed) //press V
+        {
+            datap.bulletDamage += 15;
+            Debug.Log("Damage mis à 15");
+            return;
+        }
+    }
+
     public void OnTimeScale1(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed) //press PavNum-
         {
             Time.timeScale = 1f;
             Debug.Log("TimeScale 1");
@@ -108,7 +118,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void OnTimeScale0(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed) //press PavNum+
         {
             Time.timeScale = 0f;
             Debug.Log("TimeScale 0");

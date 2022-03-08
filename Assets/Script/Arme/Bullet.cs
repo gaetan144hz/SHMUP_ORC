@@ -8,11 +8,12 @@ using TMPro;
 
 public class Bullet : MonoBehaviour
 {
+    private ScoreSetup scoreSetup;
+
     [Header("Data")]
     public PlayerData datap;
 
     [Header("FX")]
-    private ScoreSetup scoreSetup;
     public GameObject hitPrefab;
     public GameObject lastHit;
 
@@ -25,6 +26,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         scoreSetup = FindObjectOfType<ScoreSetup>();
+
         Vector3 pos = transform.position;
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
@@ -42,10 +44,10 @@ public class Bullet : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Disque disque = hitInfo.transform.GetComponent<Disque>();
-        EnemyFollowPlayer enemyFollowPlayer = hitInfo.transform.GetComponent<EnemyFollowPlayer>();
-        BossMovement bossMovement = hitInfo.transform.GetComponent<BossMovement>();
-        MageMove mageMove = hitInfo.transform.GetComponent<MageMove>();
-        DragonMove dragonMove = hitInfo.transform.GetComponent<DragonMove>();
+        EnemyFollowPlayer enemy = hitInfo.transform.GetComponent<EnemyFollowPlayer>();
+        BossMovement boss = hitInfo.transform.GetComponent<BossMovement>();
+        MageMove mage = hitInfo.transform.GetComponent<MageMove>();
+        DragonMove dragon = hitInfo.transform.GetComponent<DragonMove>();
 
         if (disque != null)
         {
@@ -55,25 +57,25 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (enemyFollowPlayer != null)
+        if (enemy != null)
         {
-            enemyFollowPlayer.TakeDamage(datap.bulletDamage);
+            enemy.TakeDamage(datap.bulletDamage);
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
-        if(bossMovement != null)
+        if(boss != null)
         {
-            bossMovement.TakeDamage(datap.bulletDamage);
+            boss.TakeDamage(datap.bulletDamage);
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
-        if(mageMove != null)
+        if(mage != null)
         {           
-            mageMove.TakeDamage(datap.bulletDamage);
+            mage.TakeDamage(datap.bulletDamage);
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
@@ -81,9 +83,9 @@ public class Bullet : MonoBehaviour
             //score.scoreValue += 200;
         }
 
-        if (dragonMove != null)
+        if (dragon != null)
         {
-            dragonMove.TakeDamage((datap.bulletDamage));
+            dragon.TakeDamage((datap.bulletDamage));
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);

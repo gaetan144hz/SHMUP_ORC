@@ -62,7 +62,15 @@
                     "interactions": ""
                 },
                 {
-                    "name": "cheatDamage",
+                    "name": "disableCheatDamage",
+                    "type": "Button",
+                    "id": "b9dfa415-481f-4049-b06c-0db6075825d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "enableCheatDamage",
                     "type": "Button",
                     "id": "2903c791-cc8c-45db-9e7f-580edb9076d8",
                     "expectedControlType": "Button",
@@ -292,7 +300,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "cheatDamage",
+                    "action": "enableCheatDamage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -315,6 +323,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "timeScale0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8ab1e7a-a8ad-4d0d-b490-c1f81f7a9694",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "disableCheatDamage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -5,6 +5,8 @@ public class PlayerData : ScriptableObject
 {
     public void OnEnable()
     {
+        Time.timeScale = 1f;
+
         currentHealth = startHealth;
         speed = startSpeed;
 

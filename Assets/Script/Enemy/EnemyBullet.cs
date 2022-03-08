@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    /*
     private void OnEnable()
     {
         data.OnEnable();
     }
+    */
 
     [Header("Data")]
     public EnemyData data;

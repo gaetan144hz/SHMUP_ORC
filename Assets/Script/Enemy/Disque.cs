@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Disque : MonoBehaviour
 {
-    public int DisqueScore;
 
     [SerializeField] int disqueHealth;
 
