@@ -29,7 +29,14 @@ public class RandomSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(waitingSecond);
-            spawn();
+            IEnumerator enemySpawn()
+            {
+                while (true)
+                {
+                    yield return new WaitForSeconds(waitingSecond);
+                    spawn();
+                }
+            }
         }
     }
 }
