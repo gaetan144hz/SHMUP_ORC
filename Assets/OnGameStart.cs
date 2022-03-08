@@ -8,4 +8,8 @@ public class OnGameStart : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
+    private void Update()
+    {
+        
+    }
 }

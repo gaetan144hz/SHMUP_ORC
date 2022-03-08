@@ -16,7 +16,12 @@ public class RandomSpawner : MonoBehaviour
         coroutineSpawn = StartCoroutine(Spawn());
     }
 
-    public void spawn()
+    private void Update()
+    {
+        
+    }
+
+    public void spawn1()
     {
         int randEnemy = Random.Range(0, enemyPrefabs.Length);
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
@@ -28,15 +33,34 @@ public class RandomSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(waitingSecond);
-            IEnumerator enemySpawn()
-            {
-                while (true)
-                {
-                    yield return new WaitForSeconds(waitingSecond);
-                    spawn();
-                }
-            }
+            spawn1();
+            yield return new WaitForSeconds(6);
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(12);
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(18);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(24);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(30);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(36);
+            Debug.Log("BOSS");
         }
     }
 }

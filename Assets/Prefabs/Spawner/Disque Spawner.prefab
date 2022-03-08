@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6734084580053839608}
-  - component: {fileID: 6734084580053839609}
+  - component: {fileID: 3653283190782483937}
   m_Layer: 0
   m_Name: Disque Spawner
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6734084580053839609
+--- !u!114 &3653283190782483937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6734084580053839615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a090a141bedc848a9bbac305f37c55, type: 3}
+  m_Script: {fileID: 11500000, guid: f8920232eb854c942b7de722adcdd9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
@@ -55,7 +55,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 8995282254613510149, guid: ac8861858afc50643aa0390a4cfff378, type: 3}
   - {fileID: 6826387075835381363, guid: ef83bfda86b8f544ea30d28e350524e1, type: 3}
-  waitingSecond: 6
+  waitingSecond: 1
 --- !u!1 &6734084580078076346
 GameObject:
   m_ObjectHideFlags: 0
