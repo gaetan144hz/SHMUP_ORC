@@ -1001,6 +1001,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749546191728056610, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749546191728056610, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2047512893664315300, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
       propertyPath: bossSpawnPoint
       value: 
@@ -1124,7 +1132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7652325314966257743, guid: e176d7828e01d8c4bb0ee270897cd62d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e176d7828e01d8c4bb0ee270897cd62d, type: 3}
