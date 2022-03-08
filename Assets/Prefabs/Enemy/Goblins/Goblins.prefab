@@ -458,7 +458,8 @@ MonoBehaviour:
   EnemyScore: 100
   enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
   bulletParent: {fileID: 8745041235908337779}
-  playerList: []
+  playerList:
+  - {fileID: 0}
 --- !u!114 &5431377427111105237
 MonoBehaviour:
   m_ObjectHideFlags: 0

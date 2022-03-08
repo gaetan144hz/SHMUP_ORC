@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2f6637dbbec12f04c9e4bdff8ab060c1
   - enabled: 1
+    path: Assets/Scenes/LoadingScreenScene.unity
+    guid: 6631745cd7210dc4e85e9cf68a2b86fe
+  - enabled: 1
     path: Assets/Scenes/SHMUP_INTER.unity
     guid: 8046889dcf6b3cc47a6f981a9adab359
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: cb5bf75e3a771cd4d8ed8651103912ce
-  - enabled: 0
-    path: Assets/Scenes/SHMUP_PROTO.unity
-    guid: e926b97083d727a449e9db9003d18c44
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 00cd80dc0a519284ead65a167315624f, type: 2}
