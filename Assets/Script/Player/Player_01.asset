@@ -15,9 +15,9 @@ MonoBehaviour:
   speed: 10
   startSpeed: 10
   startHealth: 300
-  currentHealth: 124
-  bulletDamage: 50
-  startBulletDamage: 20
+  currentHealth: 64
+  bulletDamage: 25
+  startBulletDamage: 15
   bulletSpeed: 15
   startBulletSpeed: 15
   spellDamage: 50

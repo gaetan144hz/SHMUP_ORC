@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 public class PlayerScriptPicker : MonoBehaviour
 {
     public GameObject playerSolo, player1, player2;
+    private PlayerMovement playerMovement;
 
     private void Start()
     {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+
         if (PlayerInputManager.instance.playerCount == 1)
         {
             Instantiate(playerSolo, transform);
@@ -17,9 +20,15 @@ public class PlayerScriptPicker : MonoBehaviour
             var solo = FindObjectOfType<PlayerMovement>().transform;
             var soloPosition = solo.position;
             var soloParent = solo.parent;
-            Destroy(solo.gameObject);
+            OnDestroy();
             Instantiate(player1, soloPosition, quaternion.identity ,soloParent);
             Instantiate(player2, transform);
         }
+    }
+    private void OnDestroy()
+    {
+        var solo = FindObjectOfType<PlayerMovement>().transform;
+        PlayerMovement.playerList.Remove(playerMovement);
+        Destroy(solo.gameObject);
     }
 }

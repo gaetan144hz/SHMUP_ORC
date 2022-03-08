@@ -10,7 +10,7 @@ public class PlayerData : ScriptableObject
         currentHealth = startHealth;
         speed = startSpeed;
 
-        startBulletDamage = bulletDamage;
+         bulletDamage = startBulletDamage;
         bulletSpeed = startBulletSpeed;
 
         startSpellDamage = spellDamage;
@@ -27,7 +27,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Bullet Settings")]
     public int bulletDamage;
-    [HideInInspector] public int startBulletDamage;
+    public int startBulletDamage;
     public int bulletSpeed;
     [HideInInspector] public int startBulletSpeed;
     public int spellDamage;
