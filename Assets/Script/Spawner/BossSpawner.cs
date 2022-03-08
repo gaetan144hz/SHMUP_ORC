@@ -26,7 +26,7 @@ public class BossSpawner : MonoBehaviour
 
     public void spawn()
     {
-        if (time.currentTime >= 60f)
+        if (time.currentTime >= 126f)
         {
             bossSpawned = true;
             Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);

@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7652325314966257741}
-  - component: {fileID: 7652325314966257742}
+  - component: {fileID: 1654627194649248865}
   m_Layer: 0
   m_Name: PowerUp Spawner
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7652325314966257742
+--- !u!114 &1654627194649248865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7652325314966257743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a090a141bedc848a9bbac305f37c55, type: 3}
+  m_Script: {fileID: 11500000, guid: f8920232eb854c942b7de722adcdd9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
@@ -80,11 +80,10 @@ MonoBehaviour:
   - {fileID: 7652325316002737652}
   - {fileID: 7652325314966257741}
   enemyPrefabs:
+  - {fileID: 528431803494245335, guid: 7080607a170f30c469bf0d49fee624b6, type: 3}
   - {fileID: 3431127103067936202, guid: ab4e87daf09d92548bad3d1955d5b394, type: 3}
   - {fileID: 528431803494245335, guid: 7080607a170f30c469bf0d49fee624b6, type: 3}
-  - {fileID: 1469140073770675404, guid: 0445ed0ac973f4945a6d64023da9df40, type: 3}
-  startWaitingSecond: 0
-  waitingSecond: 30
+  waitingSecond: 15
 --- !u!1 &7652325316002737653
 GameObject:
   m_ObjectHideFlags: 0

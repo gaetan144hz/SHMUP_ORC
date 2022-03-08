@@ -61,6 +61,7 @@ public class RandomSpawner : MonoBehaviour
             spawn1();
             yield return new WaitForSeconds(36);
             Debug.Log("BOSS");
+            //yield return new WaitForSeconds(180);
         }
     }
 }
