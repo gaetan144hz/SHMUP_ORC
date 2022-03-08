@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisqueScore: 50
-  disqueHealth: 50
+  disqueHealth: 40
   speed: 14
   damage: 50
+  damage2: 10
   blade: {fileID: 8995282254613510145}
   direction: {x: 1, y: 1, z: 0}
 --- !u!58 &8995282254613510151

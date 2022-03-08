@@ -10,6 +10,8 @@ public class Disque : MonoBehaviour
 
     [SerializeField] int damage;
 
+    [SerializeField] int damage2 = 50;
+
     public Transform blade;
 
     private Rigidbody2D rb;
@@ -51,6 +53,7 @@ public class Disque : MonoBehaviour
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
+            TakeDamage(damage2);
         }
 
         if (collision.gameObject.CompareTag("plateforme"))
@@ -59,6 +62,7 @@ public class Disque : MonoBehaviour
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
+            TakeDamage(damage2);
         }
 
         if (collision.gameObject.CompareTag("Disque"))

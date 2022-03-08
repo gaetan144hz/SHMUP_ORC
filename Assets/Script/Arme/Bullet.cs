@@ -29,7 +29,9 @@ public class Bullet : MonoBehaviour
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * datap.bulletSpeed;
-        //rb.velocity = new Vector2(0, transform.position.x * -speed);    //another way to shoot
+        //rb.velocity = new Vector2(0, transform.position.x * -speed);    //another way to 
+
+        Destroy(this.gameObject, 3);
     }
 
     private void Update()

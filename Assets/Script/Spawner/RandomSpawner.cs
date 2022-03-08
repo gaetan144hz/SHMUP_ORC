@@ -7,7 +7,6 @@ public class RandomSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
-    [SerializeField] float startWaitingSecond;
     [SerializeField] float waitingSecond;
 
     Coroutine coroutineSpawn;
@@ -29,9 +28,8 @@ public class RandomSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(startWaitingSecond);
-            spawn();
             yield return new WaitForSeconds(waitingSecond);
+            spawn();
         }
     }
 }
