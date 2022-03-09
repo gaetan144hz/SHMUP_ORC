@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour
 {
-    [SerializeField] private int timeToDestroy; 
+    [SerializeField] private float timeToDestroy; 
 
     private void Update()
     {

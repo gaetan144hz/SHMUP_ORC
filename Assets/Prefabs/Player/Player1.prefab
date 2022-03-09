@@ -508,6 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2ed3cf67c6f2745b7c67862b72399b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!114 &6798356960732621039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2ed3cf67c6f2745b7c67862b72399b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!114 &5303164041424475951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,6 +2517,7 @@ GameObject:
   - component: {fileID: 7567997724479068166}
   - component: {fileID: 7567997724479068167}
   - component: {fileID: 4793215509708049726}
+  - component: {fileID: 4035058275391564586}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -2702,6 +2707,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2194768669503653043}
+--- !u!114 &4035058275391564586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567997724479068161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b22efb01ff79248977d25484fb0111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
+  spawnD: {fileID: 0}
+  spawnP: {fileID: 0}
+  randomDisqueSpawner: {fileID: 0}
 --- !u!1 &7953867836159948988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,6 +3191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2ed3cf67c6f2745b7c67862b72399b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!114 &2452737470799565205
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,8 +7,7 @@ public class Credit : MonoBehaviour
 {
     public void onCredit()
     {
-        Debug.Log("______Credit______");
-        //SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);
     }
 
 }

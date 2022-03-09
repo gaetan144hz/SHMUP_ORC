@@ -20,15 +20,10 @@ public class PlayerScriptPicker : MonoBehaviour
             var solo = FindObjectOfType<PlayerMovement>().transform;
             var soloPosition = solo.position;
             var soloParent = solo.parent;
-            OnDestroy();
+            PlayerMovement.playerList.Remove(playerMovement);
+            Destroy(solo.gameObject);
             Instantiate(player1, soloPosition, quaternion.identity ,soloParent);
             Instantiate(player2, transform);
         }
-    }
-    private void OnDestroy()
-    {
-        var solo = FindObjectOfType<PlayerMovement>().transform;
-        PlayerMovement.playerList.Remove(playerMovement);
-        Destroy(solo.gameObject);
     }
 }

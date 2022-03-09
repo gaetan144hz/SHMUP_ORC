@@ -726,14 +726,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018361562}
-        m_TargetAssemblyTypeName: GameLoader, Assembly-CSharp
-        m_MethodName: LevelLoader
-        m_Mode: 1
+      - m_Target: {fileID: 1018361565}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -786,9 +786,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1018361561}
   - component: {fileID: 1018361564}
-  - component: {fileID: 1018361563}
-  - component: {fileID: 1018361562}
-  - component: {fileID: 1018361560}
   - component: {fileID: 1018361565}
   m_Layer: 0
   m_Name: GameManagerScene
@@ -797,18 +794,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1018361560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018361559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d20650c0f1eb8214cb1fac3ffd7d1970, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1018361561
 Transform:
   m_ObjectHideFlags: 0
@@ -823,30 +808,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018361562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018361559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71cc6dd22b8aa1c4fac8366c66dde041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1018361563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018361559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 449d55fbc764e7e488f582c95a1c4072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1018361564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 318978491}
+  mainMenu: {fileID: 1413516643}
   slider: {fileID: 356893441}
   progressText: {fileID: 773710016}
 --- !u!1 &1041186528
@@ -967,7 +929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credit
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}
   m_sharedMaterial: {fileID: -3776091077442967996, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}
@@ -994,8 +956,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1056,6 +1018,7 @@ GameObject:
   - component: {fileID: 1105638791}
   - component: {fileID: 1105638790}
   - component: {fileID: 1105638789}
+  - component: {fileID: 1105638792}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -1127,9 +1090,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018361563}
-        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: onSettings
+      - m_Target: {fileID: 1105638792}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: SceneSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1177,6 +1140,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105638787}
   m_CullTransparentMesh: 1
+--- !u!114 &1105638792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105638787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624730a7cc315da48bbcdfa8d4b7f6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomDeScene: Settings
 --- !u!1 &1234655607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1239,7 @@ GameObject:
   - component: {fileID: 1293276195}
   - component: {fileID: 1293276194}
   - component: {fileID: 1293276193}
+  - component: {fileID: 1293276196}
   m_Layer: 5
   m_Name: CreditButton
   m_TagString: Untagged
@@ -1334,9 +1311,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018361560}
-        m_TargetAssemblyTypeName: Credit, Assembly-CSharp
-        m_MethodName: onCredit
+      - m_Target: {fileID: 1293276196}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: SceneSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1384,6 +1361,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293276191}
   m_CullTransparentMesh: 1
+--- !u!114 &1293276196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293276191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624730a7cc315da48bbcdfa8d4b7f6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomDeScene: Credits
 --- !u!1 &1314132497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,8 +1905,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2022,7 +2012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}
   m_sharedMaterial: {fileID: -3776091077442967996, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}

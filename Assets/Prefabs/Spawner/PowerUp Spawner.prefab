@@ -82,6 +82,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 528431803494245335, guid: 7080607a170f30c469bf0d49fee624b6, type: 3}
   - {fileID: 528431803494245335, guid: 7080607a170f30c469bf0d49fee624b6, type: 3}
+  - {fileID: 3431127103067936202, guid: ab4e87daf09d92548bad3d1955d5b394, type: 3}
   waitingSecond: 15
 --- !u!1 &7652325316002737653
 GameObject:

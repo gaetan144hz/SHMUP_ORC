@@ -36,6 +36,7 @@ public class DragonMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         scoreSetup = FindObjectOfType<ScoreSetup>();
+        healthBar = FindObjectOfType<HealthBar>();
 
         rb.gravityScale = 0;
         healthBar.SetMaxHealth(data.currentHealth);
@@ -55,15 +56,6 @@ public class DragonMove : MonoBehaviour
             }
         }
     }
-
-    /*
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, data.range);
-        Gizmos.DrawWireSphere(transform.position, data.shootingRange);
-    }
-    */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
