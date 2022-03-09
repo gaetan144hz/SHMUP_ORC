@@ -7,7 +7,12 @@ public class RandomSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
-    [SerializeField] float waitingSecond;
+    [SerializeField] private float wave1ToWave2;
+    [SerializeField] private float wave2ToWave3;
+    [SerializeField] private float wave3ToWave4;
+    [SerializeField] private float wave4ToWave5;
+    [SerializeField] private float wave5ToWave6;
+    [SerializeField] private float wave6ToWave7;
 
     Coroutine coroutineSpawn;
 
@@ -34,32 +39,32 @@ public class RandomSpawner : MonoBehaviour
         while (true)
         {
             spawn1();
-            yield return new WaitForSeconds(6);
+            yield return new WaitForSeconds(wave1ToWave2);
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(12);
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(18);
+            yield return new WaitForSeconds(wave2ToWave3);
             spawn1();
             spawn1();
             spawn1();
-            spawn1();
-            yield return new WaitForSeconds(24);
+            yield return new WaitForSeconds(wave3ToWave4);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            spawn1();
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(wave4ToWave5);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
+            yield return new WaitForSeconds(wave5ToWave6);
             spawn1();
-            yield return new WaitForSeconds(36);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(wave6ToWave7);
             Debug.Log("BOSS");
             //yield return new WaitForSeconds(180);
         }
