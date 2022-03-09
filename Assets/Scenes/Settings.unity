@@ -2996,6 +2996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: ceacf2dfb4553ee4d8234cd0a95f39cc, type: 2}
+  volumeSlider: {fileID: 269805405}
   resolutionDropdown: {fileID: 1401886056}
   fps: {fileID: 388163481}
 --- !u!224 &1931374573
@@ -3096,6 +3097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2ed3cf67c6f2745b7c67862b72399b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 269805405}
+  audioMixer: {fileID: 24100000, guid: ceacf2dfb4553ee4d8234cd0a95f39cc, type: 2}
 --- !u!1 &2124985043
 GameObject:
   m_ObjectHideFlags: 0

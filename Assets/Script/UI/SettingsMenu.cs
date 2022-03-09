@@ -10,11 +10,15 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
+    public Slider volumeSlider;
+
     public Dropdown resolutionDropdown;
 
     public GameObject fps;
 
     Resolution[] resolutions;
+
+    float volumeData;
 
     private void Start()
     {
