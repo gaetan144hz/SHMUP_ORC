@@ -27,8 +27,8 @@ public class PlayerData : ScriptableObject
 
     [Header("Bullet Settings")]
     public int bulletDamage;
-    public int startBulletDamage;
     public int bulletSpeed;
+    [HideInInspector] public int startBulletDamage;
     [HideInInspector] public int startBulletSpeed;
     public int spellDamage;
     [HideInInspector] public int startSpellDamage;
