@@ -105,6 +105,54 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""removeHealth"",
+                    ""type"": ""Button"",
+                    ""id"": ""21f5f4bd-5e2b-4569-8e44-bc5d20d38079"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""maxHealth"",
+                    ""type"": ""Button"",
+                    ""id"": ""33fb4689-b2ca-4128-92a3-6fde61911539"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""maxSpeed"",
+                    ""type"": ""Button"",
+                    ""id"": ""93f81ad4-6b8a-4ff4-9569-a219fea94596"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""removeSpeed"",
+                    ""type"": ""Button"",
+                    ""id"": ""aeb489ae-78e3-42b7-ae3c-85063b178e5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""6df8211e-43d0-41aa-82e6-ca3d4b78d1d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""fa74194e-1bae-4901-a919-3192c51e428c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -309,7 +357,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9be41095-fc0d-471b-80e5-9a282af2ec66"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/f1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -320,7 +368,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cad28fc0-cc3c-4845-a9e6-2f370cbe1531"",
-                    ""path"": ""<Keyboard>/numpadPlus"",
+                    ""path"": ""<Keyboard>/f6"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -331,7 +379,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""39736c44-619b-413b-882e-5e80d3c2cdf3"",
-                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""path"": ""<Keyboard>/f5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -342,11 +390,77 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f8ab1e7a-a8ad-4d0d-b490-c1f81f7a9694"",
-                    ""path"": ""<Keyboard>/v"",
+                    ""path"": ""<Keyboard>/f2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""disableCheatDamage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3f177fd-a975-4f41-87ad-c261f560eb8d"",
+                    ""path"": ""<Keyboard>/f4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""removeHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d2f22b6-1317-42c4-8b25-d15687fd341c"",
+                    ""path"": ""<Keyboard>/f3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7c57b91-17a4-41a1-bc2a-df37acb68fd4"",
+                    ""path"": ""<Keyboard>/f7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f05143bd-dc1d-4995-bae4-def7989b82b8"",
+                    ""path"": ""<Keyboard>/f8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""removeSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9ffe52f-e01a-4340-add6-b03a7af544e5"",
+                    ""path"": ""<Keyboard>/f10"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""enableDisqueSpwn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe67f427-ca43-4fea-8fe1-f02c21a05026"",
+                    ""path"": ""<Keyboard>/f9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -413,25 +527,33 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""disableCheatDamage"",
+                    ""name"": ""removeSpeed"",
                     ""type"": ""Button"",
-                    ""id"": ""a7a0af96-0d53-4c4d-ae2e-be832899142d"",
+                    ""id"": ""9bbd4ab9-1d3a-4ad7-9fdb-c1c9811a172e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""enableCheatDamage"",
+                    ""name"": ""maxSpeed"",
                     ""type"": ""Button"",
-                    ""id"": ""dac204a6-2eaa-4a8e-85a5-99235f390c85"",
+                    ""id"": ""134524c9-c7e7-42a9-8179-4ace520125d7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""timeScale1"",
+                    ""name"": ""maxHealth"",
                     ""type"": ""Button"",
-                    ""id"": ""347881cb-ee30-46fe-bfed-047ff44d8897"",
+                    ""id"": ""e3c1e5f5-4876-4ab2-911e-704018223cfe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""removeHealth"",
+                    ""type"": ""Button"",
+                    ""id"": ""f991cc5f-b6bb-4309-937b-482289562834"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -439,7 +561,47 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": ""timeScale0"",
                     ""type"": ""Button"",
-                    ""id"": ""93daac2d-5e64-4f34-9e6b-a1d0a989f5b1"",
+                    ""id"": ""94c5c1b2-0699-46b0-926f-aef834e805d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""timeScale1"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f0e0ce8-f999-47bd-bc83-cf6e8e93e41b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableCheatDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""baa305d7-9e46-4303-8318-546656478386"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableCheatDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""369f8d1e-d0af-4d37-bbb9-c00ca2db2e03"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad309977-8be0-45df-9331-c5b4a744e4e5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e9f8b63-68d6-40d7-988a-44c274631751"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -646,8 +808,19 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""da61de54-a099-4132-97a7-12c17420c195"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""a58542cc-341f-45f0-9777-c763d53f1d91"",
+                    ""path"": ""<Keyboard>/f2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableCheatDamage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb433034-3b17-4e8e-9553-216ca57b32b2"",
+                    ""path"": ""<Keyboard>/f1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -657,8 +830,8 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""13505b5a-1f41-4fec-9c23-a27d9ac85d14"",
-                    ""path"": ""<Keyboard>/numpadPlus"",
+                    ""id"": ""a3ed65d4-2fc8-47bc-aad2-84b1ae46db9a"",
+                    ""path"": ""<Keyboard>/f6"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -668,8 +841,8 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""10337b16-29e9-463a-b798-5333a81c64ad"",
-                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""id"": ""03cd4c4a-1631-4b25-8d71-e50bddb03e68"",
+                    ""path"": ""<Keyboard>/f5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -679,12 +852,67 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8ae801b7-0c99-4cbf-8568-531cadae1f11"",
-                    ""path"": ""<Keyboard>/v"",
+                    ""id"": ""809614a4-307e-4730-9763-ba1fcc902c5e"",
+                    ""path"": ""<Keyboard>/f4"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""disableCheatDamage"",
+                    ""action"": ""removeHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47e9c03c-0b17-42d2-9e74-a6179dabc8ed"",
+                    ""path"": ""<Keyboard>/f3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6360db5a-dfe1-4321-bb86-fde95629fae1"",
+                    ""path"": ""<Keyboard>/f7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd7e7c45-d245-449b-aa7e-a8a9ac6b31cc"",
+                    ""path"": ""<Keyboard>/f8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""removeSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f93c86f2-ac1a-4e7a-9ecc-9361e74d6b5d"",
+                    ""path"": ""<Keyboard>/f10"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""enableDisqueSpwn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a6d1220f-3c0c-4a41-b978-b489fa3bf770"",
+                    ""path"": ""<Keyboard>/f9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -751,25 +979,33 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""disableCheatDamage"",
+                    ""name"": ""removeSpeed"",
                     ""type"": ""Button"",
-                    ""id"": ""43fb03a3-79e4-4a63-9a76-3eefd18bc213"",
+                    ""id"": ""41f1513a-9ea8-40d1-aa19-0d77edf2e2d3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""enableCheatDamage"",
+                    ""name"": ""maxSpeed"",
                     ""type"": ""Button"",
-                    ""id"": ""d1665f71-5afa-48b8-a62c-25101619455a"",
+                    ""id"": ""18f89313-33e5-4af4-a370-3c49e24260bc"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""timeScale1"",
+                    ""name"": ""maxHealth"",
                     ""type"": ""Button"",
-                    ""id"": ""258d4e17-c911-4c41-bc96-bc7d2aee741c"",
+                    ""id"": ""869448ad-b757-49fb-8774-580defdbacc8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""removeHealth"",
+                    ""type"": ""Button"",
+                    ""id"": ""809cb712-fa7f-4fd2-ac4c-4145022bba5c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -777,7 +1013,47 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": ""timeScale0"",
                     ""type"": ""Button"",
-                    ""id"": ""502bb4d9-22dd-47f2-833f-940bc429a461"",
+                    ""id"": ""5fc34934-c675-4080-a057-e7e3ea79aa3e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""timeScale1"",
+                    ""type"": ""Button"",
+                    ""id"": ""572c6074-923a-40d3-a704-7f136cd832a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableCheatDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""29abd187-ddd1-409b-a519-0865238e9634"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableCheatDamage"",
+                    ""type"": ""Button"",
+                    ""id"": ""2b7980bc-e056-458d-821a-6a1d5cda6021"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""d4827702-ba2d-4cf7-8d66-cb619f3d9644"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableDisqueSpwn"",
+                    ""type"": ""Button"",
+                    ""id"": ""a1078a78-bfda-4f18-ad6f-8045305ebd28"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -984,8 +1260,19 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""db1c38b3-c3fa-448f-9f5f-95b85091498b"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""665200ee-beb2-48fc-8425-1e484cdbb356"",
+                    ""path"": ""<Keyboard>/f2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableCheatDamage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5450835-3a7d-4fdd-b9ec-fc72415da5e3"",
+                    ""path"": ""<Keyboard>/f1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -995,8 +1282,8 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fa080560-ae87-4f3e-83ef-d6749a9aceeb"",
-                    ""path"": ""<Keyboard>/numpadPlus"",
+                    ""id"": ""c122840a-db24-462a-9a94-86c4e93e25a9"",
+                    ""path"": ""<Keyboard>/f6"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -1006,8 +1293,8 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b5a26326-3a04-4d99-b0db-7e14bff02565"",
-                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""id"": ""9d269079-a27d-4f47-ab9f-3eb633d2be40"",
+                    ""path"": ""<Keyboard>/f5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -1017,12 +1304,67 @@ public class @Controllers : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b7b62290-6f4a-4b93-8dd9-2d0555875eaf"",
-                    ""path"": ""<Keyboard>/v"",
+                    ""id"": ""d7f39615-0d00-45d7-bc2f-efb227fdbe47"",
+                    ""path"": ""<Keyboard>/f4"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""disableCheatDamage"",
+                    ""action"": ""removeHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cea8589a-dcdf-4b21-83e9-1c8493d6f8e9"",
+                    ""path"": ""<Keyboard>/f3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxHealth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""16f8fd5d-2168-440d-b557-06f8b6c88b02"",
+                    ""path"": ""<Keyboard>/f7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""maxSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ca164b9-da0b-4213-a595-1835fbe4a410"",
+                    ""path"": ""<Keyboard>/f8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""removeSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b459165f-01a8-4c4e-928d-b25ac855aa46"",
+                    ""path"": ""<Keyboard>/f10"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""enableDisqueSpwn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95cd535c-17a1-46a9-871d-4a7e87793824"",
+                    ""path"": ""<Keyboard>/f9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1067,6 +1409,12 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_enableCheatDamage = m_player.FindAction("enableCheatDamage", throwIfNotFound: true);
         m_player_timeScale1 = m_player.FindAction("timeScale1", throwIfNotFound: true);
         m_player_timeScale0 = m_player.FindAction("timeScale0", throwIfNotFound: true);
+        m_player_removeHealth = m_player.FindAction("removeHealth", throwIfNotFound: true);
+        m_player_maxHealth = m_player.FindAction("maxHealth", throwIfNotFound: true);
+        m_player_maxSpeed = m_player.FindAction("maxSpeed", throwIfNotFound: true);
+        m_player_removeSpeed = m_player.FindAction("removeSpeed", throwIfNotFound: true);
+        m_player_enableDisqueSpwn = m_player.FindAction("enableDisqueSpwn", throwIfNotFound: true);
+        m_player_disableDisqueSpwn = m_player.FindAction("disableDisqueSpwn", throwIfNotFound: true);
         // player1
         m_player1 = asset.FindActionMap("player1", throwIfNotFound: true);
         m_player1_move = m_player1.FindAction("move", throwIfNotFound: true);
@@ -1076,10 +1424,16 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player1_Resume = m_player1.FindAction("Resume", throwIfNotFound: true);
         m_player1_stopMusic = m_player1.FindAction("stopMusic", throwIfNotFound: true);
         m_player1_playMusic = m_player1.FindAction("playMusic", throwIfNotFound: true);
-        m_player1_disableCheatDamage = m_player1.FindAction("disableCheatDamage", throwIfNotFound: true);
-        m_player1_enableCheatDamage = m_player1.FindAction("enableCheatDamage", throwIfNotFound: true);
-        m_player1_timeScale1 = m_player1.FindAction("timeScale1", throwIfNotFound: true);
+        m_player1_removeSpeed = m_player1.FindAction("removeSpeed", throwIfNotFound: true);
+        m_player1_maxSpeed = m_player1.FindAction("maxSpeed", throwIfNotFound: true);
+        m_player1_maxHealth = m_player1.FindAction("maxHealth", throwIfNotFound: true);
+        m_player1_removeHealth = m_player1.FindAction("removeHealth", throwIfNotFound: true);
         m_player1_timeScale0 = m_player1.FindAction("timeScale0", throwIfNotFound: true);
+        m_player1_timeScale1 = m_player1.FindAction("timeScale1", throwIfNotFound: true);
+        m_player1_enableCheatDamage = m_player1.FindAction("enableCheatDamage", throwIfNotFound: true);
+        m_player1_disableCheatDamage = m_player1.FindAction("disableCheatDamage", throwIfNotFound: true);
+        m_player1_disableDisqueSpwn = m_player1.FindAction("disableDisqueSpwn", throwIfNotFound: true);
+        m_player1_enableDisqueSpwn = m_player1.FindAction("enableDisqueSpwn", throwIfNotFound: true);
         // player2
         m_player2 = asset.FindActionMap("player2", throwIfNotFound: true);
         m_player2_move = m_player2.FindAction("move", throwIfNotFound: true);
@@ -1089,10 +1443,16 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
         m_player2_stopMusic = m_player2.FindAction("stopMusic", throwIfNotFound: true);
         m_player2_playMusic = m_player2.FindAction("playMusic", throwIfNotFound: true);
-        m_player2_disableCheatDamage = m_player2.FindAction("disableCheatDamage", throwIfNotFound: true);
-        m_player2_enableCheatDamage = m_player2.FindAction("enableCheatDamage", throwIfNotFound: true);
-        m_player2_timeScale1 = m_player2.FindAction("timeScale1", throwIfNotFound: true);
+        m_player2_removeSpeed = m_player2.FindAction("removeSpeed", throwIfNotFound: true);
+        m_player2_maxSpeed = m_player2.FindAction("maxSpeed", throwIfNotFound: true);
+        m_player2_maxHealth = m_player2.FindAction("maxHealth", throwIfNotFound: true);
+        m_player2_removeHealth = m_player2.FindAction("removeHealth", throwIfNotFound: true);
         m_player2_timeScale0 = m_player2.FindAction("timeScale0", throwIfNotFound: true);
+        m_player2_timeScale1 = m_player2.FindAction("timeScale1", throwIfNotFound: true);
+        m_player2_enableCheatDamage = m_player2.FindAction("enableCheatDamage", throwIfNotFound: true);
+        m_player2_disableCheatDamage = m_player2.FindAction("disableCheatDamage", throwIfNotFound: true);
+        m_player2_disableDisqueSpwn = m_player2.FindAction("disableDisqueSpwn", throwIfNotFound: true);
+        m_player2_enableDisqueSpwn = m_player2.FindAction("enableDisqueSpwn", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1153,6 +1513,12 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_enableCheatDamage;
     private readonly InputAction m_player_timeScale1;
     private readonly InputAction m_player_timeScale0;
+    private readonly InputAction m_player_removeHealth;
+    private readonly InputAction m_player_maxHealth;
+    private readonly InputAction m_player_maxSpeed;
+    private readonly InputAction m_player_removeSpeed;
+    private readonly InputAction m_player_enableDisqueSpwn;
+    private readonly InputAction m_player_disableDisqueSpwn;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -1168,6 +1534,12 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @enableCheatDamage => m_Wrapper.m_player_enableCheatDamage;
         public InputAction @timeScale1 => m_Wrapper.m_player_timeScale1;
         public InputAction @timeScale0 => m_Wrapper.m_player_timeScale0;
+        public InputAction @removeHealth => m_Wrapper.m_player_removeHealth;
+        public InputAction @maxHealth => m_Wrapper.m_player_maxHealth;
+        public InputAction @maxSpeed => m_Wrapper.m_player_maxSpeed;
+        public InputAction @removeSpeed => m_Wrapper.m_player_removeSpeed;
+        public InputAction @enableDisqueSpwn => m_Wrapper.m_player_enableDisqueSpwn;
+        public InputAction @disableDisqueSpwn => m_Wrapper.m_player_disableDisqueSpwn;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1210,6 +1582,24 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @timeScale0.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTimeScale0;
+                @removeHealth.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveHealth;
+                @maxHealth.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxHealth;
+                @maxSpeed.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMaxSpeed;
+                @removeSpeed.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveSpeed;
+                @enableDisqueSpwn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableDisqueSpwn;
+                @disableDisqueSpwn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1247,6 +1637,24 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @timeScale0.started += instance.OnTimeScale0;
                 @timeScale0.performed += instance.OnTimeScale0;
                 @timeScale0.canceled += instance.OnTimeScale0;
+                @removeHealth.started += instance.OnRemoveHealth;
+                @removeHealth.performed += instance.OnRemoveHealth;
+                @removeHealth.canceled += instance.OnRemoveHealth;
+                @maxHealth.started += instance.OnMaxHealth;
+                @maxHealth.performed += instance.OnMaxHealth;
+                @maxHealth.canceled += instance.OnMaxHealth;
+                @maxSpeed.started += instance.OnMaxSpeed;
+                @maxSpeed.performed += instance.OnMaxSpeed;
+                @maxSpeed.canceled += instance.OnMaxSpeed;
+                @removeSpeed.started += instance.OnRemoveSpeed;
+                @removeSpeed.performed += instance.OnRemoveSpeed;
+                @removeSpeed.canceled += instance.OnRemoveSpeed;
+                @enableDisqueSpwn.started += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled += instance.OnEnableDisqueSpwn;
+                @disableDisqueSpwn.started += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled += instance.OnDisableDisqueSpwn;
             }
         }
     }
@@ -1262,10 +1670,16 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player1_Resume;
     private readonly InputAction m_player1_stopMusic;
     private readonly InputAction m_player1_playMusic;
-    private readonly InputAction m_player1_disableCheatDamage;
-    private readonly InputAction m_player1_enableCheatDamage;
-    private readonly InputAction m_player1_timeScale1;
+    private readonly InputAction m_player1_removeSpeed;
+    private readonly InputAction m_player1_maxSpeed;
+    private readonly InputAction m_player1_maxHealth;
+    private readonly InputAction m_player1_removeHealth;
     private readonly InputAction m_player1_timeScale0;
+    private readonly InputAction m_player1_timeScale1;
+    private readonly InputAction m_player1_enableCheatDamage;
+    private readonly InputAction m_player1_disableCheatDamage;
+    private readonly InputAction m_player1_disableDisqueSpwn;
+    private readonly InputAction m_player1_enableDisqueSpwn;
     public struct Player1Actions
     {
         private @Controllers m_Wrapper;
@@ -1277,10 +1691,16 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Resume => m_Wrapper.m_player1_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player1_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player1_playMusic;
-        public InputAction @disableCheatDamage => m_Wrapper.m_player1_disableCheatDamage;
-        public InputAction @enableCheatDamage => m_Wrapper.m_player1_enableCheatDamage;
-        public InputAction @timeScale1 => m_Wrapper.m_player1_timeScale1;
+        public InputAction @removeSpeed => m_Wrapper.m_player1_removeSpeed;
+        public InputAction @maxSpeed => m_Wrapper.m_player1_maxSpeed;
+        public InputAction @maxHealth => m_Wrapper.m_player1_maxHealth;
+        public InputAction @removeHealth => m_Wrapper.m_player1_removeHealth;
         public InputAction @timeScale0 => m_Wrapper.m_player1_timeScale0;
+        public InputAction @timeScale1 => m_Wrapper.m_player1_timeScale1;
+        public InputAction @enableCheatDamage => m_Wrapper.m_player1_enableCheatDamage;
+        public InputAction @disableCheatDamage => m_Wrapper.m_player1_disableCheatDamage;
+        public InputAction @disableDisqueSpwn => m_Wrapper.m_player1_disableDisqueSpwn;
+        public InputAction @enableDisqueSpwn => m_Wrapper.m_player1_enableDisqueSpwn;
         public InputActionMap Get() { return m_Wrapper.m_player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1311,18 +1731,36 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPlayMusic;
                 @playMusic.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPlayMusic;
                 @playMusic.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPlayMusic;
-                @disableCheatDamage.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
-                @disableCheatDamage.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
-                @disableCheatDamage.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
-                @enableCheatDamage.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
-                @enableCheatDamage.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
-                @enableCheatDamage.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
-                @timeScale1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
-                @timeScale1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
-                @timeScale1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
+                @removeSpeed.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveSpeed;
+                @maxSpeed.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxSpeed;
+                @maxHealth.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMaxHealth;
+                @removeHealth.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRemoveHealth;
                 @timeScale0.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale0;
+                @timeScale1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTimeScale1;
+                @enableCheatDamage.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
+                @enableCheatDamage.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
+                @enableCheatDamage.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableCheatDamage;
+                @disableCheatDamage.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableCheatDamage.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableCheatDamage.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableDisqueSpwn.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @enableDisqueSpwn.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1348,18 +1786,36 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started += instance.OnPlayMusic;
                 @playMusic.performed += instance.OnPlayMusic;
                 @playMusic.canceled += instance.OnPlayMusic;
-                @disableCheatDamage.started += instance.OnDisableCheatDamage;
-                @disableCheatDamage.performed += instance.OnDisableCheatDamage;
-                @disableCheatDamage.canceled += instance.OnDisableCheatDamage;
-                @enableCheatDamage.started += instance.OnEnableCheatDamage;
-                @enableCheatDamage.performed += instance.OnEnableCheatDamage;
-                @enableCheatDamage.canceled += instance.OnEnableCheatDamage;
-                @timeScale1.started += instance.OnTimeScale1;
-                @timeScale1.performed += instance.OnTimeScale1;
-                @timeScale1.canceled += instance.OnTimeScale1;
+                @removeSpeed.started += instance.OnRemoveSpeed;
+                @removeSpeed.performed += instance.OnRemoveSpeed;
+                @removeSpeed.canceled += instance.OnRemoveSpeed;
+                @maxSpeed.started += instance.OnMaxSpeed;
+                @maxSpeed.performed += instance.OnMaxSpeed;
+                @maxSpeed.canceled += instance.OnMaxSpeed;
+                @maxHealth.started += instance.OnMaxHealth;
+                @maxHealth.performed += instance.OnMaxHealth;
+                @maxHealth.canceled += instance.OnMaxHealth;
+                @removeHealth.started += instance.OnRemoveHealth;
+                @removeHealth.performed += instance.OnRemoveHealth;
+                @removeHealth.canceled += instance.OnRemoveHealth;
                 @timeScale0.started += instance.OnTimeScale0;
                 @timeScale0.performed += instance.OnTimeScale0;
                 @timeScale0.canceled += instance.OnTimeScale0;
+                @timeScale1.started += instance.OnTimeScale1;
+                @timeScale1.performed += instance.OnTimeScale1;
+                @timeScale1.canceled += instance.OnTimeScale1;
+                @enableCheatDamage.started += instance.OnEnableCheatDamage;
+                @enableCheatDamage.performed += instance.OnEnableCheatDamage;
+                @enableCheatDamage.canceled += instance.OnEnableCheatDamage;
+                @disableCheatDamage.started += instance.OnDisableCheatDamage;
+                @disableCheatDamage.performed += instance.OnDisableCheatDamage;
+                @disableCheatDamage.canceled += instance.OnDisableCheatDamage;
+                @disableDisqueSpwn.started += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled += instance.OnDisableDisqueSpwn;
+                @enableDisqueSpwn.started += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled += instance.OnEnableDisqueSpwn;
             }
         }
     }
@@ -1375,10 +1831,16 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player2_Resume;
     private readonly InputAction m_player2_stopMusic;
     private readonly InputAction m_player2_playMusic;
-    private readonly InputAction m_player2_disableCheatDamage;
-    private readonly InputAction m_player2_enableCheatDamage;
-    private readonly InputAction m_player2_timeScale1;
+    private readonly InputAction m_player2_removeSpeed;
+    private readonly InputAction m_player2_maxSpeed;
+    private readonly InputAction m_player2_maxHealth;
+    private readonly InputAction m_player2_removeHealth;
     private readonly InputAction m_player2_timeScale0;
+    private readonly InputAction m_player2_timeScale1;
+    private readonly InputAction m_player2_enableCheatDamage;
+    private readonly InputAction m_player2_disableCheatDamage;
+    private readonly InputAction m_player2_disableDisqueSpwn;
+    private readonly InputAction m_player2_enableDisqueSpwn;
     public struct Player2Actions
     {
         private @Controllers m_Wrapper;
@@ -1390,10 +1852,16 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Resume => m_Wrapper.m_player2_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player2_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player2_playMusic;
-        public InputAction @disableCheatDamage => m_Wrapper.m_player2_disableCheatDamage;
-        public InputAction @enableCheatDamage => m_Wrapper.m_player2_enableCheatDamage;
-        public InputAction @timeScale1 => m_Wrapper.m_player2_timeScale1;
+        public InputAction @removeSpeed => m_Wrapper.m_player2_removeSpeed;
+        public InputAction @maxSpeed => m_Wrapper.m_player2_maxSpeed;
+        public InputAction @maxHealth => m_Wrapper.m_player2_maxHealth;
+        public InputAction @removeHealth => m_Wrapper.m_player2_removeHealth;
         public InputAction @timeScale0 => m_Wrapper.m_player2_timeScale0;
+        public InputAction @timeScale1 => m_Wrapper.m_player2_timeScale1;
+        public InputAction @enableCheatDamage => m_Wrapper.m_player2_enableCheatDamage;
+        public InputAction @disableCheatDamage => m_Wrapper.m_player2_disableCheatDamage;
+        public InputAction @disableDisqueSpwn => m_Wrapper.m_player2_disableDisqueSpwn;
+        public InputAction @enableDisqueSpwn => m_Wrapper.m_player2_enableDisqueSpwn;
         public InputActionMap Get() { return m_Wrapper.m_player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1424,18 +1892,36 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPlayMusic;
                 @playMusic.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPlayMusic;
                 @playMusic.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPlayMusic;
-                @disableCheatDamage.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
-                @disableCheatDamage.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
-                @disableCheatDamage.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
-                @enableCheatDamage.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
-                @enableCheatDamage.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
-                @enableCheatDamage.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
-                @timeScale1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
-                @timeScale1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
-                @timeScale1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
+                @removeSpeed.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveSpeed;
+                @removeSpeed.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveSpeed;
+                @maxSpeed.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxSpeed;
+                @maxSpeed.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxSpeed;
+                @maxHealth.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxHealth;
+                @maxHealth.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMaxHealth;
+                @removeHealth.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveHealth;
+                @removeHealth.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRemoveHealth;
                 @timeScale0.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale0;
                 @timeScale0.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale0;
+                @timeScale1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
+                @timeScale1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTimeScale1;
+                @enableCheatDamage.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
+                @enableCheatDamage.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
+                @enableCheatDamage.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableCheatDamage;
+                @disableCheatDamage.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableCheatDamage.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableCheatDamage.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableCheatDamage;
+                @disableDisqueSpwn.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDisableDisqueSpwn;
+                @enableDisqueSpwn.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1461,18 +1947,36 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @playMusic.started += instance.OnPlayMusic;
                 @playMusic.performed += instance.OnPlayMusic;
                 @playMusic.canceled += instance.OnPlayMusic;
-                @disableCheatDamage.started += instance.OnDisableCheatDamage;
-                @disableCheatDamage.performed += instance.OnDisableCheatDamage;
-                @disableCheatDamage.canceled += instance.OnDisableCheatDamage;
-                @enableCheatDamage.started += instance.OnEnableCheatDamage;
-                @enableCheatDamage.performed += instance.OnEnableCheatDamage;
-                @enableCheatDamage.canceled += instance.OnEnableCheatDamage;
-                @timeScale1.started += instance.OnTimeScale1;
-                @timeScale1.performed += instance.OnTimeScale1;
-                @timeScale1.canceled += instance.OnTimeScale1;
+                @removeSpeed.started += instance.OnRemoveSpeed;
+                @removeSpeed.performed += instance.OnRemoveSpeed;
+                @removeSpeed.canceled += instance.OnRemoveSpeed;
+                @maxSpeed.started += instance.OnMaxSpeed;
+                @maxSpeed.performed += instance.OnMaxSpeed;
+                @maxSpeed.canceled += instance.OnMaxSpeed;
+                @maxHealth.started += instance.OnMaxHealth;
+                @maxHealth.performed += instance.OnMaxHealth;
+                @maxHealth.canceled += instance.OnMaxHealth;
+                @removeHealth.started += instance.OnRemoveHealth;
+                @removeHealth.performed += instance.OnRemoveHealth;
+                @removeHealth.canceled += instance.OnRemoveHealth;
                 @timeScale0.started += instance.OnTimeScale0;
                 @timeScale0.performed += instance.OnTimeScale0;
                 @timeScale0.canceled += instance.OnTimeScale0;
+                @timeScale1.started += instance.OnTimeScale1;
+                @timeScale1.performed += instance.OnTimeScale1;
+                @timeScale1.canceled += instance.OnTimeScale1;
+                @enableCheatDamage.started += instance.OnEnableCheatDamage;
+                @enableCheatDamage.performed += instance.OnEnableCheatDamage;
+                @enableCheatDamage.canceled += instance.OnEnableCheatDamage;
+                @disableCheatDamage.started += instance.OnDisableCheatDamage;
+                @disableCheatDamage.performed += instance.OnDisableCheatDamage;
+                @disableCheatDamage.canceled += instance.OnDisableCheatDamage;
+                @disableDisqueSpwn.started += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.performed += instance.OnDisableDisqueSpwn;
+                @disableDisqueSpwn.canceled += instance.OnDisableDisqueSpwn;
+                @enableDisqueSpwn.started += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.performed += instance.OnEnableDisqueSpwn;
+                @enableDisqueSpwn.canceled += instance.OnEnableDisqueSpwn;
             }
         }
     }
@@ -1508,6 +2012,12 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnEnableCheatDamage(InputAction.CallbackContext context);
         void OnTimeScale1(InputAction.CallbackContext context);
         void OnTimeScale0(InputAction.CallbackContext context);
+        void OnRemoveHealth(InputAction.CallbackContext context);
+        void OnMaxHealth(InputAction.CallbackContext context);
+        void OnMaxSpeed(InputAction.CallbackContext context);
+        void OnRemoveSpeed(InputAction.CallbackContext context);
+        void OnEnableDisqueSpwn(InputAction.CallbackContext context);
+        void OnDisableDisqueSpwn(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
     {
@@ -1518,10 +2028,16 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
-        void OnDisableCheatDamage(InputAction.CallbackContext context);
-        void OnEnableCheatDamage(InputAction.CallbackContext context);
-        void OnTimeScale1(InputAction.CallbackContext context);
+        void OnRemoveSpeed(InputAction.CallbackContext context);
+        void OnMaxSpeed(InputAction.CallbackContext context);
+        void OnMaxHealth(InputAction.CallbackContext context);
+        void OnRemoveHealth(InputAction.CallbackContext context);
         void OnTimeScale0(InputAction.CallbackContext context);
+        void OnTimeScale1(InputAction.CallbackContext context);
+        void OnEnableCheatDamage(InputAction.CallbackContext context);
+        void OnDisableCheatDamage(InputAction.CallbackContext context);
+        void OnDisableDisqueSpwn(InputAction.CallbackContext context);
+        void OnEnableDisqueSpwn(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
@@ -1532,9 +2048,15 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
-        void OnDisableCheatDamage(InputAction.CallbackContext context);
-        void OnEnableCheatDamage(InputAction.CallbackContext context);
-        void OnTimeScale1(InputAction.CallbackContext context);
+        void OnRemoveSpeed(InputAction.CallbackContext context);
+        void OnMaxSpeed(InputAction.CallbackContext context);
+        void OnMaxHealth(InputAction.CallbackContext context);
+        void OnRemoveHealth(InputAction.CallbackContext context);
         void OnTimeScale0(InputAction.CallbackContext context);
+        void OnTimeScale1(InputAction.CallbackContext context);
+        void OnEnableCheatDamage(InputAction.CallbackContext context);
+        void OnDisableCheatDamage(InputAction.CallbackContext context);
+        void OnDisableDisqueSpwn(InputAction.CallbackContext context);
+        void OnEnableDisqueSpwn(InputAction.CallbackContext context);
     }
 }

@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RandomDisqueSpawner : MonoBehaviour
 {
@@ -9,11 +12,16 @@ public class RandomDisqueSpawner : MonoBehaviour
 
     [SerializeField] float waitingSecond;
 
-    Coroutine coroutineSpawn;
+    public  Coroutine coroutineSpawn;
 
     private void Start()
     {
         coroutineSpawn = StartCoroutine(disqueSpawn());
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void spawn1()
@@ -24,7 +32,7 @@ public class RandomDisqueSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
-    IEnumerator disqueSpawn()
+    public IEnumerator disqueSpawn()
     {
         while (true)
         {
