@@ -42,13 +42,23 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
+    public void onlyGoblin()
+    {
+        int randEnemy = Random.Range(0, 1);
+        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+
+        Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
+    }
+
     IEnumerator Spawn()
     {
         while (true)
         {
-            goblinToTank();
+            onlyGoblin();
+            onlyGoblin();
             yield return new WaitForSeconds(wave1ToWave2);
-            goblinToTank();
+            onlyGoblin();
+            onlyGoblin();
             goblinToTank();
             yield return new WaitForSeconds(wave2ToWave3);
             goblinToTank();
