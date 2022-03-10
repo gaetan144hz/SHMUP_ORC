@@ -646,7 +646,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3360667008138746010}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: menu
+        m_MethodName: OnMenuPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -854,7 +854,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3360667008138746010}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: menu
+        m_MethodName: OnMenuPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2723,6 +2723,8 @@ MonoBehaviour:
   spawnD: {fileID: 0}
   spawnP: {fileID: 0}
   randomDisqueSpawner: {fileID: 0}
+  cheatDamage: {fileID: 0}
+  cheatHealth: {fileID: 0}
 --- !u!1 &7953867836159948988
 GameObject:
   m_ObjectHideFlags: 0
