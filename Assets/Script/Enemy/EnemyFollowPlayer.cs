@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
+    private void OnEnable()
+    {
+        data.OnEnable();
+    }
+
     private ScoreSetup scoreSetup;
 
     [Header("EnemyData")]
