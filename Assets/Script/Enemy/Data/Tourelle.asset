@@ -15,14 +15,19 @@ MonoBehaviour:
   Enemy: Tourelle
   EnemyModel: {fileID: 7592566264066918321, guid: a8359f3a04cd0624a8450d28951d1958, type: 3}
   Description: 
+  Score: 0
   currentSpeedMovement: 0
   startSpeedMovement: 0
-  currentHealth: 60
+  currentHealth: -75
   startHealth: 60
   bulletSpeed: 4
   startBulletSpeed: 4
   bulletDamage: 1
   startBulletDamage: 1
+  spellSpeed: 0
+  startSpellSpeed: 0
+  spellDamage: 0
+  startSpellDamage: 0
   fireRate: 0.5
   healIncrease: 0
   range: 0

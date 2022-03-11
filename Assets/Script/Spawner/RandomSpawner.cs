@@ -16,7 +16,7 @@ public class RandomSpawner : MonoBehaviour
 
     Coroutine coroutineSpawn;
 
-    private void Start()
+    private void Awake()
     {
         coroutineSpawn = StartCoroutine(Spawn());
     }
@@ -44,47 +44,49 @@ public class RandomSpawner : MonoBehaviour
 
     public void onlyGoblin()
     {
-        int randEnemy = Random.Range(0, 1);
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
 
         Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
+        Debug.Log(enemyPrefabs[0]);
     }
 
     IEnumerator Spawn()
     {
         while (true)
         {
-            onlyGoblin();
-            onlyGoblin();
-            yield return new WaitForSeconds(wave1ToWave2);
-            onlyGoblin();
-            onlyGoblin();
-            goblinToTank();
-            yield return new WaitForSeconds(wave2ToWave3);
-            goblinToTank();
-            goblinToTank();
-            goblinToTank();
-            goblinToTank();
-            yield return new WaitForSeconds(wave3ToWave4);
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(6);
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(12);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(18);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(wave4ToWave5);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave5ToWave6);
+            yield return new WaitForSeconds(24);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(wave6ToWave7);
+            spawn1();
+            yield return new WaitForSeconds(30);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(32);
             Debug.Log("BOSS");
             //yield return new WaitForSeconds(180);
         }
