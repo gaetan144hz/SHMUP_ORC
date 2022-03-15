@@ -15,14 +15,19 @@ MonoBehaviour:
   Enemy: Tourelle
   EnemyModel: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   Description: rapide avec tourelle 2t max
-  currentSpeedMovement: 0
+  Score: 0
+  currentSpeedMovement: 0.9
   startSpeedMovement: 0.9
-  currentHealth: 150
-  startHealth: 150
+  currentHealth: -30
+  startHealth: 75
   bulletSpeed: 0
   startBulletSpeed: 0
   bulletDamage: 0
   startBulletDamage: 0
+  spellSpeed: 0
+  startSpellSpeed: 0
+  spellDamage: 0
+  startSpellDamage: 0
   fireRate: 5
   healIncrease: 10
   range: 0

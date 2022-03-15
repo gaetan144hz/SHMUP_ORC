@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 0, y: 144}
   m_SizeDelta: {x: 256.28113, y: 43.74051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762432714565929882
@@ -180,7 +180,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -367,14 +367,13 @@ GameObject:
   - component: {fileID: 1292387767295246840}
   - component: {fileID: 9114618521634652636}
   - component: {fileID: 9114618521634652639}
-  - component: {fileID: 2035936017}
   m_Layer: 0
   m_Name: Alchimiste
   m_TagString: Enemy
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9114618521634652627
 Transform:
   m_ObjectHideFlags: 0
@@ -431,7 +430,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f76dc3f7a3cbd0449e4630721c1a232, type: 3}
   m_Color: {r: 0.5468368, g: 0.2663314, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -457,7 +456,6 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 5190a1deb2057a94bbf67761263f4569, type: 2}
   healthBar: {fileID: 3296157504435890702}
   explosion: {fileID: 7561791552984474656, guid: 6825e96a568838446835e603531f330e, type: 3}
-  EnemyScore: 100
   enemyBullet: {fileID: 8291274181402240965, guid: d804c26c7c500b543b3514936e8ce3b2, type: 3}
   bulletParent: {fileID: 9114618523032691221}
   playerList: []
@@ -528,7 +526,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -536,31 +534,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25625098, y: -0.4380107}
-      - {x: 0.24928367, y: -0.44267797}
-      - {x: 0.5072675, y: -0.0019416809}
-      - {x: 0.25140977, y: 0.43713784}
-      - {x: -0.25508368, y: 0.43771052}
-      - {x: -0.50144887, y: -0.00096940994}
---- !u!114 &2035936017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114618521634652638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbff6ca1a1812748a6cc44a007fab35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 0}
-  healthBar: {fileID: 0}
-  explosion: {fileID: 0}
-  EnemyScore: 100
-  enemyBullet: {fileID: 0}
-  bulletParent: {fileID: 0}
-  playerList: []
+    - - {x: -0.29936123, y: -0.34481478}
+      - {x: -0.10313904, y: -0.9483832}
+      - {x: 0.19824636, y: -0.9734654}
+      - {x: 0.36076975, y: -0.28677323}
+      - {x: 0.16021395, y: -0.14484599}
+      - {x: 0.9557235, y: 0.43713784}
+      - {x: -0.004602909, y: 0.7996553}
+      - {x: -0.9389826, y: 0.34584343}
+      - {x: -0.14418769, y: -0.13366628}
 --- !u!1 &9114618523032691221
 GameObject:
   m_ObjectHideFlags: 0

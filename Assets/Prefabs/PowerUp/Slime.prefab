@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7765959782366688217}
   - component: {fileID: 7765959782366688198}
   - component: {fileID: 7765959782366688216}
+  - component: {fileID: 2910470564743012344}
   - component: {fileID: 7765959782366688218}
   - component: {fileID: 7765959782366688219}
   m_Layer: 0
@@ -100,6 +101,22 @@ MonoBehaviour:
   rotaZ: 0
   rotationSpeed: 200
   ClockwiseRoation: 0
+--- !u!114 &2910470564743012344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765959782366688196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cc27db0769d1d4187fd276907b8889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 1
+  max: 10
+  stopMin: 9
+  stopMax: 4
 --- !u!50 &7765959782366688218
 Rigidbody2D:
   serializedVersion: 4
@@ -108,7 +125,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7765959782366688196}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -120,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7765959782366688219
 BoxCollider2D:
   m_ObjectHideFlags: 0
