@@ -77,6 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a090a141bedc848a9bbac305f37c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Description: 'g envie de mourrir ptn de spwaner de merde
+
+    Flore aled'
   spawnPoints:
   - {fileID: 8098913062235468642}
   - {fileID: 8098913061543068830}
@@ -90,12 +93,12 @@ MonoBehaviour:
   - {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   - {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   - {fileID: 9114618521634652638, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
-  wave1ToWave2: 6
-  wave2ToWave3: 12
-  wave3ToWave4: 18
-  wave4ToWave5: 24
-  wave5ToWave6: 30
-  wave6ToWave7: 32
+  wave1ToWave2: 1
+  wave2ToWave3: 5
+  wave3ToWave4: 10
+  wave4ToWave5: 15
+  wave5ToWave6: 20
+  wave6ToWave7: 25
 --- !u!1 &8098913062235468643
 GameObject:
   m_ObjectHideFlags: 0

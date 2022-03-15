@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        data.OnEnable();
-    }
-
     private ScoreSetup scoreSetup;
 
     [Header("EnemyData")]
@@ -21,8 +16,6 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     [Header("FX")]
     public GameObject explosion;
-
-    public int EnemyScore = 100;
 
     [Header("FireRate")]
     private float nextFireTime;

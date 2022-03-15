@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        data.OnEnable();
-    }
+    
 
     [Header("EnemyData")]
     public EnemyData data;

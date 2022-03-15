@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class DragonMove : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        data.OnEnable();
-    }
+    
 
     private ScoreSetup scoreSetup;
 
