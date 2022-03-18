@@ -5,7 +5,7 @@ public class EnemyData : ScriptableObject
 {
     public void OnEnable()
     {
-        currentHealth = startHealth;
+        startHealth = currentHealth;
 
         bulletSpeed = startBulletSpeed;
         bulletDamage = startBulletDamage;
@@ -28,7 +28,7 @@ public class EnemyData : ScriptableObject
     public float startSpeedMovement;
 
     [Header("Health")]
-    [HideInInspector] public int currentHealth;
+    public int currentHealth;
     public int startHealth;
 
     [Header("Bullet Speed")]

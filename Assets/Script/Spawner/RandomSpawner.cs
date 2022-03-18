@@ -8,7 +8,7 @@ public class RandomSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        data.OnEnable();
+        data.OnEnable(); //???????????????//
     }
 
     [TextArea]
