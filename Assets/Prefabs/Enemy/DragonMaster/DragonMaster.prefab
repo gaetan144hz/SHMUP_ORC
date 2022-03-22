@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1906477220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906477221}
+  - component: {fileID: 1906477223}
+  - component: {fileID: 1906477222}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1906477221
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906477220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8853631916681671453}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -153, y: -4}
+  m_SizeDelta: {x: 100, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1906477223
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906477220}
+  m_CullTransparentMesh: 1
+--- !u!114 &1906477222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906477220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ba06db5eac14d85428c940aaa5d1e447, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &470091076734982456
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +112,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1287, y: 634}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4775781984089520704
 Canvas:
@@ -131,12 +206,13 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 0.4, z: 1}
   m_Children:
   - {fileID: 6251475818840146565}
+  - {fileID: 1906477221}
   m_Father: {fileID: 8421582381436903192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 0, y: 172}
   m_SizeDelta: {x: 256.28113, y: 43.74051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6536534235158480256
@@ -500,9 +576,8 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 2a19aae0c9012134487ef61fd8a8e61d, type: 2}
   healthBar: {fileID: 3837178668055789509}
   explosion: {fileID: 4940616246933530902, guid: b88805c2daff97a4bb862df9c2d8afd4, type: 3}
-  EnemyScore: 250
   enemyBullet: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
-  bulletParent: {fileID: 6309468453753526194}
+  bulletParent: {fileID: 6309468453753526193}
   playerList: []
 --- !u!114 &3714470050940854725
 MonoBehaviour:
@@ -565,9 +640,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.43681145, y: -0.2541085}
+    - - {x: 0.25391722, y: -0.59604096}
+      - {x: 0.46371984, y: -0.68854403}
+      - {x: 0.50708246, y: -0.19851717}
+      - {x: 0.8503094, y: -0.14786418}
+      - {x: 0.85150576, y: 0.19604209}
       - {x: 0.43888664, y: 0.25144482}
-      - {x: -0.0022220612, y: 0.50892174}
-      - {x: -0.43764114, y: 0.2505206}
-      - {x: -0.4375, y: -0.25056326}
-      - {x: 0.0017728806, y: -0.5053818}
+      - {x: 0.26554728, y: 0.98396957}
+      - {x: -0.0032143593, y: 0.75119585}
+      - {x: -0.25668335, y: 1.0098925}
+      - {x: -0.36508608, y: 0.27557608}
+      - {x: -0.8250232, y: 0.2133384}
+      - {x: -0.8511405, y: -0.10731569}
+      - {x: -0.50906754, y: -0.16309217}
+      - {x: -0.41740036, y: -0.7059505}
+      - {x: -0.12548256, y: -0.6498275}
+      - {x: 0.033580303, y: -0.9904487}

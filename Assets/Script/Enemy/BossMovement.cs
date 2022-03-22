@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        data.OnEnable();
-    }
+    
 
     [Header("EnemyData")]
     public EnemyData data;
@@ -25,14 +22,12 @@ public class BossMovement : MonoBehaviour
 
     private Transform player;
     
-    public GameObject[] bossBullet;
+    public GameObject[] bullet;
 
-    public GameObject[] firePoint;
+    public Transform[] firePoint;
 
     [Header("FireRate")]
     public float FireRateBullet;
-    public float FireRateSpell1;
-    public float FireRateSpell2;
 
     private float lastShot;
     
@@ -56,39 +51,22 @@ public class BossMovement : MonoBehaviour
             }
             else if (distanceFromPlayer <= data.shootingRange && FireRateBullet < Time.time)
             {
-                shoot();
+                shoot(bullet[0], firePoint[0], 1);
+                shoot(bullet[0], firePoint[1], 1);
             }
-            spell1();
-            spell2();
+            shoot(bullet[1], firePoint[3], 1);
+            shoot(bullet[2], firePoint[2], 3);
         }
         
     }
 
-    public void shoot()
+    public void shoot(GameObject bullet, Transform firePoint, float fireRate)
     {
-        Instantiate(bossBullet[0], firePoint[0].transform.position, Quaternion.identity);
-        Instantiate(bossBullet[0], firePoint[1].transform.position, Quaternion.identity);
-        FireRateBullet = Time.time + data.fireRate;
-    }
-
-    public void spell1()
-    {
-        if (Time.time - lastShot < FireRateSpell1)
+        if (Time.time <= lastShot + fireRate)
         {
-            return;
+            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         }
         lastShot = Time.time;
-        Instantiate(bossBullet[1], firePoint[2].transform.position, firePoint[2].transform.rotation);
-    }
-
-    public void spell2()
-    {
-        if (Time.time - lastShot < FireRateSpell2)
-        {
-            return;
-        }
-        lastShot = Time.time;
-        Instantiate(bossBullet[2], firePoint[3].transform.position, firePoint[3].transform.rotation);
     }
 
     private void OnDrawGizmosSelected()

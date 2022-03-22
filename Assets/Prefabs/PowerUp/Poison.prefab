@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7860294685146708760}
   - component: {fileID: 8291274181402240960}
   - component: {fileID: 8291274181402240963}
-  - component: {fileID: 8291274181402240962}
+  - component: {fileID: 6924744943433010755}
   m_Layer: 0
   m_Name: Poison
   m_TagString: Untagged
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 4d0041387d03adb44b34742bc72f3a4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -4595401726773951757, guid: fc8eb20a645a9b144b56390bb9396439, type: 3}
+  m_Color: {r: 0.68179417, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4003906, y: 1.3403003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 10
-  stopMax: 4
   stopMin: 9
+  stopMax: 4
 --- !u!114 &8291274181402240960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +136,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &8291274181402240962
-CircleCollider2D:
+--- !u!60 &6924744943433010755
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,5 +150,29 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4003906, y: 1.3403003}
+    newSize: {x: 1.4003906, y: 1.3403003}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.542253, y: 0.13745499}
+      - {x: 0.56711054, y: 0.4770751}
+      - {x: 0.38292742, y: 0.6533193}
+      - {x: 0.059815884, y: 0.6371541}
+      - {x: -0.07130003, y: 0.39713}
+      - {x: -0.22717142, y: 0.28945065}
+      - {x: -0.5034542, y: 0.30525726}
+      - {x: -0.65662813, y: 0.22477144}
+      - {x: -0.70935297, y: 0.07204288}
+      - {x: -0.6165104, y: -0.19322109}
+      - {x: -0.6007619, y: -0.45885473}
+      - {x: -0.24655962, y: -0.5986128}
+      - {x: 0.10996199, y: -0.6517983}
+      - {x: 0.52274275, y: -0.55418205}
+      - {x: 0.6993947, y: -0.33595186}

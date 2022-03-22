@@ -7,6 +7,9 @@ using Random = UnityEngine.Random;
 
 public class RandomDisqueSpawner : MonoBehaviour
 {
+    [TextArea]
+    public string Description;
+
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 

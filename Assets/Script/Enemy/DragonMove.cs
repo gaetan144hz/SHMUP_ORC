@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class DragonMove : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        data.OnEnable();
-    }
+    
 
     private ScoreSetup scoreSetup;
 
@@ -39,6 +36,8 @@ public class DragonMove : MonoBehaviour
 
     void Awake()
     {
+        data = Instantiate(data);
+
         rb = GetComponent<Rigidbody2D>();
         scoreSetup = FindObjectOfType<ScoreSetup>();
         healthBar = FindObjectOfType<HealthBar>();

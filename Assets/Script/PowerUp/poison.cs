@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(CircleCollider2D))]
-
 public class poison : MonoBehaviour
 {
     private PlayerData datap;
@@ -45,7 +42,7 @@ public class poison : MonoBehaviour
     {
         while (true)
         {
-            //datap.currentHealth -= poisonIncrease;
+            datap.currentHealth -= poisonIncrease;
             playerHealth.TakeDamage(poisonIncrease);
             yield return new WaitForSeconds(2);
         }

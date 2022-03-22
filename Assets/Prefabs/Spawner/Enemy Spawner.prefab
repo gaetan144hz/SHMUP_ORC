@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8098913061637567094
 Transform:
   m_ObjectHideFlags: 0
@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a090a141bedc848a9bbac305f37c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Description: merci flore t la boss <3
   spawnPoints:
   - {fileID: 8098913062235468642}
   - {fileID: 8098913061543068830}
@@ -95,7 +96,7 @@ MonoBehaviour:
   wave3ToWave4: 18
   wave4ToWave5: 24
   wave5ToWave6: 30
-  wave6ToWave7: 32
+  wave6ToWave7: 36
 --- !u!1 &8098913062235468643
 GameObject:
   m_ObjectHideFlags: 0

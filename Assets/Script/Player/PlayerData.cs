@@ -13,8 +13,8 @@ public class PlayerData : ScriptableObject
         bulletDamage = startBulletDamage;
         bulletSpeed = startBulletSpeed;
 
-        startSpellDamage = spellDamage;
-        startSpellSpeed = spellSpeed;
+        spellDamage = startSpellDamage;
+        spellSpeed = startSpellSpeed;
     }
 
     [Header("Player Movement")]

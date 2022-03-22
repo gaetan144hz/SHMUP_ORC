@@ -1,9 +1,15 @@
+/// <summary
+/// By QG
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
+    [TextArea]
+    public string Description;
+
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
@@ -14,11 +20,9 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] private float wave5ToWave6;
     [SerializeField] private float wave6ToWave7;
 
-    Coroutine coroutineSpawn;
-
-    private void Awake()
-    {
-        coroutineSpawn = StartCoroutine(Spawn());
+    public void Start()
+    { 
+        StartCoroutine(Spawn());
     }
 
     private void Update()
@@ -34,6 +38,7 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
+    /*
     public void goblinToTank()
     {
         int randEnemy = Random.Range(0, 2);
@@ -49,6 +54,7 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
         Debug.Log(enemyPrefabs[0]);
     }
+    */
 
     IEnumerator Spawn()
     {
@@ -56,37 +62,37 @@ public class RandomSpawner : MonoBehaviour
         {
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(6);
+            yield return new WaitForSeconds(wave1ToWave2);
             spawn1();
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(12);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(18);
+            yield return new WaitForSeconds(wave2ToWave3);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            spawn1();
-            yield return new WaitForSeconds(24);
+            yield return new WaitForSeconds(wave3ToWave4);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(wave4ToWave5);
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
             spawn1();
-            yield return new WaitForSeconds(32);
+            spawn1();
+            yield return new WaitForSeconds(wave5ToWave6);
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            spawn1();
+            yield return new WaitForSeconds(wave6ToWave7);
             Debug.Log("BOSS");
             //yield return new WaitForSeconds(180);
         }
