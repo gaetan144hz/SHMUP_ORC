@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8857431569147144519}
   - component: {fileID: 4273279651123649779}
   - component: {fileID: 772289550247340993}
-  - component: {fileID: 4922338255798317614}
+  - component: {fileID: 6067698005965548913}
   m_Layer: 0
   m_Name: TourelleBullet
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 6143468016709707475, guid: 8b382fa2f91dc6c4e972a2d73b79dd6d, type: 3}
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &4922338255798317614
-CircleCollider2D:
+--- !u!60 &6067698005965548913
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,9 +131,26 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49999997
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4166666, y: 0.70023847}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.6466522, y: 0.056223646}
+      - {x: 0.17332381, y: 0.15524206}
+      - {x: -0.11261637, y: 0.14113007}
+      - {x: -0.11790926, y: -0.22310996}
+      - {x: -0.09516813, y: -0.22067332}
+      - {x: 0.12335211, y: -0.22880535}
+      - {x: 0.452951, y: -0.1062268}
+      - {x: 0.64172363, y: -0.04375586}

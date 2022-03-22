@@ -60,7 +60,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
-                Instantiate(enemyBullet, bulletParent.transform.position, Quaternion.identity);
+                Instantiate(enemyBullet, bulletParent.transform.position, transform.localRotation);
                 nextFireTime = Time.time + data.fireRate;
             }
         }       

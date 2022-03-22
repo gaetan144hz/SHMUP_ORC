@@ -18,8 +18,8 @@ MonoBehaviour:
   Score: 0
   currentSpeedMovement: 0
   startSpeedMovement: 0
-  currentHealth: -75
-  startHealth: 60
+  currentHealth: 70
+  startHealth: 70
   bulletSpeed: 4
   startBulletSpeed: 4
   bulletDamage: 1

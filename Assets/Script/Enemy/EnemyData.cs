@@ -5,7 +5,7 @@ public class EnemyData : ScriptableObject
 {
     public void OnEnable()
     {
-        startHealth = currentHealth;
+        currentHealth = startHealth ;
 
         bulletSpeed = startBulletSpeed;
         bulletDamage = startBulletDamage;

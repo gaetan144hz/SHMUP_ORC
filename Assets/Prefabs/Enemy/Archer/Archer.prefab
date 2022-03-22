@@ -35,7 +35,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -157,7 +157,7 @@ GameObject:
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2647647482063053803
 Transform:
   m_ObjectHideFlags: 0
@@ -240,7 +240,6 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
   healthBar: {fileID: 5313695336406884829}
   explosion: {fileID: 4271312362133296787, guid: 03c1ac17960dbc541892aabe611523d4, type: 3}
-  EnemyScore: 150
   enemyBullet: {fileID: 6981149121312585428, guid: 9ed3146154156f14c975658dedb8460c, type: 3}
   bulletParent: {fileID: 2647647480842136899}
   playerList: []
@@ -348,7 +347,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1287, y: 634}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4458445061966418150
 Canvas:
@@ -447,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 97}
+  m_AnchoredPosition: {x: 0, y: 167}
   m_SizeDelta: {x: 256.28113, y: 43.74051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4542306659930466680
