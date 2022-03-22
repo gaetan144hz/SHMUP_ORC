@@ -577,7 +577,7 @@ MonoBehaviour:
   healthBar: {fileID: 3837178668055789509}
   explosion: {fileID: 4940616246933530902, guid: b88805c2daff97a4bb862df9c2d8afd4, type: 3}
   enemyBullet: {fileID: 4789042166700847261, guid: ca7e35b106f143b48befbd3300b72e1a, type: 3}
-  bulletParent: {fileID: 6309468453753526194}
+  bulletParent: {fileID: 6309468453753526193}
   playerList: []
 --- !u!114 &3714470050940854725
 MonoBehaviour:

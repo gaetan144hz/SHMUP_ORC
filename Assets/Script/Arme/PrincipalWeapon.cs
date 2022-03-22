@@ -76,7 +76,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void TripleShoot()
     {
-        if (Time.time -lastShot < cooldown)
+        if (Time.time - lastShot < cooldown)
         {
             return;
         }

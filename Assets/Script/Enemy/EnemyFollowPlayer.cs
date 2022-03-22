@@ -24,7 +24,7 @@ public class EnemyFollowPlayer : MonoBehaviour
     public GameObject enemyBullet;
 
     [Header("FirePoint")]
-    public GameObject bulletParent;
+    public Transform bulletParent;
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -39,6 +39,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Awake()
     {
+        data = Instantiate(data);
+
         rb = GetComponent<Rigidbody2D>();
         scoreSetup = FindObjectOfType<ScoreSetup>();
 
@@ -60,7 +62,7 @@ public class EnemyFollowPlayer : MonoBehaviour
             }
             else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
-                Instantiate(enemyBullet, bulletParent.transform.position, transform.localRotation);
+                Instantiate(enemyBullet, bulletParent.position, bulletParent.rotation);
                 nextFireTime = Time.time + data.fireRate;
             }
         }       

@@ -1,16 +1,12 @@
+/// <summary
+/// By QG
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public EnemyData data;
-
-    private void OnEnable()
-    {
-        data.OnEnable(); //???????????????//
-    }
-
     [TextArea]
     public string Description;
 
@@ -25,7 +21,7 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] private float wave6ToWave7;
 
     public void Start()
-    {
+    { 
         StartCoroutine(Spawn());
     }
 

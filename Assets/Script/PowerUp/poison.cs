@@ -42,7 +42,7 @@ public class poison : MonoBehaviour
     {
         while (true)
         {
-            //datap.currentHealth -= poisonIncrease;
+            datap.currentHealth -= poisonIncrease;
             playerHealth.TakeDamage(poisonIncrease);
             yield return new WaitForSeconds(2);
         }
