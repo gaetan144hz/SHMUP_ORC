@@ -23,14 +23,16 @@ public class cheat : MonoBehaviour
 
     private void Awake()
     {
+        data = Instantiate(data);
+
         randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
         player = FindObjectOfType<PlayerHealth>();
     }
 
     void Update()
     {
-        cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
-        cheatHealth.text = $"Health: {data.currentHealth}";
+        //cheatHealth.text = $"HP: {data.currentHealth}";
+        //cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
     }
 
     public void OnEnableDisqueSpwn(bool value)

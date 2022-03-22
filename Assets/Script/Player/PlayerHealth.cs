@@ -8,13 +8,15 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public GameObject gameOverUI;
+    private GameObject gameOverUI;
 
     public PlayerMovement playerMovement;
 
-    void Start()
-    {       
-        healthBar.SetMaxHealth(datap.currentHealth);
+    void Awake()
+    {
+        gameOverUI = GameObject.Find("GameOverCanvas");
+        gameOverUI.SetActive(false);
+        //healthBar.SetMaxHealth(datap.currentHealth);
     }
 
     public void TakeDamage(int ennemyDamage)

@@ -6,19 +6,31 @@ public class Pause : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenu;
+    private GameObject pauseMenu;
+
+    public void Awake()
+    {
+        pauseMenu = GameObject.Find("PauseMenu");
+        pauseMenu.SetActive(false);
+    }
 
     public void OnResume(InputValue value)
     {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;              
-        GameIsPaused = false;
+        if (value.isPressed)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+        }
     }
 
     public void OnPause(InputValue value)
     {
-        pauseMenu.SetActive(true);        
-        Time.timeScale = 0f;        
-        GameIsPaused = true;
+        if (value.isPressed)
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
     }
 }
