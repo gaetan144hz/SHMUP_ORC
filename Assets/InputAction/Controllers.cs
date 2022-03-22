@@ -43,7 +43,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""pause"",
+                    ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""a75d895c-c06e-4245-b224-e93cb7754063"",
                     ""expectedControlType"": ""Button"",
@@ -247,11 +247,11 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""22fcb377-4eb7-4f09-8796-c5c41959db5c"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -262,7 +262,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -495,7 +495,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""pause"",
+                    ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""0a99b43f-6419-4afa-b0e5-7f85bd572fd6"",
                     ""expectedControlType"": ""Button"",
@@ -703,7 +703,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -714,7 +714,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -947,7 +947,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""pause"",
+                    ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""2a6f9dfc-79e6-4078-8d5a-7e8f93d65bd0"",
                     ""expectedControlType"": ""Button"",
@@ -1155,7 +1155,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1166,7 +1166,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""pause"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1401,7 +1401,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_shoot = m_player.FindAction("shoot", throwIfNotFound: true);
         m_player_tripleShoot = m_player.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player_pause = m_player.FindAction("pause", throwIfNotFound: true);
+        m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
         m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
         m_player_stopMusic = m_player.FindAction("stopMusic", throwIfNotFound: true);
         m_player_playMusic = m_player.FindAction("playMusic", throwIfNotFound: true);
@@ -1420,7 +1420,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player1_move = m_player1.FindAction("move", throwIfNotFound: true);
         m_player1_shoot = m_player1.FindAction("shoot", throwIfNotFound: true);
         m_player1_tripleShoot = m_player1.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player1_pause = m_player1.FindAction("pause", throwIfNotFound: true);
+        m_player1_Pause = m_player1.FindAction("Pause", throwIfNotFound: true);
         m_player1_Resume = m_player1.FindAction("Resume", throwIfNotFound: true);
         m_player1_stopMusic = m_player1.FindAction("stopMusic", throwIfNotFound: true);
         m_player1_playMusic = m_player1.FindAction("playMusic", throwIfNotFound: true);
@@ -1439,7 +1439,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player2_move = m_player2.FindAction("move", throwIfNotFound: true);
         m_player2_shoot = m_player2.FindAction("shoot", throwIfNotFound: true);
         m_player2_tripleShoot = m_player2.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player2_pause = m_player2.FindAction("pause", throwIfNotFound: true);
+        m_player2_Pause = m_player2.FindAction("Pause", throwIfNotFound: true);
         m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
         m_player2_stopMusic = m_player2.FindAction("stopMusic", throwIfNotFound: true);
         m_player2_playMusic = m_player2.FindAction("playMusic", throwIfNotFound: true);
@@ -1505,7 +1505,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_shoot;
     private readonly InputAction m_player_tripleShoot;
-    private readonly InputAction m_player_pause;
+    private readonly InputAction m_player_Pause;
     private readonly InputAction m_player_Resume;
     private readonly InputAction m_player_stopMusic;
     private readonly InputAction m_player_playMusic;
@@ -1526,7 +1526,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @shoot => m_Wrapper.m_player_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player_tripleShoot;
-        public InputAction @pause => m_Wrapper.m_player_pause;
+        public InputAction @Pause => m_Wrapper.m_player_Pause;
         public InputAction @Resume => m_Wrapper.m_player_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player_playMusic;
@@ -1558,9 +1558,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
-                @pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Resume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
                 @Resume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
                 @Resume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
@@ -1613,9 +1613,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @pause.started += instance.OnPause;
-                @pause.performed += instance.OnPause;
-                @pause.canceled += instance.OnPause;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
                 @Resume.started += instance.OnResume;
                 @Resume.performed += instance.OnResume;
                 @Resume.canceled += instance.OnResume;
@@ -1666,7 +1666,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player1_move;
     private readonly InputAction m_player1_shoot;
     private readonly InputAction m_player1_tripleShoot;
-    private readonly InputAction m_player1_pause;
+    private readonly InputAction m_player1_Pause;
     private readonly InputAction m_player1_Resume;
     private readonly InputAction m_player1_stopMusic;
     private readonly InputAction m_player1_playMusic;
@@ -1687,7 +1687,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player1_move;
         public InputAction @shoot => m_Wrapper.m_player1_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player1_tripleShoot;
-        public InputAction @pause => m_Wrapper.m_player1_pause;
+        public InputAction @Pause => m_Wrapper.m_player1_Pause;
         public InputAction @Resume => m_Wrapper.m_player1_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player1_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player1_playMusic;
@@ -1719,9 +1719,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
-                @pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
                 @Resume.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
                 @Resume.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
                 @Resume.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
@@ -1774,9 +1774,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @pause.started += instance.OnPause;
-                @pause.performed += instance.OnPause;
-                @pause.canceled += instance.OnPause;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
                 @Resume.started += instance.OnResume;
                 @Resume.performed += instance.OnResume;
                 @Resume.canceled += instance.OnResume;
@@ -1827,7 +1827,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player2_move;
     private readonly InputAction m_player2_shoot;
     private readonly InputAction m_player2_tripleShoot;
-    private readonly InputAction m_player2_pause;
+    private readonly InputAction m_player2_Pause;
     private readonly InputAction m_player2_Resume;
     private readonly InputAction m_player2_stopMusic;
     private readonly InputAction m_player2_playMusic;
@@ -1848,7 +1848,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player2_move;
         public InputAction @shoot => m_Wrapper.m_player2_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player2_tripleShoot;
-        public InputAction @pause => m_Wrapper.m_player2_pause;
+        public InputAction @Pause => m_Wrapper.m_player2_Pause;
         public InputAction @Resume => m_Wrapper.m_player2_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player2_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player2_playMusic;
@@ -1880,9 +1880,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
-                @pause.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
-                @pause.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
-                @pause.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Pause.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
                 @Resume.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
                 @Resume.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
                 @Resume.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
@@ -1935,9 +1935,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @pause.started += instance.OnPause;
-                @pause.performed += instance.OnPause;
-                @pause.canceled += instance.OnPause;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
                 @Resume.started += instance.OnResume;
                 @Resume.performed += instance.OnResume;
                 @Resume.canceled += instance.OnResume;

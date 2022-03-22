@@ -579,8 +579,8 @@ GameObject:
   - component: {fileID: 7567997724479068165}
   - component: {fileID: 7567997724479068166}
   - component: {fileID: 7567997724479068167}
-  - component: {fileID: 4793215509708049726}
   - component: {fileID: -6327956963384566301}
+  - component: {fileID: -8945190309725666800}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -753,21 +753,7 @@ MonoBehaviour:
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
   healthBar: {fileID: 416609986048958082}
-  gameOverUI: {fileID: 0}
   playerMovement: {fileID: 7567997724479068166}
---- !u!114 &4793215509708049726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7567997724479068161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c64ce430e3510d4fbfb58c356216f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
 --- !u!114 &-6327956963384566301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,3 +772,15 @@ MonoBehaviour:
   randomDisqueSpawner: {fileID: 0}
   cheatDamage: {fileID: 0}
   cheatHealth: {fileID: 0}
+--- !u!114 &-8945190309725666800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567997724479068161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2dd443cd950eb43aa583e8e34c372a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

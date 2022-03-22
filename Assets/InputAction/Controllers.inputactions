@@ -30,7 +30,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "pause",
+                    "name": "Pause",
                     "type": "Button",
                     "id": "a75d895c-c06e-4245-b224-e93cb7754063",
                     "expectedControlType": "Button",
@@ -234,11 +234,11 @@
                 {
                     "name": "",
                     "id": "22fcb377-4eb7-4f09-8796-c5c41959db5c",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -249,7 +249,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -482,7 +482,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "pause",
+                    "name": "Pause",
                     "type": "Button",
                     "id": "0a99b43f-6419-4afa-b0e5-7f85bd572fd6",
                     "expectedControlType": "Button",
@@ -690,7 +690,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -701,7 +701,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -934,7 +934,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "pause",
+                    "name": "Pause",
                     "type": "Button",
                     "id": "2a6f9dfc-79e6-4078-8d5a-7e8f93d65bd0",
                     "expectedControlType": "Button",
@@ -1142,7 +1142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1153,7 +1153,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "pause",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
