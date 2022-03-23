@@ -13,6 +13,8 @@ public class RandomSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
+    private Timer timer;
+
     [SerializeField] private float wave1ToWave2;
     [SerializeField] private float wave2ToWave3;
     [SerializeField] private float wave3ToWave4;
@@ -21,13 +23,15 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] private float wave6ToWave7;
 
     public void Start()
-    { 
+    {
+        timer = FindObjectOfType<Timer>();
+
         StartCoroutine(Spawn());
     }
 
     private void Update()
     {
-        
+        //wave1();
     }
 
     public void spawn1()
@@ -53,6 +57,20 @@ public class RandomSpawner : MonoBehaviour
 
         Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
         Debug.Log(enemyPrefabs[0]);
+    }
+    
+
+    public void wave(GameObject enemyPrefabs, Transform spawnPoints)
+    {
+        Instantiate(enemyPrefabs, spawnPoints.position, spawnPoints.rotation);
+    }
+
+    public void wave1()
+    {
+        if (timer.currentTime <= 1)
+        {
+            wave(enemyPrefabs[0], spawnPoints[2]);
+        }
     }
     */
 
