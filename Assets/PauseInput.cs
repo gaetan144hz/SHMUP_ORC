@@ -12,19 +12,12 @@ public class PauseInput : MonoBehaviour
         pauseResume = FindObjectOfType<PauseResume>();
     }
 
-    public void OnResume(InputValue value)
-    {
-        if (value.isPressed)
-        {
-            pauseResume.pause();
-        }
-    }
-
     public void OnPause(InputValue value)
     {
         if (value.isPressed)
         {
-            pauseResume.resume();
+            pauseResume.pause();
+            return;
         }
     }
 }

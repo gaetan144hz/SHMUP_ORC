@@ -43,22 +43,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""a75d895c-c06e-4245-b224-e93cb7754063"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Resume"",
-                    ""type"": ""Button"",
-                    ""id"": ""9aeaa1a4-0e8d-4d79-ae2a-3b6b2133a93a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""stopMusic"",
                     ""type"": ""Button"",
                     ""id"": ""f80c4f7f-c632-4ee6-a6d7-d5188f4fb133"",
@@ -153,6 +137,22 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""92f2864f-1e41-4586-9e3b-206298b45610"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""3148b2fe-9393-46ab-9654-1e5f070637b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -241,50 +241,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""22fcb377-4eb7-4f09-8796-c5c41959db5c"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5e9447d2-9ae3-4142-a034-dce8870a9349"",
-                    ""path"": ""<XInputController>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""976aeddd-7448-460a-b1c7-956be8f7c4e0"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Resume"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3be0eb3d-3942-4381-b9d3-d9b0e754d90d"",
-                    ""path"": ""<XInputController>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -463,6 +419,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3f7f06e4-2c94-483d-9444-1ff0165e98a5"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89e26b51-0f9d-477d-8762-96306974e03f"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -490,22 +468,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""name"": ""tripleShoot"",
                     ""type"": ""Button"",
                     ""id"": ""e2aa3230-097d-4ab4-b83f-4d328dc9f0fd"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""0a99b43f-6419-4afa-b0e5-7f85bd572fd6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Resume"",
-                    ""type"": ""Button"",
-                    ""id"": ""933a1e07-0fc8-4a03-a1f2-911eb90eddb7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -605,6 +567,22 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd482295-a1c9-4781-9c89-96df5d4fb0df"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""28a94198-39ec-4c2f-b341-f00fba25f30e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -693,50 +671,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""70133368-58d0-4a59-8389-e4464d4846df"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6c96819f-8bae-4462-9ea5-782f98edc82d"",
-                    ""path"": ""<XInputController>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""33a9c6ce-67df-4057-95a2-387de7ad17cb"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Resume"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a42b5145-2f35-414a-be87-39066ac156b9"",
-                    ""path"": ""<XInputController>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -915,6 +849,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4b9da8d-fd67-4ac5-8aab-77b411588cc4"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f381282c-6fb5-4d80-ac89-4e108b51e780"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -942,22 +898,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""name"": ""tripleShoot"",
                     ""type"": ""Button"",
                     ""id"": ""31a35c69-1d46-43f8-8b7e-9619ac27687e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""2a6f9dfc-79e6-4078-8d5a-7e8f93d65bd0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Resume"",
-                    ""type"": ""Button"",
-                    ""id"": ""fc5eb378-35a4-4b4c-8a89-af2436025b2d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -1057,6 +997,22 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""57c8178d-1d4d-4faf-b04c-47019ce95d5f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""0f80d11c-de1e-47a7-ae62-c5c4fcbdff50"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -1145,50 +1101,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f1930270-5ff0-4003-ad61-e23c6cba766c"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d8af578d-9171-4702-8e4c-d495de0fd2e0"",
-                    ""path"": ""<XInputController>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1185c6f8-3b75-48b4-bcd4-67ca376b2d5e"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Resume"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bcf5f907-9236-49b9-a9d8-2c36283666de"",
-                    ""path"": ""<XInputController>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1367,6 +1279,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""disableDisqueSpwn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b57dae95-636f-4d67-aa60-62eaf4921347"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9b02cb9-0d42-488a-bf2d-df7ea4a8b8d6"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1401,8 +1335,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_move = m_player.FindAction("move", throwIfNotFound: true);
         m_player_shoot = m_player.FindAction("shoot", throwIfNotFound: true);
         m_player_tripleShoot = m_player.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
-        m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
         m_player_stopMusic = m_player.FindAction("stopMusic", throwIfNotFound: true);
         m_player_playMusic = m_player.FindAction("playMusic", throwIfNotFound: true);
         m_player_disableCheatDamage = m_player.FindAction("disableCheatDamage", throwIfNotFound: true);
@@ -1415,13 +1347,13 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_removeSpeed = m_player.FindAction("removeSpeed", throwIfNotFound: true);
         m_player_enableDisqueSpwn = m_player.FindAction("enableDisqueSpwn", throwIfNotFound: true);
         m_player_disableDisqueSpwn = m_player.FindAction("disableDisqueSpwn", throwIfNotFound: true);
+        m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
+        m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
         // player1
         m_player1 = asset.FindActionMap("player1", throwIfNotFound: true);
         m_player1_move = m_player1.FindAction("move", throwIfNotFound: true);
         m_player1_shoot = m_player1.FindAction("shoot", throwIfNotFound: true);
         m_player1_tripleShoot = m_player1.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player1_Pause = m_player1.FindAction("Pause", throwIfNotFound: true);
-        m_player1_Resume = m_player1.FindAction("Resume", throwIfNotFound: true);
         m_player1_stopMusic = m_player1.FindAction("stopMusic", throwIfNotFound: true);
         m_player1_playMusic = m_player1.FindAction("playMusic", throwIfNotFound: true);
         m_player1_removeSpeed = m_player1.FindAction("removeSpeed", throwIfNotFound: true);
@@ -1434,13 +1366,13 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player1_disableCheatDamage = m_player1.FindAction("disableCheatDamage", throwIfNotFound: true);
         m_player1_disableDisqueSpwn = m_player1.FindAction("disableDisqueSpwn", throwIfNotFound: true);
         m_player1_enableDisqueSpwn = m_player1.FindAction("enableDisqueSpwn", throwIfNotFound: true);
+        m_player1_Pause = m_player1.FindAction("Pause", throwIfNotFound: true);
+        m_player1_Resume = m_player1.FindAction("Resume", throwIfNotFound: true);
         // player2
         m_player2 = asset.FindActionMap("player2", throwIfNotFound: true);
         m_player2_move = m_player2.FindAction("move", throwIfNotFound: true);
         m_player2_shoot = m_player2.FindAction("shoot", throwIfNotFound: true);
         m_player2_tripleShoot = m_player2.FindAction("tripleShoot", throwIfNotFound: true);
-        m_player2_Pause = m_player2.FindAction("Pause", throwIfNotFound: true);
-        m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
         m_player2_stopMusic = m_player2.FindAction("stopMusic", throwIfNotFound: true);
         m_player2_playMusic = m_player2.FindAction("playMusic", throwIfNotFound: true);
         m_player2_removeSpeed = m_player2.FindAction("removeSpeed", throwIfNotFound: true);
@@ -1453,6 +1385,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player2_disableCheatDamage = m_player2.FindAction("disableCheatDamage", throwIfNotFound: true);
         m_player2_disableDisqueSpwn = m_player2.FindAction("disableDisqueSpwn", throwIfNotFound: true);
         m_player2_enableDisqueSpwn = m_player2.FindAction("enableDisqueSpwn", throwIfNotFound: true);
+        m_player2_Pause = m_player2.FindAction("Pause", throwIfNotFound: true);
+        m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1505,8 +1439,6 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_move;
     private readonly InputAction m_player_shoot;
     private readonly InputAction m_player_tripleShoot;
-    private readonly InputAction m_player_Pause;
-    private readonly InputAction m_player_Resume;
     private readonly InputAction m_player_stopMusic;
     private readonly InputAction m_player_playMusic;
     private readonly InputAction m_player_disableCheatDamage;
@@ -1519,6 +1451,8 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_removeSpeed;
     private readonly InputAction m_player_enableDisqueSpwn;
     private readonly InputAction m_player_disableDisqueSpwn;
+    private readonly InputAction m_player_Resume;
+    private readonly InputAction m_player_Pause;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -1526,8 +1460,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player_move;
         public InputAction @shoot => m_Wrapper.m_player_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player_tripleShoot;
-        public InputAction @Pause => m_Wrapper.m_player_Pause;
-        public InputAction @Resume => m_Wrapper.m_player_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player_playMusic;
         public InputAction @disableCheatDamage => m_Wrapper.m_player_disableCheatDamage;
@@ -1540,6 +1472,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @removeSpeed => m_Wrapper.m_player_removeSpeed;
         public InputAction @enableDisqueSpwn => m_Wrapper.m_player_enableDisqueSpwn;
         public InputAction @disableDisqueSpwn => m_Wrapper.m_player_disableDisqueSpwn;
+        public InputAction @Resume => m_Wrapper.m_player_Resume;
+        public InputAction @Pause => m_Wrapper.m_player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1558,12 +1492,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTripleShoot;
-                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Resume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
-                @Resume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
-                @Resume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
                 @stopMusic.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
                 @stopMusic.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
                 @stopMusic.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMusic;
@@ -1600,6 +1528,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @disableDisqueSpwn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
                 @disableDisqueSpwn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
                 @disableDisqueSpwn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableDisqueSpwn;
+                @Resume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
+                @Resume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
+                @Resume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1613,12 +1547,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-                @Resume.started += instance.OnResume;
-                @Resume.performed += instance.OnResume;
-                @Resume.canceled += instance.OnResume;
                 @stopMusic.started += instance.OnStopMusic;
                 @stopMusic.performed += instance.OnStopMusic;
                 @stopMusic.canceled += instance.OnStopMusic;
@@ -1655,6 +1583,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @disableDisqueSpwn.started += instance.OnDisableDisqueSpwn;
                 @disableDisqueSpwn.performed += instance.OnDisableDisqueSpwn;
                 @disableDisqueSpwn.canceled += instance.OnDisableDisqueSpwn;
+                @Resume.started += instance.OnResume;
+                @Resume.performed += instance.OnResume;
+                @Resume.canceled += instance.OnResume;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -1666,8 +1600,6 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player1_move;
     private readonly InputAction m_player1_shoot;
     private readonly InputAction m_player1_tripleShoot;
-    private readonly InputAction m_player1_Pause;
-    private readonly InputAction m_player1_Resume;
     private readonly InputAction m_player1_stopMusic;
     private readonly InputAction m_player1_playMusic;
     private readonly InputAction m_player1_removeSpeed;
@@ -1680,6 +1612,8 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player1_disableCheatDamage;
     private readonly InputAction m_player1_disableDisqueSpwn;
     private readonly InputAction m_player1_enableDisqueSpwn;
+    private readonly InputAction m_player1_Pause;
+    private readonly InputAction m_player1_Resume;
     public struct Player1Actions
     {
         private @Controllers m_Wrapper;
@@ -1687,8 +1621,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player1_move;
         public InputAction @shoot => m_Wrapper.m_player1_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player1_tripleShoot;
-        public InputAction @Pause => m_Wrapper.m_player1_Pause;
-        public InputAction @Resume => m_Wrapper.m_player1_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player1_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player1_playMusic;
         public InputAction @removeSpeed => m_Wrapper.m_player1_removeSpeed;
@@ -1701,6 +1633,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @disableCheatDamage => m_Wrapper.m_player1_disableCheatDamage;
         public InputAction @disableDisqueSpwn => m_Wrapper.m_player1_disableDisqueSpwn;
         public InputAction @enableDisqueSpwn => m_Wrapper.m_player1_enableDisqueSpwn;
+        public InputAction @Pause => m_Wrapper.m_player1_Pause;
+        public InputAction @Resume => m_Wrapper.m_player1_Resume;
         public InputActionMap Get() { return m_Wrapper.m_player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1719,12 +1653,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnTripleShoot;
-                @Pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @Resume.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
-                @Resume.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
-                @Resume.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
                 @stopMusic.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStopMusic;
                 @stopMusic.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStopMusic;
                 @stopMusic.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStopMusic;
@@ -1761,6 +1689,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @enableDisqueSpwn.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @Pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Resume.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
+                @Resume.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
+                @Resume.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1774,12 +1708,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-                @Resume.started += instance.OnResume;
-                @Resume.performed += instance.OnResume;
-                @Resume.canceled += instance.OnResume;
                 @stopMusic.started += instance.OnStopMusic;
                 @stopMusic.performed += instance.OnStopMusic;
                 @stopMusic.canceled += instance.OnStopMusic;
@@ -1816,6 +1744,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @enableDisqueSpwn.started += instance.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.performed += instance.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.canceled += instance.OnEnableDisqueSpwn;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Resume.started += instance.OnResume;
+                @Resume.performed += instance.OnResume;
+                @Resume.canceled += instance.OnResume;
             }
         }
     }
@@ -1827,8 +1761,6 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player2_move;
     private readonly InputAction m_player2_shoot;
     private readonly InputAction m_player2_tripleShoot;
-    private readonly InputAction m_player2_Pause;
-    private readonly InputAction m_player2_Resume;
     private readonly InputAction m_player2_stopMusic;
     private readonly InputAction m_player2_playMusic;
     private readonly InputAction m_player2_removeSpeed;
@@ -1841,6 +1773,8 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player2_disableCheatDamage;
     private readonly InputAction m_player2_disableDisqueSpwn;
     private readonly InputAction m_player2_enableDisqueSpwn;
+    private readonly InputAction m_player2_Pause;
+    private readonly InputAction m_player2_Resume;
     public struct Player2Actions
     {
         private @Controllers m_Wrapper;
@@ -1848,8 +1782,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @move => m_Wrapper.m_player2_move;
         public InputAction @shoot => m_Wrapper.m_player2_shoot;
         public InputAction @tripleShoot => m_Wrapper.m_player2_tripleShoot;
-        public InputAction @Pause => m_Wrapper.m_player2_Pause;
-        public InputAction @Resume => m_Wrapper.m_player2_Resume;
         public InputAction @stopMusic => m_Wrapper.m_player2_stopMusic;
         public InputAction @playMusic => m_Wrapper.m_player2_playMusic;
         public InputAction @removeSpeed => m_Wrapper.m_player2_removeSpeed;
@@ -1862,6 +1794,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @disableCheatDamage => m_Wrapper.m_player2_disableCheatDamage;
         public InputAction @disableDisqueSpwn => m_Wrapper.m_player2_disableDisqueSpwn;
         public InputAction @enableDisqueSpwn => m_Wrapper.m_player2_enableDisqueSpwn;
+        public InputAction @Pause => m_Wrapper.m_player2_Pause;
+        public InputAction @Resume => m_Wrapper.m_player2_Resume;
         public InputActionMap Get() { return m_Wrapper.m_player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1880,12 +1814,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
                 @tripleShoot.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnTripleShoot;
-                @Pause.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
-                @Resume.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
-                @Resume.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
-                @Resume.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
                 @stopMusic.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnStopMusic;
                 @stopMusic.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnStopMusic;
                 @stopMusic.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnStopMusic;
@@ -1922,6 +1850,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @enableDisqueSpwn.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnEnableDisqueSpwn;
+                @Pause.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnPause;
+                @Resume.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
+                @Resume.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
+                @Resume.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1935,12 +1869,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @tripleShoot.started += instance.OnTripleShoot;
                 @tripleShoot.performed += instance.OnTripleShoot;
                 @tripleShoot.canceled += instance.OnTripleShoot;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-                @Resume.started += instance.OnResume;
-                @Resume.performed += instance.OnResume;
-                @Resume.canceled += instance.OnResume;
                 @stopMusic.started += instance.OnStopMusic;
                 @stopMusic.performed += instance.OnStopMusic;
                 @stopMusic.canceled += instance.OnStopMusic;
@@ -1977,6 +1905,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @enableDisqueSpwn.started += instance.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.performed += instance.OnEnableDisqueSpwn;
                 @enableDisqueSpwn.canceled += instance.OnEnableDisqueSpwn;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Resume.started += instance.OnResume;
+                @Resume.performed += instance.OnResume;
+                @Resume.canceled += instance.OnResume;
             }
         }
     }
@@ -2004,8 +1938,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnTripleShoot(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
-        void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
         void OnDisableCheatDamage(InputAction.CallbackContext context);
@@ -2018,14 +1950,14 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnRemoveSpeed(InputAction.CallbackContext context);
         void OnEnableDisqueSpwn(InputAction.CallbackContext context);
         void OnDisableDisqueSpwn(InputAction.CallbackContext context);
+        void OnResume(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnTripleShoot(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
-        void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
         void OnRemoveSpeed(InputAction.CallbackContext context);
@@ -2038,14 +1970,14 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnDisableCheatDamage(InputAction.CallbackContext context);
         void OnDisableDisqueSpwn(InputAction.CallbackContext context);
         void OnEnableDisqueSpwn(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnResume(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnTripleShoot(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
-        void OnResume(InputAction.CallbackContext context);
         void OnStopMusic(InputAction.CallbackContext context);
         void OnPlayMusic(InputAction.CallbackContext context);
         void OnRemoveSpeed(InputAction.CallbackContext context);
@@ -2058,5 +1990,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnDisableCheatDamage(InputAction.CallbackContext context);
         void OnDisableDisqueSpwn(InputAction.CallbackContext context);
         void OnEnableDisqueSpwn(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnResume(InputAction.CallbackContext context);
     }
 }

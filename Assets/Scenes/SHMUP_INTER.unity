@@ -1820,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -740.34
       objectReference: {fileID: 0}
+    - target: {fileID: 7488796568210273368, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7488796569348178704, guid: 1709b3484b6de4b4da507db754d54981, type: 3}
       propertyPath: m_Name
       value: Arene
