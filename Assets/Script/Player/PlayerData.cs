@@ -18,8 +18,11 @@ public class PlayerData : ScriptableObject
     }
 
     [Header("Player Movement")]
-    public float speed;
-    [HideInInspector] public float startSpeed;
+    [HideInInspector] public float speed;
+    public float startSpeed;
+    [HideInInspector] public float acceleration;
+    public float startAcceleration;
+    public float maxSpeed;
 
     [Header("Health")]
     public int startHealth;
