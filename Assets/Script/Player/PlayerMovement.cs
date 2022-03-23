@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Data")]
     public PlayerData datap;
 
+    [SerializeField] private float speed;
+
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();
     public static List<PlayerMovement> GetPlayerList()
     {
@@ -43,7 +45,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         //Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
-        Vector2 moveInput = value.Get<Vector2>();
-        rb.velocity = moveInput * datap.speed;
+        speed += datap.acceleration * Time.deltaTime;
+        speed = Mathf.Min(datap.speed, datap.maxSpeed);
+
+        Vector2 moveInput = value.Get<Vector2>().normalized;
+        rb.velocity = moveInput * speed;
     }
 }

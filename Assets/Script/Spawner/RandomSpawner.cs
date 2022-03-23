@@ -58,8 +58,8 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
         Debug.Log(enemyPrefabs[0]);
     }
-    
-
+    */
+    /*
     public void wave(GameObject enemyPrefabs, Transform spawnPoints)
     {
         Instantiate(enemyPrefabs, spawnPoints.position, spawnPoints.rotation);
