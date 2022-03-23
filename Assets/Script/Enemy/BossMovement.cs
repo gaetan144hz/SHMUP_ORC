@@ -27,7 +27,7 @@ public class BossMovement : MonoBehaviour
     public Transform[] firePoint;
 
     [Header("FireRate")]
-    public float FireRateBullet;
+    [SerializeField] private float nextFireTime;
 
     private float lastShot;
     
@@ -47,26 +47,31 @@ public class BossMovement : MonoBehaviour
             if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
-                
             }
-            else if (distanceFromPlayer <= data.shootingRange && FireRateBullet < Time.time)
+            else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
             {
                 shoot(bullet[0], firePoint[0], 1);
-                shoot(bullet[0], firePoint[1], 1);
+                nextFireTime = Time.time + data.fireRate;
+                shoot(bullet[1], firePoint[1], 1);
+                nextFireTime = Time.time + data.fireRate;
+                shoot(bullet[0], firePoint[3], 1);
+                nextFireTime = Time.time + data.fireRate;
+                shoot(bullet[2], firePoint[2], 1);
+                nextFireTime = Time.time + data.fireRate;
             }
-            shoot(bullet[1], firePoint[3], 1);
-            shoot(bullet[2], firePoint[2], 3);
+            
         }
-        
     }
 
-    public void shoot(GameObject bullet, Transform firePoint, float fireRate)
+    public void shoot(GameObject bullet, Transform firePoint, float cooldown)
     {
-        if (Time.time <= lastShot + fireRate)
+        if (Time.time <= lastShot + cooldown)
         {
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         }
         lastShot = Time.time;
+        
+        Debug.Log(bullet);
     }
 
     private void OnDrawGizmosSelected()
