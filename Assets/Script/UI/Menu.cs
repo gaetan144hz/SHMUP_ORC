@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        loadSave();
+        //loadSave();
     }
     public void OnMenu()
     {
@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
     public void loadSave()
     {
         float volumeData = PlayerPrefs.GetFloat("volumeData");
-        volumeSlider.value = volumeData;
+        //volumeSlider.value = volumeData;
         audioMixer.SetFloat("volume", volumeData);
     }
     

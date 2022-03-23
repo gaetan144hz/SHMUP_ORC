@@ -8,13 +8,14 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public GameObject gameOverUI;
+    private GameOver gameOver;
 
     public PlayerMovement playerMovement;
 
-    void Start()
-    {       
-        healthBar.SetMaxHealth(datap.currentHealth);
+    void Awake()
+    {
+        gameOver = FindObjectOfType<GameOver>();
+        //healthBar.SetMaxHealth(datap.currentHealth);
     }
 
     public void TakeDamage(int ennemyDamage)
@@ -22,9 +23,8 @@ public class PlayerHealth : MonoBehaviour
         datap.currentHealth -= ennemyDamage;
         if (datap.currentHealth <= 0)
         {
-            gameOverUI.SetActive(true);
-            Time.timeScale = 0f;
             Die();
+            gameOver.gameOverUI();
         }
         healthBar.SetHealth(datap.currentHealth);
     }
@@ -33,9 +33,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "DeathZone")
         {
-            gameOverUI.SetActive(true);
-            Time.timeScale = 0f;
             Die();
+            gameOver.gameOverUI();
         }
         healthBar.SetHealth(datap.currentHealth);
     }

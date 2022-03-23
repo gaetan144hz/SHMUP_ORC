@@ -250,7 +250,7 @@ MonoBehaviour:
   - {fileID: 1404511805962807138}
   - {fileID: 5846432504357129469}
   - {fileID: 3826620028802122857}
-  FireRateBullet: 2
+  FireRateBullet: 20
   playerList: []
 --- !u!114 &6281377891622321027
 MonoBehaviour:
