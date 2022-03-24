@@ -157,7 +157,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2572329373142976745
 Transform:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   healthBar: {fileID: 4775624471845222539}
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
   enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
-  bulletParent: {fileID: 2572329372805760763}
+  bulletParent: {fileID: 2572329372805760762}
   playerList: []
 --- !u!114 &7207205614913576959
 MonoBehaviour:
