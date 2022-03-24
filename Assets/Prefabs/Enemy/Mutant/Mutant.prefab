@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9114618521634652627}
   - component: {fileID: 9114618521634652626}
-  - component: {fileID: 1344424728819806599}
+  - component: {fileID: 7996563834704973800}
   - component: {fileID: 1582200558016408917}
   - component: {fileID: 1292387767295246840}
   - component: {fileID: 9114618521634652636}
@@ -441,7 +441,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1344424728819806599
+--- !u!114 &7996563834704973800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,14 +450,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 9114618521634652638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbff6ca1a1812748a6cc44a007fab35, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a0a24eba5fb7d245b971074da9a206f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 5190a1deb2057a94bbf67761263f4569, type: 2}
+  data: {fileID: 11400000, guid: 12b1bc461e19ea740a50ab0d2eec9c00, type: 2}
   healthBar: {fileID: 3296157504435890702}
   explosion: {fileID: 7561791552984474656, guid: 6825e96a568838446835e603531f330e, type: 3}
   enemyBullet: {fileID: 7765959782366688196, guid: 0b838cff6ecf4aa489112c891d089f48, type: 3}
-  bulletParent: {fileID: 9114618523032691221}
+  bulletParent: {fileID: 9114618523032691210}
   playerList: []
 --- !u!114 &1582200558016408917
 MonoBehaviour:

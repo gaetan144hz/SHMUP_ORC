@@ -49,12 +49,11 @@ public class Bullet : MonoBehaviour
         if (disque != null)
         {
             disque.TakeDamage(datap.bulletDamage);
-            scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
-        if (enemy != null)
+        if (hitInfo.gameObject.tag == "Enemy")
         {
             enemy.TakeDamage(datap.bulletDamage);
             scoreSetup.AddDmgScore(datap.bulletDamage);
@@ -62,7 +61,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(boss != null)
+        if(hitInfo.gameObject.tag == "Boss")
         {
             boss.TakeDamage(datap.bulletDamage);
             scoreSetup.AddDmgScore(datap.bulletDamage);
@@ -70,24 +69,13 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(mage != null)
+        if(hitInfo.gameObject.tag == "Invoked")
         {           
-            mage.TakeDamage(datap.bulletDamage);
-            scoreSetup.AddDmgScore(datap.bulletDamage);
+            enemy.TakeDamage(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
-            
-            //score.scoreValue += 200;
         }
 
-        if (dragon != null)
-        {
-            dragon.TakeDamage((datap.bulletDamage));
-            scoreSetup.AddDmgScore(datap.bulletDamage);
-            hitSpawn();
-            Destroy(gameObject);
-        }
-        
         if(hitInfo.gameObject.tag == "skybarriere")
         {
             hitSpawn();
