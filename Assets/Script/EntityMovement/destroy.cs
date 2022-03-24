@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour
 {
-    [SerializeField] float timeToDestroy;
-
-    public void update()
+    public void destroyPress()
     {
-        Destroy(this.gameObject,timeToDestroy);
+        Destroy(this.gameObject);
     }
 }

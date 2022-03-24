@@ -23,8 +23,9 @@ public class Timer : MonoBehaviour
     {
         while(true)
         {
-            currentTime += 1 * Time.deltaTime;
+            currentTime += 1;
             countdownText.text = currentTime.ToString("0");
+            yield return new WaitForSeconds(1);
         }
     }
 }

@@ -10,6 +10,9 @@ public class RandomSpawner : MonoBehaviour
 {
     [TextArea]
     public string Description;
+    public int waveNumber;
+    public int waveInput;
+    public int spawnInput;
 
     private ScoreSetup ScoreSetup;
     private RandomDisqueSpawner randomDisqueSpawner;
@@ -31,6 +34,7 @@ public class RandomSpawner : MonoBehaviour
 
     public void gameInstantiate()
     {
+        spawnInput = 1;
         StartCoroutine(Spawn());
     }
 
@@ -63,55 +67,55 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[enemyValue], spawnPoints[spawnValue].position, spawnPoints[spawnValue].rotation);
     }
 
+    public void stopSpawnCoroutine()
+    {
+        StopCoroutine(Spawn());
+    }
+
+    IEnumerator WaveAnim()
+    {
+        while (waveInput > 0)
+        {
+            waveNumber += 1;
+            var textInput = $"WAVE {waveNumber}";
+            yield return new WaitForSeconds(1);
+            wavesText.text = textInput;
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            Debug.Log(waveNumber);
+            wavesObject.SetActive(false);
+            wavesObject.SetActive(true);
+            wavesText.text = "START !";
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+            waveInput = 0;
+        }
+
+        yield return false;
+    }
+
     IEnumerator Spawn()
     {
-        while (true)
+        while (spawnInput > 0)
         {
-            yield return new WaitForSeconds(1);
-            wavesText.text = "WAVE 1";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
-            wavesText.text = "START !";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
+            waveNumber = 0;
+            waveInput = 1;
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
             wave(0, 2);
             yield return new WaitUntil(() => ScoreSetup.killCount == 1);
-
-            wavesText.text = "WAVE 2";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
-            wavesText.text = "START !";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
+            waveInput = 1;
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
             randomDisqueSpawner.disqueInstantiate();
             wave(Random.Range(0, enemyPrefabs.Length), 2);
             wave(Random.Range(0, enemyPrefabs.Length), 3);
             yield return new WaitUntil(() => ScoreSetup.killCount == 3);
-
-            wavesText.text = "WAVE 3";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
-            wavesText.text = "START !";
-            wavesObject.SetActive(true);
-            animator.Play("Anim_WaveText");
-            yield return new WaitForSeconds(1);
-            wavesObject.SetActive(false);
-
+            waveInput = 1;
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
             wave(Random.Range(0, enemyPrefabs.Length), 0);
             wave(Random.Range(0, enemyPrefabs.Length), 1);
             wave(Random.Range(0, enemyPrefabs.Length), 3);
@@ -121,7 +125,7 @@ public class RandomSpawner : MonoBehaviour
 
             yield return new WaitUntil(() => timer.currentTime >= 20);
             Debug.Log("Boss");
-            yield return false;
+            spawnInput = 0;
         }
     }
 }
