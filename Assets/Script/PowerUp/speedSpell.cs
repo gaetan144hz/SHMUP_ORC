@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class superBullet : MonoBehaviour
+public class speedSpell : MonoBehaviour
 {
     public PlayerData datap;
 
@@ -16,7 +16,7 @@ public class superBullet : MonoBehaviour
 
             if (datap)
             {
-                datap.bulletDamage += increase;
+                datap.spellSpeed += increase;
                 Destroy(gameObject);
             }
         }

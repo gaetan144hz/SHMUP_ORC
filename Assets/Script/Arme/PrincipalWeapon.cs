@@ -39,7 +39,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     private void Update()
     {
-        textCooldown.text = cooldown.ToString();
+        textCooldown.text = cooldown.ToString("0");
     }
 
     public void OnShoot(InputValue value)
@@ -80,7 +80,7 @@ public class PrincipalWeapon : MonoBehaviour
         {
             return;
         }
-        lastShot = Time.time;    
+        lastShot = Time.time;
         Instantiate(bulletPrefab[1], firePoint.position, firePoint.rotation);
         Instantiate(bulletPrefab[1], firePointDroite.position, firePointDroite.rotation);
         Instantiate(bulletPrefab[1], firePointGauche.position, firePointGauche.rotation);

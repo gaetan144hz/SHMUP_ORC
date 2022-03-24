@@ -31,8 +31,8 @@ public class cheat : MonoBehaviour
 
     void Update()
     {
-        //cheatHealth.text = $"HP: {data.currentHealth}";
-        //cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
+        cheatHealth.text = $"HP: {data.currentHealth}";
+        cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
     }
 
     public void OnEnableDisqueSpwn(bool value)
