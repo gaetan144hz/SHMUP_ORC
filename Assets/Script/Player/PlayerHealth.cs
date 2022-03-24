@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         gameOver = FindObjectOfType<GameOver>();
-        //healthBar.SetMaxHealth(datap.currentHealth);
+        healthBar.SetMaxHealth(datap.currentHealth); //NE PAS ENLEVER SINON LA HEALTHBAR NE FONCTIONNE PLUS
     }
 
     public void TakeDamage(int ennemyDamage)
