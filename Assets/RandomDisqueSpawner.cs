@@ -17,14 +17,9 @@ public class RandomDisqueSpawner : MonoBehaviour
 
     public  Coroutine coroutineSpawn;
 
-    private void Start()
+    public void disqueInstantiate()
     {
         coroutineSpawn = StartCoroutine(disqueSpawn());
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void spawn1()
@@ -35,7 +30,7 @@ public class RandomDisqueSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
-    public IEnumerator disqueSpawn()
+    IEnumerator disqueSpawn()
     {
         while (true)
         {

@@ -4,42 +4,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RandomSpawner : MonoBehaviour
 {
     [TextArea]
     public string Description;
 
+    private ScoreSetup ScoreSetup;
+    private RandomDisqueSpawner randomDisqueSpawner;
+
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
+    public GameObject wavesObject;
+    public TextMeshProUGUI wavesText;
+    public Animator animator;
 
     private Timer timer;
 
-    [SerializeField] private float wave1ToWave2;
-    [SerializeField] private float wave2ToWave3;
-    [SerializeField] private float wave3ToWave4;
-    [SerializeField] private float wave4ToWave5;
-    [SerializeField] private float wave5ToWave6;
-    [SerializeField] private float wave6ToWave7;
-
     public void Start()
     {
+        randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
+        ScoreSetup = FindObjectOfType<ScoreSetup>();
         timer = FindObjectOfType<Timer>();
+    }
 
+    public void gameInstantiate()
+    {
         StartCoroutine(Spawn());
     }
 
     private void Update()
     {
         //wave1();
-    }
-
-    public void spawn1()
-    {
-        int randEnemy = Random.Range(0, enemyPrefabs.Length);
-        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
     }
 
     /*
@@ -58,61 +55,73 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
         Debug.Log(enemyPrefabs[0]);
     }
+    */
     
 
-    public void wave(GameObject enemyPrefabs, Transform spawnPoints)
+    public void wave(int enemyValue, int spawnValue)
     {
-        Instantiate(enemyPrefabs, spawnPoints.position, spawnPoints.rotation);
+        Instantiate(enemyPrefabs[enemyValue], spawnPoints[spawnValue].position, spawnPoints[spawnValue].rotation);
     }
-
-    public void wave1()
-    {
-        if (timer.currentTime <= 1)
-        {
-            wave(enemyPrefabs[0], spawnPoints[2]);
-        }
-    }
-    */
 
     IEnumerator Spawn()
     {
         while (true)
         {
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave1ToWave2);
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave2ToWave3);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave3ToWave4);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave4ToWave5);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave5ToWave6);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave6ToWave7);
-            Debug.Log("BOSS");
-            //yield return new WaitForSeconds(180);
+            yield return new WaitForSeconds(1);
+            wavesText.text = "WAVE 1";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            wavesText.text = "START !";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            wave(0, 2);
+            yield return new WaitUntil(() => ScoreSetup.killCount == 1);
+
+            wavesText.text = "WAVE 2";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            wavesText.text = "START !";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            randomDisqueSpawner.disqueInstantiate();
+            wave(Random.Range(0, enemyPrefabs.Length), 2);
+            wave(Random.Range(0, enemyPrefabs.Length), 3);
+            yield return new WaitUntil(() => ScoreSetup.killCount == 3);
+
+            wavesText.text = "WAVE 3";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            wavesText.text = "START !";
+            wavesObject.SetActive(true);
+            animator.Play("Anim_WaveText");
+            yield return new WaitForSeconds(1);
+            wavesObject.SetActive(false);
+
+            wave(Random.Range(0, enemyPrefabs.Length), 0);
+            wave(Random.Range(0, enemyPrefabs.Length), 1);
+            wave(Random.Range(0, enemyPrefabs.Length), 3);
+            yield return new WaitUntil(() => ScoreSetup.killCount == 6);
+
+            Debug.Log("WAVE 3 END");
+
+            yield return new WaitUntil(() => timer.currentTime >= 20);
+            Debug.Log("Boss");
+            yield return false;
         }
     }
 }

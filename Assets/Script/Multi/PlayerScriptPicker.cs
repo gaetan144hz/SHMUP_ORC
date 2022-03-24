@@ -6,14 +6,20 @@ public class PlayerScriptPicker : MonoBehaviour
 {
     public GameObject playerSolo, player1, player2;
     private PlayerMovement playerMovement;
+    private RandomSpawner randomSpawner;
+    private Timer timer;
 
-    private void Start()
-    {
+    public void Start()
+    { 
         playerMovement = FindObjectOfType<PlayerMovement>();
+        timer = FindObjectOfType<Timer>();
+        randomSpawner = FindObjectOfType<RandomSpawner>();
 
         if (PlayerInputManager.instance.playerCount == 1)
         {
             Instantiate(playerSolo, transform);
+            randomSpawner.gameInstantiate();
+            timer.timeInstantiate();
         }
         else
         {
