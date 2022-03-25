@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Data")]
     public PlayerData datap;
 
+    public float maxSpeed;
+
     public Animator animator;
 
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();
@@ -31,16 +33,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable()
-    {
-        playerInput.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerInput.Disable();
-    }
-
     public void OnMove(InputValue value)
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
@@ -57,12 +49,22 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = moveInput * datap.speed;
-        
+
             animator.SetFloat("horizontalMovement", moveInput.x);
             animator.SetFloat("horizontalMovement", moveInput.y);
             animator.SetBool("isMoving", true);
         }
-        ;
-        
     }
+
+    private void OnEnable()
+    {
+        playerInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInput.Disable();
+    }
+
+    
 }

@@ -23,7 +23,7 @@ public class cheat : MonoBehaviour
 
     private void Awake()
     {
-        data = Instantiate(data);
+        //data = Instantiate(data);
 
         randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
         player = FindObjectOfType<PlayerHealth>();
@@ -62,7 +62,7 @@ public class cheat : MonoBehaviour
 
     public void OnEnableCheatDamage(InputValue value)
     {
-        if (value.isPressed) //press O
+        if (value.isPressed) //press F1
         {
             data.bulletDamage = 9999;
             Debug.Log("BulletDamage at 9999");
@@ -72,7 +72,7 @@ public class cheat : MonoBehaviour
 
     public void OnDisableCheatDamage(InputValue value)
     {
-        if (value.isPressed) //press P
+        if (value.isPressed) //press F2
         {
             data.bulletDamage = 15;
             Debug.Log("BulletDamage at 15");
@@ -82,7 +82,7 @@ public class cheat : MonoBehaviour
 
     public void OnRemoveHealth(InputValue value)
     {
-        if (value.isPressed) //Press M
+        if (value.isPressed) //Press F4
         {
             data.currentHealth = 1;
             Debug.Log("Health at 1");
@@ -92,7 +92,7 @@ public class cheat : MonoBehaviour
 
     public void OnMaxHealth(InputValue value)
     {
-        if (value.isPressed) //Press L
+        if (value.isPressed) //Press F3
         {
             data.currentHealth = 9999;
             Debug.Log("Healt at 9999");

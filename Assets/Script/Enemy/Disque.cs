@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Disque : MonoBehaviour
 {
@@ -19,7 +21,6 @@ public class Disque : MonoBehaviour
 
     Vector3 lastVelocity;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -33,7 +34,7 @@ public class Disque : MonoBehaviour
     {
         lastVelocity = rb.velocity;
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -46,6 +47,7 @@ public class Disque : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
         if (collision.gameObject.CompareTag("skybarriere")) //&& collision.gameObject.CompareTag("Disque")
         {
             var speed = lastVelocity.magnitude;
@@ -97,6 +99,6 @@ public class Disque : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
