@@ -813,6 +813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
+  moveInput: 25
+  maxSpeed: 50
   animator: {fileID: 2023204821179027515}
 --- !u!114 &7567997724479068167
 MonoBehaviour:
