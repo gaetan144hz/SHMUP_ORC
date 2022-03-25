@@ -15,7 +15,6 @@ TagManager:
   - Player2
   - GameOverUI
   - PauseUI
-  - Boss
   - Invoked
   layers:
   - Default

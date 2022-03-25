@@ -325,45 +325,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 27.630121, y: 0.2563784}
   m_EdgeRadius: 0
---- !u!1 &2447633567618920070
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4382034266776644800}
-  m_Layer: 0
-  m_Name: Cheat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4382034266776644800
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2447633567618920070}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1011533412498202045}
-  - {fileID: 5297172357646600994}
-  - {fileID: 9140495547130742936}
-  - {fileID: 2270923733153769051}
-  m_Father: {fileID: 6369994538039350181}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 914, y: 514}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2516970339344047578
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +355,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7488796569348178705}
   m_RootOrder: 1
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1749546191728056610
 MonoBehaviour:
@@ -864,6 +826,63 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4976233262856239568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4948270033820438454}
+  - component: {fileID: 5669672684322853048}
+  m_Layer: 3
+  m_Name: MidlleSkybarriere
+  m_TagString: middleSkybarriere
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4948270033820438454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4976233262856239568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.808448, y: 0.020699576, z: -54.328712}
+  m_LocalScale: {x: 0.9239438, y: 0.064686164, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7488796569348178705}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5669672684322853048
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4976233262856239568}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.38433647, y: -0.3997103}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.842087, y: 0.4465549}
+  m_EdgeRadius: 0
 --- !u!1 &5027761716985878256
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +913,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7488796569348178705}
   m_RootOrder: 5
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8396868997052011627
 BoxCollider2D:
@@ -1608,6 +1628,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7488796569348178705}
   m_RootOrder: 3
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1047729774954060284
 MonoBehaviour:
@@ -1623,7 +1644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   startingTime: 0
-  countdownText: {fileID: 6075040014226754662}
+  countdownText: {fileID: 0}
 --- !u!114 &2047512893664315300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3487,6 +3508,24 @@ Transform:
   - {fileID: 548363244552077586}
   - {fileID: 5154337925443510034}
   - {fileID: 6369994538039350181}
+  - {fileID: 7488796568210273366}
+  - {fileID: 7488796568369538563}
+  - {fileID: 7488796568016397761}
+  - {fileID: 7488796567525786321}
+  - {fileID: 7488796567486621558}
+  - {fileID: 7488796569417750745}
+  - {fileID: 7488796568570382425}
+  - {fileID: 7488796567828316761}
+  - {fileID: 7488796568145493788}
+  - {fileID: 7488796568545813784}
+  - {fileID: 7488796568089102957}
+  - {fileID: 7488796569491580130}
+  - {fileID: 7488796567720933005}
+  - {fileID: 7488796569607362432}
+  - {fileID: 7488796568286768813}
+  - {fileID: 7488796568241869816}
+  - {fileID: 7488796567621443400}
+  - {fileID: 6691340497451653833}
   - {fileID: 9151425900855031694}
   - {fileID: 6691340497451653833}
   - {fileID: 3380246685537073791}

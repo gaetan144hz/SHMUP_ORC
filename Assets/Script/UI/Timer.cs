@@ -14,10 +14,18 @@ public class Timer : MonoBehaviour
         currentTime = startingTime;
     }
 
-    void Update()
+    public void timeInstantiate()
     {
-        currentTime += 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        StartCoroutine(timeCount());
     }
-    
+
+    IEnumerator timeCount()
+    {
+        while(true)
+        {
+            currentTime += 1;
+            countdownText.text = currentTime.ToString("0");
+            yield return new WaitForSeconds(1);
+        }
+    }
 }

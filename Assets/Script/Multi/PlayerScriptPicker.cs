@@ -6,14 +6,25 @@ public class PlayerScriptPicker : MonoBehaviour
 {
     public GameObject playerSolo, player1, player2;
     private PlayerMovement playerMovement;
+    private RandomSpawner randomSpawner;
+    private Timer timer;
+    private destroy destroyButton;
 
-    private void Start()
+    public void Awake()
     {
+        destroyButton = FindObjectOfType<destroy>();
         playerMovement = FindObjectOfType<PlayerMovement>();
-
+        timer = FindObjectOfType<Timer>();
+        randomSpawner = FindObjectOfType<RandomSpawner>();
+    }
+    public void Start()
+    {
         if (PlayerInputManager.instance.playerCount == 1)
         {
             Instantiate(playerSolo, transform);
+            randomSpawner.gameInstantiate();
+            timer.timeInstantiate();
+            destroyButton.destroyPress();
         }
         else
         {

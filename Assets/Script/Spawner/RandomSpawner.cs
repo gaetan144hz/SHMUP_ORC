@@ -4,115 +4,106 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RandomSpawner : MonoBehaviour
 {
     [TextArea]
     public string Description;
+    public int waveNumber;
+    public int waveValue;
+    public int maxValue;
+
+    private ScoreSetup ScoreSetup;
+    private RandomDisqueSpawner randomDisqueSpawner;
+    private Timer timer;
 
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
-
-    private Timer timer;
-
-    [SerializeField] private float wave1ToWave2;
-    [SerializeField] private float wave2ToWave3;
-    [SerializeField] private float wave3ToWave4;
-    [SerializeField] private float wave4ToWave5;
-    [SerializeField] private float wave5ToWave6;
-    [SerializeField] private float wave6ToWave7;
+    public GameObject wavesObject;
+    public TextMeshProUGUI wavesText;
+    public Animator animator;
 
     public void Start()
     {
+        randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
+        ScoreSetup = FindObjectOfType<ScoreSetup>();
         timer = FindObjectOfType<Timer>();
+    }
 
-        StartCoroutine(Spawn());
+    public void gameInstantiate()
+    {
+        waveValue = 0;
+        StartCoroutine(Wave1());
     }
 
     private void Update()
     {
         //wave1();
     }
+    
 
-    public void spawn1()
+    public void wave(int enemyValue, int spawnValue)
     {
-        int randEnemy = Random.Range(0, enemyPrefabs.Length);
-        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+        Instantiate(enemyPrefabs[enemyValue], spawnPoints[spawnValue].position, spawnPoints[spawnValue].rotation);
     }
 
-    /*
-    public void goblinToTank()
+    IEnumerator WaveAnim()
     {
-        int randEnemy = Random.Range(0, 2);
-        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+        waveNumber += 1;
+        Debug.Log(waveNumber);
+        var textInput = $"WAVE {waveNumber}";
+        yield return new WaitForSeconds(1);
+        wavesText.text = textInput;
+        wavesObject.SetActive(true);
+        animator.Play("Anim_WaveText");
+        yield return new WaitForSeconds(1);
+        wavesObject.SetActive(false);
+        wavesObject.SetActive(true);
+        wavesText.text = "START !";
+        animator.Play("Anim_WaveText");
+        yield return new WaitForSeconds(1);
+        wavesObject.SetActive(false);
     }
 
-    public void onlyGoblin()
+    IEnumerator Wave1()
     {
-        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-        Instantiate(enemyPrefabs[0], spawnPoints[randSpawnPoint].position, transform.rotation);
-        Debug.Log(enemyPrefabs[0]);
-    }
-    */
-    /*
-    public void wave(GameObject enemyPrefabs, Transform spawnPoints)
-    {
-        Instantiate(enemyPrefabs, spawnPoints.position, spawnPoints.rotation);
-    }
-
-    public void wave1()
-    {
-        if (timer.currentTime <= 1)
+        while (waveValue <= 0)
         {
-            wave(enemyPrefabs[0], spawnPoints[2]);
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
+            wave(0, Random.Range(0, spawnPoints.Length));
+            yield return new WaitUntil(() => ScoreSetup.killCount == 1);
+            waveValue = 1;
+            maxValue = 2;
+            StartCoroutine(WaveManager());
         }
     }
-    */
 
-    IEnumerator Spawn()
+    IEnumerator WaveSetup()
+    {
+        for (int i = 1; i < maxValue; i++)
+        {
+            wave(Random.Range(0, enemyPrefabs.Length), Random.Range(0, spawnPoints.Length));
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    IEnumerator WaveManager()
     {
         while (true)
         {
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave1ToWave2);
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave2ToWave3);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave3ToWave4);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave4ToWave5);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave5ToWave6);
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            spawn1();
-            yield return new WaitForSeconds(wave6ToWave7);
-            Debug.Log("BOSS");
-            //yield return new WaitForSeconds(180);
+            if(waveNumber >= 5)
+            {
+                maxValue = 5;
+            }
+
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
+            var killNeeded = ScoreSetup.killCount + maxValue;
+            StartCoroutine(WaveSetup());
+            maxValue += 1;
+            yield return new WaitUntil(() => ScoreSetup.killCount == killNeeded);
         }
     }
 }
