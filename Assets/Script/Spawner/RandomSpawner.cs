@@ -22,9 +22,10 @@ public class RandomSpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public GameObject wavesObject;
     public TextMeshProUGUI wavesText;
+    public TextMeshProUGUI wavesCounter;
     public Animator animator;
 
-    public void Start()
+    public void Awake()
     {
         randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
         ScoreSetup = FindObjectOfType<ScoreSetup>();
@@ -51,7 +52,7 @@ public class RandomSpawner : MonoBehaviour
     IEnumerator WaveAnim()
     {
         waveNumber += 1;
-        Debug.Log(waveNumber);
+        wavesCounter.text = $"VAGUE: {waveNumber}";
         var textInput = $"WAVE {waveNumber}";
         yield return new WaitForSeconds(1);
         wavesText.text = textInput;
