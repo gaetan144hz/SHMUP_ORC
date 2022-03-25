@@ -94,14 +94,18 @@ public class EnemyFollowPlayer : MonoBehaviour
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
-            Die();
+            if (gameObject.tag == "Enemy")
+            {
+                scoreSetup.AddKillScore(1);
+                Die();
+            }
+            else Die();
         }
         healthBar.SetHealth(data.currentHealth);
     }
 
     void Die()
     {
-        scoreSetup.AddKillScore(1);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
