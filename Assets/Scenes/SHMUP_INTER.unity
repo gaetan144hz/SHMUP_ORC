@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &389710519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2712209489892322639, guid: 3101bec034c2d1f478b71121a01aa735, type: 3}
+  m_PrefabInstance: {fileID: 169263446501781312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &413118001
 Mesh:
   m_ObjectHideFlags: 0
@@ -1792,6 +1803,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &2083759559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5809882967808610948, guid: bb673487414859246b576c0425598b34, type: 3}
+  m_PrefabInstance: {fileID: 5809882966131783491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2121178067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2009,10 @@ PrefabInstance:
       propertyPath: randomDisqueSpawner
       value: 
       objectReference: {fileID: 661466111}
+    - target: {fileID: 7580492135966638455, guid: 3101bec034c2d1f478b71121a01aa735, type: 3}
+      propertyPath: bossSpawnPoint
+      value: 
+      objectReference: {fileID: 2083759559}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3101bec034c2d1f478b71121a01aa735, type: 3}
 --- !u!1001 &1405351764776272292
@@ -2626,6 +2646,10 @@ PrefabInstance:
       propertyPath: wavesObject
       value: 
       objectReference: {fileID: 1246413426}
+    - target: {fileID: 8098913061637567095, guid: 358e272e310c5054a94526408df068c9, type: 3}
+      propertyPath: wavesCounter
+      value: 
+      objectReference: {fileID: 389710519}
     - target: {fileID: 8098913062235468642, guid: 358e272e310c5054a94526408df068c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.54

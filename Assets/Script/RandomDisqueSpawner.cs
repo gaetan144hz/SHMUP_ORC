@@ -15,11 +15,9 @@ public class RandomDisqueSpawner : MonoBehaviour
 
     [SerializeField] float waitingSecond;
 
-    public  Coroutine coroutineSpawn;
-
-    public void disqueInstantiate()
+    public void Start()
     {
-        coroutineSpawn = StartCoroutine(disqueSpawn());
+        StartCoroutine(disqueSpawn());
     }
 
     public void spawn1()
