@@ -813,7 +813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   maxSpeed: 0
-  animator: {fileID: 0}
+  animator: {fileID: 763211265528676198}
 --- !u!114 &7567997724479068167
 MonoBehaviour:
   m_ObjectHideFlags: 0
