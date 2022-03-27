@@ -7,13 +7,15 @@ public class slime : MonoBehaviour
     [SerializeField] private float rotaZ;
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField] private int timeToDestroy;
+
     public bool ClockwiseRoation;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
-
+        Destroy(this.gameObject, timeToDestroy);
     }
     
     void Update()

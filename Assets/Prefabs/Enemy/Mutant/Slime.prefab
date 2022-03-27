@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotaZ: 0
   rotationSpeed: 200
+  timeToDestroy: 15
   ClockwiseRoation: 0
 --- !u!114 &2910470564743012344
 MonoBehaviour:
