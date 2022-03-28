@@ -41,7 +41,7 @@ public class EnemyBullet : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(data.bulletDamage);
-            CameraShake.Instance.shakeCamera(0.5f, 0.1f);
+            CameraShake.Instance.shakeCamera(0.7f, 0.1f);
             hitSpawn();
             Destroy(gameObject);
         }

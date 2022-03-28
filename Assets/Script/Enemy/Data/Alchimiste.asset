@@ -15,7 +15,8 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
   Description: gros colldown
-  currentSpeedMovement: 0
+  Score: 0
+  currentSpeedMovement: 0.7
   startSpeedMovement: 0.7
   currentHealth: 100
   startHealth: 100
@@ -23,7 +24,11 @@ MonoBehaviour:
   startBulletSpeed: 3
   bulletDamage: 0
   startBulletDamage: 0
+  spellSpeed: 0
+  startSpellSpeed: 0
+  spellDamage: 0
+  startSpellDamage: 0
   fireRate: 10
   healIncrease: 0
   range: 0
-  shootingRange: 10
+  shootingRange: 20

@@ -10,22 +10,14 @@ public class cheat : MonoBehaviour
     public PlayerData data;
     private PlayerHealth player;
 
-    private bool disqueSpawner;
-    public GameObject spawnD;
-
-    private bool powerUp;
-    public GameObject spawnP;
-
-    public RandomDisqueSpawner randomDisqueSpawner;
-
     public TextMeshProUGUI cheatDamage;
     public TextMeshProUGUI cheatHealth;
+
+    public TextMeshProUGUI cheatSpellDamage;
 
     private void Awake()
     {
         //data = Instantiate(data);
-
-        randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
         player = FindObjectOfType<PlayerHealth>();
     }
 
@@ -33,6 +25,7 @@ public class cheat : MonoBehaviour
     {
         cheatHealth.text = $"HP: {data.currentHealth}";
         cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
+        cheatSpellDamage.text = $"BulletDamage: {data.spellDamage}";
     }
 
     public void OnEnableCheatDamage(InputValue value)

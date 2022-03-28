@@ -17,8 +17,7 @@ public class PrincipalWeapon : MonoBehaviour
     public TextMeshProUGUI textCooldown;
 
     [Header("BulletColdown")]
-    [SerializeField] private int cooldown;
-    private int cooldownTime;
+    private float cooldownTime;
     private bool spellReady;
 
     [Header("FirePoint")]
@@ -32,7 +31,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spellReady = true;
@@ -83,22 +82,29 @@ public class PrincipalWeapon : MonoBehaviour
         }
         spellReady = false;
         StartCoroutine(cooldownTripleShot());
+        CameraShake.Instance.shakeCamera(3f,0.1f);
         Instantiate(bulletPrefab[1], firePoint[0].position, firePoint[0].rotation);
         Instantiate(bulletPrefab[1], firePoint[1].position, firePoint[1].rotation);
         Instantiate(bulletPrefab[1], firePoint[2].position, firePoint[2].rotation);
         Instantiate(bulletPrefab[1], firePoint[3].position, firePoint[3].rotation);
         Instantiate(bulletPrefab[1], firePoint[4].position, firePoint[4].rotation);
+        Instantiate(bulletPrefab[1], firePoint[5].position, firePoint[5].rotation);
+        Instantiate(bulletPrefab[1], firePoint[6].position, firePoint[6].rotation);
+        Instantiate(bulletPrefab[1], firePoint[7].position, firePoint[7].rotation);
+        Instantiate(bulletPrefab[1], firePoint[8].position, firePoint[8].rotation);
+        Instantiate(bulletPrefab[1], firePoint[9].position, firePoint[9].rotation);
+        Instantiate(bulletPrefab[1], firePoint[10].position, firePoint[10].rotation);
     }
 
-    IEnumerator cooldownTripleShot()
+    public IEnumerator cooldownTripleShot()
     {
-        cooldownTime = cooldown;
+        cooldownTime = datap.currentCooldown;
 
         while (cooldownTime > 0)
         {
             textCooldown.text = cooldownTime.ToString("0");
             cooldownTime -= 1;
-            if (cooldownTime == 0)
+            if (cooldownTime <= 0)
             {
                 spellReady = true;
                 textCooldown.text = "A Ready!";

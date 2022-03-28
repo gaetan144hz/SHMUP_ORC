@@ -30,5 +30,5 @@ MonoBehaviour:
   startSpellDamage: 0
   fireRate: 0.7
   healIncrease: 0
-  range: 15
-  shootingRange: 15
+  range: 20
+  shootingRange: 20

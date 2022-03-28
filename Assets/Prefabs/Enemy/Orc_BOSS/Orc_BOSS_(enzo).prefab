@@ -575,7 +575,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4403538363309789833}
         m_TargetAssemblyTypeName: GameLoader, Assembly-CSharp
         m_MethodName: LevelLoader
         m_Mode: 1
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4074213216423876083}
         m_TargetAssemblyTypeName: Quit, Assembly-CSharp
         m_MethodName: OnApplicationQuit
         m_Mode: 1
@@ -1462,9 +1462,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3185001543780860165}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnMenuPause
+        m_MethodName: OnMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1807,8 +1807,9 @@ GameObject:
   - component: {fileID: 1546247433096003527}
   - component: {fileID: 3185001543780860165}
   - component: {fileID: 4403538363309789833}
-  - component: {fileID: 7547726831903393374}
   - component: {fileID: 8495107263346487878}
+  - component: {fileID: 4074213216423876083}
+  - component: {fileID: 354022091972909012}
   m_Layer: 0
   m_Name: WInCanvas
   m_TagString: Untagged
@@ -1927,19 +1928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cc6dd22b8aa1c4fac8366c66dde041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7547726831903393374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243553497120213944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb45c4a4cee5b44d81802cfc2a7debf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selection: {fileID: 1937608479551730862}
 --- !u!114 &8495107263346487878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,7 +1941,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCanvas: {fileID: 8243553497120213944}
-  boss: {fileID: 0}
+  boss: {fileID: 1405351762913005651}
+--- !u!114 &4074213216423876083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243553497120213944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8e374fe158b40428fae3ea98c60e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &354022091972909012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243553497120213944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb45c4a4cee5b44d81802cfc2a7debf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection: {fileID: 1937608479551730862}
 --- !u!1 &8320218798926464240
 GameObject:
   m_ObjectHideFlags: 0
