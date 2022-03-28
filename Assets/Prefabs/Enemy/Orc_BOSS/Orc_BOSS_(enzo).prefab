@@ -1953,7 +1953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCanvas: {fileID: 8243553497120213944}
-  boss: {fileID: 0}
+  boss: {fileID: 1405351762913005651}
 --- !u!1 &8320218798926464240
 GameObject:
   m_ObjectHideFlags: 0
