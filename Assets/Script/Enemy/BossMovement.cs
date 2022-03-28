@@ -30,12 +30,17 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private float nextFireTime;
 
     private float lastShot;
+
+    private BossSpawner bossSpawner;
+    private RandomSpawner randomSpawner;
     
     public List<GameObject> playerList;
 
     // Start is called before the first frame update
     void Start()
     {
+        randomSpawner = FindObjectOfType<RandomSpawner>();
+        bossSpawner = FindObjectOfType<BossSpawner>();
         healthBar.SetMaxHealth(data.currentHealth);
     }
 
@@ -107,9 +112,11 @@ public class BossMovement : MonoBehaviour
 
     void Die()
     {
+        bossSpawner.bossSpawned = false;
+        randomSpawner.stage += 2;
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(GetComponent<BossMovement>());
         gameOverUI.SetActive(true);
+        Destroy(GetComponent<BossMovement>());
         Time.timeScale = 0;
     }
 }

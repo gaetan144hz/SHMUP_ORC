@@ -13,6 +13,7 @@ public class RandomSpawner : MonoBehaviour
     public int waveNumber;
     public int waveValue;
     public int maxValue;
+    public int stage;
 
     private ScoreSetup ScoreSetup;
     private Timer timer;
@@ -28,6 +29,7 @@ public class RandomSpawner : MonoBehaviour
     {
         ScoreSetup = FindObjectOfType<ScoreSetup>();
         timer = FindObjectOfType<Timer>();
+        stage = 5;
     }
 
     public void gameInstantiate()
@@ -92,9 +94,9 @@ public class RandomSpawner : MonoBehaviour
     {
         while (true)
         {
-            if(waveNumber >= 5)
+            if(waveNumber >= stage)
             {
-                maxValue = 5;
+                maxValue = stage;
             }
 
             StartCoroutine(WaveAnim());

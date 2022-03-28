@@ -5,32 +5,41 @@ using UnityEngine;
 public class BossSpawner : MonoBehaviour
 {
     public Timer time;
+    private ScoreSetup scoreSetup;
 
     public GameObject bossPrefabs;
-    private bool bossSpawned;
+    public bool bossSpawned;
+    private float bossTiming;
+    private int bossKillCount;
 
     public Transform bossSpawnPoint;
 
     private void Start()
     {
-       time = this.GetComponent<Timer>();
+        scoreSetup = FindObjectOfType<ScoreSetup>();
+        time = this.GetComponent<Timer>();
+        bossTiming = 120;
+        bossKillCount = 30;
     }
 
     private void Update()
     {
-        if (!bossSpawned) // ! inverse le booleen
+        if (!bossSpawned && time.currentTime >= bossTiming) // ! inverse le booleen
         {
             spawn();
-        }      
+        }
+        
+        if (!bossSpawned && scoreSetup.killCount == bossKillCount)
+        {
+            spawn();
+        }
     }
 
     public void spawn()
     {
-        if (time.currentTime >= 120f)
-        {
-            bossSpawned = true;
-            Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);
-            Destroy(this);
-        }       
+        bossKillCount += 35;
+        bossTiming += 120;
+        bossSpawned = true;
+        Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);
     }
 }
