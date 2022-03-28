@@ -1809,7 +1809,6 @@ GameObject:
   - component: {fileID: 4403538363309789833}
   - component: {fileID: 8495107263346487878}
   - component: {fileID: 4074213216423876083}
-  - component: {fileID: 354022091972909012}
   m_Layer: 0
   m_Name: WInCanvas
   m_TagString: Untagged
@@ -1954,19 +1953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8e374fe158b40428fae3ea98c60e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &354022091972909012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243553497120213944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb45c4a4cee5b44d81802cfc2a7debf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selection: {fileID: 1937608479551730862}
 --- !u!1 &8320218798926464240
 GameObject:
   m_ObjectHideFlags: 0
