@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using System.Collections;
 
 public class PrincipalWeapon : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class PrincipalWeapon : MonoBehaviour
     public TextMeshProUGUI textCooldown;
 
     [Header("BulletColdown")]
-    [SerializeField] private float cooldown;
-    private float lastShot;
+    [SerializeField] private int cooldown;
+    private int cooldownTime;
+    private bool spellReady;
 
     [Header("FirePoint")]
     [SerializeField] Transform firePoint;
@@ -35,11 +37,12 @@ public class PrincipalWeapon : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spellReady = true;
     }
 
     private void Update()
     {
-        textCooldown.text = cooldown.ToString("0");
+        //textCooldown.text = cooldown.ToString("0");
     }
 
     public void OnShoot(InputValue value)
@@ -76,13 +79,35 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void TripleShoot()
     {
-        if (Time.time - lastShot < cooldown)
+        if (spellReady == false)
         {
             return;
         }
-        lastShot = Time.time;
+        spellReady = false;
+        StartCoroutine(cooldownTripleShot());
         Instantiate(bulletPrefab[1], firePoint.position, firePoint.rotation);
         Instantiate(bulletPrefab[1], firePointDroite.position, firePointDroite.rotation);
         Instantiate(bulletPrefab[1], firePointGauche.position, firePointGauche.rotation);
+    }
+
+    IEnumerator cooldownTripleShot()
+    {
+        cooldownTime = cooldown;
+
+        while (cooldownTime > 0)
+        {
+            textCooldown.text = cooldownTime.ToString("0");
+            cooldownTime -= 1;
+            if (cooldownTime == 0)
+            {
+                spellReady = true;
+                textCooldown.text = "Ready !";
+            }
+            else
+            {
+                textCooldown.text = cooldownTime.ToString("0");
+                yield return new WaitForSeconds(1);
+            }
+        }
     }
 }
