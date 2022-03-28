@@ -8,6 +8,8 @@ public class fire : MonoBehaviour
     private PlayerData datap;
     private PlayerHealth playerHealth;
 
+    [SerializeField] private int timeToDestroy;
+
     public GameObject target;
 
     [SerializeField] public int fireIncrease;
@@ -24,10 +26,9 @@ public class fire : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-
         rb.gravityScale = 0;
 
-        //Destroy(this.gameObject,10);
+        Destroy(this.gameObject,timeToDestroy);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        datap = Instantiate(datap);
+
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();

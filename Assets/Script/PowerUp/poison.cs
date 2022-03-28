@@ -7,6 +7,8 @@ public class poison : MonoBehaviour
     private PlayerData datap;
     private PlayerHealth playerHealth;
 
+    [SerializeField] private int timeToDestroy;
+
     [SerializeField] public int poisonIncrease;
 
     Coroutine coroutinePoison ;
@@ -18,7 +20,7 @@ public class poison : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
 
-        //Destroy(this.gameObject,10);
+        Destroy(this.gameObject,timeToDestroy);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
