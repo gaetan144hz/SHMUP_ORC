@@ -22,9 +22,7 @@ public class PrincipalWeapon : MonoBehaviour
     private bool spellReady;
 
     [Header("FirePoint")]
-    [SerializeField] Transform firePoint;
-    [SerializeField] Transform firePointDroite;
-    [SerializeField] Transform firePointGauche;
+    public Transform[] firePoint;
 
     [Header("Bullet")]
     public GameObject[] bulletPrefab;
@@ -72,7 +70,7 @@ public class PrincipalWeapon : MonoBehaviour
                 return;
         }
         */
-        Instantiate(bulletPrefab[0], firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
         //Instantiate(bulletPrefab[0], firePointDroite.position, firePointDroite.rotation);
         //Instantiate(bulletPrefab[0], firePointGauche.position, firePointGauche.rotation);
     }
@@ -85,9 +83,11 @@ public class PrincipalWeapon : MonoBehaviour
         }
         spellReady = false;
         StartCoroutine(cooldownTripleShot());
-        Instantiate(bulletPrefab[1], firePoint.position, firePoint.rotation);
-        Instantiate(bulletPrefab[1], firePointDroite.position, firePointDroite.rotation);
-        Instantiate(bulletPrefab[1], firePointGauche.position, firePointGauche.rotation);
+        Instantiate(bulletPrefab[1], firePoint[0].position, firePoint[0].rotation);
+        Instantiate(bulletPrefab[1], firePoint[1].position, firePoint[1].rotation);
+        Instantiate(bulletPrefab[1], firePoint[2].position, firePoint[2].rotation);
+        Instantiate(bulletPrefab[1], firePoint[3].position, firePoint[3].rotation);
+        Instantiate(bulletPrefab[1], firePoint[4].position, firePoint[4].rotation);
     }
 
     IEnumerator cooldownTripleShot()
