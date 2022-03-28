@@ -13,8 +13,8 @@ public class PlayerData : ScriptableObject
         bulletDamage = startBulletDamage;
         bulletSpeed = startBulletSpeed;
 
-        spellDamage = startSpellDamage;
-        spellSpeed = startSpellSpeed;
+        startSpellDamage  = spellDamage;
+        startSpellSpeed = spellSpeed;
     }
 
     [Header("Player Movement")]
@@ -30,14 +30,16 @@ public class PlayerData : ScriptableObject
 
     [Header("Bullet Settings")]
     public int bulletDamage;
-    public int bulletSpeed;
     [HideInInspector] public int startBulletDamage;
+    public int bulletSpeed;
     [HideInInspector] public int startBulletSpeed;
+
+    [Header("Spell Settings")]
     public int spellDamage;
     [HideInInspector] public int startSpellDamage;
     public int spellSpeed;
     [HideInInspector] public int startSpellSpeed;
 
-    [Header("AnimationDeath")]
+    [Header("FXDeath")]
     public GameObject explosion;
 }

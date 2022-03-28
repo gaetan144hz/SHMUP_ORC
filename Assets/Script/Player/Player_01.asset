@@ -18,13 +18,13 @@ MonoBehaviour:
   startAcceleration: 40
   maxSpeed: 50
   startHealth: 300
-  currentHealth: 300
-  bulletDamage: 15
-  bulletSpeed: 15
+  currentHealth: 221
+  bulletDamage: 25
   startBulletDamage: 15
+  bulletSpeed: 15
   startBulletSpeed: 15
   spellDamage: 50
   startSpellDamage: 50
-  spellSpeed: 20
-  startSpellSpeed: 20
+  spellSpeed: 33
+  startSpellSpeed: 25
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}

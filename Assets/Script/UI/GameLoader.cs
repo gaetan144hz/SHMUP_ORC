@@ -19,5 +19,4 @@ public class GameLoader : MonoBehaviour
     {
         PlayerMovement.playerList.Remove(playerMovement);
     }
-    
 }

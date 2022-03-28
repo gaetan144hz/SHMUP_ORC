@@ -241,6 +241,36 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3185884279987546214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6268582937782982727}
+  m_Layer: 7
+  m_Name: FirePointGauche (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6268582937782982727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185884279987546214}
+  m_LocalRotation: {x: 0, y: 0, z: 0.60876137, w: 0.7933534}
+  m_LocalPosition: {x: 0.25, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7567997724479068185}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 75}
 --- !u!1 &5004911703713872685
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +403,36 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 1045932259162430638}
+--- !u!1 &6348013853468139566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8785510783852430307}
+  m_Layer: 7
+  m_Name: FirePointDroite (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8785510783852430307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348013853468139566}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7933534, w: 0.6087614}
+  m_LocalPosition: {x: -0.25, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7567997724479068185}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 105}
 --- !u!1 &7458935975190844832
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +466,7 @@ RectTransform:
   - {fileID: 4533753942541447939}
   - {fileID: 7029699909893147057}
   m_Father: {fileID: 7567997724479068185}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -562,7 +622,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7567997724479068185}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 125}
 --- !u!1 &7567997724479068161
 GameObject:
@@ -601,7 +661,9 @@ Transform:
   m_Children:
   - {fileID: 7567997723314607435}
   - {fileID: 7567997723689358634}
+  - {fileID: 6268582937782982727}
   - {fileID: 7567997723740045820}
+  - {fileID: 8785510783852430307}
   - {fileID: 481625892657896486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -686,10 +748,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   textCooldown: {fileID: 1067283645133495291}
-  cooldown: 2
-  firePoint: {fileID: 7567997723314607435}
-  firePointDroite: {fileID: 7567997723740045820}
-  firePointGauche: {fileID: 7567997723689358634}
+  cooldown: 8
+  firePoint:
+  - {fileID: 7567997723314607435}
+  - {fileID: 7567997723689358634}
+  - {fileID: 6268582937782982727}
+  - {fileID: 7567997723740045820}
+  - {fileID: 8785510783852430307}
   bulletPrefab:
   - {fileID: 201954176755067931, guid: d101519ed6415cb44a0eed3a8db477f5, type: 3}
   - {fileID: 8261057487346045336, guid: 720182383d28b6d42a078f8d32c97f6c, type: 3}

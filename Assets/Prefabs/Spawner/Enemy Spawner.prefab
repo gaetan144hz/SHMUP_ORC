@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098913061543068831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 0.2, z: 0}
+  m_LocalPosition: {x: 9.4, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8098913061637567094}
@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8098913061637567094
 Transform:
   m_ObjectHideFlags: 0
@@ -78,6 +78,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: merci flore t la boss <3
+  waveNumber: 0
+  waveValue: 0
+  maxValue: 0
   spawnPoints:
   - {fileID: 8098913062235468642}
   - {fileID: 8098913061543068830}
@@ -91,12 +94,10 @@ MonoBehaviour:
   - {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   - {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   - {fileID: 9114618521634652638, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
-  wave1ToWave2: 6
-  wave2ToWave3: 12
-  wave3ToWave4: 18
-  wave4ToWave5: 24
-  wave5ToWave6: 30
-  wave6ToWave7: 36
+  wavesObject: {fileID: 0}
+  wavesText: {fileID: 0}
+  wavesCounter: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &8098913062235468643
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098913062235468643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: 0.2, z: 0}
+  m_LocalPosition: {x: -9.54, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8098913061637567094}
@@ -151,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098913062836146432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.54, y: -1.5899999, z: 0}
+  m_LocalPosition: {x: 10.65, y: -2.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8098913061637567094}
@@ -181,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098913063399016331}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.56, y: -1.59, z: 0}
+  m_LocalPosition: {x: -10.56, y: -2.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8098913061637567094}
