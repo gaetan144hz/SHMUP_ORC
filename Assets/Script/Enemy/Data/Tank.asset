@@ -15,7 +15,8 @@ MonoBehaviour:
   Enemy: 
   EnemyModel: {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
   Description: 
-  currentSpeedMovement: 0
+  Score: 0
+  currentSpeedMovement: 0.3
   startSpeedMovement: 0.3
   currentHealth: 200
   startHealth: 200
@@ -23,7 +24,11 @@ MonoBehaviour:
   startBulletSpeed: 2
   bulletDamage: 15
   startBulletDamage: 15
+  spellSpeed: 0
+  startSpellSpeed: 0
+  spellDamage: 0
+  startSpellDamage: 0
   fireRate: 2
   healIncrease: 0
   range: 0
-  shootingRange: 10
+  shootingRange: 20

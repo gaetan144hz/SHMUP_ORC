@@ -56,6 +56,7 @@ public class Bullet : MonoBehaviour
         if (hitInfo.gameObject.tag == "Enemy")
         {
             enemy.TakeDamage(datap.bulletDamage);
+            CameraShake.Instance.shakeCamera(0.3f, 0.1f);
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
@@ -64,6 +65,7 @@ public class Bullet : MonoBehaviour
         if(hitInfo.gameObject.tag == "Boss")
         {
             boss.TakeDamage(datap.bulletDamage);
+            CameraShake.Instance.shakeCamera(0.3f, 0.1f);
             scoreSetup.AddDmgScore(datap.bulletDamage);
             hitSpawn();
             Destroy(gameObject);
@@ -72,6 +74,7 @@ public class Bullet : MonoBehaviour
         if(hitInfo.gameObject.tag == "Invoked")
         {           
             enemy.TakeDamage(datap.bulletDamage);
+            CameraShake.Instance.shakeCamera(0.3f, 0.1f);
             hitSpawn();
             Destroy(gameObject);
         }

@@ -31,4 +31,4 @@ MonoBehaviour:
   fireRate: 1
   healIncrease: 10
   range: 0
-  shootingRange: 7
+  shootingRange: 20

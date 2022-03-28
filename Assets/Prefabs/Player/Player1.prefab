@@ -854,7 +854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   textCooldown: {fileID: 1067283645133495291}
-  cooldown: 8
+  currentCooldown: 0
+  startCooldown: 8
   firePoint:
   - {fileID: 7567997723314607435}
   - {fileID: 7567997723689358634}

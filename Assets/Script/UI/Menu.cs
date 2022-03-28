@@ -19,8 +19,8 @@ public class Menu : MonoBehaviour
     public void OnMenu()
     {
         
-        float volumeData = volumeSlider.value;
-        PlayerPrefs.SetFloat("volumeData", volumeData);
+        //float volumeData = volumeSlider.value;
+        //PlayerPrefs.SetFloat("volumeData", volumeData);
         
 
         SceneManager.LoadScene(0); //MenuPrincipal

@@ -43,6 +43,7 @@ public class Disque : MonoBehaviour
 
             if (playerHealth != null)
             {
+                CameraShake.Instance.shakeCamera(2.5f, 0.1f);
                 playerHealth.TakeDamage(damage);
                 Destroy(gameObject);
             }
