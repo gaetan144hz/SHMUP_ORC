@@ -101,7 +101,7 @@ public class PrincipalWeapon : MonoBehaviour
             if (cooldownTime == 0)
             {
                 spellReady = true;
-                textCooldown.text = "Ready !";
+                textCooldown.text = "A Ready!";
             }
             else
             {

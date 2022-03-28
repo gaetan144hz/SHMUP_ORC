@@ -9,30 +9,35 @@ public class RandomDisqueSpawner : MonoBehaviour
 {
     [TextArea]
     public string Description;
+    private ScoreSetup scoreSetup;
 
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
     [SerializeField] float waitingSecond;
 
-    public void Start()
+    public void Awake()
     {
-        StartCoroutine(disqueSpawn());
+        scoreSetup = FindObjectOfType<ScoreSetup>();
+        StartCoroutine(waitForDiskLaunch());
     }
 
-    public void spawn1()
+    public void spawn1(int randEnemy, int randSpawnPoint)
     {
-        int randEnemy = Random.Range(0, enemyPrefabs.Length);
-        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
         Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+    }
+
+    IEnumerator waitForDiskLaunch()
+    {
+        yield return new WaitUntil(() => scoreSetup.killCount == 3);
+        StartCoroutine(disqueSpawn());
     }
 
     IEnumerator disqueSpawn()
     {
         while (true)
         {
-            spawn1();
+            spawn1(Random.Range(0, enemyPrefabs.Length), Random.Range(0, spawnPoints.Length));
             yield return new WaitForSeconds(waitingSecond);
         }
     }
