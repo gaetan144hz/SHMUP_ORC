@@ -15,7 +15,6 @@ public class RandomSpawner : MonoBehaviour
     public int maxValue;
 
     private ScoreSetup ScoreSetup;
-    private RandomDisqueSpawner randomDisqueSpawner;
     private Timer timer;
 
     public Transform[] spawnPoints;
@@ -27,7 +26,6 @@ public class RandomSpawner : MonoBehaviour
 
     public void Awake()
     {
-        randomDisqueSpawner = FindObjectOfType<RandomDisqueSpawner>();
         ScoreSetup = FindObjectOfType<ScoreSetup>();
         timer = FindObjectOfType<Timer>();
     }

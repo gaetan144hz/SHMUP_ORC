@@ -35,31 +35,6 @@ public class cheat : MonoBehaviour
         cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
     }
 
-    public void OnEnableDisqueSpwn(bool value)
-    {
-        if (disqueSpawner == true)
-        {
-            spawnD.SetActive(value);
-        }
-        if(disqueSpawner == false)
-        {
-            randomDisqueSpawner.spawn1();
-        }
-    }
-
-    public void OnEnablePowerUp(bool value)
-    {
-        if (powerUp == true)
-        {
-            spawnP.SetActive(value);
-        }
-
-        if (powerUp == false)
-        {
-            spawnP.SetActive(value);
-        }
-    }
-
     public void OnEnableCheatDamage(InputValue value)
     {
         if (value.isPressed) //press F1
