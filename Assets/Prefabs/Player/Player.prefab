@@ -1249,6 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7567997724479068161}
+  pauseEvent: {fileID: 11400000, guid: 463ac0169e40b3a4dbe4f57c7564ad56, type: 2}
 --- !u!95 &2023204821179027515
 Animator:
   serializedVersion: 3

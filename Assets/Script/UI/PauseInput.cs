@@ -9,6 +9,8 @@ public class PauseInput : MonoBehaviour
 
     public GameObject player;
 
+    public GameEvent pauseEvent;
+
     private void Awake()
     {
         pauseResume = FindObjectOfType<PauseResume>();
@@ -19,6 +21,7 @@ public class PauseInput : MonoBehaviour
         if (value.isPressed)
         {
             pauseResume.pause();
+            pauseEvent.Raise();
             //player.SetActive(false);
             return;
         }

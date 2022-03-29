@@ -29,4 +29,12 @@ public class PauseResume : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
+
+    public void PauseResumeFunc()
+    {
+        if (pauseMenu.activeInHierarchy)
+            resume();
+        else
+            pause();
+    }
 }
