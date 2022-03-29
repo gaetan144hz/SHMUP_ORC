@@ -37,7 +37,7 @@ public class BossSpawner : MonoBehaviour
 
     public void spawn()
     {
-        bossKillCount += 35;
+        bossKillCount += 30;
         bossTiming += 120;
         bossSpawned = true;
         Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);
