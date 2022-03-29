@@ -10,22 +10,10 @@ public class cheat : MonoBehaviour
     public PlayerData data;
     private PlayerHealth player;
 
-    public TextMeshProUGUI cheatDamage;
-    public TextMeshProUGUI cheatHealth;
-
-    public TextMeshProUGUI cheatSpellDamage;
-
     private void Awake()
     {
         //data = Instantiate(data);
         player = FindObjectOfType<PlayerHealth>();
-    }
-
-    void Update()
-    {
-        cheatHealth.text = $"HP: {data.currentHealth}";
-        cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
-        cheatSpellDamage.text = $"SpellDamage: {data.spellDamage}";
     }
 
     public void OnEnableCheatDamage(InputValue value)

@@ -3669,7 +3669,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5939343642040385975}
         m_TargetAssemblyTypeName: PauseResume, Assembly-CSharp
-        m_MethodName: PauseResumeFunc
+        m_MethodName: pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4119,9 +4119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  cheatDamage: {fileID: 5636957108570564649}
-  cheatHealth: {fileID: 6160814373651560020}
-  cheatSpellDamage: {fileID: 3912273603478328276}
 --- !u!1 &7481552073712978297
 GameObject:
   m_ObjectHideFlags: 0
