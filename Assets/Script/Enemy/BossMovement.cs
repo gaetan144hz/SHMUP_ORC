@@ -29,10 +29,10 @@ public class BossMovement : MonoBehaviour
     [Header("FireRate")]
     [SerializeField] private float nextFireTime;
 
-    private float lastShot;
-
     private BossSpawner bossSpawner;
     private RandomSpawner randomSpawner;
+
+    private float lastShot;
     
     public List<GameObject> playerList;
 
@@ -41,6 +41,7 @@ public class BossMovement : MonoBehaviour
     {
         randomSpawner = FindObjectOfType<RandomSpawner>();
         bossSpawner = FindObjectOfType<BossSpawner>();
+        data = Instantiate(data);
         healthBar.SetMaxHealth(data.currentHealth);
     }
 
@@ -112,11 +113,11 @@ public class BossMovement : MonoBehaviour
 
     void Die()
     {
-        bossSpawner.bossSpawned = false;
-        randomSpawner.stage += 2;
         Instantiate(explosion, transform.position, Quaternion.identity);
-        gameOverUI.SetActive(true);
+        randomSpawner.stage += 2;
+        bossSpawner.bossSpawned = false;
         Destroy(GetComponent<BossMovement>());
+        gameOverUI.SetActive(true);
         Time.timeScale = 0;
     }
 }
