@@ -25,7 +25,7 @@ public class cheat : MonoBehaviour
     {
         cheatHealth.text = $"HP: {data.currentHealth}";
         cheatDamage.text = $"BulletDamage: {data.bulletDamage}";
-        cheatSpellDamage.text = $"BulletDamage: {data.spellDamage}";
+        cheatSpellDamage.text = $"SpellDamage: {data.spellDamage}";
     }
 
     public void OnEnableCheatDamage(InputValue value)
