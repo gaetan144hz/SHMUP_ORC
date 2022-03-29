@@ -28,7 +28,7 @@ MonoBehaviour:
   startSpellSpeed: 0
   spellDamage: 0
   startSpellDamage: 0
-  fireRate: 1
+  fireRate: 5
   healIncrease: 0
   range: 0
   shootingRange: 20
