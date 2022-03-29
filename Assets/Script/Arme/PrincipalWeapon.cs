@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PrincipalWeapon : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PrincipalWeapon : MonoBehaviour
     [Header("TextCooldown")]
     public TextMeshProUGUI textCooldown;
 
+    [Header("SpellImage")]
+    public Image spellImage;
+
     [Header("BulletColdown")]
     private float cooldownTime;
     private bool spellReady;
@@ -28,13 +32,13 @@ public class PrincipalWeapon : MonoBehaviour
     //public Transform[] spawnPoints;
 
     //[SerializeField] private float bulletForce;
-
     private Rigidbody2D rb;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spellReady = true;
+        spellImage.fillAmount = 1;
     }
 
     private void Update()
@@ -99,15 +103,18 @@ public class PrincipalWeapon : MonoBehaviour
     public IEnumerator cooldownTripleShot()
     {
         cooldownTime = datap.currentCooldown;
+        spellImage.fillAmount = 0;
 
         while (cooldownTime > 0)
         {
             textCooldown.text = cooldownTime.ToString("0");
+            spellImage.fillAmount += 1/datap.currentCooldown;
             cooldownTime -= 1;
             if (cooldownTime <= 0)
             {
                 spellReady = true;
-                textCooldown.text = "A Ready!";
+                textCooldown.text = "A";
+                spellImage.fillAmount = 1;
             }
             else
             {
