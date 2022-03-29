@@ -18,7 +18,7 @@ MonoBehaviour:
   Score: 0
   currentSpeedMovement: 1
   startSpeedMovement: 1
-  currentHealth: 1500
+  currentHealth: 970
   startHealth: 1500
   bulletSpeed: 4
   startBulletSpeed: 4
@@ -31,4 +31,4 @@ MonoBehaviour:
   fireRate: 2
   healIncrease: 0
   range: 0
-  shootingRange: 15
+  shootingRange: 20
