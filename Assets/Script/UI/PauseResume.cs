@@ -7,11 +7,16 @@ public class PauseResume : MonoBehaviour
     public GameObject pauseMenu;
 
     private GameObject player;
-
     private PauseInput pauseInput;
+    private PlayerInput playerInput;
+
+    public bool shootStatus;
 
     private void Start()
     {
+        shootStatus = true;
+        
+        playerInput = GetComponent<PlayerInput>();
         player = GameObject.FindWithTag("Player");
         pauseInput = GetComponent<PauseInput>();
     }
@@ -19,6 +24,7 @@ public class PauseResume : MonoBehaviour
     public void pause()
     {
         //pauseInput.disablePlayer();
+        shootStatus = false;
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -26,15 +32,8 @@ public class PauseResume : MonoBehaviour
     public void resume()
     {
         //pauseInput.activePlayer();
-        pauseMenu.SetActive(false);
+        shootStatus = true;
         Time.timeScale = 1f;
-    }
-
-    public void PauseResumeFunc()
-    {
-        if (pauseMenu.activeInHierarchy)
-            resume();
-        else
-            pause();
-    }
+        pauseMenu.SetActive(false);
+        }
 }

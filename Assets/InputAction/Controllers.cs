@@ -1534,6 +1534,44 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""52c39f83-b875-4c27-be35-d14684dbaee5"",
+            ""actions"": [
+                {
+                    ""name"": ""click"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb675b3f-9d77-43d3-a30e-4991a3f09d9d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3cd9a574-73da-4745-8b75-c7c2f331458a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""024cd763-ab27-42a5-9385-046a12dad382"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1623,6 +1661,9 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player2_enableDisqueSpwn = m_player2.FindAction("enableDisqueSpwn", throwIfNotFound: true);
         m_player2_Pause = m_player2.FindAction("Pause", throwIfNotFound: true);
         m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_click = m_UI.FindAction("click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -2151,6 +2192,39 @@ public class @Controllers : IInputActionCollection, IDisposable
         }
     }
     public Player2Actions @player2 => new Player2Actions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_click;
+    public struct UIActions
+    {
+        private @Controllers m_Wrapper;
+        public UIActions(@Controllers wrapper) { m_Wrapper = wrapper; }
+        public InputAction @click => m_Wrapper.m_UI_click;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
+            {
+                @click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @click.started += instance.OnClick;
+                @click.performed += instance.OnClick;
+                @click.canceled += instance.OnClick;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -2228,5 +2302,9 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnEnableDisqueSpwn(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnResume(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnClick(InputAction.CallbackContext context);
     }
 }

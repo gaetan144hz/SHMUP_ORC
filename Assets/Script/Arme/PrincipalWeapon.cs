@@ -14,6 +14,8 @@ public class PrincipalWeapon : MonoBehaviour
     [Header("Data")]
     public PlayerData datap;
 
+    private PauseResume _pauseResume;
+
     [Header("TextCooldown")]
     public TextMeshProUGUI textCooldown;
 
@@ -36,6 +38,8 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void Start()
     {
+        _pauseResume = FindObjectOfType<PauseResume>();
+        
         rb = GetComponent<Rigidbody2D>();
         spellReady = true;
         spellImage.fillAmount = 1;
@@ -48,24 +52,35 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void OnShoot(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && _pauseResume.shootStatus == true)
         {
             Shoot();
+            return;
+        }
+        else
+        {
             return;
         }
     }
 
     public void OnTripleShoot(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && _pauseResume.shootStatus == false)
         {
             TripleShoot();
+            return;
+        }
+        else
+        {
             return;
         }
     }
 
     public void Shoot()
     {
+        
+        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
+        
         /*
         for (int i = 0; i < bulletPrefab.Length; i++)
         {
@@ -73,9 +88,6 @@ public class PrincipalWeapon : MonoBehaviour
                 return;
         }
         */
-        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
-        //Instantiate(bulletPrefab[0], firePointDroite.position, firePointDroite.rotation);
-        //Instantiate(bulletPrefab[0], firePointGauche.position, firePointGauche.rotation);
     }
 
     public void TripleShoot()
