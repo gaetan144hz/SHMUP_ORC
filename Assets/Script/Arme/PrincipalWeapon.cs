@@ -65,7 +65,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void OnTripleShoot(InputValue value)
     {
-        if (value.isPressed && _pauseResume.shootStatus == false)
+        if (value.isPressed && _pauseResume.shootStatus == true)
         {
             TripleShoot();
             return;
