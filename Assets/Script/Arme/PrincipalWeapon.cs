@@ -11,6 +11,8 @@ public class PrincipalWeapon : MonoBehaviour
         datap.OnEnable();
     }
 
+    private PlayerInput _playerInput;
+
     [Header("Data")]
     public PlayerData datap;
 
@@ -45,11 +47,6 @@ public class PrincipalWeapon : MonoBehaviour
         spellImage.fillAmount = 1;
     }
 
-    private void Update()
-    {
-        //textCooldown.text = cooldown.ToString("0");
-    }
-
     public void OnShoot(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
@@ -67,6 +64,7 @@ public class PrincipalWeapon : MonoBehaviour
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
+            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
             TripleShoot();
             return;
         }
@@ -78,7 +76,7 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void Shoot()
     {
-        
+        Gamepad.current.SetMotorSpeeds(0.1f, 0.5f);
         Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
         
         /*
