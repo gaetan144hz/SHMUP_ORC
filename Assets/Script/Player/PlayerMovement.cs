@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Data")]
     public PlayerData datap;
 
-    public float maxSpeed;
+    public Vector2 acceleration;
 
     public Animator animator;
 
