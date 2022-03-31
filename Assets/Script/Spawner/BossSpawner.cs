@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossSpawner : MonoBehaviour
 {
-    public Timer time;
+    private Timer time;
     private ScoreSetup scoreSetup;
 
     public GameObject bossPrefabs;
