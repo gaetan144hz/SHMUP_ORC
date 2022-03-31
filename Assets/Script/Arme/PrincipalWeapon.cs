@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class PrincipalWeapon : MonoBehaviour
 {
@@ -76,7 +76,6 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void Shoot()
     {
-        Gamepad.current.SetMotorSpeeds(0.1f, 0.5f);
         Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
         
         /*

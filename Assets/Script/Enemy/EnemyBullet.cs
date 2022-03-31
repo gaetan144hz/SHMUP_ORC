@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -42,6 +44,7 @@ public class EnemyBullet : MonoBehaviour
         {
             playerHealth.TakeDamage(data.bulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 0.1f);
+            StartCoroutine(rumble());
             hitSpawn();
             Destroy(gameObject);
         }
@@ -55,6 +58,13 @@ public class EnemyBullet : MonoBehaviour
             hitSpawn();
             Destroy(this.gameObject);
         }
+    }
+    
+    public IEnumerator rumble()
+    {
+        Gamepad.current.SetMotorSpeeds(0.25f, 0.55f);
+        yield return new WaitForSeconds(1);
+        Gamepad.current.SetMotorSpeeds(0,0);
     }
 
     public void hitSpawn()
