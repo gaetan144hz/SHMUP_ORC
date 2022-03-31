@@ -19,7 +19,6 @@ public class PauseInput : MonoBehaviour
         if (value.isPressed)
         {
             pauseResume.pause();
-            //player.SetActive(false);
             return;
         }
     }

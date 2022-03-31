@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class PrincipalWeapon : MonoBehaviour
 {
@@ -11,8 +11,12 @@ public class PrincipalWeapon : MonoBehaviour
         datap.OnEnable();
     }
 
+    private PlayerInput _playerInput;
+
     [Header("Data")]
     public PlayerData datap;
+
+    private PauseResume _pauseResume;
 
     [Header("TextCooldown")]
     public TextMeshProUGUI textCooldown;
@@ -36,36 +40,44 @@ public class PrincipalWeapon : MonoBehaviour
 
     public void Start()
     {
+        _pauseResume = FindObjectOfType<PauseResume>();
+        
         rb = GetComponent<Rigidbody2D>();
         spellReady = true;
         spellImage.fillAmount = 1;
     }
 
-    private void Update()
-    {
-        //textCooldown.text = cooldown.ToString("0");
-    }
-
     public void OnShoot(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && _pauseResume.shootStatus == true)
         {
             Shoot();
+            return;
+        }
+        else
+        {
             return;
         }
     }
 
     public void OnTripleShoot(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && _pauseResume.shootStatus == true)
         {
+            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
             TripleShoot();
+            return;
+        }
+        else
+        {
             return;
         }
     }
 
     public void Shoot()
     {
+        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
+        
         /*
         for (int i = 0; i < bulletPrefab.Length; i++)
         {
@@ -73,9 +85,6 @@ public class PrincipalWeapon : MonoBehaviour
                 return;
         }
         */
-        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
-        //Instantiate(bulletPrefab[0], firePointDroite.position, firePointDroite.rotation);
-        //Instantiate(bulletPrefab[0], firePointGauche.position, firePointGauche.rotation);
     }
 
     public void TripleShoot()
