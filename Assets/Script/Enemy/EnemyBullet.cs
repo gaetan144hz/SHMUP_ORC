@@ -44,7 +44,7 @@ public class EnemyBullet : MonoBehaviour
         {
             playerHealth.TakeDamage(data.bulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 0.1f);
-            StartCoroutine(rumble());
+            //StartCoroutine(rumble());
             hitSpawn();
             Destroy(gameObject);
         }

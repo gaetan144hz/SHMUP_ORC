@@ -33,6 +33,8 @@ public class PrincipalWeapon : MonoBehaviour
 
     [Header("Bullet")]
     public GameObject[] bulletPrefab;
+    public bool shootBool;
+    public float autoFireRate;
     //public Transform[] spawnPoints;
 
     //[SerializeField] private float bulletForce;
@@ -45,26 +47,52 @@ public class PrincipalWeapon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spellReady = true;
         spellImage.fillAmount = 1;
+        shootBool = false;
+        autoFireRate = 0.1f;
     }
 
     public void OnShoot(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            Shoot();
+            shootBool = true;
+            StartCoroutine(autoShoot());
             return;
         }
         else
         {
+            shootBool = false;
             return;
         }
+    }
+
+    public IEnumerator autoShoot()
+    {
+        while (shootBool == true)
+        {
+            Shoot();
+            yield return new WaitForSeconds(autoFireRate);
+        }
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
+
+        /*
+        for (int i = 0; i < bulletPrefab.Length; i++)
+        {
+            if (i >= nombreDeTirAutorise)
+                return;
+        }
+        */
     }
 
     public void OnTripleShoot(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);   
             TripleShoot();
             return;
         }
@@ -74,18 +102,6 @@ public class PrincipalWeapon : MonoBehaviour
         }
     }
 
-    public void Shoot()
-    {
-        Instantiate(bulletPrefab[0], firePoint[0].position, firePoint[0].rotation);
-        
-        /*
-        for (int i = 0; i < bulletPrefab.Length; i++)
-        {
-            if (i >= nombreDeTirAutorise)
-                return;
-        }
-        */
-    }
 
     public void TripleShoot()
     {
