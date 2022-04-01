@@ -64,7 +64,7 @@ public class PrincipalWeapon : MonoBehaviour
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
+            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);
             TripleShoot();
             return;
         }

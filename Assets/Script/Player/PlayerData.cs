@@ -16,7 +16,7 @@ public class PlayerData : ScriptableObject
         spellDamage = startSpellDamage;
         spellSpeed = startSpellSpeed;
 
-        startCooldown = currentCooldown;
+        currentCooldown = startCooldown;
     }
 
     [Header("Player Movement")]
@@ -38,7 +38,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Spell Settings")]
     public float currentCooldown;
-    [HideInInspector] public float startCooldown;
+    public float startCooldown;
 
     [Header("Spell Settings")]
     public int spellDamage;
