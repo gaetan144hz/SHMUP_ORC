@@ -19,7 +19,7 @@
                     "id": "c45e9048-25a6-4113-b638-e17f317509e4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "tripleShoot",
@@ -526,7 +526,7 @@
                     "id": "ea55b26a-b2b0-4402-b3dc-5d671b40ad3f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "tripleShoot",
@@ -1033,7 +1033,7 @@
                     "id": "008db052-a8dc-49f6-aaa2-a20488930da2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "tripleShoot",
