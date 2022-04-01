@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -11,8 +10,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Data")]
     public PlayerData datap;
-
-    public Vector2 acceleration;
+    
+    [Header("Dash")]
+    private float dashCooldownTime;
+    private bool dashReady;
 
     public Animator animator;
 
@@ -23,18 +24,70 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private Controllers playerInput; // recupere le Input Action, attention au nom
-
     private Rigidbody2D rb;
 
     void Awake()
     {
         datap = Instantiate(datap);
 
+        dashReady = true;
+        
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
     }
 
+    #region DashRegion
+    public void OnDashR(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            if (dashReady == false)
+            {
+                return;
+            }
+            dashReady = false;
+            StartCoroutine(DashCooldown());
+            Debug.Log("RightDashReady True");
+            rb.AddForce(transform.right * datap.currentSpeedDash);
+        }
+    }
+    public void OnDashL(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            if (dashReady == false)
+            {
+                return;
+            }
+            dashReady = false;
+            StartCoroutine(DashCooldown());
+            Debug.Log("LeftDashReady True");
+            rb.AddForce(-transform.right * datap.currentSpeedDash);
+        }
+    }
+
+    public IEnumerator DashCooldown()
+    {
+        dashCooldownTime = datap.currentDashCooldown;
+        
+        while (dashCooldownTime > 0)
+        {
+            dashCooldownTime -= 1;
+            if (dashCooldownTime <= 0)
+            {
+                dashReady = true;
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
+        }
+    }
+    #endregion
+
+
+    #region Movement
     public void OnMove(InputValue value)
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
@@ -67,6 +120,5 @@ public class PlayerMovement : MonoBehaviour
     {
         playerInput.Disable();
     }
-
-    
+    #endregion
 }

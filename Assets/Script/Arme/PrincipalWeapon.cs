@@ -51,6 +51,10 @@ public class PrincipalWeapon : MonoBehaviour
         autoFireRate = 0.1f;
     }
 
+    
+    
+    #region ShootAuto
+    
     public void OnShoot(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
@@ -87,7 +91,13 @@ public class PrincipalWeapon : MonoBehaviour
         }
         */
     }
+    
+    #endregion
+    
+    
 
+    #region Spell
+    
     public void OnTripleShoot(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
@@ -101,8 +111,7 @@ public class PrincipalWeapon : MonoBehaviour
             return;
         }
     }
-
-
+    
     public void TripleShoot()
     {
         if (spellReady == false)
@@ -148,4 +157,6 @@ public class PrincipalWeapon : MonoBehaviour
             }
         }
     }
+    
+    #endregion
 }
