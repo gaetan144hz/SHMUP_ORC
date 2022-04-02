@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
-  hitPrefab: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
-  lastHit: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
+  hitPrefab: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  lastHit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
   rb: {fileID: 8648771640050673117}
 --- !u!114 &6564390603560047939
 MonoBehaviour:
