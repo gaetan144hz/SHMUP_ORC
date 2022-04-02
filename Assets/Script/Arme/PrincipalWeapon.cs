@@ -60,7 +60,8 @@ public class PrincipalWeapon : MonoBehaviour
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
             shootBool = true;
-            StartCoroutine(autoShoot());
+            //StartCoroutine(autoShoot());
+            Shoot();
             return;
         }
         else

@@ -190,8 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 10
-  stopMin: 4
-  stopMax: 9
+  stopMin: 1
+  stopMax: 10
 --- !u!50 &7765959782366688218
 Rigidbody2D:
   serializedVersion: 4

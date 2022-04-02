@@ -3,37 +3,100 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class TestSpawnUnitaire : MonoBehaviour
 {
-    public Transform[] spawnePoint;
+    [Header("SpwnEnemy Controls")]
+    public Transform[] spawnPointEnemy;
     public GameObject[] enemyPrefabs;
+    public TMP_InputField[] InputFieldEnemy;
 
-    public TMP_InputField[] InputField;
-    public int enemy;
-/*
-    [SerializeField] private int enemyNumberD;
-    [SerializeField] private int enemyNumberM;
-    [SerializeField] private int enemyNumberG;
-*/
-    #region SpawnRegion
+    [Header("SpwnPowerUp Controls")]
+    public Transform[] spawnPointPowerUp;
+    public GameObject[] powerUpPrefabs;
+    public TMP_InputField[] InputFieldPowerUp;
     
-    public void spawnD()
+    public GameObject[] ui;
+
+    public int enemyNumber;
+    public int powerUpNumber;
+
+    #region SpawnEnemyRegion
+    public void allEn()
     {
-        enemy = Int32.Parse(InputField[0].text);
-        Instantiate(enemyPrefabs[enemy], spawnePoint[0].position, spawnePoint[0].rotation);
+        spawnDe();
+        spawnMe();
+        spawnGe();
     }
-    public void spawnM()
+    public void rgEn()
     {
-        enemy = Int32.Parse(InputField[1].text);
-        Instantiate(enemyPrefabs[enemy], spawnePoint[1].position, spawnePoint[1].rotation);
-    }
-    public void spawnG()
-    {
-        enemy = Int32.Parse(InputField[2].text);
-        Instantiate(enemyPrefabs[enemy], spawnePoint[2].position, spawnePoint[2].rotation);
+        spawnDe();
+        spawnGe();
     }
     
+    public void spawnDe()
+    {
+        enemyNumber = Int32.Parse(InputFieldEnemy[2].text);
+        Instantiate(enemyPrefabs[enemyNumber], spawnPointEnemy[2].position, spawnPointEnemy[2].rotation);
+    }
+    public void spawnMe()
+    {
+        enemyNumber = Int32.Parse(InputFieldEnemy[1].text);
+        Instantiate(enemyPrefabs[enemyNumber], spawnPointEnemy[1].position, spawnPointEnemy[1].rotation);
+    }
+    public void spawnGe()
+    {
+        enemyNumber = Int32.Parse(InputFieldEnemy[0].text);
+        Instantiate(enemyPrefabs[enemyNumber], spawnPointEnemy[0].position, spawnPointEnemy[0].rotation);
+    }
+
+    #endregion
+
+    #region SpawnPowerUpRegion
+    public void allPw()
+    {
+        spawnGPw();
+        spawnMPw();
+        spawnDPw();
+    }
+    public void rgPw()
+    {
+        spawnGPw();
+        spawnDPw();
+    }
+    
+    public void spawnDPw()
+    {
+        powerUpNumber = Int32.Parse(InputFieldPowerUp[2].text);
+        Instantiate(powerUpPrefabs[powerUpNumber], spawnPointPowerUp[2].position, spawnPointPowerUp[2].rotation);
+    }
+    public void spawnMPw()
+    {
+        powerUpNumber = Int32.Parse(InputFieldPowerUp[1].text);
+        Instantiate(powerUpPrefabs[powerUpNumber], spawnPointPowerUp[1].position, spawnPointPowerUp[1].rotation);
+    }
+    public void spawnGPw()
+    {
+        powerUpNumber = Int32.Parse(InputFieldPowerUp[0].text);
+        Instantiate(powerUpPrefabs[powerUpNumber], spawnPointPowerUp[0].position, spawnPointPowerUp[0].rotation);
+    }
+
     #endregion
     
+    public void disableSpUI()
+    {
+        foreach (var canvas in ui)
+        {
+            canvas.SetActive(false);
+        }
+    }
+
+    public void enableSpUI()
+    {
+        foreach (var canvas in ui)
+        {
+            canvas.SetActive(true);
+        }
+    }
 }

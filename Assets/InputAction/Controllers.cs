@@ -137,6 +137,22 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""enableSpUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""3b9a9766-047f-4d88-8950-7679995a13a9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""disableSpUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""4909354b-0b24-43da-a25f-4683f5a03506"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -423,6 +439,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""dashL"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2bf9d844-1b7e-438e-a574-79a736e6c9fa"",
+                    ""path"": ""<Keyboard>/pageUp"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""enableSpUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fce509a4-da8d-4069-b62f-0526a475460f"",
+                    ""path"": ""<Keyboard>/pageDown"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""disableSpUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1376,6 +1414,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
         m_player_dashR = m_player.FindAction("dashR", throwIfNotFound: true);
         m_player_dashL = m_player.FindAction("dashL", throwIfNotFound: true);
+        m_player_enableSpUI = m_player.FindAction("enableSpUI", throwIfNotFound: true);
+        m_player_disableSpUI = m_player.FindAction("disableSpUI", throwIfNotFound: true);
         // player1
         m_player1 = asset.FindActionMap("player1", throwIfNotFound: true);
         m_player1_move = m_player1.FindAction("move", throwIfNotFound: true);
@@ -1473,6 +1513,8 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_Pause;
     private readonly InputAction m_player_dashR;
     private readonly InputAction m_player_dashL;
+    private readonly InputAction m_player_enableSpUI;
+    private readonly InputAction m_player_disableSpUI;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -1492,6 +1534,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Pause => m_Wrapper.m_player_Pause;
         public InputAction @dashR => m_Wrapper.m_player_dashR;
         public InputAction @dashL => m_Wrapper.m_player_dashL;
+        public InputAction @enableSpUI => m_Wrapper.m_player_enableSpUI;
+        public InputAction @disableSpUI => m_Wrapper.m_player_disableSpUI;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1546,6 +1590,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @dashL.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
                 @dashL.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
                 @dashL.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
+                @enableSpUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
+                @enableSpUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
+                @enableSpUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
+                @disableSpUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
+                @disableSpUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
+                @disableSpUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1595,6 +1645,12 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @dashL.started += instance.OnDashL;
                 @dashL.performed += instance.OnDashL;
                 @dashL.canceled += instance.OnDashL;
+                @enableSpUI.started += instance.OnEnableSpUI;
+                @enableSpUI.performed += instance.OnEnableSpUI;
+                @enableSpUI.canceled += instance.OnEnableSpUI;
+                @disableSpUI.started += instance.OnDisableSpUI;
+                @disableSpUI.performed += instance.OnDisableSpUI;
+                @disableSpUI.canceled += instance.OnDisableSpUI;
             }
         }
     }
@@ -1925,6 +1981,8 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnDashR(InputAction.CallbackContext context);
         void OnDashL(InputAction.CallbackContext context);
+        void OnEnableSpUI(InputAction.CallbackContext context);
+        void OnDisableSpUI(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
     {
