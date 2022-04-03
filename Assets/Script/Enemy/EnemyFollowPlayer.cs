@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class EnemyFollowPlayer : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    [Header("Audio")] 
+    public AudioSource deathAudioSource;
+
     public List<GameObject> playerList;
 
     public static List<EnemyFollowPlayer> enemyList = new List<EnemyFollowPlayer>();
@@ -39,6 +43,8 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Awake()
     {
+        
+        
         data = Instantiate(data);
 
         rb = GetComponent<Rigidbody2D>();
@@ -94,6 +100,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
+            deathAudioSource.Play();
             Die();
         }
         healthBar.SetHealth(data.currentHealth);
