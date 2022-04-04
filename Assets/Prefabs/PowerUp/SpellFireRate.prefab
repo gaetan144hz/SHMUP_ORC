@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737784530519862591}
-  m_LocalRotation: {x: -0, y: -0, z: -0.004039752, w: 0.99999183}
+  m_LocalRotation: {x: -0, y: -0, z: -0.002359283, w: 0.99999726}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.78431374, g: 0.24313726, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.80537075
+  m_PointLightOuterRadius: 1.4649619
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -82,12 +82,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8249511203934546972}
   - component: {fileID: 8249511203934546973}
-  - component: {fileID: 8249511203934546974}
   - component: {fileID: 8249511203934546975}
+  - component: {fileID: 230614761834515562}
   m_Layer: 0
   m_Name: SpellFireRate
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -146,33 +146,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -188508008810838281, guid: d3e569171b5bd5a4a8bb10204af364bf, type: 3}
-  m_Color: {r: 1, g: 0.2224911, b: 0.0039215684, a: 1}
+  m_Sprite: {fileID: -7839403697686440193, guid: d6aca68cecf872f47afe420db970af9d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.98, y: 2.1925}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8249511203934546974
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8249511203934546968}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &8249511203934546975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +171,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   increase: 1
+--- !u!60 &230614761834515562
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249511203934546968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.98, y: 2.1925}
+    newSize: {x: 0.98, y: 2.1925}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.28321743, y: -1.0412211}
+      - {x: 0.20421708, y: -0.678998}
+      - {x: 0.5202869, y: -0.5020757}
+      - {x: 0.45673144, y: -0.21628225}
+      - {x: 0.1531061, y: 0.30383253}
+      - {x: -0.13090152, y: 0.857199}
+      - {x: -0.294365, y: 1.1525857}
+      - {x: -0.5357901, y: 1.0663533}
+      - {x: -0.5213049, y: 0.6214637}
+      - {x: -0.23407328, y: -0.38911867}
+      - {x: -0.5312395, y: -0.49891806}
+      - {x: -0.44298756, y: -0.7310109}
+      - {x: -0.1342212, y: -0.61506414}
+      - {x: 0.04240322, y: -1.081862}

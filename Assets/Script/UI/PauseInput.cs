@@ -9,9 +9,28 @@ public class PauseInput : MonoBehaviour
 
     public GameObject player;
 
+    private TestSpawnUnitaire testUnitaire;
+
     private void Awake()
     {
         pauseResume = FindObjectOfType<PauseResume>();
+        testUnitaire = FindObjectOfType<TestSpawnUnitaire>();
+    }
+    
+    public void OnDisableSpUI(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            testUnitaire.disableSpUI();
+        }
+    }
+
+    public void OnEnableSpUI(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            testUnitaire.enableSpUI();
+        }
     }
 
     public void OnPause(InputValue value)

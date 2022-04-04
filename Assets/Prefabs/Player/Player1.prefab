@@ -720,7 +720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &179758594718099136
 Transform:
   m_ObjectHideFlags: 0
@@ -1159,6 +1159,8 @@ MonoBehaviour:
   bulletPrefab:
   - {fileID: 201954176755067931, guid: d101519ed6415cb44a0eed3a8db477f5, type: 3}
   - {fileID: 8261057487346045336, guid: 720182383d28b6d42a078f8d32c97f6c, type: 3}
+  shootBool: 0
+  autoFireRate: 0
 --- !u!114 &7567997724479068166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,7 +1174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  maxSpeed: 0
   animator: {fileID: 763211265528676198}
 --- !u!114 &7567997724479068167
 MonoBehaviour:

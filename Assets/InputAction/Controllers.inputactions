@@ -94,38 +94,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "maxSpeed",
-                    "type": "Button",
-                    "id": "93f81ad4-6b8a-4ff4-9569-a219fea94596",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "removeSpeed",
-                    "type": "Button",
-                    "id": "aeb489ae-78e3-42b7-ae3c-85063b178e5d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "enableDisqueSpwn",
-                    "type": "Button",
-                    "id": "6df8211e-43d0-41aa-82e6-ca3d4b78d1d5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "disableDisqueSpwn",
-                    "type": "Button",
-                    "id": "fa74194e-1bae-4901-a919-3192c51e428c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Resume",
                     "type": "Button",
                     "id": "92f2864f-1e41-4586-9e3b-206298b45610",
@@ -137,6 +105,38 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "3148b2fe-9393-46ab-9654-1e5f070637b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dashR",
+                    "type": "Button",
+                    "id": "dbe0896e-34bb-4db6-8c98-f2ca5afa9879",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "dashL",
+                    "type": "Button",
+                    "id": "d2f59f26-892b-4507-971e-14d5708b2b2e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "enableSpUI",
+                    "type": "Button",
+                    "id": "3b9a9766-047f-4d88-8950-7679995a13a9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "disableSpUI",
+                    "type": "Button",
+                    "id": "4909354b-0b24-43da-a25f-4683f5a03506",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -365,50 +365,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d7c57b91-17a4-41a1-bc2a-df37acb68fd4",
-                    "path": "<Keyboard>/f7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "maxSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f05143bd-dc1d-4995-bae4-def7989b82b8",
-                    "path": "<Keyboard>/f8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "removeSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e9ffe52f-e01a-4340-add6-b03a7af544e5",
-                    "path": "<Keyboard>/f10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "enableDisqueSpwn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fe67f427-ca43-4fea-8fe1-f02c21a05026",
-                    "path": "<Keyboard>/f9",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "disableDisqueSpwn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3f7f06e4-2c94-483d-9444-1ff0165e98a5",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -428,61 +384,6 @@
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector Arrow",
-                    "id": "ae65f175-f0e9-49f0-9854-2a497b037441",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "47cb57ec-076c-49b7-bf1a-64a9d7d9145e",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "d3771109-76f6-4248-9870-83401725b3e3",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "d3859b49-057c-4402-86ec-54e23eb7dcb2",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "238ca519-64aa-4b91-889d-2dcf8af11175",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -505,6 +406,105 @@
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "746e8204-208b-4819-b4b3-64ae34f613fa",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "dashR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f73392f-afa7-4f86-9378-226570dc62ba",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "dashL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bf9d844-1b7e-438e-a574-79a736e6c9fa",
+                    "path": "<Keyboard>/pageUp",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "enableSpUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fce509a4-da8d-4069-b62f-0526a475460f",
+                    "path": "<Keyboard>/pageDown",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "disableSpUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector AZERTY",
+                    "id": "b059a0f3-1b31-4ca1-b25b-f1e1230b8331",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7eb8f3a0-3570-4aa5-9173-caec65efb5c8",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "80c37449-efec-4f4e-82e4-51e50a9bb379",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "432c01de-403d-4e19-884b-835991cc76b5",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "aad30421-d3c3-44f1-ace8-5bbf6197c0c0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -553,22 +553,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "removeSpeed",
-                    "type": "Button",
-                    "id": "9bbd4ab9-1d3a-4ad7-9fdb-c1c9811a172e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "maxSpeed",
-                    "type": "Button",
-                    "id": "134524c9-c7e7-42a9-8179-4ace520125d7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "maxHealth",
                     "type": "Button",
                     "id": "e3c1e5f5-4876-4ab2-911e-704018223cfe",
@@ -612,22 +596,6 @@
                     "name": "disableCheatDamage",
                     "type": "Button",
                     "id": "369f8d1e-d0af-4d37-bbb9-c00ca2db2e03",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "disableDisqueSpwn",
-                    "type": "Button",
-                    "id": "ad309977-8be0-45df-9331-c5b4a744e4e5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "enableDisqueSpwn",
-                    "type": "Button",
-                    "id": "7e9f8b63-68d6-40d7-988a-44c274631751",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -871,50 +839,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "6360db5a-dfe1-4321-bb86-fde95629fae1",
-                    "path": "<Keyboard>/f7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "maxSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fd7e7c45-d245-449b-aa7e-a8a9ac6b31cc",
-                    "path": "<Keyboard>/f8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "removeSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f93c86f2-ac1a-4e7a-9ecc-9361e74d6b5d",
-                    "path": "<Keyboard>/f10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "enableDisqueSpwn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a6d1220f-3c0c-4a41-b978-b489fa3bf770",
-                    "path": "<Keyboard>/f9",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "disableDisqueSpwn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "2D Vector Arrow",
                     "id": "4d5865a3-b1a4-4dc4-a200-032fc6c2f8d4",
                     "path": "2DVector",
@@ -1060,22 +984,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "removeSpeed",
-                    "type": "Button",
-                    "id": "41f1513a-9ea8-40d1-aa19-0d77edf2e2d3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "maxSpeed",
-                    "type": "Button",
-                    "id": "18f89313-33e5-4af4-a370-3c49e24260bc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "maxHealth",
                     "type": "Button",
                     "id": "869448ad-b757-49fb-8774-580defdbacc8",
@@ -1119,22 +1027,6 @@
                     "name": "disableCheatDamage",
                     "type": "Button",
                     "id": "2b7980bc-e056-458d-821a-6a1d5cda6021",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "disableDisqueSpwn",
-                    "type": "Button",
-                    "id": "d4827702-ba2d-4cf7-8d66-cb619f3d9644",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "enableDisqueSpwn",
-                    "type": "Button",
-                    "id": "a1078a78-bfda-4f18-ad6f-8045305ebd28",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -1374,50 +1266,6 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "maxHealth",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "16f8fd5d-2168-440d-b557-06f8b6c88b02",
-                    "path": "<Keyboard>/f7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "maxSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8ca164b9-da0b-4213-a595-1835fbe4a410",
-                    "path": "<Keyboard>/f8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "removeSpeed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b459165f-01a8-4c4e-928d-b25ac855aa46",
-                    "path": "<Keyboard>/f10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "enableDisqueSpwn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "95cd535c-17a1-46a9-871d-4a7e87793824",
-                    "path": "<Keyboard>/f9",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "disableDisqueSpwn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

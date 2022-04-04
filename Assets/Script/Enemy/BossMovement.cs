@@ -73,7 +73,7 @@ public class BossMovement : MonoBehaviour
     {
         if (Time.time <= lastShot + cooldown)
         {
-            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+            Instantiate(bullet, firePoint.transform.position, firePoint.rotation);
         }
         lastShot = Time.time;
         
