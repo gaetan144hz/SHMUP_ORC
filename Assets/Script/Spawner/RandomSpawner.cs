@@ -8,16 +8,13 @@ using TMPro;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public Wave waveClass;
-
     [TextArea]
     public string Description;
     public int waveNumber;
     //public int waveValue;
     //public int maxValue;
-    //public int stage;
+    public int stage;
 
-    private int killCap;
     private int waveStage;
 
     [Header("Collections")]
@@ -42,7 +39,6 @@ public class RandomSpawner : MonoBehaviour
     {
         //waveValue = 0;
         //StartCoroutine(Wave1());
-        killCap = 1;
         StartCoroutine(WavesLauncher());
     }
     
@@ -116,18 +112,19 @@ public class RandomSpawner : MonoBehaviour
         {
             StartCoroutine(WaveAnim());
             yield return new WaitForSeconds(3);
-            WaveSpawn();
+            StartCoroutine(WaveSpawn());
+            var killCap = ScoreSetup.killCount + waves[waveStage].enemies.Length;
             yield return new WaitUntil(() => ScoreSetup.killCount == killCap);
+            waveStage++;
         }
     }
 
-    public void WaveSpawn()
+    IEnumerator WaveSpawn()
     {
-        foreach (var enemy in waveClass.enemies)
+        foreach (var enemy in waves[waveStage].enemies)
         {
-            Debug.Log("ok");
             Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].position, spawnPoints[Random.Range(0, spawnPoints.Length)].rotation);
-            killCap += 1;
+            yield return new WaitForSeconds(1);
         }
     }
 }
