@@ -81,6 +81,7 @@ MonoBehaviour:
   waveNumber: 0
   waveValue: 0
   maxValue: 0
+  stage: 0
   spawnPoints:
   - {fileID: 8098913062235468642}
   - {fileID: 8098913061543068830}
@@ -89,11 +90,11 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
   - {fileID: 2647647482063053804, guid: 5deba7d5959471f49b640a6954ab2311, type: 3}
-  - {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
   - {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
-  - {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   - {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   - {fileID: 9114618521634652638, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
+  - {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
+  - {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   wavesObject: {fileID: 0}
   wavesText: {fileID: 0}
   wavesCounter: {fileID: 0}
