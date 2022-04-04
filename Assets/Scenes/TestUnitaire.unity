@@ -2180,10 +2180,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 591855343465937456, guid: 840badd979856a9458c570e32f408c6e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 591855343735192472, guid: 840badd979856a9458c570e32f408c6e, type: 3}
       propertyPath: spawnPointEnemy.Array.data[0]
       value: 
@@ -2255,10 +2251,6 @@ PrefabInstance:
     - target: {fileID: 591855343735192479, guid: 840badd979856a9458c570e32f408c6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543486358207557107, guid: 840badd979856a9458c570e32f408c6e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 840badd979856a9458c570e32f408c6e, type: 3}
