@@ -215,7 +215,7 @@ MonoBehaviour:
   amplitude: 0.5
   frequency: 1
   inverted: 1
---- !u!43 &338199719
+--- !u!43 &291141840
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1741,8 +1741,8 @@ MonoBehaviour:
   - {x: 0.49260402, y: 0.48869982, z: 0}
   - {x: -0.48445886, y: 0.488685, z: 0}
   m_ShapePathHash: -538132850
-  m_Mesh: {fileID: 338199719}
-  m_InstanceId: 24236
+  m_Mesh: {fileID: 291141840}
+  m_InstanceId: 21428
 --- !u!96 &1841580640
 TrailRenderer:
   serializedVersion: 2
