@@ -11,12 +11,16 @@ public class RandomSpawner : MonoBehaviour
     [TextArea]
     public string Description;
     public int waveNumber;
-    public int waveValue;
-    public int maxValue;
+    //public int waveValue;
+    //public int maxValue;
     public int stage;
 
+    private int waveStage;
+
+    [Header("Collections")]
+    public Wave[] waves;
+
     private ScoreSetup ScoreSetup;
-    private Timer timer;
 
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
@@ -28,22 +32,16 @@ public class RandomSpawner : MonoBehaviour
     public void Awake()
     {
         ScoreSetup = FindObjectOfType<ScoreSetup>();
-        timer = FindObjectOfType<Timer>();
-        stage = 5;
+        //stage = 5;
     }
 
     public void gameInstantiate()
     {
-        waveValue = 0;
-        StartCoroutine(Wave1());
-    }
-
-    private void Update()
-    {
-        //wave1();
+        //waveValue = 0;
+        //StartCoroutine(Wave1());
+        StartCoroutine(WavesLauncher());
     }
     
-
     public void wave(int enemyValue, int spawnValue)
     {
         Instantiate(enemyPrefabs[enemyValue], spawnPoints[spawnValue].position, spawnPoints[spawnValue].rotation);
@@ -67,7 +65,7 @@ public class RandomSpawner : MonoBehaviour
         wavesObject.SetActive(false);
     }
 
-    IEnumerator Wave1()
+    /*IEnumerator Wave1()
     {
         while (waveValue <= 0)
         {
@@ -106,5 +104,34 @@ public class RandomSpawner : MonoBehaviour
             maxValue += 1;
             yield return new WaitUntil(() => ScoreSetup.killCount == killNeeded);
         }
+    }*/
+
+    IEnumerator WavesLauncher()
+    {
+        foreach (var wave in waves)
+        {
+            StartCoroutine(WaveAnim());
+            yield return new WaitForSeconds(3);
+            StartCoroutine(WaveSpawn());
+            var killCap = ScoreSetup.killCount + waves[waveStage].enemies.Length;
+            yield return new WaitUntil(() => ScoreSetup.killCount == killCap);
+            waveStage++;
+        }
     }
+
+    IEnumerator WaveSpawn()
+    {
+        foreach (var enemy in waves[waveStage].enemies)
+        {
+            Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].position, spawnPoints[Random.Range(0, spawnPoints.Length)].rotation);
+            yield return new WaitForSeconds(1);
+        }
+    }
+}
+
+[System.Serializable]
+
+public class Wave
+{
+    public GameObject[] enemies;
 }
