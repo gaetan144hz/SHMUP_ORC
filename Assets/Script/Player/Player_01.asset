@@ -16,7 +16,7 @@ MonoBehaviour:
   startSpeed: 10
   acceleration: 0
   startAcceleration: 40
-  maxSpeed: 50
+  maxSpeed: 15
   currentSpeedDash: 20000
   startSpeedDash: 20000
   startDashCooldown: 2

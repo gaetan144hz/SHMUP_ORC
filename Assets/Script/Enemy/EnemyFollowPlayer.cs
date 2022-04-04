@@ -100,7 +100,7 @@ public class EnemyFollowPlayer : MonoBehaviour
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
-            deathAudioSource.Play();
+            //deathAudioSource.Play();
             Die();
         }
         healthBar.SetHealth(data.currentHealth);

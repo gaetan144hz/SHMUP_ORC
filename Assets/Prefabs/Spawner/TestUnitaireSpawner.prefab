@@ -1734,9 +1734,11 @@ MonoBehaviour:
   ui:
   - {fileID: 5543486358207557107}
   - {fileID: 591855343465937456}
-  test: {fileID: 5543486358207557107}
   enemyNumber: 0
   powerUpNumber: 0
+  testWave:
+  - enn:
+    - {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
 --- !u!1 &591855343965002461
 GameObject:
   m_ObjectHideFlags: 0

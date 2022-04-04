@@ -16,8 +16,8 @@ MonoBehaviour:
   EnemyModel: {fileID: 6309468454909960870, guid: cc48ba0aba19fa04ca7a5881e8f9efde, type: 3}
   Description: sous boss, attack avec des minis dragons, colldown
   Score: 0
-  currentSpeedMovement: 0.4
-  startSpeedMovement: 0.4
+  currentSpeedMovement: 5
+  startSpeedMovement: 5
   currentHealth: 100
   startHealth: 100
   bulletSpeed: 5

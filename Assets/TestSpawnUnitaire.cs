@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -83,7 +84,8 @@ public class TestSpawnUnitaire : MonoBehaviour
     }
 
     #endregion
-    
+
+    #region DisableUI
     public void disableSpUI()
     {
         foreach (var canvas in ui)
@@ -99,4 +101,7 @@ public class TestSpawnUnitaire : MonoBehaviour
             canvas.SetActive(true);
         }
     }
+
+    #endregion
+    
 }

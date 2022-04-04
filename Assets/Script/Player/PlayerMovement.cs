@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,16 +17,17 @@ public class PlayerMovement : MonoBehaviour
     private bool dashReady;
 
     public Animator animator;
-
+    
+    private Controllers playerInput; // recupere le Input Action, attention au nom
+    private Vector2 movement;
+    private Rigidbody2D rb;
+    
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();
     public static List<PlayerMovement> GetPlayerList()
     {
         return playerList;
     }
-
-    private Controllers playerInput; // recupere le Input Action, attention au nom
-    private Rigidbody2D rb;
-
+    
     void Awake()
     {
         datap = Instantiate(datap);
@@ -48,22 +50,8 @@ public class PlayerMovement : MonoBehaviour
             }
             dashReady = false;
             StartCoroutine(DashCooldown());
-            Debug.Log("RightDashReady True");
-            rb.AddForce(transform.right * datap.currentSpeedDash);
-        }
-    }
-    public void OnDashL(InputValue value)
-    {
-        if (value.isPressed)
-        {
-            if (dashReady == false)
-            {
-                return;
-            }
-            dashReady = false;
-            StartCoroutine(DashCooldown());
-            Debug.Log("LeftDashReady True");
-            rb.AddForce(-transform.right * datap.currentSpeedDash);
+            Debug.Log("DASH");
+            rb.AddForce(movement * datap.currentSpeedDash);
         }
     }
 
@@ -86,16 +74,17 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
+    
 
     #region Movement
-    public void OnMove(InputValue value)
+    private void OnMove(InputValue value)
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         //Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
 
-        Vector2 moveInput = value.Get<Vector2>().normalized;
-
-        bool isIdle = moveInput.x == 0 && moveInput.y == 0;
+        movement = value.Get<Vector2>();
+        
+        bool isIdle = movement.x == 0 && movement.y == 0;
         if (isIdle)
         {
             rb.velocity = Vector2.zero;
@@ -103,10 +92,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = moveInput * datap.speed;
-
-            animator.SetFloat("horizontalMovement", moveInput.x);
-            animator.SetFloat("horizontalMovement", moveInput.y);
+            if (datap.speed < datap.maxSpeed)
+            {
+                rb.velocity = movement * datap.speed;
+            }
+            animator.SetFloat("horizontalMovement", movement.x);
+            animator.SetFloat("horizontalMovement", movement.y);
             animator.SetBool("isMoving", true);
         }
     }
@@ -120,5 +111,6 @@ public class PlayerMovement : MonoBehaviour
     {
         playerInput.Disable();
     }
+    
     #endregion
 }
