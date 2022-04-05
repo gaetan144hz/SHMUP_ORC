@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class poison : MonoBehaviour
 {
-    private PlayerData datap;
+    public PlayerData datap;
     private PlayerHealth playerHealth;
 
     [SerializeField] private int timeToDestroy;
@@ -23,15 +24,17 @@ public class poison : MonoBehaviour
         Destroy(this.gameObject,timeToDestroy);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D hit)
     {
-        playerHealth = collision.transform.GetComponent<PlayerHealth>();
+        playerHealth = hit.transform.GetComponent<PlayerHealth>();
 
-        if (collision.tag == "Player")
+        if (hit.tag == "Player")
         {
-            coroutinePoison = StartCoroutine(MakePoison());
+            StartCoroutine(MakePoison());
         }
     }
+    
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(coroutinePoison != null)
@@ -40,8 +43,11 @@ public class poison : MonoBehaviour
         } 
     }
 
+    
     IEnumerator MakePoison()
     {
+        playerHealth = transform.GetComponent<PlayerHealth>();
+        
         while (true)
         {
             datap.currentHealth -= poisonIncrease;
@@ -49,4 +55,5 @@ public class poison : MonoBehaviour
             yield return new WaitForSeconds(2);
         }
     }
+    
 }

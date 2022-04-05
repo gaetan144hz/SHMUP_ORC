@@ -17,15 +17,15 @@ MonoBehaviour:
   acceleration: 0
   startAcceleration: 40
   maxSpeed: 15
-  currentSpeedDash: 5000
-  startSpeedDash: 5000
-  startDashCooldown: 5
-  currentDashCooldown: 5
+  currentSpeedDash: 2000
+  startSpeedDash: 2000
+  startDashCooldown: 2
+  currentDashCooldown: 2
   startHealth: 250
-  currentHealth: 125
-  bulletDamage: 15
-  startBulletDamage: 10
-  bulletSpeed: 24
+  currentHealth: -10
+  bulletDamage: 5
+  startBulletDamage: 5
+  bulletSpeed: 20
   startBulletSpeed: 20
   currentCooldown: 8
   startCooldown: 8

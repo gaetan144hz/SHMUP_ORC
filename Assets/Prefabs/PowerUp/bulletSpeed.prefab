@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  increase: 2
+  increase: 1
 --- !u!58 &8553383875449215789
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -135,7 +135,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2572329373142976745}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2572329373142976740
 GameObject:
@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 7207205614913576959}
   - component: {fileID: 2572329373142976747}
   - component: {fileID: 1776372551433248985}
+  - component: {fileID: 6243793472790686595}
   m_Layer: 0
   m_Name: GoblinTank
   m_TagString: Enemy
@@ -169,8 +170,10 @@ Transform:
   m_LocalPosition: {x: 2.61, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6097689206990595054}
   - {fileID: 2572329372805760762}
+  - {fileID: 5337596343538181867}
+  - {fileID: 7129776354717484488}
+  - {fileID: 6097689206990595054}
   - {fileID: 4405247823161469001}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -243,6 +246,7 @@ MonoBehaviour:
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
   enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
   bulletParent: {fileID: 2572329372805760762}
+  deathAudioSource: {fileID: 0}
   playerList: []
 --- !u!114 &7207205614913576959
 MonoBehaviour:
@@ -374,6 +378,69 @@ PolygonCollider2D:
       - {x: 0.68, y: -1.43}
       - {x: 0.62, y: -1.3199999}
       - {x: 0.5, y: -1.1999999}
+--- !u!114 &6243793472790686595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572329373142976740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dbcb61e5dc7304e958ff7c6d24bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet:
+  - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
+  firePoint:
+  - {fileID: 5337596343538181867}
+  - {fileID: 7129776354717484488}
+--- !u!1 &2862888217091094634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5337596343538181867}
+  - component: {fileID: 7360801605813314069}
+  m_Layer: 0
+  m_Name: TankFirePoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5337596343538181867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862888217091094634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2572329373142976745}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7360801605813314069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862888217091094634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4033d7f1f627880468014164d1a97b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotaZ: 0
+  rotationSpeed: 100
+  ClockwiseRoation: 0
 --- !u!1 &6394276095086783747
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +473,7 @@ RectTransform:
   m_Children:
   - {fileID: 8160874145763559026}
   m_Father: {fileID: 2572329373142976745}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -503,7 +570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2572329373142976745}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2254970020760864219
 MonoBehaviour:
@@ -546,6 +613,52 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &8254381765954326354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7129776354717484488}
+  - component: {fileID: 7795878261774946119}
+  m_Layer: 0
+  m_Name: TankFirePoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7129776354717484488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254381765954326354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2572329373142976745}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7795878261774946119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254381765954326354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4033d7f1f627880468014164d1a97b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotaZ: 180
+  rotationSpeed: 100
+  ClockwiseRoation: 0
 --- !u!1 &8437057871099610692
 GameObject:
   m_ObjectHideFlags: 0

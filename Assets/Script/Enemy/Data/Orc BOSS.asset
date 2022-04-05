@@ -18,10 +18,10 @@ MonoBehaviour:
   Score: 0
   currentSpeedMovement: 1
   startSpeedMovement: 1
-  currentHealth: 970
+  currentHealth: 1500
   startHealth: 1500
-  bulletSpeed: 4
-  startBulletSpeed: 4
+  bulletSpeed: 10
+  startBulletSpeed: 10
   bulletDamage: 10
   startBulletDamage: 10
   spellSpeed: 10

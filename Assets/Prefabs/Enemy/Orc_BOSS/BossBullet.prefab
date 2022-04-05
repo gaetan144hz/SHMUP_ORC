@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144822631592327808}
   - component: {fileID: 144822631592327811}
-  - component: {fileID: 3082134696604113444}
+  - component: {fileID: -8503127979065653975}
   - component: {fileID: 8539666639839922103}
   - component: {fileID: -8341167256922561994}
   - component: {fileID: -5930681242238818221}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3082134696604113444
+--- !u!114 &-8503127979065653975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 144822631592327813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5a1ef9b98a84a4ea35a8ba28ef5046, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f3bc6f6b30cb4f47ab9f3fa154524a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
-  hitPrefab: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
-  lastHit: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
+  enData: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
+  bulletDamage: 10
+  hitPrefab: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  lastHit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  rb: {fileID: 8539666639839922103}
 --- !u!50 &8539666639839922103
 Rigidbody2D:
   serializedVersion: 4
