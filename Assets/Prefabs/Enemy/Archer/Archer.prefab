@@ -107,6 +107,36 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!1 &1372010063465280177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3216281055552586145}
+  m_Layer: 0
+  m_Name: ArcherFirePoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3216281055552586145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372010063465280177}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2647647482063053803}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &2647647480842136899
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +178,7 @@ GameObject:
   - component: {fileID: 2647647482063053803}
   - component: {fileID: 2647647482063053800}
   - component: {fileID: 2647647482063053806}
+  - component: {fileID: 7025834644715763209}
   - component: {fileID: 6552985913213346757}
   - component: {fileID: 2647647482063053801}
   - component: {fileID: 5924302721223800349}
@@ -170,6 +201,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2647647480842136898}
+  - {fileID: 7264979840468115238}
+  - {fileID: 8886798364995366898}
+  - {fileID: 3216281055552586145}
   - {fileID: 3932584906112404013}
   - {fileID: 6847922721388225968}
   m_Father: {fileID: 0}
@@ -243,7 +277,26 @@ MonoBehaviour:
   explosion: {fileID: 4271312362133296787, guid: 03c1ac17960dbc541892aabe611523d4, type: 3}
   enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
   bulletParent: {fileID: 2647647480842136898}
+  deathAudioSource: {fileID: 0}
   playerList: []
+--- !u!114 &7025834644715763209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647647482063053804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dbcb61e5dc7304e958ff7c6d24bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet:
+  - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
+  firePoint:
+  - {fileID: 7264979840468115238}
+  - {fileID: 8886798364995366898}
+  - {fileID: 3216281055552586145}
 --- !u!114 &6552985913213346757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +396,7 @@ RectTransform:
   m_Children:
   - {fileID: 8732413308979540888}
   m_Father: {fileID: 2647647482063053803}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -556,6 +609,66 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &5757787437047009241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7264979840468115238}
+  m_Layer: 0
+  m_Name: ArcherFirePoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7264979840468115238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5757787437047009241}
+  m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2647647482063053803}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+--- !u!1 &5897193252873545043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8886798364995366898}
+  m_Layer: 0
+  m_Name: ArcherFirePoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8886798364995366898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5897193252873545043}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
+  m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2647647482063053803}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
 --- !u!1 &8218227930218001289
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2647647482063053803}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8334739411803348626
 MonoBehaviour:
