@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(AudioSource))]
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
@@ -43,8 +42,6 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Awake()
     {
-        
-        
         data = Instantiate(data);
 
         rb = GetComponent<Rigidbody2D>();
@@ -57,6 +54,8 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetHealth(data.currentHealth);
+        
         foreach(PlayerMovement player in PlayerMovement.GetPlayerList())
         {
             float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);

@@ -1,13 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(BoxCollider2D))]
 
 public class BossMovement : MonoBehaviour
 {
-    
-
     [Header("EnemyData")]
     public EnemyData data;
 
@@ -26,58 +25,77 @@ public class BossMovement : MonoBehaviour
 
     public Transform[] firePoint;
 
-    [Header("FireRate")]
-    [SerializeField] private float nextFireTime;
-
     private BossSpawner bossSpawner;
     private RandomSpawner randomSpawner;
 
     private float lastShot;
-    
-    public List<GameObject> playerList;
 
-    // Start is called before the first frame update
+    public bool shootStatues;
+    
     void Start()
     {
+        shootStatues = true;
+        
         randomSpawner = FindObjectOfType<RandomSpawner>();
         bossSpawner = FindObjectOfType<BossSpawner>();
         data = Instantiate(data);
         healthBar.SetMaxHealth(data.currentHealth);
+
+        StartCoroutine(pattern1());
+        StartCoroutine(pattern2());
+        StartCoroutine(pattern3());
     }
 
     void Update()
     {
-        foreach (PlayerMovement player in PlayerMovement.GetPlayerList())
+        healthBar.SetHealth(data.currentHealth);
+    }
+
+    public IEnumerator patternCooldown()
+    {
+        yield return new WaitForSeconds(5f);
+        shootStatues = true;
+    }
+    
+    public IEnumerator pattern1()
+    {
+        while (true)
         {
-            float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
-            if (distanceFromPlayer < data.range && distanceFromPlayer > data.shootingRange)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, data.currentSpeedMovement * Time.deltaTime);
-            }
-            else if (distanceFromPlayer <= data.shootingRange && nextFireTime < Time.time)
-            {
-                shoot(bullet[0], firePoint[0], 1);
-                nextFireTime = Time.time + data.fireRate;
-                shoot(bullet[1], firePoint[1], 1);
-                nextFireTime = Time.time + data.fireRate;
-                shoot(bullet[0], firePoint[3], 1);
-                nextFireTime = Time.time + data.fireRate;
-                shoot(bullet[2], firePoint[2], 1);
-                nextFireTime = Time.time + data.fireRate;
-            }
-            
+            shoot(bullet[0],firePoint[0]);
+            shoot(bullet[0],firePoint[1]);
+            shoot(bullet[0],firePoint[4]);
+            shoot(bullet[0],firePoint[5]);
+            shoot(bullet[0],firePoint[6]);
+            shoot(bullet[0],firePoint[7]);
+            yield return new WaitForSeconds(1.5f);
+        }
+    }
+    
+    public IEnumerator pattern2()
+    {
+        while (true)
+        {
+            shoot(bullet[1],firePoint[3]);
+            shoot(bullet[1],firePoint[8]);
+            shoot(bullet[1],firePoint[9]);
+            shoot(bullet[1],firePoint[10]);
+            yield return new WaitForSeconds(0.15f);
         }
     }
 
-    public void shoot(GameObject bullet, Transform firePoint, float cooldown)
+    public IEnumerator pattern3()
     {
-        if (Time.time <= lastShot + cooldown)
+        while (true)
         {
-            Instantiate(bullet, firePoint.transform.position, firePoint.rotation);
+            shoot(bullet[2],firePoint[2]);
+            yield return new WaitForSeconds(3f);
         }
-        lastShot = Time.time;
-        
-        Debug.Log(bullet);
+    }
+    
+   
+    public void shoot(GameObject bullet, Transform firePoint)
+    {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 
     private void OnDrawGizmosSelected()
@@ -108,7 +126,6 @@ public class BossMovement : MonoBehaviour
         {
             Die();  
         }
-        healthBar.SetHealth(data.currentHealth);
     }
 
     void Die()

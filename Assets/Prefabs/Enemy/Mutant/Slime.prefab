@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 7765959782366688196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.09, y: -3.65, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 523130612157154995}
   m_Father: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 10
-  stopMin: 1
-  stopMax: 10
+  stopMin: 5
+  stopMax: 9
 --- !u!50 &7765959782366688218
 Rigidbody2D:
   serializedVersion: 4
