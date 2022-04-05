@@ -131,14 +131,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""dashL"",
-                    ""type"": ""Button"",
-                    ""id"": ""d2f59f26-892b-4507-971e-14d5708b2b2e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""enableSpUI"",
                     ""type"": ""Button"",
                     ""id"": ""3b9a9766-047f-4d88-8950-7679995a13a9"",
@@ -423,22 +415,11 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""746e8204-208b-4819-b4b3-64ae34f613fa"",
-                    ""path"": ""<Keyboard>/alt"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""dashR"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6f73392f-afa7-4f86-9378-226570dc62ba"",
-                    ""path"": ""<Keyboard>/semicolon"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""dashL"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1468,7 +1449,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
         m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
         m_player_dashR = m_player.FindAction("dashR", throwIfNotFound: true);
-        m_player_dashL = m_player.FindAction("dashL", throwIfNotFound: true);
         m_player_enableSpUI = m_player.FindAction("enableSpUI", throwIfNotFound: true);
         m_player_disableSpUI = m_player.FindAction("disableSpUI", throwIfNotFound: true);
         // player1
@@ -1567,7 +1547,6 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_Resume;
     private readonly InputAction m_player_Pause;
     private readonly InputAction m_player_dashR;
-    private readonly InputAction m_player_dashL;
     private readonly InputAction m_player_enableSpUI;
     private readonly InputAction m_player_disableSpUI;
     public struct PlayerActions
@@ -1588,7 +1567,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Resume => m_Wrapper.m_player_Resume;
         public InputAction @Pause => m_Wrapper.m_player_Pause;
         public InputAction @dashR => m_Wrapper.m_player_dashR;
-        public InputAction @dashL => m_Wrapper.m_player_dashL;
         public InputAction @enableSpUI => m_Wrapper.m_player_enableSpUI;
         public InputAction @disableSpUI => m_Wrapper.m_player_disableSpUI;
         public InputActionMap Get() { return m_Wrapper.m_player; }
@@ -1642,9 +1620,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @dashR.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
                 @dashR.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
                 @dashR.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
-                @dashL.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
-                @dashL.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
-                @dashL.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashL;
                 @enableSpUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
                 @enableSpUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
                 @enableSpUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
@@ -1697,9 +1672,6 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @dashR.started += instance.OnDashR;
                 @dashR.performed += instance.OnDashR;
                 @dashR.canceled += instance.OnDashR;
-                @dashL.started += instance.OnDashL;
-                @dashL.performed += instance.OnDashL;
-                @dashL.canceled += instance.OnDashL;
                 @enableSpUI.started += instance.OnEnableSpUI;
                 @enableSpUI.performed += instance.OnEnableSpUI;
                 @enableSpUI.canceled += instance.OnEnableSpUI;
@@ -2035,7 +2007,6 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnResume(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnDashR(InputAction.CallbackContext context);
-        void OnDashL(InputAction.CallbackContext context);
         void OnEnableSpUI(InputAction.CallbackContext context);
         void OnDisableSpUI(InputAction.CallbackContext context);
     }

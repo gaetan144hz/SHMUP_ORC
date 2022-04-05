@@ -118,14 +118,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "dashL",
-                    "type": "Button",
-                    "id": "d2f59f26-892b-4507-971e-14d5708b2b2e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "enableSpUI",
                     "type": "Button",
                     "id": "3b9a9766-047f-4d88-8950-7679995a13a9",
@@ -410,22 +402,11 @@
                 {
                     "name": "",
                     "id": "746e8204-208b-4819-b4b3-64ae34f613fa",
-                    "path": "<Keyboard>/alt",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "dashR",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6f73392f-afa7-4f86-9378-226570dc62ba",
-                    "path": "<Keyboard>/semicolon",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "dashL",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
