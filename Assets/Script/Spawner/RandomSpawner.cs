@@ -11,10 +11,7 @@ public class RandomSpawner : MonoBehaviour
     [TextArea]
     public string Description;
     public int waveNumber;
-    //public int waveValue;
-    //public int maxValue;
-    public int stage;
-
+    public int maxValue;
     private int waveStage;
 
     [Header("Collections")]
@@ -32,14 +29,17 @@ public class RandomSpawner : MonoBehaviour
     public void Awake()
     {
         ScoreSetup = FindObjectOfType<ScoreSetup>();
-        //stage = 5;
+        maxValue = 7;
     }
 
     public void gameInstantiate()
     {
-        //waveValue = 0;
-        //StartCoroutine(Wave1());
         StartCoroutine(WavesLauncher());
+    }
+
+    public void lateGameInstantiate()
+    {
+        StartCoroutine(LateGame());
     }
     
     public void wave(int enemyValue, int spawnValue)
@@ -65,46 +65,26 @@ public class RandomSpawner : MonoBehaviour
         wavesObject.SetActive(false);
     }
 
-    /*IEnumerator Wave1()
-    {
-        while (waveValue <= 0)
-        {
-            StartCoroutine(WaveAnim());
-            yield return new WaitForSeconds(3);
-            wave(0, Random.Range(0, spawnPoints.Length));
-            yield return new WaitUntil(() => ScoreSetup.killCount == 1);
-            waveValue = 1;
-            maxValue = 2;
-            StartCoroutine(WaveManager());
-        }
-    }
-
     IEnumerator WaveSetup()
     {
-        for (int i = 1; i < maxValue; i++)
+        for (int i = 0; i < maxValue; i++)
         {
             wave(Random.Range(0, enemyPrefabs.Length), Random.Range(0, spawnPoints.Length));
             yield return new WaitForSeconds(1);
         }
     }
 
-    IEnumerator WaveManager()
+    IEnumerator LateGame()
     {
         while (true)
         {
-            if(waveNumber >= stage)
-            {
-                maxValue = stage;
-            }
-
             StartCoroutine(WaveAnim());
             yield return new WaitForSeconds(3);
-            var killNeeded = ScoreSetup.killCount + maxValue;
+            var killCap = ScoreSetup.killCount + maxValue;
             StartCoroutine(WaveSetup());
-            maxValue += 1;
-            yield return new WaitUntil(() => ScoreSetup.killCount == killNeeded);
+            yield return new WaitUntil(() => ScoreSetup.killCount == killCap);
         }
-    }*/
+    }
 
     IEnumerator WavesLauncher()
     {
