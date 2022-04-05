@@ -114,7 +114,7 @@ public class BossMovement : MonoBehaviour
     void Die()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        randomSpawner.stage += 2;
+        randomSpawner.lateGameInstantiate();
         bossSpawner.bossSpawned = false;
         Destroy(GetComponent<BossMovement>());
         gameOverUI.SetActive(true);
