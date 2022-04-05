@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -15,9 +16,16 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash")]
     private float dashCooldownTime;
     private bool dashReady;
+    public TextMeshProUGUI textCooldownDash;
+
+    [Header("DashImage")]
+    public Image dashImage;
 
     public Animator animator;
-    
+    private PauseResume _pauseResume;
+
+    private Vector2 lastMovement;
+
     private Controllers playerInput; // recupere le Input Action, attention au nom
     private Vector2 movement;
     private Rigidbody2D rb;
@@ -27,47 +35,76 @@ public class PlayerMovement : MonoBehaviour
     {
         return playerList;
     }
-    
+
     void Awake()
     {
+        _pauseResume = FindObjectOfType<PauseResume>();
         datap = Instantiate(datap);
 
         dashReady = true;
-        
+
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
+
+        lastMovement = new Vector2(0, 1);
+    }
+
+    void Update()
+    {
+        if (movement != Vector2.zero)
+        {
+            lastMovement = movement;
+        }
     }
 
     #region DashRegion
     public void OnDashR(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            if (dashReady == false)
-            {
-                return;
-            }
-            dashReady = false;
-            StartCoroutine(DashCooldown());
-            Debug.Log("DASH");
-            rb.AddForce(movement * datap.currentSpeedDash);
+            Dash();
+            return;
         }
+        else
+        {
+            return;
+        }
+    }
+
+    public void Dash()
+    {
+        if (dashReady == false)
+        {
+            return;
+        }
+        dashReady = false;
+        StartCoroutine(DashCooldown());
+        rb.AddForce(lastMovement * datap.currentSpeedDash);
     }
 
     public IEnumerator DashCooldown()
     {
         dashCooldownTime = datap.currentDashCooldown;
+        dashImage.fillAmount = 0;
         
         while (dashCooldownTime > 0)
         {
+            textCooldownDash.fontSize = 32;
+            textCooldownDash.text = dashCooldownTime.ToString("0");
+            dashImage.fillAmount += 1 / datap.currentDashCooldown;
             dashCooldownTime -= 1;
             if (dashCooldownTime <= 0)
             {
                 dashReady = true;
+                textCooldownDash.fontSize = 14;
+                textCooldownDash.text = "SHIFT";
+                dashImage.fillAmount = 1;
             }
             else
             {
+                textCooldownDash.fontSize = 32;
+                textCooldownDash.text = dashCooldownTime.ToString("0");
                 yield return new WaitForSeconds(1);
             }
         }

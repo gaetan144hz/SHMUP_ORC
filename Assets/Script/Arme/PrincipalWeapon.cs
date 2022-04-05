@@ -24,6 +24,9 @@ public class PrincipalWeapon : MonoBehaviour
     [Header("SpellImage")]
     public Image spellImage;
 
+    [Header("AutoAttackImage")]
+    public Image autoImage;
+
     [Header("BulletColdown")]
     private float cooldownTime;
     private bool spellReady;
@@ -67,15 +70,23 @@ public class PrincipalWeapon : MonoBehaviour
         else
         {
             shootBool = false;
+            autoImage.fillAmount = 1;
             return;
         }
     }
 
     public IEnumerator autoShoot()
     {
+        autoImage.fillAmount = 0;
+
         while (shootBool == true)
         {
             Shoot();
+            autoImage.fillAmount += 0.2f;
+            if (autoImage.fillAmount >= 1)
+            {
+                autoImage.fillAmount = 0f;
+            }
             yield return new WaitForSeconds(autoFireRate);
         }
     }
