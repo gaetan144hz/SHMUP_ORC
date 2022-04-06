@@ -36,8 +36,7 @@ public class BulletMovement : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(enData.patternBulletDamage);
-            CameraShake.Instance.shakeCamera(0.7f, 0.1f);
-            //StartCoroutine(rumble());
+            CameraShake.Instance.shakeCamera(0.7f, 1f);
             hitSpawn();
             Destroy(gameObject);
         }

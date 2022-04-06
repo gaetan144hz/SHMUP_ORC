@@ -15,8 +15,8 @@ MonoBehaviour:
   speed: 10
   startSpeed: 10
   maxSpeed: 15
-  currentSpeedDash: 2000
-  startSpeedDash: 2000
+  currentSpeedDash: 10000
+  startSpeedDash: 10000
   startDashCooldown: 2
   currentDashCooldown: 2
   startHealth: 250
