@@ -10,14 +10,13 @@ public class fire : MonoBehaviour
 
     [SerializeField] private int timeToDestroy;
 
-    public GameObject target;
-
     [SerializeField] public int fireIncrease;
     private int fireMultiply;
     [SerializeField] private int multiplicator;
     Coroutine coroutineFire;
 
     private Rigidbody2D rb;
+    [SerializeField] private float speed;
 
     private void Start()
     {
@@ -25,8 +24,8 @@ public class fire : MonoBehaviour
         
         rb = GetComponent<Rigidbody2D>();
 
-        target = GameObject.FindGameObjectWithTag("Player");
         rb.gravityScale = 0;
+        rb.velocity = transform.right * speed;
 
         Destroy(this.gameObject,timeToDestroy);
     }

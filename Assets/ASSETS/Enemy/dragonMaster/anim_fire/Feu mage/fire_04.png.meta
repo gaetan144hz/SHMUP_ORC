@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 392ae8c210a7afd4396eb080e440aedf
+guid: ed98d76c686fc6243a44a98c26f57ef8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4745287646398373363
+    second: fire_04_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -44,10 +47,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.47578877, y: 0.5327363}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 1037, y: 832, z: 1155, w: 723}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -91,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Illustration_sans_titre-4_0
+      name: fire_04_0
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 826
-        width: 205
-        height: 119
+        x: 851
+        y: 12
+        width: 736
+        height: 1656
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b25e9ccb0898ab900800000000000000
-      internalID: 701023878025700651
+      spriteID: 3fddf9809f5aad140800000000000000
+      internalID: 4745287646398373363
       vertices: []
       indices: 
       edges: []
