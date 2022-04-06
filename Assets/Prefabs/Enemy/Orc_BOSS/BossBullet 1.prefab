@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 6924478342059470165}
   - component: {fileID: 6924478342059470166}
   - component: {fileID: 2274381739262179628}
-  - component: {fileID: 5930046989322185947}
   - component: {fileID: 437912124206334990}
   - component: {fileID: 1484163296184619106}
-  - component: {fileID: 6613090291719808518}
+  - component: {fileID: 2943670780831304434}
   - component: {fileID: -3269290461090295025}
   m_Layer: 0
   m_Name: BossBullet 1
@@ -77,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.09638786, a: 1}
+  m_Sprite: {fileID: -5416818847749009384, guid: cb143fa03b7000e4e892824568345aec, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.09803915, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,23 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enData: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
-  bulletDamage: 5
   hitPrefab: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
   lastHit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
   rb: {fileID: 1484163296184619106}
---- !u!114 &5930046989322185947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6924478342059470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e3b74177a00e54ba82614a53da45d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellDamage: 25
 --- !u!114 &437912124206334990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +136,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6613090291719808518
-CircleCollider2D:
+--- !u!60 &2943670780831304434
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,8 +150,29 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.9949996, y: 1.6930767}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.0619564, y: -0.34625626}
+      - {x: -0.65512085, y: -0.49411774}
+      - {x: 0.1579113, y: -0.5595951}
+      - {x: 0.71974087, y: -0.3844986}
+      - {x: 0.5576687, y: -0.19156265}
+      - {x: 0.60581875, y: -0.030723572}
+      - {x: 0.4793749, y: 0.38893318}
+      - {x: 0.32831383, y: 0.44503784}
+      - {x: 0.22866535, y: 0.6899414}
+      - {x: -0.15985227, y: 0.8547322}
+      - {x: -0.7611294, y: 0.5955334}
+      - {x: -1.2067194, y: -0.15668297}
 --- !u!96 &-3269290461090295025
 TrailRenderer:
   serializedVersion: 2

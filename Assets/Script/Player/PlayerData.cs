@@ -25,8 +25,6 @@ public class PlayerData : ScriptableObject
     [Header("Player Movement")]
     [HideInInspector] public float speed;
     public float startSpeed;
-    [HideInInspector] public float acceleration;
-    public float startAcceleration;
     public float maxSpeed;
 
     [Header("Dash")] 

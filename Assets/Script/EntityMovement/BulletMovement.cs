@@ -9,7 +9,7 @@ public class BulletMovement : MonoBehaviour
     [Header("Data")]
     public EnemyData enData;
 
-    [SerializeField] private int bulletDamage;
+    //[SerializeField] private int bulletDamage;
 
     [Header("FX")]
     public GameObject hitPrefab;
@@ -35,7 +35,7 @@ public class BulletMovement : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(bulletDamage);
+            playerHealth.TakeDamage(enData.patternBulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 0.1f);
             //StartCoroutine(rumble());
             hitSpawn();

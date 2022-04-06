@@ -390,8 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dbcb61e5dc7304e958ff7c6d24bd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4ed3baa12e30a2a498356a22c3639c2f, type: 2}
   bullet:
-  - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
+  - {fileID: 3435794395951778832, guid: 845a315e0f9489f4fb9386247a1d7c7d, type: 3}
   firePoint:
   - {fileID: 5337596343538181867}
   - {fileID: 7129776354717484488}

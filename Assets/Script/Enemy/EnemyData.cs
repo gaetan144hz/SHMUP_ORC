@@ -10,10 +10,14 @@ public class EnemyData : ScriptableObject
         bulletSpeed = startBulletSpeed;
         bulletDamage = startBulletDamage;
 
+        patternBulletDamage = startPatternBulletDamage;
+
         spellDamage = startSpellDamage;
         spellSpeed = startSpellSpeed;
 
         currentSpeedMovement = startSpeedMovement;
+        
+        currentPatternFireRate = startPatternFireRate;
     }
 
     [Header("Enemy Information")]
@@ -38,6 +42,8 @@ public class EnemyData : ScriptableObject
     [Header("Bullet Damage")]
     [HideInInspector] public int bulletDamage;
     public int startBulletDamage;
+    public int patternBulletDamage;
+    public int startPatternBulletDamage;
 
     [Header("Spell Speed")]
     [HideInInspector] public float spellSpeed;
@@ -47,8 +53,10 @@ public class EnemyData : ScriptableObject
     [HideInInspector] public int spellDamage;
     public int startSpellDamage;
 
-    [Space(5)]
+    [Header("FireRate")]
     public float fireRate;
+    public float currentPatternFireRate;
+    public float startPatternFireRate;
 
     [Header("Only for Mage")]
     public int healIncrease;
