@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -44,30 +46,22 @@ public class EnemyBullet : MonoBehaviour
         {
             playerHealth.TakeDamage(data.bulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 0.1f);
-            //StartCoroutine(rumble());
-            hitSpawn();
-            Destroy(gameObject);
+            fxHit();
+            Destroy(this.gameObject);
         }
         if (hitInfo.gameObject.tag == "skybarriere")
         {
-            hitSpawn();
+            fxHit();
             Destroy(this.gameObject);
         }
         if (hitInfo.gameObject.tag == "plateforme")
         {
-            hitSpawn();
+            fxHit();
             Destroy(this.gameObject);
         }
     }
-    
-    public IEnumerator rumble()
-    {
-        Gamepad.current.SetMotorSpeeds(0.25f, 0.55f);
-        yield return new WaitForSeconds(1);
-        Gamepad.current.SetMotorSpeeds(0,0);
-    }
 
-    public void hitSpawn()
+    public void fxHit()
     {
         lastHit = Instantiate(hitPrefab, transform.position, Quaternion.identity);
         Destroy(lastHit, 1f);

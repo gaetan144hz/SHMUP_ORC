@@ -51,7 +51,6 @@ public class EnemyFollowPlayer : MonoBehaviour
         healthBar.SetMaxHealth(data.currentHealth);
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthBar.SetHealth(data.currentHealth);

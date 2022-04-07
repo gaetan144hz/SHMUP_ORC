@@ -894,7 +894,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &834734370
+--- !u!43 &863860838
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1659,8 +1659,8 @@ MonoBehaviour:
   - {x: 0.49260402, y: 0.48869982, z: 0}
   - {x: -0.48445886, y: 0.488685, z: 0}
   m_ShapePathHash: -538132850
-  m_Mesh: {fileID: 834734370}
-  m_InstanceId: 102764
+  m_Mesh: {fileID: 863860838}
+  m_InstanceId: 21422
 --- !u!96 &1841580640
 TrailRenderer:
   serializedVersion: 2
@@ -1842,7 +1842,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: e6b9b44320f4448d9d5e0ee634259966, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
