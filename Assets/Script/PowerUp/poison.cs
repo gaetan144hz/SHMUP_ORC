@@ -31,7 +31,7 @@ public class poison : MonoBehaviour
 
         if (hit.tag == "Player")
         {
-            Gamepad.current.SetMotorSpeeds(1f,1f);
+            //Gamepad.current.SetMotorSpeeds(1f,1f);
             StartCoroutine(MakePoison());
         }
     }
@@ -42,9 +42,8 @@ public class poison : MonoBehaviour
         if(coroutinePoison != null)
         {
             StopCoroutine(coroutinePoison);
-            Gamepad.current.SetMotorSpeeds(0f,0f);
-
-        } 
+            //Gamepad.current.SetMotorSpeeds(0f,0f);
+        }
     }
 
     

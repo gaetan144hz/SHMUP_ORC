@@ -37,7 +37,7 @@ public class slime : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {            
-            Gamepad.current.SetMotorSpeeds(0.5f,0.5f);
+            //Gamepad.current.SetMotorSpeeds(0.5f,0.5f);
             obj.transform.rotation = Quaternion.Euler(0, 0, rotaZ);
         }
     }
@@ -47,7 +47,8 @@ public class slime : MonoBehaviour
         if(obj.gameObject.tag == "Player")
         {
             obj.transform.rotation = Quaternion.Euler(0, 0, 0);
-            Gamepad.current.SetMotorSpeeds(0f,0f);
+            //Gamepad.current.SetMotorSpeeds(0f,0f);
         }
+
     }
 }
