@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Controllers playerInput; // recupere le Input Action, attention au nom
     private Vector2 movement;
+    private Vector2 lastMovement;
     private Rigidbody2D rb;
     
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
+        lastMovement = Vector2.up;
     }
 
     #region DashRegion
@@ -69,8 +71,9 @@ public class PlayerMovement : MonoBehaviour
             shield.SetActive(true);
             dashReady = false;
             StartCoroutine(DashCooldown());
-            rb.AddForce(movement * datap.currentSpeedDash, ForceMode2D.Impulse);
+            rb.AddForce(lastMovement * datap.currentSpeedDash, ForceMode2D.Impulse);
             yield return new WaitForSeconds(0.5f);
+            rb.velocity = Vector2.zero;
             shield.SetActive(false);
         }
     }
@@ -110,7 +113,12 @@ public class PlayerMovement : MonoBehaviour
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         //Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
         movement = value.Get<Vector2>();
-        
+
+        if (movement != Vector2.zero)
+        {
+            lastMovement = movement; 
+        }
+
         bool isIdle = movement.x == 0 && movement.y == 0;
         if (isIdle)
         {
