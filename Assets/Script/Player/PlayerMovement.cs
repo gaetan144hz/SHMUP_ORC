@@ -16,18 +16,23 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash")]
     private float dashCooldownTime;
     private bool dashReady;
+    private float doubleTapTime;
     public TextMeshProUGUI textCooldownDash;
 
     [Header("DashImage")]
     public Image dashImage;
+    public GameObject RcButton;
+
+
+    [Header("Shied")]
+    public GameObject shield;
 
     public Animator animator;
     private PauseResume _pauseResume;
 
-    private Vector2 lastMovement;
-
     private Controllers playerInput; // recupere le Input Action, attention au nom
     private Vector2 movement;
+    private Vector2 lastMovement;
     private Rigidbody2D rb;
     
     public static List<PlayerMovement> playerList = new List<PlayerMovement>();
@@ -46,16 +51,7 @@ public class PlayerMovement : MonoBehaviour
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
-
-        lastMovement = new Vector2(0, 1);
-    }
-
-    void Update()
-    {
-        if (movement != Vector2.zero)
-        {
-            lastMovement = movement;
-        }
+        lastMovement = Vector2.up;
     }
 
     #region DashRegion
@@ -63,24 +59,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            Dash();
-            return;
-        }
-        else
-        {
+            StartCoroutine(Dash());
             return;
         }
     }
 
-    public void Dash()
+    public IEnumerator Dash()
     {
-        if (dashReady == false)
+        if (dashReady == true)
         {
-            return;
+            shield.SetActive(true);
+            dashReady = false;
+            StartCoroutine(DashCooldown());
+            rb.AddForce(lastMovement * datap.currentSpeedDash, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(0.5f);
+            rb.velocity = Vector2.zero;
+            shield.SetActive(false);
         }
-        dashReady = false;
-        StartCoroutine(DashCooldown());
-        rb.AddForce(lastMovement * datap.currentSpeedDash);
     }
 
     public IEnumerator DashCooldown()
@@ -90,20 +85,19 @@ public class PlayerMovement : MonoBehaviour
         
         while (dashCooldownTime > 0)
         {
-            textCooldownDash.fontSize = 32;
             textCooldownDash.text = dashCooldownTime.ToString("0");
             dashImage.fillAmount += 1 / datap.currentDashCooldown;
             dashCooldownTime -= 1;
             if (dashCooldownTime <= 0)
             {
                 dashReady = true;
-                textCooldownDash.fontSize = 14;
-                textCooldownDash.text = "SHIFT";
+                textCooldownDash.text = " ";
+                RcButton.SetActive(true);
                 dashImage.fillAmount = 1;
             }
             else
             {
-                textCooldownDash.fontSize = 32;
+                RcButton.SetActive(false);
                 textCooldownDash.text = dashCooldownTime.ToString("0");
                 yield return new WaitForSeconds(1);
             }
@@ -118,9 +112,13 @@ public class PlayerMovement : MonoBehaviour
     {
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         //Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
-
         movement = value.Get<Vector2>();
-        
+
+        if (movement != Vector2.zero)
+        {
+            lastMovement = movement; 
+        }
+
         bool isIdle = movement.x == 0 && movement.y == 0;
         if (isIdle)
         {

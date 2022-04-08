@@ -17,19 +17,19 @@ MonoBehaviour:
   acceleration: 0
   startAcceleration: 40
   maxSpeed: 15
-  currentSpeedDash: 2000
-  startSpeedDash: 2000
-  startDashCooldown: 2
-  currentDashCooldown: 2
+  currentSpeedDash: 50
+  startSpeedDash: 50
+  startDashCooldown: 5
+  currentDashCooldown: 5
   startHealth: 250
-  currentHealth: -10
-  bulletDamage: 5
+  currentHealth: -15
+  bulletDamage: 7
   startBulletDamage: 5
-  bulletSpeed: 20
+  bulletSpeed: 21
   startBulletSpeed: 20
   currentCooldown: 8
   startCooldown: 8
-  spellDamage: 105
+  spellDamage: 110
   startSpellDamage: 100
   spellSpeed: 35
   startSpellSpeed: 33
