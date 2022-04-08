@@ -531,6 +531,7 @@ MonoBehaviour:
   explosion: {fileID: 7561791552984474656, guid: 6825e96a568838446835e603531f330e, type: 3}
   enemyBullet: {fileID: 7765959782366688196, guid: 0b838cff6ecf4aa489112c891d089f48, type: 3}
   bulletParent: {fileID: 9114618523032691210}
+  deathAudioSource: {fileID: 0}
   playerList: []
 --- !u!114 &1582200558016408917
 MonoBehaviour:
@@ -558,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2145a6ccac79e7d40b29074bd6852dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 5190a1deb2057a94bbf67761263f4569, type: 2}
+  data: {fileID: 11400000, guid: 12b1bc461e19ea740a50ab0d2eec9c00, type: 2}
   rangeRight: 6
   rangeLeft: -6
 --- !u!50 &9114618521634652636

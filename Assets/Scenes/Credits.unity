@@ -523,10 +523,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\nEquipe JV1 : Ga\xE9tan Dumas et Quentin Pavie\n\nAnimA : Florian ANDRE-JOCHEMCZAK
-    , Maxime ENJOMMET, Enzo DOS SANTOS, Maximilien NICOLAS\n\nAnimB : Hector DE GHAISNE
-    DE BOURMONT, Nemo LEEUWENBURG, Tristan LAVALLEE-LUMINET\n\nMerci \xE0 : Flore,
-    Jonathan, Zabo, Camille et Alexandre "
+  m_text: "\n\nEquipe JV1 : Ga\xE9tan Dumas et Quentin Pavie\n\nAnimA : Florian ANDRE-JOCHEMCZAK,
+    Enzo DOS SANTOS , Maxime ENJOMMET, Maximilien NICOLAS\n\nAnimB : Hector DE GHAISNE
+    DE BOURMONT,Tristan LAVALLEE-LUMINET, Nemo LEEUWENBURG, \n\nMerci \xE0 : Flore,
+    Jonathan, Zaboo, Camille et Alexandre "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}
   m_sharedMaterial: {fileID: -3776091077442967996, guid: 96d3a55eb9c74144587738cfed8a1d59, type: 2}

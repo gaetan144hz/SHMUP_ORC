@@ -20,15 +20,19 @@ MonoBehaviour:
   startSpeedMovement: 0.3
   currentHealth: 200
   startHealth: 200
-  bulletSpeed: 2
-  startBulletSpeed: 2
+  bulletSpeed: 7
+  startBulletSpeed: 10
   bulletDamage: 15
   startBulletDamage: 15
+  patternBulletDamage: 0
+  startPatternBulletDamage: 0
   spellSpeed: 0
   startSpellSpeed: 0
   spellDamage: 0
   startSpellDamage: 0
-  fireRate: 2
+  fireRate: 3
+  currentPatternFireRate: 0.5
+  startPatternFireRate: 0.5
   healIncrease: 0
   range: 0
   shootingRange: 20

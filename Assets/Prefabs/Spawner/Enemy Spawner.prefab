@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: merci flore t la boss <3
   waveNumber: 0
-  stage: 0
+  maxValue: 0
   waves:
   - enemies:
     - {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
@@ -93,7 +93,7 @@ MonoBehaviour:
   - enemies:
     - {fileID: 2647647482063053804, guid: 5deba7d5959471f49b640a6954ab2311, type: 3}
     - {fileID: 2647647482063053804, guid: 5deba7d5959471f49b640a6954ab2311, type: 3}
-    - {fileID: 9114618521634652638, guid: 2b8b9b835f2edda43a33bfc66365c608, type: 3}
+    - {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}
     - {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
   - enemies:
     - {fileID: 8745041235676749273, guid: 108a936b28f001a4d9d2227acbc77ed4, type: 3}

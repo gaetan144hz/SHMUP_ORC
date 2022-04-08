@@ -32,6 +32,7 @@ public class BossSpell : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(data.spellDamage);
+            CameraShake.Instance.shakeCamera(0.7f, 1f);
             hitSpawn();
             Destroy(gameObject);
         }
