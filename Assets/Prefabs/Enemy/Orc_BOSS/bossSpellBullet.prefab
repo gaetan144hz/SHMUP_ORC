@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8648771640050673117}
   - component: {fileID: 6906674632690530849}
   - component: {fileID: -6279277110797956836}
+  - component: {fileID: -7489117869661824393}
   m_Layer: 0
   m_Name: bossSpellBullet
   m_TagString: Untagged
@@ -281,3 +282,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-7489117869661824393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648771640050673107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4033d7f1f627880468014164d1a97b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotaZ: 0
+  rotationSpeed: 50
+  ClockwiseRoation: 0

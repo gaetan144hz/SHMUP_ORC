@@ -7,7 +7,7 @@ public class SlideEnemyMovement : MonoBehaviour
     [Header("EnemyData")]
     public EnemyData data;
 
-    private bool moveRight;
+    public bool moveRight;
 
     [Header("Range")]
     [SerializeField] private float rangeRight;
