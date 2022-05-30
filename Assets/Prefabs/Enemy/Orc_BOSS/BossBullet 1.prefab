@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1484163296184619106}
   - component: {fileID: 2943670780831304434}
   - component: {fileID: -3269290461090295025}
+  - component: {fileID: -7682266141148374877}
   m_Layer: 0
   m_Name: BossBullet 1
   m_TagString: Untagged
@@ -280,3 +281,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-7682266141148374877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924478342059470160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4033d7f1f627880468014164d1a97b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotaZ: 0
+  rotationSpeed: 65
+  ClockwiseRoation: 0
