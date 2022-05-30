@@ -596,8 +596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 2a19aae0c9012134487ef61fd8a8e61d, type: 2}
-  rangeRight: 20
-  rangeLeft: -20
+  rangeRight: 12
+  rangeLeft: -12
 --- !u!114 &809613616533340539
 MonoBehaviour:
   m_ObjectHideFlags: 0

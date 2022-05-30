@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 5236579111389598164}
   - component: {fileID: 6244103163788977793}
   - component: {fileID: 3048030552276065324}
+  - component: {fileID: 7579104561041763960}
   m_Layer: 0
   m_Name: Ingenieur
   m_TagString: Enemy
@@ -586,6 +587,7 @@ MonoBehaviour:
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
   enemyBullet: {fileID: 7592566264066918321, guid: a8359f3a04cd0624a8450d28951d1958, type: 3}
   bulletParent: {fileID: 6244103164689674612}
+  deathAudioSource: {fileID: 0}
   playerList: []
 --- !u!114 &3048030552276065324
 MonoBehaviour:
@@ -602,6 +604,21 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 588074bb03731e64391d4ac03dee0f10, type: 2}
   rangeRight: 13
   rangeLeft: -13
+--- !u!114 &7579104561041763960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244103163788977798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7ea992d243cf84d9b4ba56b9b2d25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 1
+  inverted: 0
 --- !u!1 &6244103164689674613
 GameObject:
   m_ObjectHideFlags: 0

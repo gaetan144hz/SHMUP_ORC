@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatternBehavior : MonoBehaviour
 {
+    public EnemyData data;
+    
     public GameObject[] bullet;
 
     public Transform[] firePoint;
@@ -26,7 +28,7 @@ public class PatternBehavior : MonoBehaviour
             {
                 shoot(bullet[0], firePoints);
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(data.currentPatternFireRate);
         }
     }
     

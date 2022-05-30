@@ -1,5 +1,8 @@
 using System;
+using System.Collections;
+using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,7 +26,27 @@ public class PlayerHealth : MonoBehaviour
     {
         healthBar.SetHealth(datap.currentHealth);
     }
+    
+    #region MyRegion
+    public void playRumble()
+    { 
+        Gamepad.current.SetMotorSpeeds(0.5f,0.5f);
+        Debug.Log("waiting.....");
+        new WaitForSeconds(0.5f);
+        Debug.Log("after wait");
+        stopRumble();
+        Debug.Log("STOP");
+    }
 
+    public void stopRumble()
+    {
+        Gamepad.current.SetMotorSpeeds(0f,0f);
+        Gamepad.current.ResetHaptics();
+        Debug.Log("STOP");
+    }
+
+    #endregion
+    
     public void TakeDamage(int ennemyDamage)
     {
         datap.currentHealth -= ennemyDamage;

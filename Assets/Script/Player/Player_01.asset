@@ -14,22 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   startSpeed: 10
-  acceleration: 0
-  startAcceleration: 40
   maxSpeed: 15
-  currentSpeedDash: 50
-  startSpeedDash: 50
+  currentSpeedDash: 2500
+  startSpeedDash: 2500
   startDashCooldown: 5
-  currentDashCooldown: 5
+  currentDashCooldown: 2
   startHealth: 250
-  currentHealth: -15
-  bulletDamage: 7
+  currentHealth: -5
+  bulletDamage: 6
   startBulletDamage: 5
-  bulletSpeed: 21
+  bulletSpeed: 20
   startBulletSpeed: 20
-  currentCooldown: 8
+  currentCooldown: 7
   startCooldown: 8
-  spellDamage: 110
+  spellDamage: 105
   startSpellDamage: 100
   spellSpeed: 35
   startSpellSpeed: 33

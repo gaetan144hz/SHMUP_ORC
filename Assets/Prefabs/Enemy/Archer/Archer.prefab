@@ -291,8 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dbcb61e5dc7304e958ff7c6d24bd79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
   bullet:
-  - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}
+  - {fileID: 5123764742128960648, guid: 68353553fdc1bd748bcc3c5500db1a4b, type: 3}
   firePoint:
   - {fileID: 7264979840468115238}
   - {fileID: 8886798364995366898}
@@ -310,8 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 58a8bee8daff7704192aee5601707525, type: 2}
-  rangeRight: 4
-  rangeLeft: -4
+  rangeRight: 12
+  rangeLeft: -12
 --- !u!50 &2647647482063053801
 Rigidbody2D:
   serializedVersion: 4

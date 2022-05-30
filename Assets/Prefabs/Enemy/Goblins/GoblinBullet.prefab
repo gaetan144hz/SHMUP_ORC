@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1360870432897407592}
   - component: {fileID: 8352712492236754817}
   - component: {fileID: 6239927486092902813}
-  - component: {fileID: -7799216508797029388}
+  - component: {fileID: 2503357900073998803}
   - component: {fileID: -4684867899690753351}
   m_Layer: 0
   m_Name: GoblinBullet
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -5416818847749009384, guid: cb143fa03b7000e4e892824568345aec, type: 3}
   m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,8 +123,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &-7799216508797029388
-CircleCollider2D:
+--- !u!60 &2503357900073998803
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,8 +137,29 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.9949996, y: 1.6930767}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5688882, y: -0.22406578}
+      - {x: 0.5922103, y: -0.015306473}
+      - {x: 0.47102928, y: 0.38512468}
+      - {x: 0.3327465, y: 0.44893265}
+      - {x: 0.2305007, y: 0.6842017}
+      - {x: -0.15755796, y: 0.8437644}
+      - {x: -0.76857173, y: 0.574598}
+      - {x: -1.2160873, y: -0.16576767}
+      - {x: -1.0709071, y: -0.35770893}
+      - {x: -0.6121063, y: -0.5124855}
+      - {x: 0.16098976, y: -0.55650234}
+      - {x: 0.7256916, y: -0.38466418}
 --- !u!96 &-4684867899690753351
 TrailRenderer:
   serializedVersion: 2
@@ -311,7 +332,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.09945257, g: 0.6226415, b: 0, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
