@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class fire : MonoBehaviour
 {
-    private PlayerData datap;
+    public PlayerData datap;
     private PlayerHealth playerHealth;
 
     [SerializeField] private int timeToDestroy;
@@ -30,13 +30,13 @@ public class fire : MonoBehaviour
         Destroy(this.gameObject,timeToDestroy);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         playerHealth = collision.transform.GetComponent<PlayerHealth>();
 
         if (collision.tag == "Player")
         {
-            coroutineFire = StartCoroutine(MakeFire());           
+            StartCoroutine(MakeFire());
         }
     }
 
@@ -50,12 +50,14 @@ public class fire : MonoBehaviour
 
     IEnumerator MakeFire()
     {
+        playerHealth = transform.GetComponent<PlayerHealth>();
+        
         while (true)
         {
-            //datap.currentHealth -= fireIncrease;
-            var firemultiply = fireIncrease * multiplicator;
-            playerHealth.TakeDamage(firemultiply);
-            yield return new WaitForSeconds(1);   
+            //var firemultiply = fireIncrease * multiplicator;
+            datap.currentHealth -= fireIncrease;
+            playerHealth.TakeDamage(fireIncrease);
+            yield return new WaitForSeconds(2);   
         }
     }
 }

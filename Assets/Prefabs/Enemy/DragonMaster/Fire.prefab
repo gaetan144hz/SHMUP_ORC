@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8608233570520217286}
   - component: {fileID: 8608233570520217285}
-  - component: {fileID: 8608233570520217284}
+  - component: {fileID: 7616573542023619045}
   - component: {fileID: 8127322634111511211}
   - component: {fileID: 8608233570520217307}
   - component: {fileID: 4678597780790909301}
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8608233570520217284
+--- !u!114 &7616573542023619045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,13 +169,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8608233570520217305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f98ba356542d784db9a38b83dd40d9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 928a0cb5af0337e4ea956574986324d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   timeToDestroy: 10
-  fireIncrease: 1
-  multiplicator: 2
-  speed: 0
+  poisonIncrease: 0.1
 --- !u!114 &8127322634111511211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,15 +237,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.14310575, y: -0.77241004}
-      - {x: -0.02048409, y: -0.79655266}
-      - {x: 0.16793323, y: -0.68576527}
-      - {x: 0.35920954, y: -0.1420703}
-      - {x: 0.28365827, y: 0.66496277}
+    - - {x: -0.4976052, y: -1.0350024}
+      - {x: 0.46531117, y: -1.0591445}
+      - {x: 0.9557096, y: -0.83019114}
+      - {x: 1.3833187, y: -0.26023674}
+      - {x: 1.3471563, y: 0.6780925}
       - {x: 0.01797086, y: 0.8387461}
-      - {x: -0.21417987, y: 0.72601414}
-      - {x: -0.30264354, y: 0.35063553}
-      - {x: -0.30993086, y: -0.54931426}
+      - {x: -0.34547603, y: 0.988606}
+      - {x: -0.814698, y: 0.62635756}
+      - {x: -1.3471696, y: -0.85129476}
 --- !u!1 &8631939464756563106
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,8 +34,8 @@ public class PlayerData : ScriptableObject
     public float currentDashCooldown;
 
     [Header("Health")]
-    public int startHealth;
-    public int currentHealth;
+    public float startHealth;
+    public float currentHealth;
 
     [Header("Bullet Settings")]
     public int bulletDamage;

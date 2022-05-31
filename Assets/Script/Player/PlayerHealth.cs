@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
 
     #endregion
     
-    public void TakeDamage(int ennemyDamage)
+    public void TakeDamage(float ennemyDamage)
     {
         datap.currentHealth -= ennemyDamage;
         healthBar.SetHealth(datap.currentHealth);

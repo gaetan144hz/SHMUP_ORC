@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: a3dacaec0287d7444b4bd276816e1666, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
+  m_AmplitudeGain: 2.5
   m_FrequencyGain: 1
   mNoiseOffsets: {x: -958.10034, y: 973.9092, z: -340.82303}
 --- !u!1 &590210911
@@ -1631,8 +1631,8 @@ MonoBehaviour:
   - {x: 0.49260402, y: 0.48869982, z: 0}
   - {x: -0.48445886, y: 0.488685, z: 0}
   m_ShapePathHash: -538132850
-  m_Mesh: {fileID: 1424535719}
-  m_InstanceId: 36948
+  m_Mesh: {fileID: 1432137853}
+  m_InstanceId: 72360
 --- !u!1 &1246413426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 629632058790392492, guid: 3101bec034c2d1f478b71121a01aa735, type: 3}
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!43 &1424535719
+--- !u!43 &1432137853
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

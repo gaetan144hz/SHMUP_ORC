@@ -30,7 +30,7 @@ MonoBehaviour:
   startSpellSpeed: 0
   spellDamage: 0
   startSpellDamage: 0
-  fireRate: 15
+  fireRate: 7
   currentPatternFireRate: 0
   startPatternFireRate: 0
   healIncrease: 0
