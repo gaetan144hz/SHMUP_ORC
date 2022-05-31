@@ -335,5 +335,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotaZ: 0
-  rotationSpeed: 100
+  rotationSpeed: 500
   ClockwiseRoation: 0
