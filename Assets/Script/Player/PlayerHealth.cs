@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject explosion;
 
-    public HealthBar healthBar;
+    public HealthCounter healthBar;
 
     private GameOver gameOver;
 
