@@ -19,6 +19,11 @@ public class BossMovement : MonoBehaviour
     [Header("FX")]
     public GameObject explosion;
 
+    [Header("Cooldown")] 
+    public float Pattern1;
+    public float Pattern2;
+    public float Pattern3;
+
     private Transform player;
     
     public GameObject[] bullet;
@@ -67,7 +72,7 @@ public class BossMovement : MonoBehaviour
             shoot(bullet[0],firePoint[5]);
             shoot(bullet[0],firePoint[6]);
             shoot(bullet[0],firePoint[7]);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(Pattern1);
         }
     }
     
@@ -79,7 +84,7 @@ public class BossMovement : MonoBehaviour
             shoot(bullet[1],firePoint[8]);
             shoot(bullet[1],firePoint[9]);
             shoot(bullet[1],firePoint[10]);
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(Pattern2);
         }
     }
 
@@ -88,7 +93,7 @@ public class BossMovement : MonoBehaviour
         while (true)
         {
             shoot(bullet[2],firePoint[2]);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(Pattern3);
         }
     }
     
