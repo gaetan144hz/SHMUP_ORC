@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotaZ: 0
-  rotationSpeed: 150
+  rotationSpeed: 1000
   ClockwiseRoation: 0
 --- !u!1 &7402221705158830333
 GameObject:

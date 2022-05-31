@@ -24,11 +24,15 @@ MonoBehaviour:
   startBulletSpeed: 3
   bulletDamage: 5
   startBulletDamage: 5
+  patternBulletDamage: 0
+  startPatternBulletDamage: 0
   spellSpeed: 0
   startSpellSpeed: 0
   spellDamage: 0
   startSpellDamage: 0
-  fireRate: 1.2
+  fireRate: 1.5
+  currentPatternFireRate: 0
+  startPatternFireRate: 0
   healIncrease: 0
   range: 20
   shootingRange: 20

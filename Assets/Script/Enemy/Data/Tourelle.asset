@@ -22,7 +22,7 @@ MonoBehaviour:
   startHealth: 70
   bulletSpeed: 4
   startBulletSpeed: 4
-  bulletDamage: 1
+  bulletDamage: 3
   startBulletDamage: 3
   patternBulletDamage: 0
   startPatternBulletDamage: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   startSpellSpeed: 0
   spellDamage: 0
   startSpellDamage: 0
-  fireRate: 0.3
+  fireRate: 0.5
   currentPatternFireRate: 0
   startPatternFireRate: 0
   healIncrease: 0

@@ -11,7 +11,7 @@ public class poison : MonoBehaviour
 
     [SerializeField] private int timeToDestroy;
 
-    [SerializeField] public int poisonIncrease;
+    [SerializeField] public float poisonIncrease;
 
     Coroutine coroutinePoison ;
 
