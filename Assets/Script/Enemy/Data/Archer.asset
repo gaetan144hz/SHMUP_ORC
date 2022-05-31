@@ -24,7 +24,7 @@ MonoBehaviour:
   startBulletSpeed: 5
   bulletDamage: 2
   startBulletDamage: 2
-  patternBulletDamage: 0
+  patternBulletDamage: 3
   startPatternBulletDamage: 0
   spellSpeed: 0
   startSpellSpeed: 0
