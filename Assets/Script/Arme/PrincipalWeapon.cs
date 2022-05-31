@@ -18,14 +18,8 @@ public class PrincipalWeapon : MonoBehaviour
 
     private PauseResume _pauseResume;
 
-    [Header("TextCooldown")]
-    public TextMeshProUGUI textCooldown;
-
     [Header("SpellImage")]
     public Image spellImage;
-
-    [Header("AutoAttackImage")]
-    public Image autoImage;
 
     [Header("BulletColdown")]
     private float cooldownTime;
@@ -70,23 +64,15 @@ public class PrincipalWeapon : MonoBehaviour
         else
         {
             shootBool = false;
-            autoImage.fillAmount = 1;
             return;
         }
     }
 
     public IEnumerator autoShoot()
     {
-        autoImage.fillAmount = 0;
-
         while (shootBool == true)
         {
             Shoot();
-            autoImage.fillAmount += 0.2f;
-            if (autoImage.fillAmount >= 1)
-            {
-                autoImage.fillAmount = 0f;
-            }
             yield return new WaitForSeconds(autoFireRate);
         }
     }
@@ -153,18 +139,15 @@ public class PrincipalWeapon : MonoBehaviour
 
         while (cooldownTime > 0)
         {
-            textCooldown.text = cooldownTime.ToString("0");
             spellImage.fillAmount += 1/datap.currentCooldown;
             cooldownTime -= 1;
             if (cooldownTime <= 0)
             {
                 spellReady = true;
-                textCooldown.text = "A";
                 spellImage.fillAmount = 1;
             }
             else
             {
-                textCooldown.text = cooldownTime.ToString("0");
                 yield return new WaitForSeconds(1);
             }
         }

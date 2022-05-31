@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8665adb1319dcf145a7029f7bbf9c720, type: 2}
+  moveRight: 0
   rangeRight: 7
   rangeLeft: -7
 --- !u!50 &1405351762913005662
@@ -1329,8 +1330,8 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.91838396, b: 0, a: 1}
-    key2: {r: 0, g: 1, b: 0.052033424, a: 0}
+    key1: {r: 1, g: 0.62352943, b: 0, a: 1}
+    key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}

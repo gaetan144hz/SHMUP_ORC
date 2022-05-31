@@ -17,11 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashCooldownTime;
     private bool dashReady;
     private float doubleTapTime;
-    public TextMeshProUGUI textCooldownDash;
 
     [Header("DashImage")]
     public Image dashImage;
-    public GameObject RcButton;
 
 
     [Header("Shied")]
@@ -85,20 +83,15 @@ public class PlayerMovement : MonoBehaviour
         
         while (dashCooldownTime > 0)
         {
-            textCooldownDash.text = dashCooldownTime.ToString("0");
             dashImage.fillAmount += 1 / datap.currentDashCooldown;
             dashCooldownTime -= 1;
             if (dashCooldownTime <= 0)
             {
                 dashReady = true;
-                textCooldownDash.text = " ";
-                RcButton.SetActive(true);
                 dashImage.fillAmount = 1;
             }
             else
             {
-                RcButton.SetActive(false);
-                textCooldownDash.text = dashCooldownTime.ToString("0");
                 yield return new WaitForSeconds(1);
             }
         }
