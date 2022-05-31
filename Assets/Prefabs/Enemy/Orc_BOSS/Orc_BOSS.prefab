@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1405351762913005661}
   - component: {fileID: 7093151321551204161}
   m_Layer: 0
-  m_Name: Orc_BOSS_(enzo)
+  m_Name: Orc_BOSS
   m_TagString: Boss
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -296,6 +296,9 @@ MonoBehaviour:
   healthBar: {fileID: 8827138564293951634}
   gameOverUI: {fileID: 8243553497120213944}
   explosion: {fileID: 7451577467745133327, guid: bdd50dc6e42b04146b1110171c398bad, type: 3}
+  Pattern1: 0.5
+  Pattern2: 0.15
+  Pattern3: 3
   bullet:
   - {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}
   - {fileID: 6924478342059470160, guid: f341863ca2c308d43bc440d5fcd70f6f, type: 3}

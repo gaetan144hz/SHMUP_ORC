@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4076829256209453300}
   - component: {fileID: 2382459720435002838}
   - component: {fileID: 3718629792209336762}
-  - component: {fileID: 3093941801277947048}
   - component: {fileID: 8476567358955092695}
+  - component: {fileID: 7689563645627609394}
   m_Layer: 0
   m_Name: archerBulletPattern
   m_TagString: Untagged
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5416818847749009384, guid: cb143fa03b7000e4e892824568345aec, type: 3}
-  m_Color: {r: 0.9150943, g: 0.5772676, b: 0, a: 1}
+  m_Sprite: {fileID: 7395457438161162175, guid: b71e6d7c7ba62c24a8fb6a833a580b55, type: 3}
+  m_Color: {r: 1, g: 0.78585315, b: 0.4198113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,43 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &3093941801277947048
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5123764742128960648}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.9949996, y: 1.6930767}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1.2093449, y: -0.15724087}
-      - {x: -1.0649157, y: -0.33329868}
-      - {x: -0.6430054, y: -0.49772406}
-      - {x: 0.19288301, y: -0.546607}
-      - {x: 0.7237148, y: -0.37706995}
-      - {x: 0.56617975, y: -0.2119174}
-      - {x: 0.59429646, y: -0.038258076}
-      - {x: 0.4882455, y: 0.38904285}
-      - {x: 0.33813477, y: 0.44352388}
-      - {x: 0.24000406, y: 0.68418837}
-      - {x: -0.15993357, y: 0.8516154}
-      - {x: -0.7553412, y: 0.58330536}
 --- !u!96 &8476567358955092695
 TrailRenderer:
   serializedVersion: 2
@@ -280,3 +243,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!58 &7689563645627609394
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123764742128960648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.285
