@@ -7,59 +7,60 @@ public class EnemyData : ScriptableObject
     {
         currentHealth = startHealth ;
 
-        bulletSpeed = startBulletSpeed;
-        bulletDamage = startBulletDamage;
+        currentBulletSpeed = bulletSpeed;
+        currentBulletDamage = bulletDamage;
 
-        patternBulletDamage = startPatternBulletDamage;
+        currentPatternBulletDamage = patternBulletDamage;
 
-        spellDamage = startSpellDamage;
-        spellSpeed = startSpellSpeed;
+        currentSpellDamage = spellDamage;
+        currentSpellSpeed = spellSpeed;
 
-        currentSpeedMovement = startSpeedMovement;
+        currentSpeedMovement = speedMovement;
         
-        currentPatternFireRate = startPatternFireRate;
+        currentPatternFireRate = patternFireRate;
     }
 
     [Header("Enemy Information")]
-    public string Enemy;
     public GameObject EnemyModel;
     [TextArea]
-    public string Description;
-    public int Score;
+    public string Note;
+    //public int Score;
 
     [Header("Enemy Movement")]
+    public float speedMovement;
     [HideInInspector] public float currentSpeedMovement;
-    public float startSpeedMovement;
+    
 
     [Header("Health")]
     public int currentHealth;
     public int startHealth;
 
     [Header("Bullet Speed")]
-    [HideInInspector] public float bulletSpeed;
-    public float startBulletSpeed;
+    public float bulletSpeed;
+    [HideInInspector] public float currentBulletSpeed;
 
     [Header("Bullet Damage")]
-    [HideInInspector] public int bulletDamage;
-    public int startBulletDamage;
+    public int bulletDamage;
     public int patternBulletDamage;
-    public int startPatternBulletDamage;
+    [HideInInspector] public int currentBulletDamage;
+    [HideInInspector] public int currentPatternBulletDamage;
+    
 
     [Header("Spell Speed")]
-    [HideInInspector] public float spellSpeed;
-    public float startSpellSpeed;
+    public float spellSpeed;
+    [HideInInspector] public float currentSpellSpeed;
+    
      
     [Header("Spell Damage")]
-    [HideInInspector] public int spellDamage;
-    public int startSpellDamage;
+    public int spellDamage;
+    [HideInInspector] public int currentSpellDamage;
+    
 
     [Header("FireRate")]
     public float fireRate;
-    public float currentPatternFireRate;
-    public float startPatternFireRate;
-
-    [Header("Only for Mage")]
-    public int healIncrease;
+    public float patternFireRate;
+    [HideInInspector] public float currentPatternFireRate;
+    
 
     [Header("Range of Detection")]
     public float range;

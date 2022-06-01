@@ -16,7 +16,7 @@ public class superBulletDamage : MonoBehaviour
 
             if (datap)
             {
-                datap.bulletDamage += increase;
+                datap.currenntBulletDamage += increase;
                 Destroy(gameObject);
             }
         }

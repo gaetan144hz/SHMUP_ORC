@@ -16,7 +16,7 @@ public class speedSpell : MonoBehaviour
 
             if (datap)
             {
-                datap.spellSpeed += increase;
+                datap.currentSpellSpeed += increase;
                 Destroy(gameObject);
             }
         }

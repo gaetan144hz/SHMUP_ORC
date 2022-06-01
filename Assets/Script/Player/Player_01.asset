@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef6260cb0610e14cbe0beb47a9a882d, type: 3}
   m_Name: Player_01
   m_EditorClassIdentifier: 
+  currenSpeed: 10
   speed: 10
-  startSpeed: 10
   maxSpeed: 15
-  currentSpeedDash: 2500
-  startSpeedDash: 2500
-  startDashCooldown: 5
-  currentDashCooldown: 2
   startHealth: 250
-  currentHealth: -5
-  bulletDamage: 6
-  startBulletDamage: 5
+  currentHealth: 250
   bulletSpeed: 20
-  startBulletSpeed: 20
-  currentCooldown: 7
-  startCooldown: 8
+  bulletDamage: 6
+  currenntBulletDamage: 6
+  currentBulletSpeed: 20
+  speedDash: 2500
+  dashCooldown: 5
+  currentSpeedDash: 2500
+  currentDashCooldown: 0
+  spellCooldown: 7
+  currentSpellCooldown: 0
   spellDamage: 105
-  startSpellDamage: 100
   spellSpeed: 35
-  startSpellSpeed: 33
+  currentSpellDamage: 105
+  currentSpellSpeed: 35
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}

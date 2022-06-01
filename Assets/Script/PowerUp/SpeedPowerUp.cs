@@ -16,7 +16,7 @@ public class SpeedPowerUp : MonoBehaviour
 
             if (datap)
             {
-                datap.speed += increase;
+                datap.currenSpeed += increase;
                 Destroy(gameObject);
             }
         }

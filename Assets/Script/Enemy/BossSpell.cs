@@ -21,7 +21,7 @@ public class BossSpell : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * data.spellSpeed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.currentSpellSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
     }
 
@@ -31,7 +31,7 @@ public class BossSpell : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(data.spellDamage);
+            playerHealth.TakeDamage(data.currentSpellDamage);
             CameraShake.Instance.shakeCamera(0.7f, 1f);
             hitSpawn();
             Destroy(gameObject);

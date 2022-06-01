@@ -20,7 +20,7 @@ public class Spell : MonoBehaviour
         Vector3 pos = transform.position;
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * datap.spellSpeed;
+        rb.velocity = transform.right * datap.currentSpellSpeed;
         //rb.velocity = new Vector2(0, transform.position.x * -speed);    //another way to shoot
     }
 
@@ -39,28 +39,28 @@ public class Spell : MonoBehaviour
 
         if (disque != null)
         {
-            disque.TakeDamage(datap.spellDamage);
+            disque.TakeDamage(datap.currentSpellDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if (enemyFollowPlayer != null)
         {
-            enemyFollowPlayer.TakeDamage(datap.spellDamage);
+            enemyFollowPlayer.TakeDamage(datap.currentSpellDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if (bossMovement != null)
         {
-            bossMovement.TakeDamage(datap.spellDamage);
+            bossMovement.TakeDamage(datap.currentSpellDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if (mageMove != null)
         {
-            mageMove.TakeDamage(datap.spellDamage);
+            mageMove.TakeDamage(datap.currentSpellDamage);
             hitSpawn();
             Destroy(gameObject);
 
@@ -69,7 +69,7 @@ public class Spell : MonoBehaviour
 
         if (dragonMove != null)
         {
-            dragonMove.TakeDamage((datap.spellDamage));
+            dragonMove.TakeDamage((datap.currentSpellDamage));
             hitSpawn();
             Destroy(gameObject);
         }

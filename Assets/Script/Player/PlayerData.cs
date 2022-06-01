@@ -8,50 +8,51 @@ public class PlayerData : ScriptableObject
         Time.timeScale = 1f;
 
         currentHealth = startHealth;
-        speed = startSpeed;
+        currenSpeed = speed;
 
-        bulletDamage = startBulletDamage;
-        bulletSpeed = startBulletSpeed;
+        currenntBulletDamage = bulletDamage;
+        currentBulletSpeed = bulletSpeed;
 
-        spellDamage = startSpellDamage;
-        spellSpeed = startSpellSpeed;
+        currentSpellDamage = spellDamage;
+        currentSpellSpeed = spellSpeed;
 
-        currentCooldown = startCooldown;
+        currentSpellCooldown = spellCooldown;
 
-        currentDashCooldown = startDashCooldown;
-        currentSpeedDash = startSpeedDash;
+        currentDashCooldown = dashCooldown;
+        currentSpeedDash = speedDash;
     }
 
     [Header("Player Movement")]
-    [HideInInspector] public float speed;
-    public float startSpeed;
+    [HideInInspector] public float currenSpeed;
+    public float speed;
     public float maxSpeed;
-
-    [Header("Dash")] 
-    public float currentSpeedDash;
-    public float startSpeedDash;
-    public float startDashCooldown;
-    public float currentDashCooldown;
-
+    
     [Header("Health")]
     public float startHealth;
     public float currentHealth;
 
     [Header("Bullet Settings")]
-    public int bulletDamage;
-    public int startBulletDamage;
     public int bulletSpeed;
-    public int startBulletSpeed;
+    public int bulletDamage;
+    [HideInInspector] public int currenntBulletDamage;
+    [HideInInspector] public int currentBulletSpeed;
 
+    [Header("Dash")] 
+    public float speedDash;
+    public float dashCooldown;
+    [HideInInspector] public float currentSpeedDash;
+    [HideInInspector] public float currentDashCooldown;
+    
     [Header("Spell Settings")]
-    public float currentCooldown;
-    public float startCooldown;
+    public float spellCooldown;
+    [HideInInspector] public float currentSpellCooldown;
 
     [Header("Spell Settings")]
     public int spellDamage;
-    public int startSpellDamage;
     public int spellSpeed;
-    public int startSpellSpeed;
+    [HideInInspector] public int currentSpellDamage;
+    [HideInInspector] public int currentSpellSpeed;
+    
 
     [Header("FXDeath")]
     public GameObject explosion;
