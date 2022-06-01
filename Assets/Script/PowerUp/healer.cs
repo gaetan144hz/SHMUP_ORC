@@ -7,7 +7,13 @@ public class healer : MonoBehaviour
     [SerializeField] int increase = 50;
 
     private Rigidbody2D rb;
+    private PlayerHealth playerHealth;
 
+
+    private void Awake()
+    {
+        playerHealth = FindObjectOfType<PlayerHealth>();
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,7 +23,7 @@ public class healer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            datap.currentHealth += increase;
+            playerHealth.StartCoroutine(playerHealth.Heal(increase));
             Destroy(gameObject);
         }
     }

@@ -10,7 +10,7 @@ public class GameLoader : MonoBehaviour
     public void LevelLoader()
     {
         SceneManager.LoadScene(2);
-        var solo = FindObjectOfType<PlayerMovement>().transform;
+        playerMovement = FindObjectOfType<PlayerMovement>();
         OnDestroy();
     }
     

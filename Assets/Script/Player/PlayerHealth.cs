@@ -3,6 +3,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,23 +11,29 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject explosion;
 
-    public HealthCounter healthBar;
-
     private GameOver gameOver;
 
     public PlayerMovement playerMovement;
 
+    public TextMeshProUGUI healthText;
+    public Gradient gradient;
+
     void Awake()
     {
         gameOver = FindObjectOfType<GameOver>();
-        healthBar.SetMaxHealth(datap.currentHealth); //NE PAS ENLEVER SINON LA HEALTHBAR NE FONCTIONNE PLUS
+        healthText.text = datap.currentHealth.ToString("0"); //NE PAS ENLEVER SINON LA HEALTHBAR NE FONCTIONNE PLUS
+        healthText.color = gradient.Evaluate(1f);
     }
 
     private void Update()
     {
-        healthBar.SetHealth(datap.currentHealth);
+        if (datap.currentHealth <= 0)
+        {
+            Die();
+            gameOver.gameOverUI();
+        }
     }
-    
+
     #region MyRegion
     public void playRumble()
     { 
@@ -46,15 +53,31 @@ public class PlayerHealth : MonoBehaviour
     }
 
     #endregion
-    
-    public void TakeDamage(float ennemyDamage)
+
+    public void TakeDamage(float damage)
     {
-        datap.currentHealth -= ennemyDamage;
-        healthBar.SetHealth(datap.currentHealth);
-        if (datap.currentHealth <= 0)
+        StartCoroutine(Damage(damage));
+    }
+
+    public IEnumerator Damage(float damage)
+    {
+        for (int i = 0; i < damage; i++)
         {
-            Die();
-            gameOver.gameOverUI();
+            datap.currentHealth--;
+            healthText.text = datap.currentHealth.ToString("0");
+            healthText.color = gradient.Evaluate(datap.currentHealth / datap.startHealth);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public IEnumerator Heal(float heal)
+    {
+        for (int i = 0; i < heal; i++)
+        {
+            datap.currentHealth++;
+            healthText.text = datap.currentHealth.ToString("0");
+            healthText.color = gradient.Evaluate(datap.currentHealth / datap.startHealth);
+            yield return new WaitForFixedUpdate();
         }
     }
 
