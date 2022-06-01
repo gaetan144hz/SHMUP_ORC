@@ -27,35 +27,40 @@ public class EnemyData : ScriptableObject
     //public int Score;
 
     [Header("Enemy Movement")]
-    [HideInInspector] public float currentSpeedMovement;
     public float speedMovement;
+    [HideInInspector] public float currentSpeedMovement;
+    
 
     [Header("Health")]
     public int currentHealth;
     public int startHealth;
 
     [Header("Bullet Speed")]
-    [HideInInspector] public float currentBulletSpeed;
     public float bulletSpeed;
+    [HideInInspector] public float currentBulletSpeed;
 
     [Header("Bullet Damage")]
-    [HideInInspector] public int currentBulletDamage;
     public int bulletDamage;
-    [HideInInspector] public int currentPatternBulletDamage;
     public int patternBulletDamage;
+    [HideInInspector] public int currentBulletDamage;
+    [HideInInspector] public int currentPatternBulletDamage;
+    
 
     [Header("Spell Speed")]
-    [HideInInspector] public float currentSpellSpeed;
     public float spellSpeed;
+    [HideInInspector] public float currentSpellSpeed;
+    
      
     [Header("Spell Damage")]
-    [HideInInspector] public int currentSpellDamage;
     public int spellDamage;
+    [HideInInspector] public int currentSpellDamage;
+    
 
     [Header("FireRate")]
     public float fireRate;
-    [HideInInspector] public float currentPatternFireRate;
     public float patternFireRate;
+    [HideInInspector] public float currentPatternFireRate;
+    
 
     [Header("Range of Detection")]
     public float range;
