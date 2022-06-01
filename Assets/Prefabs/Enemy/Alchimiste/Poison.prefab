@@ -4922,7 +4922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
   timeToDestroy: 10
-  poisonIncrease: 10
+  poisonIncrease: 1
+  color: {r: 0.8396226, g: 0.32079923, b: 0.8396226, a: 1}
 --- !u!50 &8291274181402240963
 Rigidbody2D:
   serializedVersion: 4

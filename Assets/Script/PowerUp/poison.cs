@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class poison : MonoBehaviour
 {
@@ -13,50 +14,44 @@ public class poison : MonoBehaviour
 
     [SerializeField] public float poisonIncrease;
 
-    Coroutine coroutinePoison ;
-
     private Rigidbody2D rb;
+    private bool isCoroutine;
+    public Color color;
 
     private void Start()
     {
+        playerHealth = FindObjectOfType<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
 
         Destroy(this.gameObject,timeToDestroy);
+        isCoroutine = false;
     }
 
-    private void OnTriggerStay2D(Collider2D hit)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        playerHealth = hit.transform.GetComponent<PlayerHealth>();
-
-        if (hit.tag == "Player")
+        if (col.tag == "Player" && isCoroutine == false)
         {
-            //Gamepad.current.SetMotorSpeeds(1f,1f);
             StartCoroutine(MakePoison());
         }
     }
-    
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if(coroutinePoison != null)
+        if (col.tag == "Player")
         {
-            StopCoroutine(MakePoison());
-            //Gamepad.current.SetMotorSpeeds(0f,0f);
+            isCoroutine = false;
         }
     }
 
-    
-    IEnumerator MakePoison()
+    public IEnumerator MakePoison()
     {
-        playerHealth = transform.GetComponent<PlayerHealth>();
-        
-        while (true)
+        isCoroutine = true;
+
+        while (isCoroutine == true)
         {
-            datap.currentHealth -= poisonIncrease;
             playerHealth.TakeDamage(poisonIncrease);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.5f);
         }
     }
-    
 }
