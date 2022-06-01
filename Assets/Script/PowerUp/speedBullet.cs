@@ -16,7 +16,7 @@ public class speedBullet : MonoBehaviour
 
             if (datap)
             {
-                datap.bulletSpeed += increase;
+                datap.currentBulletSpeed += increase;
                 Destroy(gameObject);
             }
         }

@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
         Vector3 pos = transform.position;
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * datap.bulletSpeed;
+        rb.velocity = transform.right * datap.currentBulletSpeed;
         //rb.velocity = new Vector2(0, transform.position.x * -speed);    //another way to 
 
         Destroy(this.gameObject, 3);
@@ -48,30 +48,30 @@ public class Bullet : MonoBehaviour
 
         if (disque != null)
         {
-            disque.TakeDamage(datap.bulletDamage);
+            disque.TakeDamage(datap.currenntBulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if (hitInfo.gameObject.tag == "Enemy")
         {
-            enemy.TakeDamage(datap.bulletDamage);
-            scoreSetup.AddDmgScore(datap.bulletDamage);
+            enemy.TakeDamage(datap.currenntBulletDamage);
+            scoreSetup.AddDmgScore(datap.currenntBulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if(hitInfo.gameObject.tag == "Boss")
         {
-            boss.TakeDamage(datap.bulletDamage);
-            scoreSetup.AddDmgScore(datap.bulletDamage);
+            boss.TakeDamage(datap.currenntBulletDamage);
+            scoreSetup.AddDmgScore(datap.currenntBulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }
 
         if(hitInfo.gameObject.tag == "Invoked")
         {           
-            enemy.TakeDamage(datap.bulletDamage);
+            enemy.TakeDamage(datap.currenntBulletDamage);
             hitSpawn();
             Destroy(gameObject);
         }

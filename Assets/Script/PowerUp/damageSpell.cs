@@ -16,7 +16,7 @@ public class damageSpell : MonoBehaviour
 
             if (datap)
             {
-                datap.spellDamage += increase;
+                datap.currentSpellDamage += increase;
                 Destroy(this.gameObject);
             }
         }

@@ -16,7 +16,7 @@ public class speelFireRate : MonoBehaviour
 
             if (datap)
             {
-                datap.currentCooldown -= increase;
+                datap.currentSpellCooldown -= increase;
                 Destroy(this.gameObject);
             }
         }

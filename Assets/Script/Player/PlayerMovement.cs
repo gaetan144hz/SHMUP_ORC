@@ -120,9 +120,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (datap.speed < datap.maxSpeed)
+            if (datap.currenSpeed < datap.maxSpeed)
             {
-                rb.velocity = movement * datap.speed;
+                rb.velocity = movement * datap.currenSpeed;
             }
             animator.SetFloat("horizontalMovement", movement.x);
             animator.SetFloat("horizontalMovement", movement.y);

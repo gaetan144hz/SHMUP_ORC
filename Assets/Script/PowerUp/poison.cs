@@ -41,7 +41,7 @@ public class poison : MonoBehaviour
     {
         if(coroutinePoison != null)
         {
-            StopCoroutine(coroutinePoison);
+            StopCoroutine(MakePoison());
             //Gamepad.current.SetMotorSpeeds(0f,0f);
         }
     }

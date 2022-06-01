@@ -297,7 +297,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 8243553497120213944}
   explosion: {fileID: 7451577467745133327, guid: bdd50dc6e42b04146b1110171c398bad, type: 3}
   Pattern1: 0.5
-  Pattern2: 0.15
+  Pattern2: 0.25
   Pattern3: 3
   bullet:
   - {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}

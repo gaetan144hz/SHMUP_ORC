@@ -20,7 +20,7 @@ public class cheat : MonoBehaviour
     {
         if (value.isPressed) //press F1
         {
-            data.bulletDamage = 9999;
+            data.currenntBulletDamage = 9999;
             Debug.Log("BulletDamage at 9999");
             return;
         }
@@ -30,7 +30,7 @@ public class cheat : MonoBehaviour
     {
         if (value.isPressed) //press F2
         {
-            data.bulletDamage = 15;
+            data.currenntBulletDamage = 15;
             Debug.Log("BulletDamage at 15");
             return;
         }

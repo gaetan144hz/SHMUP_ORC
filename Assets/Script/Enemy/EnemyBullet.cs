@@ -32,7 +32,7 @@ public class EnemyBullet : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
 
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 movedir = (target.transform.position - transform.position).normalized * data.bulletSpeed;
+        Vector2 movedir = (target.transform.position - transform.position).normalized * data.currentBulletSpeed;
         rb.velocity = new Vector2(movedir.x, movedir.y);
 
         Destroy(this.gameObject, 5);
@@ -44,7 +44,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(data.bulletDamage);
+            playerHealth.TakeDamage(data.currentBulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 0.1f);
             fxHit();
             Destroy(this.gameObject);

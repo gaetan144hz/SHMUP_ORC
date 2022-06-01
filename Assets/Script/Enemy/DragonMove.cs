@@ -70,7 +70,7 @@ public class DragonMove : MonoBehaviour
         {
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(data.bulletDamage);
+                playerHealth.TakeDamage(data.currentBulletDamage);
             }
         }
     }

@@ -134,12 +134,12 @@ public class PrincipalWeapon : MonoBehaviour
 
     public IEnumerator cooldownTripleShot()
     {
-        cooldownTime = datap.currentCooldown;
+        cooldownTime = datap.currentSpellCooldown;
         spellImage.fillAmount = 0;
 
         while (cooldownTime > 0)
         {
-            spellImage.fillAmount += 1/datap.currentCooldown;
+            spellImage.fillAmount += 1/datap.currentSpellCooldown;
             cooldownTime -= 1;
             if (cooldownTime <= 0)
             {

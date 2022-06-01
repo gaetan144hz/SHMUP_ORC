@@ -21,7 +21,7 @@ public class BulletMovement : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * enData.bulletSpeed;
+        rb.velocity = transform.right * enData.currentBulletSpeed;
     }
 
     void Update()
@@ -35,7 +35,7 @@ public class BulletMovement : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(enData.patternBulletDamage);
+            playerHealth.TakeDamage(enData.currentPatternBulletDamage);
             CameraShake.Instance.shakeCamera(0.7f, 1f);
             hitSpawn();
             Destroy(gameObject);
