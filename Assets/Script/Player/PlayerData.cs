@@ -18,8 +18,7 @@ public class PlayerData : ScriptableObject
 
         currentSpellCooldown = spellCooldown;
 
-        currentDashCooldown = dashCooldown;
-        currentSpeedDash = speedDash;
+        currentShieldCooldown = shieldCooldown;
     }
 
     [Header("Player Movement")]
@@ -37,11 +36,9 @@ public class PlayerData : ScriptableObject
     [HideInInspector] public int currenntBulletDamage;
     [HideInInspector] public int currentBulletSpeed;
 
-    [Header("Dash")] 
-    public float speedDash;
-    public float dashCooldown;
-    [HideInInspector] public float currentSpeedDash;
-    [HideInInspector] public float currentDashCooldown;
+    [Header("Dash")]
+    public float shieldCooldown;
+    [HideInInspector] public float currentShieldCooldown;
     
     [Header("Spell Settings")]
     public float spellCooldown;
