@@ -246,7 +246,8 @@ MonoBehaviour:
   explosion: {fileID: 6236286155842691277, guid: c28fa0287dfe13c4abd9b4fc520b6f61, type: 3}
   enemyBullet: {fileID: 8450533463880654013, guid: d6975ab3d29cadd47944490b473514d1, type: 3}
   bulletParent: {fileID: 2572329372805760762}
-  deathAudioSource: {fileID: 0}
+  spawnAudioSource: {fileID: 8300000, guid: 63c57a488554a4244a05127bb9ae9e0c, type: 3}
+  source: {fileID: 0}
   playerList: []
 --- !u!114 &7207205614913576959
 MonoBehaviour:

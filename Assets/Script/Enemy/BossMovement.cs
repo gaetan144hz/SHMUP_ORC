@@ -23,6 +23,10 @@ public class BossMovement : MonoBehaviour
     public float Pattern1;
     public float Pattern2;
     public float Pattern3;
+    
+    [Header("Audio")]
+    public AudioClip spawnBossSound;
+    public AudioSource source;
 
     private Transform player;
     

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ using UnityEngine;
 public class EnemyFollowPlayer : MonoBehaviour
 {
     private ScoreSetup scoreSetup;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     [Header("EnemyData")]
     public EnemyData data;
@@ -16,6 +19,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     [Header("FX")]
     public GameObject explosion;
+    public Sprite hitSprite;
 
     [Header("FireRate")]
     private float nextFireTime;
@@ -30,7 +34,8 @@ public class EnemyFollowPlayer : MonoBehaviour
     private Vector2 movement;
 
     [Header("Audio")] 
-    public AudioSource deathAudioSource;
+    public AudioClip spawnAudioSource;
+    public AudioSource source;
 
     public List<GameObject> playerList;
 
@@ -44,11 +49,19 @@ public class EnemyFollowPlayer : MonoBehaviour
     {
         data = Instantiate(data);
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         scoreSetup = FindObjectOfType<ScoreSetup>();
 
         rb.gravityScale = 0;
         healthBar.SetMaxHealth(data.currentHealth);
+    }
+
+    private void Start()
+    {
+        source.clip = spawnAudioSource;
+        source.Play();
     }
 
     void Update()
@@ -95,6 +108,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public void TakeDamage(int playerDamage)
     {
+        spriteRenderer.sprite = hitSprite;
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
