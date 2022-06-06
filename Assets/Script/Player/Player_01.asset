@@ -17,16 +17,16 @@ MonoBehaviour:
   maxSpeed: 15
   startHealth: 250
   currentHealth: 250
-  bulletSpeed: 20
+  bulletSpeed: 16
   bulletDamage: 6
   currenntBulletDamage: 6
-  currentBulletSpeed: 20
+  currentBulletSpeed: 10
   speedDash: 2500
   dashCooldown: 5
   currentSpeedDash: 2500
-  currentDashCooldown: 0
+  currentDashCooldown: 5
   spellCooldown: 7
-  currentSpellCooldown: 0
+  currentSpellCooldown: 7
   spellDamage: 105
   spellSpeed: 35
   currentSpellDamage: 105
