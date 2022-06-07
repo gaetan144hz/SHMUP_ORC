@@ -19,7 +19,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     [Header("FX")]
     public GameObject explosion;
-    public Sprite hitSprite;
+    //public Sprite hitSprite;
 
     [Header("FireRate")]
     private float nextFireTime;
@@ -35,6 +35,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     [Header("Audio")] 
     public AudioClip spawnAudioSource;
+    public AudioClip hitSound;
     public AudioSource source;
 
     public List<GameObject> playerList;
@@ -108,7 +109,9 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     public void TakeDamage(int playerDamage)
     {
-        spriteRenderer.sprite = hitSprite;
+        source.clip = hitSound;
+        source.Play();
+        //spriteRenderer.sprite = hitSprite;
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {

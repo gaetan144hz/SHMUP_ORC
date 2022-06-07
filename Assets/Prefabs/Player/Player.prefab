@@ -1209,6 +1209,7 @@ MonoBehaviour:
   - {fileID: 8261057487346045336, guid: 720182383d28b6d42a078f8d32c97f6c, type: 3}
   shootBool: 0
   autoFireRate: 0
+  spellSound: {fileID: 8300000, guid: 1d67dbaa55b0f4f46b1bfeea8736c7ef, type: 3}
 --- !u!114 &7567997724479068166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
+  sound:
+  - {fileID: 8300000, guid: 5ea3d5b1d86ad4e47b008d164e08a096, type: 3}
+  - {fileID: 8300000, guid: b778914667ba27944b204f2ea94727de, type: 3}
+  source: {fileID: 5675858149390817935}
   explosion: {fileID: 3323616780401449747, guid: e5520df453898bd4e9b75708ddc45324, type: 3}
   playerMovement: {fileID: 7567997724479068166}
   healthText: {fileID: 1160751914481169720}

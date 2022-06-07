@@ -373,7 +373,11 @@ MonoBehaviour:
   Pattern1: 1
   Pattern2: 2
   Pattern3: 5
-  spawnBossSound: {fileID: 8300000, guid: 7c0ab38c2784f1b46b96e6c7a6356fc1, type: 3}
+  sound:
+  - {fileID: 8300000, guid: e23c39037d4e8d84bb1280ac5a3fcdf9, type: 3}
+  - {fileID: 8300000, guid: 7c0ab38c2784f1b46b96e6c7a6356fc1, type: 3}
+  - {fileID: 8300000, guid: 8804e390a2823604eac8c05d7b61b915, type: 3}
+  - {fileID: 8300000, guid: 8f0ebb8558039ea43a677f49178b7137, type: 3}
   source: {fileID: 210553454800140844}
   bullet:
   - {fileID: 144822631592327813, guid: 8cd8c867c7543dc4f8234f08cf250e27, type: 3}

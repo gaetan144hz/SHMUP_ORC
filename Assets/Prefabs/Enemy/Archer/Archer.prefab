@@ -279,6 +279,7 @@ MonoBehaviour:
   enemyBullet: {fileID: 2031548818463956106, guid: 21d9f7a3cdc1a70419d8931953d0b59c, type: 3}
   bulletParent: {fileID: 2647647480842136898}
   spawnAudioSource: {fileID: 8300000, guid: d9a5043e5fd16f14aadd8233b0d46b83, type: 3}
+  hitSound: {fileID: 8300000, guid: 8f0ebb8558039ea43a677f49178b7137, type: 3}
   source: {fileID: 1372193843}
   playerList: []
 --- !u!114 &7025834644715763209

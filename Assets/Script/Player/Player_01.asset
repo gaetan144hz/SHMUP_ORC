@@ -18,9 +18,9 @@ MonoBehaviour:
   startHealth: 250
   currentHealth: 250
   bulletSpeed: 16
-  bulletDamage: 6
-  currenntBulletDamage: 6
-  currentBulletSpeed: 10
+  bulletDamage: 10
+  currenntBulletDamage: 10
+  currentBulletSpeed: 16
   speedDash: 2500
   dashCooldown: 5
   currentSpeedDash: 2500

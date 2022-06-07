@@ -532,8 +532,9 @@ MonoBehaviour:
   explosion: {fileID: 7561791552984474656, guid: 6825e96a568838446835e603531f330e, type: 3}
   enemyBullet: {fileID: 7765959782366688196, guid: 0b838cff6ecf4aa489112c891d089f48, type: 3}
   bulletParent: {fileID: 9114618523032691210}
-  spawnAudioSource: {fileID: 0}
-  source: {fileID: 0}
+  spawnAudioSource: {fileID: 8300000, guid: 5041cc8576993134e961ac5f22b8e9d8, type: 3}
+  hitSound: {fileID: 8300000, guid: 8f0ebb8558039ea43a677f49178b7137, type: 3}
+  source: {fileID: 3494944912116949291}
   playerList: []
 --- !u!114 &1582200558016408917
 MonoBehaviour:

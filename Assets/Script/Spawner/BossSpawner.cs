@@ -7,6 +7,8 @@ public class BossSpawner : MonoBehaviour
     private Timer time;
     private ScoreSetup scoreSetup;
 
+    public AudioClip spawnMusic;
+    private AudioSource audioSource;
     public GameObject bossPrefabs;
     public bool bossSpawned;
     private float bossTiming;
@@ -16,8 +18,9 @@ public class BossSpawner : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         scoreSetup = FindObjectOfType<ScoreSetup>();
-        time = this.GetComponent<Timer>();
+        time = this.GetComponent<Timer>(); 
         bossTiming = 120;
         bossKillCount = 30;
     }
@@ -37,6 +40,8 @@ public class BossSpawner : MonoBehaviour
 
     public void spawn()
     {
+        audioSource.clip = spawnMusic;
+        audioSource.Play();
         bossKillCount += 30;
         bossTiming += 120;
         bossSpawned = true;

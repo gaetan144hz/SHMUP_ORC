@@ -4,10 +4,15 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class PlayerHealth : MonoBehaviour
 {
     public PlayerData datap;
+    
+    [Header("Audio")]
+    public AudioClip[] sound;
+    public AudioSource source;
 
     public GameObject explosion;
 
@@ -56,6 +61,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        var index = Random.Range(0, sound.Length);
+        source.clip = sound[index];
+        source.Play();
+        
         StartCoroutine(Damage(damage));
     }
 
