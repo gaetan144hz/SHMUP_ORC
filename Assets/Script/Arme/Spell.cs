@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PolygonCollider2D))]
@@ -13,10 +14,13 @@ public class Spell : MonoBehaviour
     public GameObject hitPrefab;
     public GameObject lastHit;
 
+    public GameObject hitSpell;
+
     public Rigidbody2D rb;
 
     void Start()
     {
+        Destroy(this.gameObject,2f);
         Vector3 pos = transform.position;
         rb.gravityScale = 0;
         rb = this.GetComponent<Rigidbody2D>();
@@ -89,6 +93,7 @@ public class Spell : MonoBehaviour
 
     public void hitSpawn()
     {
+        Instantiate(hitSpell, transform.position, quaternion.identity);
         lastHit = Instantiate(hitPrefab, transform.position, Quaternion.identity);
         Destroy(lastHit, 1f);
     }

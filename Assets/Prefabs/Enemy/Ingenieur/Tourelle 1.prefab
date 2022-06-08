@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1143692825537537974
@@ -558,6 +558,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: b8c4d6aaeaf2f7f4b88ae36f2b22113e, type: 2}
   healthBar: {fileID: 7551840682434303626}
   explosion: {fileID: 6699515664324340717, guid: 63b7e0847131c7242919cdc62905adb4, type: 3}
+  deathSound: {fileID: 5493691692990752268, guid: 7e8edfcc606052b4eb35a037fb830dc8, type: 3}
   enemyBullet: {fileID: 9132094279296641494, guid: a660c05f4ae1f674c8bb8e6ccf66d0dc, type: 3}
   bulletParent: {fileID: 7071470772779712137}
   spawnAudioSource: {fileID: 8300000, guid: 1b2d5ed750df80a4fb47a3442b41bc97, type: 3}

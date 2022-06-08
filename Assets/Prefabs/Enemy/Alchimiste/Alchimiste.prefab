@@ -532,6 +532,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 5190a1deb2057a94bbf67761263f4569, type: 2}
   healthBar: {fileID: 3296157504435890702}
   explosion: {fileID: 2779242656543007262, guid: 710e362d76242a245b2615c2e7ddfac3, type: 3}
+  deathSound: {fileID: 6468934903196526519, guid: d41c6d33ceb6d92408aa15f908276b73, type: 3}
   enemyBullet: {fileID: 8291274181402240965, guid: d804c26c7c500b543b3514936e8ce3b2, type: 3}
   bulletParent: {fileID: 9114618523032691210}
   spawnAudioSource: {fileID: 8300000, guid: 49045240eacd4f7419e11e673fefe14a, type: 3}

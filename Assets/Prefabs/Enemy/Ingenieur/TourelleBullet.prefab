@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7580441087313765540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8453947214426388007}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.9811321, g: 0.8417846, b: 0, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0.3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 772289550247340993}
   - component: {fileID: 6067698005965548913}
   - component: {fileID: 1337990191391863265}
+  - component: {fileID: 7096613804182556201}
   m_Layer: 0
   m_Name: TourelleBullet
   m_TagString: Untagged
@@ -148,7 +149,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6143468016709707475, guid: 8b382fa2f91dc6c4e972a2d73b79dd6d, type: 3}
+  m_Sprite: {fileID: -7763242495036300629, guid: d5b31ae86e4e6f44bb3c27ac6b0f09ea, type: 3}
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -172,8 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enData: {fileID: 11400000, guid: b8c4d6aaeaf2f7f4b88ae36f2b22113e, type: 2}
-  hitPrefab: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
-  lastHit: {fileID: 8179541322070709313, guid: 64d65ffb56065754685f1fecf83ff9ef, type: 3}
+  hitPrefab: {fileID: 2956846082771597410, guid: a5b6e4577d57bbb4286c6333c3b62c24, type: 3}
+  lastHit: {fileID: 2956846082771597410, guid: a5b6e4577d57bbb4286c6333c3b62c24, type: 3}
   rb: {fileID: 772289550247340993}
 --- !u!50 &772289550247340993
 Rigidbody2D:
@@ -213,7 +214,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4166666, y: 0.70023847}
+    oldSize: {x: 1.11, y: 0.66714287}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -354,3 +355,22 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!95 &7096613804182556201
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132094279296641494}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 863dc6c687d10a94894dbdacc588ba52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -370,6 +370,7 @@ MonoBehaviour:
   healthBar: {fileID: 8827138564293951634}
   gameOverUI: {fileID: 8243553497120213944}
   explosion: {fileID: 7451577467745133327, guid: bdd50dc6e42b04146b1110171c398bad, type: 3}
+  deathSound: {fileID: 8763511025312592551, guid: fdc2b3b6b9e9aec4585e9143bf4976ed, type: 3}
   Pattern1: 1
   Pattern2: 2
   Pattern3: 5
@@ -912,8 +913,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Boss
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d148a72f1b8627840a27c15f7eee2e44, type: 2}
-  m_sharedMaterial: {fileID: 2403650383827412469, guid: d148a72f1b8627840a27c15f7eee2e44, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

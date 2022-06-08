@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -19,6 +20,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     [Header("FX")]
     public GameObject explosion;
+    public GameObject deathSound;
     //public Sprite hitSprite;
 
     [Header("FireRate")]
@@ -123,6 +125,7 @@ public class EnemyFollowPlayer : MonoBehaviour
 
     void Die()
     {
+        Instantiate(deathSound, transform.position, Quaternion.identity);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

@@ -43,7 +43,7 @@ public class BossSpawner : MonoBehaviour
         audioSource.clip = spawnMusic;
         audioSource.Play();
         bossKillCount += 30;
-        bossTiming += 120;
+        bossTiming += 140;
         bossSpawned = true;
         Instantiate(bossPrefabs,bossSpawnPoint.position, transform.rotation);
     }

@@ -839,8 +839,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 300
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: -7292542899881751790}
   - component: {fileID: 4095713160207186902}
   - component: {fileID: 5675858149390817935}
-  - component: {fileID: 1830714190870187758}
+  - component: {fileID: 8651032518784651700}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datap: {fileID: 11400000, guid: 62194a5d5f6ecbf41988550a90e10d56, type: 2}
-  dashImage: {fileID: 2546721937986070378}
+  shieldImage: {fileID: 0}
   shield: {fileID: 670253839690754016}
   animator: {fileID: 2023204821179027515}
 --- !u!114 &7567997724479068167
@@ -1428,7 +1428,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &1830714190870187758
+--- !u!81 &8651032518784651700
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -4,15 +4,20 @@ using Random = UnityEngine.Random;
 
 public class Disque : MonoBehaviour
 {
-
+    [Header("Health")]
     [SerializeField] int disqueHealth;
 
+    [Header("Speed")]
     [SerializeField] float speed;
 
+    [Header("Damage")]
     [SerializeField] int damage;
-
     [SerializeField] int damage2 = 50;
 
+    [Header("Audio")]
+    public AudioClip[] sound;
+    public AudioSource source;
+    
     public Transform blade;
 
     private Rigidbody2D rb;

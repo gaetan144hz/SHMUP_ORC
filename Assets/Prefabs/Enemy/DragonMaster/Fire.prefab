@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8608233570520217307}
   - component: {fileID: 4678597780790909301}
   - component: {fileID: 754671309385279568}
+  - component: {fileID: 7858442077820889209}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -247,8 +248,8 @@ PolygonCollider2D:
       - {x: 1.3471563, y: 0.6780925}
       - {x: 0.01797086, y: 0.8387461}
       - {x: -0.34547603, y: 0.988606}
-      - {x: -0.814698, y: 0.62635756}
-      - {x: -1.3471696, y: -0.85129476}
+      - {x: 0.07817372, y: 0.42135978}
+      - {x: 0.07817372, y: 0.42135978}
 --- !u!82 &754671309385279568
 AudioSource:
   m_ObjectHideFlags: 0
@@ -345,6 +346,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7858442077820889209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608233570520217305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ee0cc49bd8c15f4aaede28ce362eb81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8631939464756563106
 GameObject:
   m_ObjectHideFlags: 0

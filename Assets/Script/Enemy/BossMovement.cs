@@ -18,6 +18,7 @@ public class BossMovement : MonoBehaviour
 
     [Header("FX")]
     public GameObject explosion;
+    public GameObject deathSound;
 
     [Header("Cooldown")] 
     public float Pattern1;
@@ -147,6 +148,7 @@ public class BossMovement : MonoBehaviour
         source.Play();
         source.clip = sound[2];
         source.Play();
+        Instantiate(deathSound, transform.position, Quaternion.identity);
         Instantiate(explosion, transform.position, Quaternion.identity);
         randomSpawner.lateGameInstantiate();
         bossSpawner.bossSpawned = false;
