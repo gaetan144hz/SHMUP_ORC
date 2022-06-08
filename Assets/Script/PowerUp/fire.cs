@@ -10,17 +10,16 @@ public class fire : MonoBehaviour
 
     [SerializeField] private int timeToDestroy;
 
-    [SerializeField] public int fireIncrease;
-    private int fireMultiply;
     [SerializeField] private int multiplicator;
-    Coroutine coroutineFire;
 
     private Rigidbody2D rb;
     [SerializeField] private float speed;
+    private bool isCoroutine;
+    private float fireDamage;
 
     private void Start()
     {
-        fireIncrease = fireMultiply;
+        playerHealth = FindObjectOfType<PlayerHealth>();
         
         rb = GetComponent<Rigidbody2D>();
 
@@ -28,36 +27,37 @@ public class fire : MonoBehaviour
         rb.velocity = transform.right * speed;
 
         Destroy(this.gameObject,timeToDestroy);
+        isCoroutine = false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        playerHealth = collision.transform.GetComponent<PlayerHealth>();
 
-        if (collision.tag == "Player")
+        if (col.tag == "Player" && isCoroutine == false)
         {
             StartCoroutine(MakeFire());
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if (coroutineFire != null)
+        if (col.tag == "Player")
         {
-            StopCoroutine(coroutineFire);
+            isCoroutine = false;
         }
     }
 
-    IEnumerator MakeFire()
+    public IEnumerator MakeFire()
     {
-        playerHealth = transform.GetComponent<PlayerHealth>();
+        isCoroutine = true;
+        fireDamage = 1f;
         
-        while (true)
+        while (isCoroutine == true)
         {
             //var firemultiply = fireIncrease * multiplicator;
-            datap.currentHealth -= fireIncrease;
-            playerHealth.TakeDamage(fireIncrease);
-            yield return new WaitForSeconds(2);   
+            fireDamage++;
+            playerHealth.TakeDamage(fireDamage);
+            yield return new WaitForSeconds(1);   
         }
     }
 }

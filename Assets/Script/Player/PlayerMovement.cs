@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour
     public PlayerData datap;
     
     [Header("Dash")]
-    private float dashCooldownTime;
-    private bool dashReady;
+    private float shieldCooldownTime;
+    private bool shieldReady;
     private float doubleTapTime;
 
     [Header("DashImage")]
-    public Image dashImage;
+    public Image shieldImage;
 
 
     [Header("Shied")]
@@ -44,51 +44,48 @@ public class PlayerMovement : MonoBehaviour
         _pauseResume = FindObjectOfType<PauseResume>();
         datap = Instantiate(datap);
 
-        dashReady = true;
+        shieldReady = true;
 
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
-        lastMovement = Vector2.up;
     }
 
-    #region DashRegion
-    public void OnDashR(InputValue value)
+    #region ShieldRegion
+    public void OnShield(InputValue value)
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            StartCoroutine(Dash());
+            StartCoroutine(Shield());
             return;
         }
     }
 
-    public IEnumerator Dash()
+    public IEnumerator Shield()
     {
-        if (dashReady == true)
+        if (shieldReady == true)
         {
             shield.SetActive(true);
-            dashReady = false;
-            StartCoroutine(DashCooldown());
-            rb.AddForce(lastMovement * datap.currentSpeedDash, ForceMode2D.Impulse);
-            yield return new WaitForSeconds(0.5f);
-            rb.velocity = Vector2.zero;
+            shieldReady = false;
+            StartCoroutine(ShieldCooldown());
+            yield return new WaitForSeconds(5);
             shield.SetActive(false);
         }
     }
 
-    public IEnumerator DashCooldown()
+    public IEnumerator ShieldCooldown()
     {
-        dashCooldownTime = datap.currentDashCooldown;
-        dashImage.fillAmount = 0;
+        shieldCooldownTime = datap.currentShieldCooldown;
+        shieldImage.fillAmount = 0;
         
-        while (dashCooldownTime > 0)
+        while (shieldCooldownTime > 0)
         {
-            dashImage.fillAmount += 1 / datap.currentDashCooldown;
-            dashCooldownTime -= 1;
-            if (dashCooldownTime <= 0)
+            shieldImage.fillAmount += 1 / datap.currentShieldCooldown;
+            shieldCooldownTime -= 1;
+            if (shieldCooldownTime <= 0)
             {
-                dashReady = true;
-                dashImage.fillAmount = 1;
+                shieldReady = true;
+                shieldImage.fillAmount = 1;
             }
             else
             {
@@ -106,11 +103,6 @@ public class PlayerMovement : MonoBehaviour
         //récupérer l'action maps (**player**) puis l'Action (**move**) dans l'input action ATTENTION AU NOM !!!
         //Vector2 moveInput = playerInput.player.move.ReadValue<Vector2>();
         movement = value.Get<Vector2>();
-
-        if (movement != Vector2.zero)
-        {
-            lastMovement = movement; 
-        }
 
         bool isIdle = movement.x == 0 && movement.y == 0;
         if (isIdle)
