@@ -19,7 +19,7 @@ public class ScoreSetup : MonoBehaviour
         killCount = 0;
     }
 
-    public void AddDmgScore(int scoreToAdd) //Fonction pour compter les dégats !
+    public void AddDmgScore(int scoreToAdd) //Fonction pour compter les dÃ©gats !
     {
         dmgCount += scoreToAdd;
         dmgScore.text = $"dmg: {dmgCount}";

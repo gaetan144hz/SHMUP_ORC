@@ -34,11 +34,17 @@ public class PrincipalWeapon : MonoBehaviour
     public float autoFireRate;
     //public Transform[] spawnPoints;
 
+    [Header("Audio")] 
+    public AudioClip spellSound;
+
+    private AudioSource source;
+
     //[SerializeField] private float bulletForce;
     private Rigidbody2D rb;
 
     public void Start()
     {
+        source = GetComponent<AudioSource>();
         _pauseResume = FindObjectOfType<PauseResume>();
         
         rb = GetComponent<Rigidbody2D>();
@@ -100,7 +106,7 @@ public class PrincipalWeapon : MonoBehaviour
     {
         if (value.isPressed && _pauseResume.shootStatus == true)
         {
-            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);   
+            //Gamepad.current.SetMotorSpeeds(0.25f, 0.75f); 
             TripleShoot();
             return;
         }
@@ -118,6 +124,8 @@ public class PrincipalWeapon : MonoBehaviour
         }
         spellReady = false;
         StartCoroutine(cooldownTripleShot());
+        source.clip = spellSound;
+        source.Play();
         CameraShake.Instance.shakeCamera(3f,0.1f);
         Instantiate(bulletPrefab[1], firePoint[0].position, firePoint[0].rotation);
         Instantiate(bulletPrefab[1], firePoint[1].position, firePoint[1].rotation);

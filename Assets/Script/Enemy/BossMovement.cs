@@ -23,6 +23,10 @@ public class BossMovement : MonoBehaviour
     public float Pattern1;
     public float Pattern2;
     public float Pattern3;
+    
+    [Header("Audio")]
+    public AudioClip[] sound;
+    public AudioSource source;
 
     private Transform player;
     
@@ -92,6 +96,8 @@ public class BossMovement : MonoBehaviour
     {
         while (true)
         {
+            source.clip = sound[0];
+            source.Play();
             shoot(bullet[2],firePoint[2]);
             yield return new WaitForSeconds(Pattern3);
         }
@@ -126,6 +132,8 @@ public class BossMovement : MonoBehaviour
     
     public void TakeDamage(int playerDamage)
     {
+        source.clip = sound[3];
+        source.Play();
         data.currentHealth -= playerDamage;
         if (data.currentHealth <= 0)
         {
@@ -135,6 +143,10 @@ public class BossMovement : MonoBehaviour
 
     void Die()
     {
+        source.clip = sound[1];
+        source.Play();
+        source.clip = sound[2];
+        source.Play();
         Instantiate(explosion, transform.position, Quaternion.identity);
         randomSpawner.lateGameInstantiate();
         bossSpawner.bossSpawned = false;

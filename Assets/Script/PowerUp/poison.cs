@@ -13,13 +13,21 @@ public class poison : MonoBehaviour
     [SerializeField] private int timeToDestroy;
 
     [SerializeField] public float poisonIncrease;
+    
+    [Header("Audio")] 
+    public AudioClip sound;
+    public AudioSource source;
 
     private Rigidbody2D rb;
     private bool isCoroutine;
-    public Color color;
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
+
+        source.clip = sound;
+        source.Play();
+        
         playerHealth = FindObjectOfType<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;

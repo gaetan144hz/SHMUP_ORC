@@ -9,6 +9,10 @@ public class slime : MonoBehaviour
     [SerializeField] private float rotationSpeed;
 
     [SerializeField] private int timeToDestroy;
+    
+    [Header("Audio")] 
+    public AudioClip sound;
+    public AudioSource source;
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -17,6 +21,11 @@ public class slime : MonoBehaviour
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
+
+        source.clip = sound;
+        source.Play();
+
         animator = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody2D>();
         
