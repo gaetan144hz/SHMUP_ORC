@@ -110,7 +110,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "dashR",
+                    "name": "Shield",
                     "type": "Button",
                     "id": "dbe0896e-34bb-4db6-8c98-f2ca5afa9879",
                     "expectedControlType": "Button",
@@ -402,11 +402,11 @@
                 {
                     "name": "",
                     "id": "746e8204-208b-4819-b4b3-64ae34f613fa",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "dashR",
+                    "action": "Shield",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -417,7 +417,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "dashR",
+                    "action": "Shield",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -604,6 +604,14 @@
                     "name": "Resume",
                     "type": "Button",
                     "id": "b396164e-0a6e-430e-aa81-ed0dd764564d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Shield",
+                    "type": "Button",
+                    "id": "58a14dd7-d3f0-44ef-920c-fa3bac647492",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -928,6 +936,28 @@
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01d53c27-912e-42ce-b51e-d81dec0b5652",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b57c940-9dd8-4c73-b5c4-3d444b6c95a9",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1035,6 +1065,14 @@
                     "name": "Resume",
                     "type": "Button",
                     "id": "7b4df49c-49d1-47af-847a-c7e9f9f6cef8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Shield",
+                    "type": "Button",
+                    "id": "eb19fcf7-d8e8-4789-8f59-3dc9ccb7239e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -1357,6 +1395,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56be5562-9a2b-4ccf-9a05-26f0f606997e",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4840d552-4d3c-424f-b016-f139c67240d5",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shield",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

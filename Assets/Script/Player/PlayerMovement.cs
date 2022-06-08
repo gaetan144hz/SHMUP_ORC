@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool shieldReady;
     private float doubleTapTime;
 
-    [Header("DashImage")]
+    [Header("ShieldImage")]
     public Image shieldImage;
 
 
@@ -43,12 +43,10 @@ public class PlayerMovement : MonoBehaviour
     {
         _pauseResume = FindObjectOfType<PauseResume>();
         datap = Instantiate(datap);
-
-        shieldReady = true;
-
         playerList.Add(this);
         playerInput = new Controllers();
         rb = GetComponent<Rigidbody2D>();
+        shieldReady = true;
     }
 
     #region ShieldRegion
@@ -68,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             shield.SetActive(true);
             shieldReady = false;
             StartCoroutine(ShieldCooldown());
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             shield.SetActive(false);
         }
     }
