@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cece7ef337f44c946b19dfc43ab02613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnMusic: {fileID: 8300000, guid: 6abe3ef8fc002424baf511cba43d66ed, type: 3}
+  spawnMusic: {fileID: 8300000, guid: 8e1c2034f293a874eaa6f6849ac267bc, type: 3}
   bossPrefabs: {fileID: 1405351762913005651, guid: 6f489b3de53f3d24888993f240b167c6, type: 3}
   bossSpawned: 0
   bossSpawnPoint: {fileID: 169263446968355463}
