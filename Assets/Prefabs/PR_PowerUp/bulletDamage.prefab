@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3431127103067936203}
   - component: {fileID: 8194906861368422322}
   - component: {fileID: 5647476064409889598}
+  - component: {fileID: -4995682949761561552}
   m_Layer: 0
   m_Name: bulletDamage
   m_TagString: Untagged
@@ -133,6 +134,19 @@ PolygonCollider2D:
       - {x: -0.65664613, y: -0.10398525}
     - - {x: 0.16, y: -0.17999999}
       - {x: 0.14, y: -0.17999999}
+--- !u!114 &-4995682949761561552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431127103067936202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32bee9db6f7c847b7b01dad40b984b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 9212999243046397521, guid: feb9520f42ba6e44ab68d1be5d383be8, type: 3}
 --- !u!1 &8607489376526611115
 GameObject:
   m_ObjectHideFlags: 0

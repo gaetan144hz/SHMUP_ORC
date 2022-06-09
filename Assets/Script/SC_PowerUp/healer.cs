@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class healer : MonoBehaviour
@@ -24,7 +25,7 @@ public class healer : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHealth.StartCoroutine(playerHealth.Heal(increase));
-            Destroy(gameObject);
+            Destroy(this.gameObject,0.1f);
         }
     }
 }

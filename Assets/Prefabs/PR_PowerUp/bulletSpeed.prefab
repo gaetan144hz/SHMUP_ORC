@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 180832148445401755}
   - component: {fileID: 180832148445401754}
   - component: {fileID: 8553383875449215789}
+  - component: {fileID: 2157861415455001224}
   m_Layer: 0
   m_Name: bulletSpeed
   m_TagString: Untagged
@@ -115,6 +116,19 @@ CircleCollider2D:
   m_Offset: {x: 0.07, y: 0}
   serializedVersion: 2
   m_Radius: 0.78
+--- !u!114 &2157861415455001224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180832148445401764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32bee9db6f7c847b7b01dad40b984b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 9212999243046397521, guid: feb9520f42ba6e44ab68d1be5d383be8, type: 3}
 --- !u!1 &4955958378207729855
 GameObject:
   m_ObjectHideFlags: 0

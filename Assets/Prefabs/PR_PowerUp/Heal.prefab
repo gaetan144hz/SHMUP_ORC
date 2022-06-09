@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 528431803494245338}
   - component: {fileID: 528431803494245337}
   - component: {fileID: 1373534138087561727}
+  - component: {fileID: 1284908583189303500}
   m_Layer: 0
   m_Name: Heal
   m_TagString: Untagged
@@ -158,6 +159,19 @@ PolygonCollider2D:
       - {x: -0.5362172, y: 0.09097004}
       - {x: -0.53682137, y: 0.320148}
       - {x: -0.430751, y: 0.48429435}
+--- !u!114 &1284908583189303500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528431803494245335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f32bee9db6f7c847b7b01dad40b984b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 7020401689710452671, guid: aa686cd9d73e0f24a9a581613cdfd872, type: 3}
 --- !u!1 &5632134781120699095
 GameObject:
   m_ObjectHideFlags: 0
