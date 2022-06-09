@@ -22,12 +22,12 @@ public class ScoreSetup : MonoBehaviour
     public void AddDmgScore(int scoreToAdd) //Fonction pour compter les dégats !
     {
         dmgCount += scoreToAdd;
-        dmgScore.text = $"dmg: {dmgCount}";
+        dmgScore.text = $"  Dégats provoqués : {dmgCount}";
     }
 
     public void AddKillScore(int killToAdd)
     {
         killCount += killToAdd;
-        killScore.text = $"kill: {killCount}";
+        killScore.text = $"  Ennemis tués : {killCount}";
     }
 }

@@ -22,9 +22,9 @@ public class PlayerScriptPicker : MonoBehaviour
         if (PlayerInputManager.instance.playerCount == 1)
         {
             Instantiate(playerSolo, transform);
+            destroyButton.destroyPress();
             randomSpawner.gameInstantiate();
             timer.timeInstantiate();
-            destroyButton.destroyPress();
         }
         else
         {

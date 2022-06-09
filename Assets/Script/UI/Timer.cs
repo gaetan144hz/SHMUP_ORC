@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    public float sec;
+    public float min;
     public float currentTime;
     [SerializeField] float startingTime;
 
@@ -11,7 +13,7 @@ public class Timer : MonoBehaviour
 
     void Awake()
     {
-        currentTime = startingTime;
+        sec = startingTime;
     }
 
     public void timeInstantiate()
@@ -21,10 +23,27 @@ public class Timer : MonoBehaviour
 
     IEnumerator timeCount()
     {
+        sec = 0;
+        min = 0;
+        currentTime = 0;
+
         while(true)
         {
+            sec += 1;
             currentTime += 1;
-            countdownText.text = currentTime.ToString("0");
+            if (sec >= 60)
+            {
+                sec = 0;
+                min += 1;
+            }
+            if (sec <= 9)
+            {
+                countdownText.text = $"{min}:0{sec}";
+            }
+            else
+            {
+                countdownText.text = $"{min}:{sec}";
+            }
             yield return new WaitForSeconds(1);
         }
     }

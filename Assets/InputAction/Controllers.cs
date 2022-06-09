@@ -123,7 +123,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""dashR"",
+                    ""name"": ""Shield"",
                     ""type"": ""Button"",
                     ""id"": ""dbe0896e-34bb-4db6-8c98-f2ca5afa9879"",
                     ""expectedControlType"": ""Button"",
@@ -415,11 +415,11 @@ public class @Controllers : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""746e8204-208b-4819-b4b3-64ae34f613fa"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""dashR"",
+                    ""action"": ""Shield"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -430,7 +430,7 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""dashR"",
+                    ""action"": ""Shield"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -617,6 +617,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""name"": ""Resume"",
                     ""type"": ""Button"",
                     ""id"": ""b396164e-0a6e-430e-aa81-ed0dd764564d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shield"",
+                    ""type"": ""Button"",
+                    ""id"": ""58a14dd7-d3f0-44ef-920c-fa3bac647492"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -941,6 +949,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01d53c27-912e-42ce-b51e-d81dec0b5652"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b57c940-9dd8-4c73-b5c4-3d444b6c95a9"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1048,6 +1078,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""name"": ""Resume"",
                     ""type"": ""Button"",
                     ""id"": ""7b4df49c-49d1-47af-847a-c7e9f9f6cef8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shield"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb19fcf7-d8e8-4789-8f59-3dc9ccb7239e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -1372,6 +1410,28 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56be5562-9a2b-4ccf-9a05-26f0f606997e"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4840d552-4d3c-424f-b016-f139c67240d5"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1459,7 +1519,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_maxHealth = m_player.FindAction("maxHealth", throwIfNotFound: true);
         m_player_Resume = m_player.FindAction("Resume", throwIfNotFound: true);
         m_player_Pause = m_player.FindAction("Pause", throwIfNotFound: true);
-        m_player_dashR = m_player.FindAction("dashR", throwIfNotFound: true);
+        m_player_Shield = m_player.FindAction("Shield", throwIfNotFound: true);
         m_player_enableSpUI = m_player.FindAction("enableSpUI", throwIfNotFound: true);
         m_player_disableSpUI = m_player.FindAction("disableSpUI", throwIfNotFound: true);
         // player1
@@ -1477,6 +1537,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player1_disableCheatDamage = m_player1.FindAction("disableCheatDamage", throwIfNotFound: true);
         m_player1_Pause = m_player1.FindAction("Pause", throwIfNotFound: true);
         m_player1_Resume = m_player1.FindAction("Resume", throwIfNotFound: true);
+        m_player1_Shield = m_player1.FindAction("Shield", throwIfNotFound: true);
         // player2
         m_player2 = asset.FindActionMap("player2", throwIfNotFound: true);
         m_player2_move = m_player2.FindAction("move", throwIfNotFound: true);
@@ -1492,6 +1553,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player2_disableCheatDamage = m_player2.FindAction("disableCheatDamage", throwIfNotFound: true);
         m_player2_Pause = m_player2.FindAction("Pause", throwIfNotFound: true);
         m_player2_Resume = m_player2.FindAction("Resume", throwIfNotFound: true);
+        m_player2_Shield = m_player2.FindAction("Shield", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_click = m_UI.FindAction("click", throwIfNotFound: true);
@@ -1557,7 +1619,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_maxHealth;
     private readonly InputAction m_player_Resume;
     private readonly InputAction m_player_Pause;
-    private readonly InputAction m_player_dashR;
+    private readonly InputAction m_player_Shield;
     private readonly InputAction m_player_enableSpUI;
     private readonly InputAction m_player_disableSpUI;
     public struct PlayerActions
@@ -1577,7 +1639,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @maxHealth => m_Wrapper.m_player_maxHealth;
         public InputAction @Resume => m_Wrapper.m_player_Resume;
         public InputAction @Pause => m_Wrapper.m_player_Pause;
-        public InputAction @dashR => m_Wrapper.m_player_dashR;
+        public InputAction @Shield => m_Wrapper.m_player_Shield;
         public InputAction @enableSpUI => m_Wrapper.m_player_enableSpUI;
         public InputAction @disableSpUI => m_Wrapper.m_player_disableSpUI;
         public InputActionMap Get() { return m_Wrapper.m_player; }
@@ -1628,9 +1690,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @dashR.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
-                @dashR.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
-                @dashR.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDashR;
+                @Shield.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShield;
+                @Shield.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShield;
+                @Shield.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShield;
                 @enableSpUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
                 @enableSpUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
                 @enableSpUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnableSpUI;
@@ -1680,9 +1742,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @dashR.started += instance.OnDashR;
-                @dashR.performed += instance.OnDashR;
-                @dashR.canceled += instance.OnDashR;
+                @Shield.started += instance.OnShield;
+                @Shield.performed += instance.OnShield;
+                @Shield.canceled += instance.OnShield;
                 @enableSpUI.started += instance.OnEnableSpUI;
                 @enableSpUI.performed += instance.OnEnableSpUI;
                 @enableSpUI.canceled += instance.OnEnableSpUI;
@@ -1710,6 +1772,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player1_disableCheatDamage;
     private readonly InputAction m_player1_Pause;
     private readonly InputAction m_player1_Resume;
+    private readonly InputAction m_player1_Shield;
     public struct Player1Actions
     {
         private @Controllers m_Wrapper;
@@ -1727,6 +1790,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @disableCheatDamage => m_Wrapper.m_player1_disableCheatDamage;
         public InputAction @Pause => m_Wrapper.m_player1_Pause;
         public InputAction @Resume => m_Wrapper.m_player1_Resume;
+        public InputAction @Shield => m_Wrapper.m_player1_Shield;
         public InputActionMap Get() { return m_Wrapper.m_player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1775,6 +1839,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Resume.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
                 @Resume.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
                 @Resume.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnResume;
+                @Shield.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShield;
+                @Shield.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShield;
+                @Shield.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShield;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1818,6 +1885,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Resume.started += instance.OnResume;
                 @Resume.performed += instance.OnResume;
                 @Resume.canceled += instance.OnResume;
+                @Shield.started += instance.OnShield;
+                @Shield.performed += instance.OnShield;
+                @Shield.canceled += instance.OnShield;
             }
         }
     }
@@ -1839,6 +1909,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player2_disableCheatDamage;
     private readonly InputAction m_player2_Pause;
     private readonly InputAction m_player2_Resume;
+    private readonly InputAction m_player2_Shield;
     public struct Player2Actions
     {
         private @Controllers m_Wrapper;
@@ -1856,6 +1927,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @disableCheatDamage => m_Wrapper.m_player2_disableCheatDamage;
         public InputAction @Pause => m_Wrapper.m_player2_Pause;
         public InputAction @Resume => m_Wrapper.m_player2_Resume;
+        public InputAction @Shield => m_Wrapper.m_player2_Shield;
         public InputActionMap Get() { return m_Wrapper.m_player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1904,6 +1976,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Resume.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
                 @Resume.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
                 @Resume.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnResume;
+                @Shield.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnShield;
+                @Shield.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnShield;
+                @Shield.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnShield;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -1947,6 +2022,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @Resume.started += instance.OnResume;
                 @Resume.performed += instance.OnResume;
                 @Resume.canceled += instance.OnResume;
+                @Shield.started += instance.OnShield;
+                @Shield.performed += instance.OnShield;
+                @Shield.canceled += instance.OnShield;
             }
         }
     }
@@ -2017,7 +2095,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnMaxHealth(InputAction.CallbackContext context);
         void OnResume(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnDashR(InputAction.CallbackContext context);
+        void OnShield(InputAction.CallbackContext context);
         void OnEnableSpUI(InputAction.CallbackContext context);
         void OnDisableSpUI(InputAction.CallbackContext context);
     }
@@ -2036,6 +2114,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnDisableCheatDamage(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnResume(InputAction.CallbackContext context);
+        void OnShield(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
@@ -2052,6 +2131,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnDisableCheatDamage(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnResume(InputAction.CallbackContext context);
+        void OnShield(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
