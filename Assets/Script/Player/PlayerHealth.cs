@@ -86,6 +86,12 @@ public class PlayerHealth : MonoBehaviour
             datap.currentHealth++;
             healthText.text = datap.currentHealth.ToString("0");
             healthText.color = gradient.Evaluate(datap.currentHealth / datap.startHealth);
+            if (datap.currentHealth >= 300) 
+            { 
+                datap.currentHealth = 300;
+                healthText.text = datap.currentHealth.ToString("0");
+                healthText.color = gradient.Evaluate(datap.currentHealth / datap.startHealth);
+            }
             yield return new WaitForFixedUpdate();
         }
     }

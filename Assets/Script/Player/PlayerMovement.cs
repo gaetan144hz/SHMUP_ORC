@@ -75,7 +75,6 @@ public class PlayerMovement : MonoBehaviour
     {
         shieldCooldownTime = datap.currentShieldCooldown;
         shieldImage.fillAmount = 0;
-        
         while (shieldCooldownTime > 0)
         {
             shieldImage.fillAmount += 1 / datap.currentShieldCooldown;
