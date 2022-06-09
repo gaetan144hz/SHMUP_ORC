@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 1776372551433248985}
   - component: {fileID: 6243793472790686595}
   - component: {fileID: 567289234267124333}
+  - component: {fileID: 6587634953786486711}
   m_Layer: 0
   m_Name: GoblinTank
   m_TagString: Enemy
@@ -497,6 +498,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6587634953786486711
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572329373142976740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0a1390fad5688540818e60703dae81d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2862888217091094634
 GameObject:
   m_ObjectHideFlags: 0

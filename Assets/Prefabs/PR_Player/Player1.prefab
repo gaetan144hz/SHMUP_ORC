@@ -552,8 +552,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 300
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e23222c92b0b98549a1a99b352d2d191, type: 2}
-  m_sharedMaterial: {fileID: 1895609886707053082, guid: e23222c92b0b98549a1a99b352d2d191, type: 2}
+  m_fontAsset: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1063,6 +1063,7 @@ GameObject:
   - component: {fileID: -7446464230214341407}
   - component: {fileID: 1485152647740324723}
   - component: {fileID: 6219544967254799964}
+  - component: {fileID: 7555357495519171023}
   m_Layer: 7
   m_Name: Player1
   m_TagString: Player
@@ -1440,6 +1441,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &7555357495519171023
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567997724479068161}
+  m_Enabled: 1
 --- !u!1 &8021614159951923595
 GameObject:
   m_ObjectHideFlags: 0
