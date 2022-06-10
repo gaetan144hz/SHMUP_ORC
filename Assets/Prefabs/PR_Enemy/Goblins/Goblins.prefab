@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 5262262207201644745}
   - component: {fileID: -6321525272607589084}
   - component: {fileID: 742685996384813643}
+  - component: {fileID: 4087317834176993081}
   m_Layer: 0
   m_Name: Goblins
   m_TagString: Enemy
@@ -504,7 +505,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 929fe2f820546704d877cfb7b4d6d241, type: 3}
+  m_Sprite: {fileID: 8928993324157655246, guid: 62b5dc3652b766a4f90ea6f22224570f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,18 +567,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014425039, y: 0.008655041}
+  m_Offset: {x: -0.025281906, y: 0.019511461}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1.6584616, y: 2.7846153}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5903287, y: 1.5002046}
+  m_Size: {x: 1.1765747, y: 2.5207067}
   m_EdgeRadius: 0
 --- !u!50 &5262262207201644745
 Rigidbody2D:
@@ -715,6 +716,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4087317834176993081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745041235676749273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48dc740e57ec3849a23bf031911f6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8745041235908337779
 GameObject:
   m_ObjectHideFlags: 0

@@ -162,13 +162,13 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.4860119, y: -0.49033657, z: 0}
+  - {x: -0.4952722, y: -0.49644926, z: 0}
   - {x: 0.48775572, y: -0.48630577, z: 0}
   - {x: 0.49260402, y: 0.48869982, z: 0}
   - {x: -0.48445886, y: 0.488685, z: 0}
-  m_ShapePathHash: -538132850
+  m_ShapePathHash: 1643106834
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21394
+  m_InstanceId: 42348
 --- !u!82 &3731613441580027226
 AudioSource:
   m_ObjectHideFlags: 0

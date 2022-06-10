@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5750517537162401116}
   - component: {fileID: 2171638665147211773}
+  - component: {fileID: 5150876962405134686}
   m_Layer: 0
   m_Name: DeathSoundGoblin
   m_TagString: Untagged
@@ -127,3 +128,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5150876962405134686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750517537162401117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8c33a8bb8811e41ab578bef7890a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 3
