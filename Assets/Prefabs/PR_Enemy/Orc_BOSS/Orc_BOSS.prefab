@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1405351762913005656
 Transform:
   m_ObjectHideFlags: 0
@@ -1329,7 +1329,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2289,6 +2289,7 @@ GameObject:
   - component: {fileID: 8495107263346487878}
   - component: {fileID: 4074213216423876083}
   - component: {fileID: 4850442048092414497}
+  - component: {fileID: 6844042965070981662}
   m_Layer: 0
   m_Name: WInCanvas
   m_TagString: Untagged
@@ -2445,7 +2446,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb45c4a4cee5b44d81802cfc2a7debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selection: {fileID: 1937608479551730862}
+  selection: {fileID: 3590138317885774408}
+--- !u!114 &6844042965070981662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243553497120213944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 3590138317885774408}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &8320218798926464240
 GameObject:
   m_ObjectHideFlags: 0
