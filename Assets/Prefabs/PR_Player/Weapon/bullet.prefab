@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 201954176755067928}
   - component: {fileID: -5077753748412367215}
   - component: {fileID: 3704583338932173662}
+  - component: {fileID: 3616667772924720284}
   m_Layer: 0
   m_Name: bullet
   m_TagString: playerBullet
@@ -149,11 +150,30 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.60476273, y: 0.08297497}
-      - {x: -0.06652832, y: 0.22325964}
-      - {x: 0.70868397, y: 0.0023654103}
-      - {x: -0.088864826, y: -0.2222494}
-      - {x: -0.5860532, y: -0.096223176}
+    - - {x: -0.70683545, y: 0.051567614}
+      - {x: -0.24711871, y: 0.2782218}
+      - {x: 0.70868397, y: 0.05732757}
+      - {x: -0.2301965, y: -0.24580468}
+      - {x: -0.72738487, y: -0.056964695}
+--- !u!95 &3616667772924720284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201954176755067931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c0b433e44112ef4dac6e2dc32d55b86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1518081721967300163
 GameObject:
   m_ObjectHideFlags: 0
