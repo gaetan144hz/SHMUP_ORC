@@ -1500,19 +1500,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8443312782939747454, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443312782939747454, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9087881201229516969, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 9087881201229516969, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.34
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9114618521634652627, guid: 9025dc4739f2b4e44b8f39d45ca63100, type: 3}
       propertyPath: m_RootOrder
