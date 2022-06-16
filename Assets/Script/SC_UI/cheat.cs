@@ -75,4 +75,13 @@ public class cheat : MonoBehaviour
             return;
         }
     }
+
+    public void OnResetRotation(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            Debug.Log("Rotate Z 0");
+        }
+    }
 }

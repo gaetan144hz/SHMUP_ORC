@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyModel: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   Note: 
-  speedMovement: 3
-  currentSpeedMovement: 5
+  speedMovement: 2.7
+  currentSpeedMovement: 2
   currentHealth: 100
   startHealth: 100
-  bulletSpeed: 0
-  currentBulletSpeed: 0
+  bulletSpeed: 5
+  currentBulletSpeed: 5
   bulletDamage: 0
   patternBulletDamage: 0
   currentBulletDamage: 0
