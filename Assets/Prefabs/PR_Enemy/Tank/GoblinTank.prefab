@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 6243793472790686595}
   - component: {fileID: 567289234267124333}
   - component: {fileID: 6587634953786486711}
+  - component: {fileID: 8962395159085759460}
   m_Layer: 0
   m_Name: GoblinTank
   m_TagString: Enemy
@@ -449,6 +450,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8962395159085759460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572329373142976740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95868eb14505d4743a0973b5c958a764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2862888217091094634
 GameObject:
   m_ObjectHideFlags: 0

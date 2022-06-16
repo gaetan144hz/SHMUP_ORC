@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyModel: {fileID: 0}
   Note: 
-  speedMovement: 2
-  currentSpeedMovement: 4
+  speedMovement: 1.6
+  currentSpeedMovement: 2
   currentHealth: 200
   startHealth: 200
   bulletSpeed: 3

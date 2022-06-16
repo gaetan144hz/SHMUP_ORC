@@ -145,6 +145,14 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""resetRotation"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b7d0342-a877-4973-ae34-f1c81db60721"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -510,6 +518,17 @@ public class @Controllers : IInputActionCollection, IDisposable
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""842aa71b-9824-4491-8843-e0a2bc92a35a"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""resetRotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1522,6 +1541,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         m_player_Shield = m_player.FindAction("Shield", throwIfNotFound: true);
         m_player_enableSpUI = m_player.FindAction("enableSpUI", throwIfNotFound: true);
         m_player_disableSpUI = m_player.FindAction("disableSpUI", throwIfNotFound: true);
+        m_player_resetRotation = m_player.FindAction("resetRotation", throwIfNotFound: true);
         // player1
         m_player1 = asset.FindActionMap("player1", throwIfNotFound: true);
         m_player1_move = m_player1.FindAction("move", throwIfNotFound: true);
@@ -1622,6 +1642,7 @@ public class @Controllers : IInputActionCollection, IDisposable
     private readonly InputAction m_player_Shield;
     private readonly InputAction m_player_enableSpUI;
     private readonly InputAction m_player_disableSpUI;
+    private readonly InputAction m_player_resetRotation;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -1642,6 +1663,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         public InputAction @Shield => m_Wrapper.m_player_Shield;
         public InputAction @enableSpUI => m_Wrapper.m_player_enableSpUI;
         public InputAction @disableSpUI => m_Wrapper.m_player_disableSpUI;
+        public InputAction @resetRotation => m_Wrapper.m_player_resetRotation;
         public InputActionMap Get() { return m_Wrapper.m_player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1699,6 +1721,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @disableSpUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
                 @disableSpUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
                 @disableSpUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisableSpUI;
+                @resetRotation.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetRotation;
+                @resetRotation.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetRotation;
+                @resetRotation.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetRotation;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1751,6 +1776,9 @@ public class @Controllers : IInputActionCollection, IDisposable
                 @disableSpUI.started += instance.OnDisableSpUI;
                 @disableSpUI.performed += instance.OnDisableSpUI;
                 @disableSpUI.canceled += instance.OnDisableSpUI;
+                @resetRotation.started += instance.OnResetRotation;
+                @resetRotation.performed += instance.OnResetRotation;
+                @resetRotation.canceled += instance.OnResetRotation;
             }
         }
     }
@@ -2098,6 +2126,7 @@ public class @Controllers : IInputActionCollection, IDisposable
         void OnShield(InputAction.CallbackContext context);
         void OnEnableSpUI(InputAction.CallbackContext context);
         void OnDisableSpUI(InputAction.CallbackContext context);
+        void OnResetRotation(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
     {

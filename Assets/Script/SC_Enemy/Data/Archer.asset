@@ -15,21 +15,21 @@ MonoBehaviour:
   EnemyModel: {fileID: 2647647482063053804, guid: 5deba7d5959471f49b640a6954ab2311, type: 3}
   Note: 
   speedMovement: 1
-  currentSpeedMovement: 3
+  currentSpeedMovement: 1
   currentHealth: 75
   startHealth: 75
-  bulletSpeed: 15
-  currentBulletSpeed: 15
+  bulletSpeed: 4.5
+  currentBulletSpeed: 2
   bulletDamage: 5
   patternBulletDamage: 1
   currentBulletDamage: 5
   currentPatternBulletDamage: 1
-  spellSpeed: 0
+  spellSpeed: 3
   currentSpellSpeed: 0
   spellDamage: 0
   currentSpellDamage: 0
   fireRate: 2
   patternFireRate: 4
-  currentPatternFireRate: 2
+  currentPatternFireRate: 4
   range: 0
   shootingRange: 20

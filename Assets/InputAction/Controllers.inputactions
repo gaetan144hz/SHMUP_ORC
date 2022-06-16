@@ -132,6 +132,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "resetRotation",
+                    "type": "Button",
+                    "id": "6b7d0342-a877-4973-ae34-f1c81db60721",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -497,6 +505,17 @@
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "842aa71b-9824-4491-8843-e0a2bc92a35a",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "resetRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
