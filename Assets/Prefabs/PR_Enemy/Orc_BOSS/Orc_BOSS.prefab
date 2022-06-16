@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352830566465636654}
-  m_LocalRotation: {x: -0, y: -0, z: -0.013800205, w: 0.9999048}
-  m_LocalPosition: {x: 0.35, y: -0.01, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09, y: -0.063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405351762913005656}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.21226418, b: 0.21226418, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 0.35
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -373,7 +373,7 @@ MonoBehaviour:
   deathSound: {fileID: 8763511025312592551, guid: fdc2b3b6b9e9aec4585e9143bf4976ed, type: 3}
   Pattern1: 1
   Pattern2: 2
-  Pattern3: 5
+  Pattern3: 4
   sound:
   - {fileID: 8300000, guid: e23c39037d4e8d84bb1280ac5a3fcdf9, type: 3}
   - {fileID: 8300000, guid: 7c0ab38c2784f1b46b96e6c7a6356fc1, type: 3}
@@ -447,7 +447,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.42, y: 0.2980011}
+  m_Offset: {x: 0.057158142, y: 0.37803984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -458,7 +458,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6341983, y: 0.39980733}
+  m_Size: {x: 0.86897874, y: 0.49585342}
   m_EdgeRadius: 0
 --- !u!82 &210553454800140844
 AudioSource:
