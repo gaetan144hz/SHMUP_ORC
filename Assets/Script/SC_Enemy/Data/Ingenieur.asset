@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyModel: {fileID: 6244103163788977798, guid: 27e107f2df00960438190df81288f452, type: 3}
   Note: 
-  speedMovement: 5
-  currentSpeedMovement: 3
+  speedMovement: 3
+  currentSpeedMovement: 5
   currentHealth: 100
   startHealth: 100
   bulletSpeed: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   currentSpellSpeed: 0
   spellDamage: 0
   currentSpellDamage: 0
-  fireRate: 3
+  fireRate: 5
   patternFireRate: 0
   currentPatternFireRate: 0
   range: 0

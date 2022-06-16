@@ -18,7 +18,7 @@ MonoBehaviour:
   currentSpeedMovement: 0
   currentHealth: 70
   startHealth: 70
-  bulletSpeed: 25
+  bulletSpeed: 5
   currentBulletSpeed: 25
   bulletDamage: 5
   patternBulletDamage: 5
@@ -28,7 +28,7 @@ MonoBehaviour:
   currentSpellSpeed: 0
   spellDamage: 0
   currentSpellDamage: 0
-  fireRate: 0.2
+  fireRate: 1
   patternFireRate: 0
   currentPatternFireRate: 0
   range: 0

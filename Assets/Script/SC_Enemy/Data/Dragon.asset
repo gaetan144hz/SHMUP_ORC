@@ -28,7 +28,7 @@ MonoBehaviour:
   currentSpellSpeed: 0
   spellDamage: 0
   currentSpellDamage: 0
-  fireRate: 5
+  fireRate: 7
   patternFireRate: 0
   currentPatternFireRate: 0
   range: 0

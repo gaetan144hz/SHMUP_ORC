@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 1333704bad56b56458f4c3f5ac4ce1e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1461118773753916914
+    second: player_marche_0
+  - first:
+      213: -6063846429013101785
+    second: player_marche_1
+  - first:
+      213: 5473691819508052992
+    second: player_marche_2
+  - first:
+      213: -1870245095717912047
+    second: player_marche_3
+  - first:
+      213: 3473437249878132416
+    second: player_marche_4
+  - first:
+      213: -5072142365154386115
+    second: player_marche_5
+  - first:
+      213: -5432448833640075621
+    second: player_marche_6
+  - first:
+      213: -5721755049351845655
+    second: player_marche_7
+  - first:
+      213: -2792916740817883535
+    second: player_marche_8
+  - first:
+      213: -1254118229388206963
+    second: player_marche_9
+  - first:
+      213: 8726396923248258397
+    second: player_marche_10
+  - first:
+      213: -5998465465021802006
+    second: player_marche_11
+  - first:
+      213: -6946789249356047898
+    second: player_marche_12
+  - first:
+      213: -248896505186436873
+    second: player_marche_13
+  - first:
+      213: 5732640158747981002
+    second: player_marche_14
+  - first:
+      213: -421378281801543839
+    second: player_marche_15
+  - first:
+      213: 1937839454971567287
+    second: player_marche_16
+  - first:
+      213: -4675487590497581792
+    second: player_marche_17
+  - first:
+      213: 7215585507753546464
+    second: player_marche_18
+  - first:
+      213: 6422143900235466537
+    second: player_marche_19
+  - first:
+      213: 916415359395823732
+    second: player_marche_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 125
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_marche_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 31
+        width: 91
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fda14c88cfe64410800000000000000
+      internalID: 1461118773753916914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_1
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 34
+        width: 88
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723372aecc3e8dba0800000000000000
+      internalID: -6063846429013101785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_2
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 28
+        width: 91
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0043dbf75b576fb40800000000000000
+      internalID: 5473691819508052992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_3
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 28
+        width: 88
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11241d29efd8b06e0800000000000000
+      internalID: -1870245095717912047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_4
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 28
+        width: 91
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6889496c0243030800000000000000
+      internalID: 3473437249878132416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_5
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 31
+        width: 82
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f53ca64612c99b0800000000000000
+      internalID: -5072142365154386115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_6
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 31
+        width: 85
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ee56271901c94b0800000000000000
+      internalID: -5432448833640075621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_7
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 31
+        width: 83
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8e597091e3890b0800000000000000
+      internalID: -5721755049351845655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_8
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 31
+        width: 94
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17eee4095019d39d0800000000000000
+      internalID: -2792916740817883535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_9
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 31
+        width: 91
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c59fe6d1a789ee0800000000000000
+      internalID: -1254118229388206963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_10
+      rect:
+        serializedVersion: 2
+        x: 2910
+        y: 31
+        width: 94
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d264b64c36a1970800000000000000
+      internalID: 8726396923248258397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_11
+      rect:
+        serializedVersion: 2
+        x: 3182
+        y: 31
+        width: 111
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae95de7d07b21cca0800000000000000
+      internalID: -5998465465021802006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_12
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 31
+        width: 110
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e951aebbfb089f90800000000000000
+      internalID: -6946789249356047898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_13
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 34
+        width: 102
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8b68e72fdbb8cf0800000000000000
+      internalID: -248896505186436873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_14
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 34
+        width: 102
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4ff4ff9dd6e8f40800000000000000
+      internalID: 5732640158747981002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_15
+      rect:
+        serializedVersion: 2
+        x: 4300
+        y: 34
+        width: 102
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f872d6fa6f62af0800000000000000
+      internalID: -421378281801543839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_16
+      rect:
+        serializedVersion: 2
+        x: 4584
+        y: 34
+        width: 82
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc115997b694ea10800000000000000
+      internalID: 1937839454971567287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_17
+      rect:
+        serializedVersion: 2
+        x: 4859
+        y: 34
+        width: 85
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02505a8eec45d1fb0800000000000000
+      internalID: -4675487590497581792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_18
+      rect:
+        serializedVersion: 2
+        x: 5137
+        y: 34
+        width: 82
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e25b1c1ac8e22460800000000000000
+      internalID: 7215585507753546464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_19
+      rect:
+        serializedVersion: 2
+        x: 5395
+        y: 31
+        width: 111
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9270afde9d9002950800000000000000
+      internalID: 6422143900235466537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_marche_20
+      rect:
+        serializedVersion: 2
+        x: 5693
+        y: 31
+        width: 88
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470008bf9e2c7bc00800000000000000
+      internalID: 916415359395823732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

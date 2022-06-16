@@ -373,7 +373,7 @@ MonoBehaviour:
   deathSound: {fileID: 8763511025312592551, guid: fdc2b3b6b9e9aec4585e9143bf4976ed, type: 3}
   Pattern1: 1
   Pattern2: 2
-  Pattern3: 4
+  Pattern3: 5
   sound:
   - {fileID: 8300000, guid: e23c39037d4e8d84bb1280ac5a3fcdf9, type: 3}
   - {fileID: 8300000, guid: 7c0ab38c2784f1b46b96e6c7a6356fc1, type: 3}

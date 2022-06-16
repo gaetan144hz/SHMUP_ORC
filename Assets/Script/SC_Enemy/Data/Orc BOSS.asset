@@ -20,13 +20,13 @@ MonoBehaviour:
   startHealth: 1500
   bulletSpeed: 10
   currentBulletSpeed: 10
-  bulletDamage: 10
-  patternBulletDamage: 50
+  bulletDamage: 5
+  patternBulletDamage: 25
   currentBulletDamage: 10
   currentPatternBulletDamage: 50
   spellSpeed: 10
   currentSpellSpeed: 10
-  spellDamage: 50
+  spellDamage: 25
   currentSpellDamage: 50
   fireRate: 0
   patternFireRate: 0
