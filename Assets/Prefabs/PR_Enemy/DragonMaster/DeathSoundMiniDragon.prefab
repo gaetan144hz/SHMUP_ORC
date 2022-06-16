@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8956172420992663165}
   - component: {fileID: 3288880873839572188}
+  - component: {fileID: -5953221925208288309}
   m_Layer: 0
   m_Name: DeathSoundMiniDragon
   m_TagString: Untagged
@@ -127,3 +128,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5953221925208288309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956172420992663164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8c33a8bb8811e41ab578bef7890a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 3

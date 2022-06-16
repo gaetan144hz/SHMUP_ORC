@@ -74,6 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b5c65c6a465b343af75b9eb0970b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSolo: {fileID: 7567997724479068161, guid: f7b4d0eca3580004bbc2498c0870f21b, type: 3}
+  playerSolo: {fileID: 7567997724479068161, guid: 75c6352d16e66f9479e0088e12340a0e, type: 3}
   player1: {fileID: 7567997724479068161, guid: e401c0336a5b37144a3494bef1efe7dd, type: 3}
   player2: {fileID: 7567997724479068161, guid: 46a6fa5dd1e42ea4e924ee0e576795c4, type: 3}

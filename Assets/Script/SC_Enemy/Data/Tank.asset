@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyModel: {fileID: 2572329373142976740, guid: 0eb77c867ca90f3479e5d414074af49a, type: 3}
   Note: 
-  currentSpeedMovement: 1.5
-  speedMovement: 1.5
+  speedMovement: 3
+  currentSpeedMovement: 3
   currentHealth: 200
   startHealth: 200
-  currentBulletSpeed: 10
-  bulletSpeed: 10
-  currentBulletDamage: 10
-  bulletDamage: 10
-  currentPatternBulletDamage: 3
+  bulletSpeed: 6
+  currentBulletSpeed: 20
+  bulletDamage: 5
   patternBulletDamage: 3
-  currentSpellSpeed: 0
+  currentBulletDamage: 10
+  currentPatternBulletDamage: 5
   spellSpeed: 0
-  currentSpellDamage: 0
+  currentSpellSpeed: 0
   spellDamage: 0
-  fireRate: 3
-  currentPatternFireRate: 0.5
-  patternFireRate: 1.3
+  currentSpellDamage: 0
+  fireRate: 7
+  patternFireRate: 2
+  currentPatternFireRate: 1.5
   range: 0
   shootingRange: 20

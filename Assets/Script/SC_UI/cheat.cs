@@ -30,7 +30,7 @@ public class cheat : MonoBehaviour
     {
         if (value.isPressed) //press F2
         {
-            data.currenntBulletDamage = 15;
+            data.currenntBulletDamage = 10;
             Debug.Log("BulletDamage at 15");
             return;
         }
@@ -60,8 +60,8 @@ public class cheat : MonoBehaviour
     {
         if (value.isPressed) //press PavNum-
         {
-            Time.timeScale = 1f;
-            Debug.Log("TimeScale at 1");
+            Time.timeScale = 0f;
+            Debug.Log("TimeScale at 0");
             return;
         }
     }
@@ -70,8 +70,8 @@ public class cheat : MonoBehaviour
     {
         if (value.isPressed) //press PavNum+
         {
-            Time.timeScale = 0f;
-            Debug.Log("TimeScale at 0");
+            Time.timeScale = 1f;
+            Debug.Log("TimeScale at 1");
             return;
         }
     }

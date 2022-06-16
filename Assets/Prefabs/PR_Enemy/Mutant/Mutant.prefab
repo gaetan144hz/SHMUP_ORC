@@ -440,6 +440,8 @@ GameObject:
   - component: {fileID: 9114618521634652636}
   - component: {fileID: 9087881201229516969}
   - component: {fileID: 3494944912116949291}
+  - component: {fileID: 6320797206896670010}
+  - component: {fileID: 5643077228582302208}
   m_Layer: 0
   m_Name: Mutant
   m_TagString: Enemy
@@ -504,8 +506,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6dd32389074172a4481fcbb5d450c023, type: 3}
-  m_Color: {r: 0.26666665, g: 0.99215686, b: 0.32702777, a: 1}
+  m_Sprite: {fileID: 7871236730143006330, guid: fff0b6d9ccbe2af468fc5a7a7ec7d1d2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -533,7 +535,7 @@ MonoBehaviour:
   deathSound: {fileID: 4520953076475252687, guid: c95ecab3d68b79f41b7b9e7ecd0f02af, type: 3}
   enemyBullet: {fileID: 7765959782366688196, guid: 0b838cff6ecf4aa489112c891d089f48, type: 3}
   bulletParent: {fileID: 9114618523032691210}
-  spawnAudioSource: {fileID: 8300000, guid: 5041cc8576993134e961ac5f22b8e9d8, type: 3}
+  spawnAudioSource: {fileID: 8300000, guid: ea40c8fda8ea4b44e9259004bd1a02d5, type: 3}
   hitSound: {fileID: 8300000, guid: 8f0ebb8558039ea43a677f49178b7137, type: 3}
   source: {fileID: 3494944912116949291}
   playerList: []
@@ -601,18 +603,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.005928993, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
+    oldSize: {x: 1.9533334, y: 2.9533334}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 1.9477882, y: 3}
   m_EdgeRadius: 0
 --- !u!82 &3494944912116949291
 AudioSource:
@@ -710,6 +712,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6320797206896670010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114618521634652638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef07a6597ca195744b586b7754b4b54b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5643077228582302208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114618521634652638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95868eb14505d4743a0973b5c958a764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9114618523032691221
 GameObject:
   m_ObjectHideFlags: 0

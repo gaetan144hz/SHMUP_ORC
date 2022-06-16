@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116956431021391646}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.01121584, w: 0.9999371}
+  m_LocalPosition: {x: 0.06, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7765959782366688217}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.24
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.5368863
+  m_PointLightOuterRadius: 2.4300454
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 7765959782366688196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 523130612157154995}
   - {fileID: 7932654621244803988}
@@ -154,7 +154,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4595401726773951757, guid: fc8eb20a645a9b144b56390bb9396439, type: 3}
-  m_Color: {r: 0.46608487, g: 0.990566, b: 0.4438857, a: 1}
+  m_Color: {r: 0.46608487, g: 0.990566, b: 0.4438857, a: 0.7647059}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -236,7 +236,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4003906, y: 1.3403003}
+    oldSize: {x: 3.5849998, y: 3.4311688}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -244,32 +244,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.27456, y: -0.6382765}
-      - {x: 0.49075887, y: -0.5600072}
-      - {x: 0.61516005, y: -0.48249483}
-      - {x: 0.6806083, y: -0.3755978}
-      - {x: 0.68019426, y: -0.24706903}
-      - {x: 0.59790134, y: -0.106511444}
-      - {x: 0.5466747, y: 0.04621886}
-      - {x: 0.5358431, y: 0.15205842}
-      - {x: 0.58783275, y: 0.3280728}
-      - {x: 0.5368002, y: 0.51156944}
-      - {x: 0.4275662, y: 0.6122398}
-      - {x: 0.28534538, y: 0.65866894}
-      - {x: 0.13682494, y: 0.6538405}
-      - {x: 0.015822588, y: 0.5909094}
-      - {x: -0.049994443, y: 0.45260325}
-      - {x: -0.12987117, y: 0.3334501}
-      - {x: -0.29380268, y: 0.26937756}
-      - {x: -0.5233609, y: 0.289462}
-      - {x: -0.6414832, y: 0.23000093}
-      - {x: -0.68621075, y: 0.090688206}
-      - {x: -0.64933246, y: -0.05505849}
-      - {x: -0.592922, y: -0.20853171}
-      - {x: -0.62726736, y: -0.3290235}
-      - {x: -0.6055554, y: -0.42835084}
-      - {x: -0.3232002, y: -0.57642883}
-      - {x: 0.0054787695, y: -0.6492636}
+    - - {x: 0.4310765, y: -1.6326159}
+      - {x: 0.81299865, y: -1.5543467}
+      - {x: 1.28726, y: -1.4031796}
+      - {x: 1.6289136, y: -1.1397666}
+      - {x: 1.7573956, y: -0.87313473}
+      - {x: 1.7027234, y: -0.622095}
+      - {x: 1.5778419, y: -0.34967566}
+      - {x: 1.456528, y: -0.0044576526}
+      - {x: 1.3796219, y: 0.38331366}
+      - {x: 1.4943125, y: 0.8430161}
+      - {x: 1.4034923, y: 1.2290986}
+      - {x: 1.095548, y: 1.5241129}
+      - {x: 0.6432017, y: 1.6942143}
+      - {x: 0.13551164, y: 1.5576286}
+      - {x: -0.049994443, y: 1.336461}
+      - {x: -0.2311465, y: 0.95951605}
+      - {x: -0.4443367, y: 0.8104789}
+      - {x: -0.78115267, y: 0.6945635}
+      - {x: -1.2215149, y: 0.7455844}
+      - {x: -1.533241, y: 0.6615133}
+      - {x: -1.781775, y: 0.34083605}
+      - {x: -1.5412276, y: -0.46632323}
+      - {x: -1.6031935, y: -0.9090549}
+      - {x: -1.5354471, y: -1.0912436}
+      - {x: -1.0229207, y: -1.3498044}
+      - {x: -0.012934938, y: -1.6528103}
 --- !u!96 &-46285675333196281
 TrailRenderer:
   serializedVersion: 2
@@ -5250,7 +5250,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3a121e1f70193647ba6c9bcf8cd2823, type: 2}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
